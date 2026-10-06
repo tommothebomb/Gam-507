@@ -143,8 +143,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62013946}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.000000014901159, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -775,12 +775,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   CameraPivotPoint: {fileID: 62013947}
-  maxSpeed: 0
-  accelerationSpeed: 0
-  directionChangeSpeed: 0
-  lookDirection: {fileID: 0}
-  delay: 0
-  speed: 0
+  mouseMovement: {x: 0, y: 0}
+  debugMouse: {x: 0, y: 0}
+  playerCamera: {fileID: 1546376029}
+  yClampMin: -30
+  yClampMax: 30
+  Velocity: {x: 0, y: 0}
+  maxSpeed: 1
+  Acceleration: 0.25
+  Deceleration: 0.8
 --- !u!1 &1546376029
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,13 +870,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546376029}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1305268, y: -0, z: -0, w: 0.9914448}
-  m_LocalPosition: {x: 0, y: 3.9701235, z: -5.1453896}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -12.1875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 62013947}
-  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1546376033
 MonoBehaviour:
   m_ObjectHideFlags: 0
