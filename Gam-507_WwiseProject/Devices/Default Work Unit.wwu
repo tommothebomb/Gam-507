@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D6F7E61B-A06A-485A-AA9F-C5C9C5EE498C}" SchemaVersion="133">
+	<Devices>
+		<WorkUnit Name="Default Work Unit" ID="{D6F7E61B-A06A-485A-AA9F-C5C9C5EE498C}" PersistMode="Standalone">
+			<ChildrenList>
+				<AudioDevice Name="System" ID="{244948C9-0612-4B74-9081-22E7ED3AD04A}" PluginName="System" CompanyID="0" PluginID="174" PluginType="7"/>
+				<AudioDevice Name="No_Output" ID="{403E926B-25AD-4E68-A6D1-759BF81084F3}" PluginName="No Output" CompanyID="0" PluginID="181" PluginType="7"/>
+				<WorkUnit Name="Roscislawa" ID="{F19B346C-1411-40D8-9897-DDC59E36B76E}" PersistMode="Reference"/>
+				<WorkUnit Name="Damien" ID="{CF88C19A-D078-46AE-B6CC-36F5D848D029}" PersistMode="Reference"/>
+				<WorkUnit Name="Harrisson" ID="{2CB8AE3E-DB5F-476B-BA60-72F306D9F377}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Devices>
+</WwiseDocument>

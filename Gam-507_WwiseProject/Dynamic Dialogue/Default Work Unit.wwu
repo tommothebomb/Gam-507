@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BA5AC09E-23C6-42A5-B8A6-22E858F747B0}" SchemaVersion="133">
+	<DynamicDialogue>
+		<WorkUnit Name="Default Work Unit" ID="{BA5AC09E-23C6-42A5-B8A6-22E858F747B0}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Roscislawa" ID="{4AAB7372-E18E-4241-9677-D9696AA29E3E}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</DynamicDialogue>
+</WwiseDocument>

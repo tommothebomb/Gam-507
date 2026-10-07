@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2CB8AE3E-DB5F-476B-BA60-72F306D9F377}" SchemaVersion="133" RootDocumentID="{D6F7E61B-A06A-485A-AA9F-C5C9C5EE498C}" ParentDocumentID="{D6F7E61B-A06A-485A-AA9F-C5C9C5EE498C}">
+	<Devices>
+		<WorkUnit Name="Harrisson" ID="{2CB8AE3E-DB5F-476B-BA60-72F306D9F377}" OwnerID="{D6F7E61B-A06A-485A-AA9F-C5C9C5EE498C}" PersistMode="Nested"/>
+	</Devices>
+</WwiseDocument>

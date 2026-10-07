@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8E574AE6-C9FA-4E20-ABA2-BAD7B9343532}" SchemaVersion="133">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{8E574AE6-C9FA-4E20-ABA2-BAD7B9343532}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Roscislawa" ID="{27074A54-53B3-4D9B-9707-A184AE1481EA}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

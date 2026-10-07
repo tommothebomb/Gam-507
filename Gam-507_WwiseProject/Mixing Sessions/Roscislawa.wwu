@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C16CDD58-02F6-4A9F-930B-D1B4D3A9A979}" SchemaVersion="133" RootDocumentID="{9DB2DE91-E15B-4ACC-81EA-8B7BA2090C33}" ParentDocumentID="{9DB2DE91-E15B-4ACC-81EA-8B7BA2090C33}">
+	<MixingSessions>
+		<WorkUnit Name="Roscislawa" ID="{C16CDD58-02F6-4A9F-930B-D1B4D3A9A979}" OwnerID="{9DB2DE91-E15B-4ACC-81EA-8B7BA2090C33}" PersistMode="Nested"/>
+	</MixingSessions>
+</WwiseDocument>
