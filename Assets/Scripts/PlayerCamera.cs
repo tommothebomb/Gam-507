@@ -39,22 +39,25 @@ public class PlayerCamera : MonoBehaviour
         
         mouseMovement = mouseDelta.ReadValue<Vector2>();
         mouseMovement = new Vector2(mouseMovement.y, mouseMovement.x);
-        mouseMovement *= Acceleration * Time.deltaTime;
         //Deceleration
-        if (mouseMovement == Vector2.zero)
+        if (Mathf.Abs(mouseMovement.y) <= 0.25)
         {
             //decelerate velocity
-            Velocity *= Deceleration * Time.deltaTime;
+            Velocity.y *= Deceleration * Time.deltaTime;
+        }
+        if (Mathf.Abs(mouseMovement.x) <= 0.25)
+        {
+            Velocity.x *= Deceleration * Time.deltaTime;
         }
 
-        Velocity += mouseMovement;
+        Velocity += mouseMovement * Acceleration;
         //clamp the velocity
         Velocity = new Vector2(Mathf.Clamp(Velocity.x, -maxSpeed, maxSpeed), Mathf.Clamp(Velocity.y, -maxSpeed, maxSpeed));
 
         //Velocity = Time.deltaTime;
 
-        Quaternion XLocalAxis = quaternion.Euler(Velocity.x, 0, 0,0); //local X axis rotation
-        quaternion YGlobalaxis = quaternion.Euler(0,Velocity.y, 0,0);
+        Quaternion XLocalAxis = quaternion.Euler(Velocity.x * Time.deltaTime, 0, 0,0); //local X axis rotation
+        quaternion YGlobalaxis = quaternion.Euler(0, Velocity.y * Time.deltaTime, 0,0);
         Quaternion OutputRotation = YGlobalaxis * CameraPivotPoint.rotation * XLocalAxis;
 
         CameraPivotPoint.rotation = OutputRotation;

@@ -783,7 +783,7 @@ MonoBehaviour:
   Velocity: {x: 0, y: 0}
   maxSpeed: 1
   Acceleration: 0.25
-  Deceleration: 0.8
+  Deceleration: 0.9
 --- !u!1 &1546376029
 GameObject:
   m_ObjectHideFlags: 0
