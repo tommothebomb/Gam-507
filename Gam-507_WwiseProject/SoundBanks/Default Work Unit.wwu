@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{028D2149-1DF4-48F2-B399-B7A5615431A9}" SchemaVersion="133">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{028D2149-1DF4-48F2-B399-B7A5615431A9}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Roscislawa" ID="{07858A54-703D-42D1-B7F0-6177A4ED7F9B}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

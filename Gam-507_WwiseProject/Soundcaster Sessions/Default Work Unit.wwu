@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{065202FF-C24B-4729-8E22-293D5BACC2A0}" SchemaVersion="133">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{065202FF-C24B-4729-8E22-293D5BACC2A0}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Roscislawa" ID="{4E8A382A-0265-43EA-826D-F086A496A950}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

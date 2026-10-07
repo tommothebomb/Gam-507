@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{07858A54-703D-42D1-B7F0-6177A4ED7F9B}" SchemaVersion="133" RootDocumentID="{028D2149-1DF4-48F2-B399-B7A5615431A9}" ParentDocumentID="{028D2149-1DF4-48F2-B399-B7A5615431A9}">
+	<SoundBanks>
+		<WorkUnit Name="Roscislawa" ID="{07858A54-703D-42D1-B7F0-6177A4ED7F9B}" OwnerID="{028D2149-1DF4-48F2-B399-B7A5615431A9}" PersistMode="Nested"/>
+	</SoundBanks>
+</WwiseDocument>

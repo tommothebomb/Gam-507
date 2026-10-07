@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5E58358A-527C-4627-9017-6A89871D031F}" SchemaVersion="133">
+	<Triggers>
+		<WorkUnit Name="Default Work Unit" ID="{5E58358A-527C-4627-9017-6A89871D031F}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Roscislawa" ID="{4B0489D7-74FE-4579-9F73-9012C1D16515}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Triggers>
+</WwiseDocument>
