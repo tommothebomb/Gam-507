@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Roscislawa" ID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" PersistMode="Reference"/>
+				<WorkUnit Name="Harrison" ID="{0653EA8E-19B9-4395-B257-AEFA6826B14B}" PersistMode="Reference"/>
+				<WorkUnit Name="Damien" ID="{4BE47704-534A-4C17-832F-F0C8C03CBB03}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

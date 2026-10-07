@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}" SchemaVersion="133">
+	<Attenuations>
+		<WorkUnit Name="Default Work Unit" ID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Roscislawa" ID="{B1DCC4B2-1D5D-4379-8027-DE7D99B11518}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Attenuations>
+</WwiseDocument>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5ACEEBCD-CE2C-40DC-A3FC-C5E634E74A78}" SchemaVersion="133">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{5ACEEBCD-CE2C-40DC-A3FC-C5E634E74A78}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Roscislawa" ID="{0AA075D2-EABC-4A21-A20C-F921A308F839}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CFE75DC7-83EB-4D4E-8DB7-C2F44CA4BC43}" SchemaVersion="133" RootDocumentID="{38A1B384-62E7-45C3-A36A-96394594ECCF}" ParentDocumentID="{38A1B384-62E7-45C3-A36A-96394594ECCF}">
+	<Effects>
+		<WorkUnit Name="Roscislawa" ID="{CFE75DC7-83EB-4D4E-8DB7-C2F44CA4BC43}" OwnerID="{38A1B384-62E7-45C3-A36A-96394594ECCF}" PersistMode="Nested"/>
+	</Effects>
+</WwiseDocument>
