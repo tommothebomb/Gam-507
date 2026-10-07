@@ -24,6 +24,10 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField] float Acceleration;
     [SerializeField] float Deceleration;
 
+    //add camera distance raycast
+    [Header("Distance")]
+    [Serialize] float maxDist;
+
     // Update is called once per frame
     private void Awake()
     {
@@ -40,17 +44,18 @@ public class PlayerCamera : MonoBehaviour
         mouseMovement = mouseDelta.ReadValue<Vector2>();
         mouseMovement = new Vector2(mouseMovement.y, mouseMovement.x);
         //Deceleration
+        /*
         if (Mathf.Abs(mouseMovement.y) <= 0.25)
         {
             //decelerate velocity
-            Velocity.y *= Deceleration * Time.deltaTime;
+            Velocity.y *= 0;
         }
         if (Mathf.Abs(mouseMovement.x) <= 0.25)
         {
-            Velocity.x *= Deceleration * Time.deltaTime;
-        }
+            Velocity.x *= 0;
+        }*/
 
-        Velocity += mouseMovement * Acceleration;
+        Velocity = mouseMovement * Acceleration;
         //clamp the velocity
         Velocity = new Vector2(Mathf.Clamp(Velocity.x, -maxSpeed, maxSpeed), Mathf.Clamp(Velocity.y, -maxSpeed, maxSpeed));
 
