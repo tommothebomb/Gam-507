@@ -3,6 +3,7 @@ using UnityEngine;
 // Libby/Jordan Script \\
 public class EnemyChaseState : EnemyState
 {
+    // called as soon as instance of script is created
     public EnemyChaseState(EnemyBase enemyBase, EnemyStateMachine enemySM) : base(enemyBase, enemySM)
     {
     }
@@ -15,6 +16,11 @@ public class EnemyChaseState : EnemyState
     public override void FrameUpdate()
     {
         base.FrameUpdate();
+
+        if (enemyBase.IsWithinAttackDist)
+        {
+            enemyBase.stateMachine.ChangeState(enemyBase.attackState);
+        }
     }
 
     public override void PhysicsUpdate()

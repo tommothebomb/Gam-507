@@ -3,6 +3,7 @@ using UnityEngine;
 // Libby/Jordan Script \\
 public class EnemyAttackState : EnemyState
 {
+    // called as soon as instance of script is created
     public EnemyAttackState(EnemyBase enemyBase, EnemyStateMachine enemySM) : base(enemyBase, enemySM)
     {
     }

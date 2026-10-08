@@ -3,6 +3,7 @@ using UnityEngine;
 // Libby/Jordan Script \\
 public class EnemyDeathState : EnemyState
 {
+    // called as soon as instance of script is created
     public EnemyDeathState(EnemyBase enemyBase, EnemyStateMachine enemySM) : base(enemyBase, enemySM)
     {
     }
