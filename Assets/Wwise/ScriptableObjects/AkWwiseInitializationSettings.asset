@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d73eee115255942a8766eb983045ee, type: 3}
   m_Name: AkWwiseInitializationSettings
   m_EditorClassIdentifier: AK.Wwise.Unity.API::AkWwiseInitializationSettings
-  PlatformSettingsNameList: []
-  PlatformSettingsList: []
+  PlatformSettingsNameList:
+  - Linux
+  - Mac
+  - Windows
+  PlatformSettingsList:
+  - {fileID: 11400000, guid: 02a7069d96fb7294ab52b0f3e5b56d71, type: 2}
+  - {fileID: 11400000, guid: 54f15cdae3500b846844cdb21a1b9b8b, type: 2}
+  - {fileID: 11400000, guid: b9b03836495726c49a904d44a40283c1, type: 2}
   InvalidReferencePlatforms: []
   UserSettings:
     m_BasePath: Audio\GeneratedSoundBanks
