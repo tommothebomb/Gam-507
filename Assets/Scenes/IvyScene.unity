@@ -1893,7 +1893,10 @@ MonoBehaviour:
   Velocity: 0
   DirectionArrow: {fileID: 1900881457}
   VelocityArrow: {fileID: 1265662929}
-  speed: 0.1
+  moveKeys: {x: 0, y: 0, z: 0}
+  maxSpeed: 5
+  acceleration: 1
+  turningArc: 0.4
   rb: {fileID: 713284178}
   cameraDir: {fileID: 62013947}
 --- !u!54 &713284178

@@ -9,9 +9,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float Velocity;
     [SerializeField] Transform DirectionArrow;
     [SerializeField] Transform VelocityArrow;
+    [SerializeField] Vector3 moveKeys;
 
     [Header("Core")]
-    [SerializeField] float speed;
+    [SerializeField] float maxSpeed;
+    [SerializeField] float acceleration;
+    [SerializeField] float turningArc;
     [SerializeField] Rigidbody rb;
     [SerializeField] Transform cameraDir;
     InputAction movementKeys;
@@ -43,19 +46,24 @@ public class PlayerMovement : MonoBehaviour
         //A D = forward Left Right / X
         //Movedir = new Vector3(Movedir.y, 0, Movedir.x);
         Vector3 Movedir = movementKeys.ReadValue<Vector2>();
-
+        moveKeys = Movedir;
+        Movedir = new Vector3(Movedir.x, 0, Movedir.y);
         //the direction the camera is looking, this is your forward direction
-        Vector3 direction = new Vector3(cameraDir.forward.x, 0, cameraDir.forward.z).normalized;
-        rb.linearVelocity += direction * speed;
+        Vector3 direction = new Vector3(cameraDir.forward.x, 0, cameraDir.forward.z);
+
+
+
+        rb.linearVelocity += direction * acceleration;
 
         //speed clamp
-        if  (rb.linearVelocity.magnitude > speed)
+        if  (rb.linearVelocity.magnitude > maxSpeed)
         {
-            Vector3 SpeedClamp = rb.linearVelocity.normalized * speed;
+            Vector3 SpeedClamp = rb.linearVelocity.normalized * maxSpeed;
             rb.linearVelocity = new Vector3(SpeedClamp.x, rb.linearVelocity.y, SpeedClamp.z);
         }
-        //VALUE DEBUG
 
+
+        //VALUE DEBUG
         VelocityArrow.rotation = Quaternion.LookRotation(rb.linearVelocity); //direction of travel
         DirectionArrow.rotation = Quaternion.LookRotation(direction); //direction of intent 
         Velocity = rb.linearVelocity.magnitude; //total speed
@@ -72,6 +80,15 @@ public class PlayerMovement : MonoBehaviour
     }
 
     #endregion
+
+    //2 directions
+    //one is the current diection of travel
+    //two is the ideal direction of travel
+    //you then lerp the current to the ideal and this gives us the turning arc
+    //variables to add to this
+    //  arc speed / turning speed
+            //air von
+
 
 
 
