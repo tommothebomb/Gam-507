@@ -4,7 +4,7 @@
   <GenerateSoundBanksAsPreBuildStep>false</GenerateSoundBanksAsPreBuildStep>
   <WwiseStreamingAssetsPath>Audio\GeneratedSoundBanks</WwiseStreamingAssetsPath>
   <RootOutputPath>../Gam-507_WwiseProject/GeneratedSoundBanks/</RootOutputPath>
-  <CreatedPicker>false</CreatedPicker>
+  <CreatedPicker>true</CreatedPicker>
   <CreateWwiseGlobal>true</CreateWwiseGlobal>
   <CreateWwiseListener>true</CreateWwiseListener>
   <ObjectReferenceAutoCleanup>true</ObjectReferenceAutoCleanup>
@@ -19,7 +19,7 @@
   <WaapiIP>127.0.0.1</WaapiIP>
   <AutoSyncWaapi>true</AutoSyncWaapi>
   <WaapiChangePending>false</WaapiChangePending>
-  <InstallationWasRequested>false</InstallationWasRequested>
+  <InstallationWasRequested>true</InstallationWasRequested>
   <UseGitRepository>true</UseGitRepository>
   <PackageSource />
   <AddressableBankFolder>WwiseData/Bank</AddressableBankFolder>
