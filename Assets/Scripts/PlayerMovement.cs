@@ -10,6 +10,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform DirectionArrow;
     [SerializeField] Transform VelocityArrow;
     [SerializeField] Vector3 moveKeys;
+    [SerializeField] Vector3 outputDir;
+    [SerializeField] Vector3 currentDir;
+    [SerializeField] float currentangle;
+    [SerializeField] float angle;
 
     [Header("Core")]
     [SerializeField] float maxSpeed;
@@ -19,25 +23,49 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform cameraDir;
     InputAction movementKeys;
 
+    [Header("asstetics")]
+    [SerializeField] Transform Model;
+    [SerializeField] Animator animator; //not implented yet
+
+    public enum PlayerStates
+    {
+        Idle,
+        Moveing,
+        Jumping,
+        Falling,
+    }
+
+
 
     [Header("Jump")]
     InputAction jumpKey;
-    bool isGrounded;
+    [SerializeField] bool isGrounded;
     float airSraifeSpeed;
+
+    [SerializeField] LayerMask GroundMask;
+
     Vector2 jumpVelocity; //Horizontal and vertical velocity of a jump
-
-
+    [SerializeField] float additionalAirJump;
+    float remaingAirJumps;
     //double jump?//triple jump/combo jump
 
     private void Start()
     {
         movementKeys = InputSystem.actions.FindAction("Move");
+        jumpKey = InputSystem.actions.FindAction("Jump");
+
+        jumpKey.performed += ctx => Jump();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         /////////
         Move();
+    }
+    private void Update()
+    {
+        //grounded Check
+        isGrounded = GroundedCheck();
     }
 
     void Move()
@@ -48,15 +76,24 @@ public class PlayerMovement : MonoBehaviour
         Vector3 Movedir = movementKeys.ReadValue<Vector2>();
         moveKeys = Movedir;
         Movedir = new Vector3(Movedir.x, 0, Movedir.y);
+
+
         //the direction the camera is looking, this is your forward direction
-        Vector3 direction = new Vector3(cameraDir.forward.x, 0, cameraDir.forward.z);
+        //Vector3 direction = new Vector3(cameraDir.forward.x, 0, cameraDir.forward.z);
+        Vector2 direction = new Vector2(cameraDir.forward.x, cameraDir.forward.z).normalized;
+        outputDir = direction; //direction vector2 the player is looking
+
+        angle = (Vector2.SignedAngle(direction,Vector2.up)); //anlge direction player is looking from basic forwards
+
+        Vector3 variable = Quaternion.AngleAxis(angle, Vector3.up) * Movedir;
+        currentDir = Vector3.Lerp(currentDir, variable, 0.3f);
+        //get the diffance of currentdir and variable to then rotate current dir to the variable
 
 
-
-        rb.linearVelocity += direction * acceleration;
+        rb.linearVelocity += currentDir * acceleration;
 
         //speed clamp
-        if  (rb.linearVelocity.magnitude > maxSpeed)
+        if  (rb.linearVelocity.magnitude > maxSpeed && isGrounded)
         {
             Vector3 SpeedClamp = rb.linearVelocity.normalized * maxSpeed;
             rb.linearVelocity = new Vector3(SpeedClamp.x, rb.linearVelocity.y, SpeedClamp.z);
@@ -64,19 +101,43 @@ public class PlayerMovement : MonoBehaviour
 
 
         //VALUE DEBUG
-        VelocityArrow.rotation = Quaternion.LookRotation(rb.linearVelocity); //direction of travel
-        DirectionArrow.rotation = Quaternion.LookRotation(direction); //direction of intent 
+        //VelocityArrow.rotation = Quaternion.LookRotation(currentDir); //direction of travel
+        Model.rotation = Quaternion.LookRotation(currentDir); //direction of intent 
         Velocity = rb.linearVelocity.magnitude; //total speed
 
     }
 
+
+    void Jump()
+    {
+        if (!isGrounded && remaingAirJumps == 0 ) { return; }
+        Debug.Log("Jump");
+        remaingAirJumps -= 1;
+        rb.AddForce(new Vector3(currentDir.x , 1 , currentDir.z) * 400);
+    }
     #region Utility
     bool GroundedCheck()
     {
+        RaycastHit hit;
+        Physics.Raycast(transform.position, Vector2.down,out hit, 0.55f, GroundMask);
 
+        if (hit.collider != null)
+        {
+            remaingAirJumps = additionalAirJump;
+            //is grounded
+            //check ground normal for slide = on slide// add a downward force to the player
+            if (Vector3.Dot(Vector3.up, hit.normal) > 0.3f)
+            {
+                Debug.Log("IM SLIDING YO");
+            }
 
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
 
-        return true;
     }
 
     #endregion
