@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{8BA990E7-820B-41FE-A2B1-D1AC069764C4}" SchemaVersion="133">
 	<VirtualAcoustics>
-		<WorkUnit Name="Default Work Unit" ID="{8BA990E7-820B-41FE-A2B1-D1AC069764C4}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{8BA990E7-820B-41FE-A2B1-D1AC069764C4}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Roscislawa" ID="{70F251C7-383F-4DC4-B70F-162D68038B88}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
 	</VirtualAcoustics>
 </WwiseDocument>
