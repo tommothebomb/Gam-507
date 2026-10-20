@@ -6,13 +6,12 @@ public class WithinStrikingDistCheck : MonoBehaviour
     // place this script on the enemy attack distance trigger
     // trigger MUST be child of enemy
 
-    GameObject player;
+    [SerializeField] GameObject player;
     EnemyBase thisBase;
 
 
     private void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         thisBase = GetComponentInParent<EnemyBase>();
     }
 

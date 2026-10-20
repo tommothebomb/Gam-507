@@ -7,12 +7,12 @@ public class EnemyAggroZoneCheck : MonoBehaviour
 
     [Tooltip ("Every enemy in this trigger zone must be in this array to be able to aggro")]
     [SerializeField] EnemyBase[] enemiesInZone;
-    GameObject player;
+    [SerializeField] GameObject player;
 
 
     private void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+
     }
 
     private void OnTriggerEnter(Collider other)

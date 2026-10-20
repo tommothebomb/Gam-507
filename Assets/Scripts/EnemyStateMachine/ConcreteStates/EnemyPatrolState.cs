@@ -11,29 +11,29 @@ public class EnemyPatrolState : EnemyState
     public override void EnterState()
     {
         base.EnterState();
+        enemyBase.enemyPatrolBaseInstance.DoEnterLogic();
     }
 
     public override void FrameUpdate()
     {
         base.FrameUpdate();
-
-        if (enemyBase.IsAggroed)
-        {
-            enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
-        }
+        enemyBase.enemyPatrolBaseInstance.DoUpdateLogic();
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+        enemyBase.enemyPatrolBaseInstance.DoPhysicsUpdateLogic();
     }
 
     public override void ExitState()
     {
         base.ExitState();
+        enemyBase.enemyPatrolBaseInstance.DoExitLogic();
     }
     public override void AnimationTriggerEvent(EnemyBase.AnimationTriggers trigger)
     {
         base.AnimationTriggerEvent(trigger);
+        enemyBase.enemyPatrolBaseInstance.DoAnimationTriggerLogic(trigger);
     }
 }

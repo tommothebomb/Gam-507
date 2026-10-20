@@ -33,6 +33,18 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public EnemyDeathState deathState { get; set; }
     #endregion
 
+    #region // scriptableObject variables \\
+    [SerializeField] EnemyPatrolSOBase enemyPatrolBase;
+    [SerializeField] EnemyChaseSOBase enemyChaseBase;
+    [SerializeField] EnemyAttackSOBase enemyAttackBase;
+    [SerializeField] EnemyDeathSOBase enemyDeathBase;
+
+    public EnemyPatrolSOBase enemyPatrolBaseInstance { get; set; }
+    public EnemyChaseSOBase enemyChaseBaseInstance { get; set; }
+    public EnemyAttackSOBase enemyAttackBaseInstance { get; set; }
+    public EnemyDeathSOBase enemyDeathBaseInstance { get; set; }
+    #endregion
+
     // stats \\
     [SerializeField] protected float damageDeals;
     [SerializeField] protected float speed;
@@ -40,6 +52,11 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
 
     private void Awake()
     {
+        enemyPatrolBaseInstance = Instantiate(enemyPatrolBase);
+        enemyChaseBaseInstance = Instantiate(enemyChaseBase);
+        enemyAttackBaseInstance = Instantiate(enemyAttackBase);
+        enemyDeathBaseInstance = Instantiate(enemyDeathBase);
+
         stateMachine = new EnemyStateMachine();
 
         patrolState = new EnemyPatrolState(this, stateMachine);
@@ -52,12 +69,19 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     {
         CurrentHealth = MaxHealth;
 
+        enemyPatrolBaseInstance.Initialize(gameObject, this);
+        enemyChaseBaseInstance.Initialize(gameObject, this);
+        enemyAttackBaseInstance.Initialize(gameObject, this);
+        enemyDeathBaseInstance.Initialize(gameObject, this);
+
         stateMachine.Initialise(patrolState);
     }
 
     private void Update()
     {
         stateMachine.currentEnemyState.FrameUpdate();
+
+        if (CurrentHealth <= 0) stateMachine.ChangeState(deathState);
     }
     private void FixedUpdate()
     {
@@ -68,12 +92,7 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public void TakeDamage(float damageAmount)
     {
         CurrentHealth -= damageAmount;
-        if (CurrentHealth <= 0) Die();
-    }
-    public void Die()
-    {
-        // play death anim
-        Destroy(gameObject);
+        if (CurrentHealth <= 0) stateMachine.ChangeState(deathState);
     }
 
     // from ITriggerCheckable interface \\
