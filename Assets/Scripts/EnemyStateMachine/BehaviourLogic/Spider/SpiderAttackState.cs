@@ -12,11 +12,15 @@ public class SpiderAttackState : EnemyAttackSOBase
     public override void DoEnterLogic()
     {
         base.DoEnterLogic();
+        Debug.Log("in attack state");
     }
 
     public override void DoUpdateLogic()
     {
         base.DoUpdateLogic();
+        // attack player
+        // shed web trapping them
+        // move back (far enough to leave attack trigger)
     }
 
     public override void DoPhysicsUpdateLogic()

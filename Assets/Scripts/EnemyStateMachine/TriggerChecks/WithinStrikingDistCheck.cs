@@ -6,7 +6,6 @@ public class WithinStrikingDistCheck : MonoBehaviour
     // place this script on the enemy attack distance trigger
     // trigger MUST be child of enemy
 
-    [SerializeField] GameObject player;
     EnemyBase thisBase;
 
 
@@ -17,7 +16,7 @@ public class WithinStrikingDistCheck : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.CompareTag("Player"))
         {
             thisBase.SetAttackDistBool(true);
         }
@@ -25,7 +24,7 @@ public class WithinStrikingDistCheck : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.CompareTag("Player"))
         {
             thisBase.SetAttackDistBool(false);
         }

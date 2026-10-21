@@ -16,7 +16,7 @@ public class EnemyPatrolSOBase : ScriptableObject
         transform = gameObject.transform;
         this.enemyBase = enemyBase;
 
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = enemyBase.player.transform;
     }
 
     public virtual void DoEnterLogic() { }

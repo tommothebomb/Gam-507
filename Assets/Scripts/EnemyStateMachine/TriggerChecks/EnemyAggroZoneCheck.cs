@@ -7,7 +7,6 @@ public class EnemyAggroZoneCheck : MonoBehaviour
 
     [Tooltip ("Every enemy in this trigger zone must be in this array to be able to aggro")]
     [SerializeField] EnemyBase[] enemiesInZone;
-    [SerializeField] GameObject player;
 
 
     private void Awake()
@@ -17,11 +16,11 @@ public class EnemyAggroZoneCheck : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.CompareTag("Player"))
         {
             for (int i = 0; i < enemiesInZone.Length; i++)
             {
-                EnemyBase thisBase = enemiesInZone[i].GetComponentInParent<EnemyBase>();
+                EnemyBase thisBase = enemiesInZone[i].GetComponentInChildren<EnemyBase>();
                 thisBase.SetAggroZoneStatus(true);
             }
         }
@@ -29,11 +28,11 @@ public class EnemyAggroZoneCheck : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.CompareTag("Player"))
         {
             for (int i = 0; i < enemiesInZone.Length; i++)
             {
-                EnemyBase thisBase = enemiesInZone[i].GetComponentInParent<EnemyBase>();
+                EnemyBase thisBase = enemiesInZone[i].GetComponentInChildren<EnemyBase>();
                 thisBase.SetAggroZoneStatus(false);
             }
         }

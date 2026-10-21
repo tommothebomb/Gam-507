@@ -1,9 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 // Libby/Jordan Script \\
+[RequireComponent(typeof(NavMeshAgent))]
 public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
 {
+    public GameObject player;
+
     // from IDamageable interface \\
     [field: SerializeField] public float MaxHealth { get; set; }
     public float CurrentHealth { get; set; }
@@ -47,7 +51,16 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
 
     // stats \\
     [SerializeField] protected float damageDeals;
+    [Header("Navmesh Settings")]
+    [SerializeField] protected NavMeshAgent agent;
+    [Tooltip("any values left at 0 will be assigned the navmesh agents default values")]
     [SerializeField] protected float speed;
+    [Tooltip("any values left at 0 will be assigned the navmesh agents default values")]
+    [SerializeField] protected float turningSpeed;
+    [Tooltip("any values left at 0 will be assigned the navmesh agents default values")]
+    [SerializeField] protected float acceleration;
+    [Tooltip("stopping distance default is already zero so will set this to whatever you put here")]
+    [SerializeField] protected float stoppingDist;
 
 
     private void Awake()
@@ -63,6 +76,8 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
         chaseState = new EnemyChaseState(this, stateMachine);
         attackState = new EnemyAttackState(this, stateMachine);
         deathState = new EnemyDeathState(this, stateMachine);
+
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Start()
@@ -75,13 +90,17 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
         enemyDeathBaseInstance.Initialize(gameObject, this);
 
         stateMachine.Initialise(patrolState);
+
+        // set navmesh agent values if required
+        if(speed != 0) agent.speed = speed;
+        if(turningSpeed != 0) agent.angularSpeed = turningSpeed;
+        if(acceleration != 0) agent.acceleration = acceleration;
+        agent.stoppingDistance = stoppingDist; // default stopping distance is 0 so just always set it to the value in inspector
     }
 
     private void Update()
     {
         stateMachine.currentEnemyState.FrameUpdate();
-
-        if (CurrentHealth <= 0) stateMachine.ChangeState(deathState);
     }
     private void FixedUpdate()
     {
@@ -96,13 +115,13 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     }
 
     // from ITriggerCheckable interface \\
-    public void SetAggroZoneStatus(bool isAgroable) 
+    public void SetAggroZoneStatus(bool isAggroable) 
     {
-        IsAggroable = isAgroable;
+        IsAggroable = isAggroable;
     }
-    public void SetAggroStatus(bool isAgroed) 
+    public void SetAggroStatus(bool isAggroed) 
     {
-        IsAggroed = isAgroed;
+        IsAggroed = isAggroed;
     }
     public void SetAttackDistBool(bool isWithinAttackDist) 
     {

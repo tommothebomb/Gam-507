@@ -18,7 +18,7 @@ public class EnemyAggroCheck : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // only set aggroed to true if player in same zone as enemy
-        if (other.gameObject == player && thisBase.IsAggroable)
+        if (other.CompareTag("Player") && thisBase.IsAggroable)
         {
             thisBase.SetAggroStatus(true);
         }
@@ -26,7 +26,7 @@ public class EnemyAggroCheck : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.CompareTag("Player"))
         {
             thisBase.SetAggroStatus(false);
         }

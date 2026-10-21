@@ -4,6 +4,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SpiderPatrolState", menuName = "Scriptable Objects/Patrol/SpiderPatrolState")]
 public class SpiderPatrolState : EnemyPatrolSOBase
 {
+    // spider enemies will be relatively stationary in the patrol state, staying hidden from the player
+
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
     {
         base.Initialize(gameObject, enemyBase);
@@ -12,6 +14,7 @@ public class SpiderPatrolState : EnemyPatrolSOBase
     public override void DoEnterLogic()
     {
         base.DoEnterLogic();
+        Debug.Log("in patrol state");
     }
 
     public override void DoUpdateLogic()
@@ -31,5 +34,6 @@ public class SpiderPatrolState : EnemyPatrolSOBase
     public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
     {
         base.DoAnimationTriggerLogic(trigger);
+        // play idle animation
     }
 }
