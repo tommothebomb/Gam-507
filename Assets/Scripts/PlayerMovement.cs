@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Jump")]
     InputAction jumpKey;
     [SerializeField] bool isGrounded;
-    float airSraifeSpeed;
+    [SerializeField] float jumpForce;
 
     [SerializeField] LayerMask GroundMask;
 
@@ -102,7 +102,11 @@ public class PlayerMovement : MonoBehaviour
 
         //VALUE DEBUG
         //VelocityArrow.rotation = Quaternion.LookRotation(currentDir); //direction of travel
-        Model.rotation = Quaternion.LookRotation(currentDir); //direction of intent 
+
+        if (Movedir.magnitude != 0)
+        {
+            Model.rotation = Quaternion.LookRotation(currentDir);
+        } //direction of intent 
         Velocity = rb.linearVelocity.magnitude; //total speed
 
     }
@@ -113,20 +117,23 @@ public class PlayerMovement : MonoBehaviour
         if (!isGrounded && remaingAirJumps == 0 ) { return; }
         Debug.Log("Jump");
         remaingAirJumps -= 1;
-        rb.AddForce(new Vector3(currentDir.x , 1 , currentDir.z) * 400);
+        rb.AddForce(new Vector3(currentDir.x , 1 , currentDir.z) * jumpForce);
     }
     #region Utility
     bool GroundedCheck()
     {
         RaycastHit hit;
-        Physics.Raycast(transform.position, Vector2.down,out hit, 0.55f, GroundMask);
+        Physics.Raycast(transform.position, Vector2.down,out hit, 0.75f, GroundMask);
+        Debug.DrawRay(transform.position, Vector2.down * 0.75f, Color.green);
+
 
         if (hit.collider != null)
         {
             remaingAirJumps = additionalAirJump;
             //is grounded
             //check ground normal for slide = on slide// add a downward force to the player
-            if (Vector3.Dot(Vector3.up, hit.normal) > 0.3f)
+            Debug.Log(Vector3.Dot(Vector3.up, hit.normal));
+            if (Vector3.Dot(Vector3.up, hit.normal) < 0.9f)
             {
                 Debug.Log("IM SLIDING YO");
             }
