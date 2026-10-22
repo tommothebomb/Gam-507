@@ -11,7 +11,8 @@ public class SpiderChaseState : EnemyChaseSOBase
     [SerializeField] float rangedAttackDist;
     [Tooltip("make sure this is smaller than the attack range check trigger")]
     [SerializeField] float meleeAttackDist;
-    bool playerIsTrapped;
+    [SerializeField] float timeBetweenAttacks;
+    float attackTimer;
 
 
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
@@ -23,23 +24,22 @@ public class SpiderChaseState : EnemyChaseSOBase
     {
         base.DoEnterLogic();
         Debug.Log("in chase state");
-        playerIsTrapped = false;
+        attackTimer = 0;
     }
 
     public override void DoUpdateLogic()
     {
         base.DoUpdateLogic();
 
-        if(playerIsTrapped)
+        // follow/stalk player from a distance --> needs to follow at a distance but player also needs to be able to get close enough to attack so cant use navmeshagent stopping dist
+
+        attackTimer += Time.deltaTime;
+        if (attackTimer >= timeBetweenAttacks)
         {
-            // move close enough to melee attack
-            // melee attack will be set based on trigger
-        }
-        else
-        {
-            // follow/stalk player from a distance --> needs to follow at a distance but player also needs to be able to get close enough to attack so cant use navmeshagent stopping dist
-            // periodically shoot webs to try to trap player
-            // will shoot from pool, web itself will set if player is trapped or not
+            // play shoot animation, pause movement during this to allow player time to attack
+            GameObject web = enemyBase.pooler.SpawnFromPool("webProjectile", gameObject.transform.position, Quaternion.identity);
+            WebProjectileLogic logic = web.GetComponent<WebProjectileLogic>();
+            logic.enemyBase = enemyBase;
         }
     }
 

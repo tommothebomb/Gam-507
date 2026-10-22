@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
 {
     public GameObject player;
+    public PoolManager pooler;
 
     // from IDamageable interface \\
     [field: SerializeField] public float MaxHealth { get; set; }

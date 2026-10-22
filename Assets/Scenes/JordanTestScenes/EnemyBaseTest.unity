@@ -156,7 +156,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 50, y: 5, z: 50}
+  m_Size: {x: 35, y: 5, z: 35}
   m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!4 &37916661
 Transform:
@@ -167,7 +167,7 @@ Transform:
   m_GameObject: {fileID: 37916659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -187,7 +187,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAggroZoneCheck
   enemiesInZone:
   - {fileID: 199199444}
-  player: {fileID: 1850910873}
 --- !u!1 &199199438
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df2a8643c37afd439e979aca234cefd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WithinStrikingDistCheck
-  player: {fileID: 1850910873}
 --- !u!1 &1446575560
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +849,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAggroCheck
   player: {fileID: 1850910873}
+--- !u!1 &1575338741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1575338743}
+  - component: {fileID: 1575338742}
+  m_Layer: 0
+  m_Name: --ObjectPooler--
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1575338742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575338741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3702cb50852826142a4039903c1bc72d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoolManager
+  pools:
+  - tag: webProjectile
+    prefab: {fileID: 5048398109924434597, guid: 0176685f1d3a1f545a94013e12d32632, type: 3}
+    size: 20
+--- !u!4 &1575338743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575338741}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1850910873
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,3 +1021,4 @@ SceneRoots:
   - {fileID: 199199442}
   - {fileID: 1850910877}
   - {fileID: 37916661}
+  - {fileID: 1575338743}
