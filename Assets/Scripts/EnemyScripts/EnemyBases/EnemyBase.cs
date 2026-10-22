@@ -22,7 +22,7 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public enum AnimationTriggers
     {
         Idle,
-        Chasing,
+        Chasing, // use this for walking, called chasing in case some enemies cant walk
         Attack1, // lots of options so more versitile between enemy types
         Attack2, // dont need to use all of them
         Attack3,
@@ -52,6 +52,8 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
 
     // stats \\
     [SerializeField] protected float damageDeals;
+    [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
+    public Transform shootPoint;
     [Header("Navmesh Settings")]
     [SerializeField] protected NavMeshAgent agent;
     [Tooltip("any values left at 0 will be assigned the navmesh agents default values")]

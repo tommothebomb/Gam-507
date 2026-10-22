@@ -15,6 +15,7 @@ public class SpiderPatrolState : EnemyPatrolSOBase
     {
         base.DoEnterLogic();
         Debug.Log("in patrol state");
+        enemyBase.shootPoint.gameObject.SetActive(false);
     }
 
     public override void DoUpdateLogic()

@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64dfe966b77a30343b7640e28011e9e8, type: 3}
   m_Name: SpiderChaseState
   m_EditorClassIdentifier: Assembly-CSharp::SpiderChaseState
+  timeBetweenAttacks: 5
+  webForce: 10

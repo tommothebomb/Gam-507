@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 // Libby/Jordan Script \\
@@ -6,12 +7,12 @@ public class SpiderChaseState : EnemyChaseSOBase
 {
     // keeps distance from player and tries to shoot them with a web
     // only gets close enough for melee attacks when player is webbed
-    [SerializeField] GameObject webProjectile;
-    [Tooltip("make sure this is smaller than the aggro check trigger")]
+    /*[Tooltip("make sure this is smaller than the aggro check trigger")]
     [SerializeField] float rangedAttackDist;
     [Tooltip("make sure this is smaller than the attack range check trigger")]
-    [SerializeField] float meleeAttackDist;
+    [SerializeField] float meleeAttackDist;*/
     [SerializeField] float timeBetweenAttacks;
+    [SerializeField] float webForce;
     float attackTimer;
 
 
@@ -24,6 +25,7 @@ public class SpiderChaseState : EnemyChaseSOBase
     {
         base.DoEnterLogic();
         Debug.Log("in chase state");
+        enemyBase.shootPoint.gameObject.SetActive(true);
         attackTimer = 0;
     }
 
@@ -37,9 +39,12 @@ public class SpiderChaseState : EnemyChaseSOBase
         if (attackTimer >= timeBetweenAttacks)
         {
             // play shoot animation, pause movement during this to allow player time to attack
-            GameObject web = enemyBase.pooler.SpawnFromPool("webProjectile", gameObject.transform.position, Quaternion.identity);
+            GameObject web = enemyBase.pooler.SpawnFromPool("webProjectile", enemyBase.shootPoint.position, Quaternion.identity);
             WebProjectileLogic logic = web.GetComponent<WebProjectileLogic>();
             logic.enemyBase = enemyBase;
+            web.GetComponent<Rigidbody>().AddForce(enemyBase.shootPoint.forward * webForce, ForceMode.Impulse);
+
+            attackTimer = 0;
         }
     }
 
@@ -51,6 +56,7 @@ public class SpiderChaseState : EnemyChaseSOBase
     public override void DoExitLogic()
     {
         base.DoExitLogic();
+        enemyBase.shootPoint.gameObject.SetActive(false);
     }
     public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
     {

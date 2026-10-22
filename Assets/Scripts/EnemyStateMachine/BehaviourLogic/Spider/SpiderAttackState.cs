@@ -4,10 +4,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SpiderAttackState", menuName = "Scriptable Objects/Attack/SpiderAttackState")]
 public class SpiderAttackState : EnemyAttackSOBase
 {
-    [Tooltip("make sure this is smaller than the aggro check trigger")]
+    /*[Tooltip("make sure this is smaller than the aggro check trigger")]
     [SerializeField] float rangedAttackDist;
     [Tooltip("make sure this is smaller than the attack range check trigger")]
-    [SerializeField] float meleeAttackDist;
+    [SerializeField] float meleeAttackDist;*/
 
 
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
