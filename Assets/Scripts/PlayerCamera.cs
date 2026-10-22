@@ -10,8 +10,11 @@ public class PlayerCamera : MonoBehaviour
     public Transform cameraObj;
 
     [Header("CameraDistance")]
-    [SerializeField] float cameraTrueDistance; //the current distance the camera is from the player
-    [SerializeField] float cameraGoalDistance; //the distance we want the camera to be from the player
+    [Tooltip("the current distance the camera is from the player")]
+    [SerializeField] float cameraTrueDistance;
+    [Tooltip("the distance we want the camera to be from the player")]
+    [SerializeField] float cameraGoalDistance;
+
     [SerializeField] float cameraZoomSpeed; //how quickly the mouse wheel zooms in and out
     [SerializeField] float camMaxDistance; //how far the player can zoom out
     [SerializeField] float camMinDistance; //how close the player can zoom in
@@ -52,7 +55,6 @@ public class PlayerCamera : MonoBehaviour
         Ray ray = new Ray(CameraPivotPoint.position, CameraPivotPoint.transform.forward * cameraGoalDistance);
 
         Physics.Raycast(ray,out hit,Mathf.Abs(cameraGoalDistance), camLayerMask);
-        //Debug.DrawRay(ray.origin,ray.direction);
         if (hit.transform != null) //if the camera hits a wall smoothly lerp it to be iinfront of the wall 
         {
             //we use a walldistance instead of just setting the goal distance so that once the camera isnt hitting a wall anymore it returns to its original distance
@@ -91,7 +93,7 @@ public class PlayerCamera : MonoBehaviour
         //clamp the speed (might remove this (yeh this isnt needed anymore could come back if we want))
         //Velocity = new Vector2(Mathf.Clamp(Velocity.x, -maxSpeed, maxSpeed), Mathf.Clamp(Velocity.y, -maxSpeed, maxSpeed));
 
-        //applie the axis transforms
+        //Apply the axis transforms
         Quaternion XLocalAxis = quaternion.Euler(Velocity.x * Time.deltaTime, 0, 0,0); //local X axis rotation
         quaternion YGlobalaxis = quaternion.Euler(0, Velocity.y * Time.deltaTime, 0,0); //Global Y axis
 
@@ -99,7 +101,7 @@ public class PlayerCamera : MonoBehaviour
         Quaternion OutputRotation = YGlobalaxis * CameraPivotPoint.rotation * XLocalAxis;
         //clamp the X axis,  (why is the equasion so weird, beacuse unity wraps angles so -30 becomes 330, this equasions then reverts that so the clamp can work normaly)
         Vector3 clampedOutput = new Vector3(Mathf.Clamp(((OutputRotation.eulerAngles.x + 540 )%360) - 180, yClampMin, yClampMax), OutputRotation.eulerAngles.y, 0);
-        //applie the transforms
+        //apply the transforms
         CameraPivotPoint.eulerAngles = clampedOutput;
 
   
