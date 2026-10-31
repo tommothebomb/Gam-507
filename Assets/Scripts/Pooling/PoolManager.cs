@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Libby/Jordan Script \\
 public class PoolManager : MonoBehaviour
 {
     [System.Serializable]

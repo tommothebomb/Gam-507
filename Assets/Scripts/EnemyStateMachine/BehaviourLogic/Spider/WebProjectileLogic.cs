@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Libby/Jordan Script \\
 public class WebProjectileLogic : MonoBehaviour
 {
     public EnemyBase enemyBase;
@@ -13,8 +14,10 @@ public class WebProjectileLogic : MonoBehaviour
 
     private void Update()
     {
+        // linearVel += forward
+
         lifetime += Time.deltaTime;
-        if (lifetime >= 5) gameObject.SetActive(false);
+        if (lifetime >= 4) gameObject.SetActive(false);
     }
 
     private void OnCollisionEnter(Collision collision)

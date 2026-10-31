@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Libby/Jordan Script \\
 public class ShootPointLookAt : MonoBehaviour
 {
     [Tooltip("must assign player model to this or will target wrong transform")]

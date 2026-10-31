@@ -4,6 +4,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "DefaultDeathState", menuName = "Scriptable Objects/Death/DefaultDeathState")]
 public class DefaultDeathState : EnemyDeathSOBase
 {
+    // deactivate colliders, play death animation
+    // wait a few seconds then fade model to transparent
+    // delete/deactivate model (depending on wether pooled or not)
+
+
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
     {
         base.Initialize(gameObject, enemyBase);

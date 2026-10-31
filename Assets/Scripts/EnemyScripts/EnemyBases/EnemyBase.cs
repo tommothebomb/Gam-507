@@ -6,6 +6,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
 {
+    [Tooltip("make sure is assigned as the players model")]
     public GameObject player;
     public PoolManager pooler;
 
@@ -27,6 +28,7 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
         Attack2, // dont need to use all of them
         Attack3,
         TakingDamage,
+        Death,
         PlayFootsteps
     }
 
@@ -51,19 +53,19 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     #endregion
 
     // stats \\
-    [SerializeField] protected float damageDeals;
+    public float damageDeals;
     [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
     public Transform shootPoint;
     [Header("Navmesh Settings")]
-    [SerializeField] protected NavMeshAgent agent;
+    public NavMeshAgent agent;
     [Tooltip("any values left at 0 will be assigned the navmesh agents default values")]
-    [SerializeField] protected float speed;
+    public float speed;
     [Tooltip("any values left at 0 will be assigned the navmesh agents default values")]
-    [SerializeField] protected float turningSpeed;
+    public float turningSpeed;
     [Tooltip("any values left at 0 will be assigned the navmesh agents default values")]
-    [SerializeField] protected float acceleration;
+    public float acceleration;
     [Tooltip("stopping distance default is already zero so will set this to whatever you put here")]
-    [SerializeField] protected float stoppingDist;
+    public float stoppingDist;
 
 
     private void Awake()

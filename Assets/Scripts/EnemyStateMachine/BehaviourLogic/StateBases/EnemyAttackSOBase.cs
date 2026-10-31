@@ -7,16 +7,12 @@ public class EnemyAttackSOBase : ScriptableObject
     protected Transform transform;
     protected GameObject gameObject;
 
-    protected Transform player;
-
 
     public virtual void Initialize(GameObject gameObject, EnemyBase enemyBase)
     {
         this.gameObject = gameObject;
         transform = gameObject.transform;
         this.enemyBase = enemyBase;
-
-        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     public virtual void DoEnterLogic() { }
