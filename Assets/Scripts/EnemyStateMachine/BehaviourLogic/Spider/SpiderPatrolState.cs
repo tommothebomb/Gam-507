@@ -10,12 +10,13 @@ public class SpiderPatrolState : EnemyPatrolSOBase
     Vector3 startPos;
     Vector3 startRot;
     float rotationTime;
+    enum animationStates { idle, walking, takeDamage }
+
 
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
     {
         base.Initialize(gameObject, enemyBase);
         thisLookAt = gameObject.GetComponent<ShootPointLookAt>();
-        thisLookAt.enabled = false;
         startPos = gameObject.transform.position;
         startRot = gameObject.transform.eulerAngles;
         atStartPos = true;
@@ -24,6 +25,7 @@ public class SpiderPatrolState : EnemyPatrolSOBase
     public override void DoEnterLogic()
     {
         base.DoEnterLogic();
+        thisLookAt.enabled = false;
         enemyBase.shootPoint.gameObject.SetActive(false);
         enemyBase.agent.SetDestination(startPos);
         rotationTime = 0;

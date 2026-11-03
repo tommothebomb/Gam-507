@@ -13,6 +13,7 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     // from IDamageable interface \\
     [field: SerializeField] public float MaxHealth { get; set; }
     public float CurrentHealth { get; set; }
+    public float damageDeals;
 
     // from ITriggerCheckable interface \\
     public bool IsAggroable { get; set; }
@@ -52,10 +53,11 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public EnemyDeathSOBase enemyDeathBaseInstance { get; set; }
     #endregion
 
-    // stats \\
-    public float damageDeals;
+    // shoot point to be used if enemy uses projectiles \\
     [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
     public Transform shootPoint;
+    public Animator animator;
+
     [Header("Navmesh Settings")]
     public NavMeshAgent agent;
     [Tooltip("any values left at 0 will be assigned the navmesh agents default values")]

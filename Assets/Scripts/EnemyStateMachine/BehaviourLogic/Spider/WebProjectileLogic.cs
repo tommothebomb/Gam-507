@@ -3,21 +3,27 @@ using UnityEngine;
 // Libby/Jordan Script \\
 public class WebProjectileLogic : MonoBehaviour
 {
+    [Header("Set By State")]
     public EnemyBase enemyBase;
-    float lifetime;
+    [Header("Set In Inspector")]
+    [SerializeField] Rigidbody rb;
+    [SerializeField] float webSpeed;
+    [SerializeField] float lifetime;
+    float timer;
 
 
     private void Start()
     {
-        lifetime = 0;
+        timer = 0;
+        rb.linearVelocity = Vector3.zero;
     }
 
     private void Update()
     {
-        // linearVel += forward
+        rb.linearVelocity = transform.forward * webSpeed;
 
-        lifetime += Time.deltaTime;
-        if (lifetime >= 4) gameObject.SetActive(false);
+        timer += Time.deltaTime;
+        if (timer >= lifetime) FadeWebThenSetInactive();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -27,7 +33,14 @@ public class WebProjectileLogic : MonoBehaviour
             // make player 'stuck'
             // spawn visual for web trap
             enemyBase.stateMachine.ChangeState(enemyBase.attackState);
-            gameObject.SetActive(false);
+            FadeWebThenSetInactive();
         }
+        else if (!collision.gameObject.CompareTag("Spider")) FadeWebThenSetInactive(); // to prevent spider spawning it to se it inactive immediately
+    }
+
+    void FadeWebThenSetInactive()
+    {
+        // fade web to transparent
+        gameObject.SetActive(false);
     }
 }
