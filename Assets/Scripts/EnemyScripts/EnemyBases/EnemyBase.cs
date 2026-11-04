@@ -24,14 +24,14 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public enum AnimationTriggers
     {
         Idle,
-        Chasing, // use this for walking, called chasing in case some enemies cant walk
+        Walking, // use this for walking, called chasing in case some enemies cant walk
         Attack1, // lots of options so more versitile between enemy types
         Attack2, // dont need to use all of them
         Attack3,
         TakingDamage,
-        Death,
-        PlayFootsteps
+        Death
     }
+    public EnemyAnimations enemyAnimController;
 
     #region // state machine variables \\
     public EnemyStateMachine stateMachine { get; set; }
@@ -56,7 +56,7 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     // shoot point to be used if enemy uses projectiles \\
     [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
     public Transform shootPoint;
-    public Animator animator;
+    [SerializeField] Animator animator;
 
     [Header("Navmesh Settings")]
     public NavMeshAgent agent;
@@ -108,7 +108,11 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     private void Update()
     {
         stateMachine.currentEnemyState.FrameUpdate();
+
+        if (agent.velocity.magnitude >= 0.1f && animator.GetBool("IsWalking") == false) animator.SetBool("IsWalking", true);
+        else if (agent.velocity.magnitude < 0.1f && animator.GetBool("IsWalking") == true) animator.SetBool("IsWalking", false);
     }
+
     private void FixedUpdate()
     {
         stateMachine.currentEnemyState.PhysicsUpdate();

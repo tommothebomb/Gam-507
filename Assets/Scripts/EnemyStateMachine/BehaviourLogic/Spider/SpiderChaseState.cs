@@ -14,7 +14,6 @@ public class SpiderChaseState : EnemyChaseSOBase
     float timeBetweenDestinationSet;
     float distanceFromPlayer;
     float shootTimer;
-    enum animationStates { idle, walking, attacking, takingDamage }
 
 
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
@@ -49,7 +48,7 @@ public class SpiderChaseState : EnemyChaseSOBase
             if (enemyBase.agent.velocity.sqrMagnitude <= 0.2f && distanceFromPlayer <= minDistFromPlayerToShoot)
             {
                 shootTimer = 0;
-                ShootWeb();
+                enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Attack1);
             }
         }
 
@@ -92,5 +91,6 @@ public class SpiderChaseState : EnemyChaseSOBase
     public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
     {
         base.DoAnimationTriggerLogic(trigger);
+        ShootWeb();
     }
 }

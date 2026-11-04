@@ -390,6 +390,7 @@ MonoBehaviour:
   pooler: {fileID: 1575338742}
   <MaxHealth>k__BackingField: 4
   damageDeals: 2
+  enemyAnimController: {fileID: 0}
   enemyPatrolBase: {fileID: 11400000, guid: f081498ae43b3374b8ee1b69de5831ed, type: 2}
   enemyChaseBase: {fileID: 11400000, guid: fd70c8b8c7f40d64da9d178dee92288c, type: 2}
   enemyAttackBase: {fileID: 11400000, guid: 58ebd464d6bb0b843989e05e787fa63e, type: 2}
@@ -1192,6 +1193,7 @@ GameObject:
   - component: {fileID: 7578840638334121358}
   - component: {fileID: 2590157479690421673}
   - component: {fileID: 290229738602822186}
+  - component: {fileID: 7578840638334121359}
   m_Layer: 6
   m_Name: Player_Test
   m_TagString: Player
@@ -1290,7 +1292,7 @@ PrefabInstance:
       objectReference: {fileID: 1575338742}
     - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.14
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1298,23 +1300,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.43
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.44386163
+      value: 0.42261827
       objectReference: {fileID: 0}
     - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.89609534
+      value: 0.9063079
       objectReference: {fileID: 0}
     - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1322,7 +1324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 127.299
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1496,6 +1498,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &7578840638334121359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3938083215460020769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a4391bd9b7a0b4ebf486366f60c7b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthManager
+  <MaxHealth>k__BackingField: 20
 --- !u!114 &8084365473382493705
 MonoBehaviour:
   m_ObjectHideFlags: 0

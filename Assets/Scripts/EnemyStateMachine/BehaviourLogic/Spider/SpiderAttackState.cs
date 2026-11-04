@@ -6,7 +6,6 @@ public class SpiderAttackState : EnemyAttackSOBase
 {
     [SerializeField] float distToBackUp;
     bool attackPlaying;
-    enum animationStates { idle, walking, attacking }
 
 
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
@@ -28,10 +27,7 @@ public class SpiderAttackState : EnemyAttackSOBase
         if (enemyBase.IsWithinAttackDist && !attackPlaying)
         {
             attackPlaying = true;
-            // play attack animation
-            // deal damage to player
-            // destroy web 
-            MoveBack();
+            enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Attack2);
         }
     }
 
@@ -39,8 +35,7 @@ public class SpiderAttackState : EnemyAttackSOBase
     {
         Vector3 backAwayPos = gameObject.transform.position - (gameObject.transform.forward * -distToBackUp);
         enemyBase.agent.SetDestination(backAwayPos);
-        enemyBase.animator.SetTrigger("ToTakeDamage");
-        enemyBase.stateMachine.ChangeState(enemyBase.deathState);
+        enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
     }
 
     public override void DoPhysicsUpdateLogic()
@@ -55,6 +50,10 @@ public class SpiderAttackState : EnemyAttackSOBase
     public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
     {
         base.DoAnimationTriggerLogic(trigger);
-        // damage player and destroy web
+
+        enemyBase.player.GetComponent<IDamageable>().TakeDamage(enemyBase.damageDeals);
+        Debug.Log("damaged player");
+        // destroy web and unstick player
+        MoveBack();
     }
 }

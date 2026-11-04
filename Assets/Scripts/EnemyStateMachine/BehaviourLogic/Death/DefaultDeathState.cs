@@ -9,13 +9,7 @@ public class DefaultDeathState : EnemyDeathSOBase
     Vector3 deathPos;
     Vector3 endPos;
     float lerpTime;
-    float waitTime;
 
-
-    public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
-    {
-        base.Initialize(gameObject, enemyBase);
-    }
 
     public override void DoEnterLogic()
     {
@@ -24,20 +18,17 @@ public class DefaultDeathState : EnemyDeathSOBase
         endPos = new Vector3(deathPos.x, deathPos.y - 6, deathPos.z);
         enemyBase.agent.SetDestination(deathPos);
         startDescent = false;
-        lerpTime = 0; waitTime = 0;
         gameObject.GetComponent<Collider>().enabled = false;
-        enemyBase.animator.SetTrigger("ToDeath");
+        enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Death);
+        lerpTime = 0; 
     }
 
     public override void DoUpdateLogic()
     {
         base.DoUpdateLogic();
-        if (!startDescent)
-        {
-            waitTime += Time.deltaTime;
-            if (waitTime >= 4) startDescent = true;
-        }
-        else
+
+        // make enemy sink below the floor before deactivating
+        if (startDescent)
         {
             lerpTime += Time.deltaTime * 0.5f;
             gameObject.transform.position = Vector3.Lerp(deathPos, endPos, lerpTime);
@@ -48,5 +39,6 @@ public class DefaultDeathState : EnemyDeathSOBase
     public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
     {
         base.DoAnimationTriggerLogic(trigger);
+        startDescent = true;
     }
 }

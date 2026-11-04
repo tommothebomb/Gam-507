@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpiderChaseState
   shootInterval: 4
   distanceDestinationWillBeFromPlayer: 8
-  timeBetweenDestinationModifier: 10
+  timeBetweenDestinationModifier: 12
   minDistFromPlayerToFindNewDestination: 2
-  minDistFromPlayerToShoot: 10
+  minDistFromPlayerToShoot: 12

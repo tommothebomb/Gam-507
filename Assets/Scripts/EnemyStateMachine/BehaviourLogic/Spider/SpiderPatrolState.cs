@@ -10,7 +10,6 @@ public class SpiderPatrolState : EnemyPatrolSOBase
     Vector3 startPos;
     Vector3 startRot;
     float rotationTime;
-    enum animationStates { idle, walking, takeDamage }
 
 
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)

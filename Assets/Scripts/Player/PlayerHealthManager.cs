@@ -7,8 +7,17 @@ public class PlayerHealthManager : MonoBehaviour, IDamageable
     public float CurrentHealth { get; set; }
 
 
+    private void Awake()
+    {
+        CurrentHealth = MaxHealth;
+    }
+
     public void TakeDamage(float damageAmount)
     {
-        throw new System.NotImplementedException();
+        CurrentHealth -= damageAmount;
+        if (CurrentHealth <= 0)
+        {
+            Debug.Log("playerDied");
+        }
     }
 }
