@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{70F251C7-383F-4DC4-B70F-162D68038B88}" SchemaVersion="133" RootDocumentID="{8BA990E7-820B-41FE-A2B1-D1AC069764C4}" ParentDocumentID="{8BA990E7-820B-41FE-A2B1-D1AC069764C4}">
+	<VirtualAcoustics>
+		<WorkUnit Name="Roscislawa" ID="{70F251C7-383F-4DC4-B70F-162D68038B88}" OwnerID="{8BA990E7-820B-41FE-A2B1-D1AC069764C4}" PersistMode="Nested">
+			<ChildrenList>
+				<AcousticTexture Name="Wood" ID="{94A84D02-E063-44BA-8F13-6DA54379E6BF}">
+					<PropertyList>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="75"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="50"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="Color" Type="int16" Value="7"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+				</AcousticTexture>
+				<AcousticTexture Name="Metal" ID="{3855435B-BD5A-419E-BD24-C9A2A0ADC263}">
+					<PropertyList>
+						<Property Name="AbsorptionLow" Type="Real32" Value="50"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="15"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="30"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+				</AcousticTexture>
+				<AcousticTexture Name="Stone" ID="{ECBD53B8-1F52-4762-9201-D933D8712714}">
+					<PropertyList>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="80"/>
+						<Property Name="AbsorptionLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="60"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="50"/>
+						<Property Name="Color" Type="int16" Value="27"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+				</AcousticTexture>
+				<AcousticTexture Name="Plaster" ID="{F61C165F-D7B6-4271-9539-90CFBB001387}">
+					<PropertyList>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="40"/>
+						<Property Name="AbsorptionLow" Type="Real32" Value="15"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="20"/>
+						<Property Name="Color" Type="int16" Value="23"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+				</AcousticTexture>
+				<AcousticTexture Name="Glass" ID="{94BE8A9E-7BD0-449D-8019-E5300F6735E1}">
+					<PropertyList>
+						<Property Name="AbsorptionLow" Type="Real32" Value="70"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+				</AcousticTexture>
+				<AcousticTexture Name="Concrete" ID="{F9848BF5-F0A4-465B-936C-4D472BDC5456}">
+					<PropertyList>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="70"/>
+						<Property Name="AbsorptionLow" Type="Real32" Value="9"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="58"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="36"/>
+					</PropertyList>
+				</AcousticTexture>
+				<AcousticTexture Name="Brick" ID="{0AA711B9-3D39-4909-8796-228BF8AC3C04}">
+					<PropertyList>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="59"/>
+						<Property Name="AbsorptionLow" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="41"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+				</AcousticTexture>
+			</ChildrenList>
+		</WorkUnit>
+	</VirtualAcoustics>
+</WwiseDocument>
