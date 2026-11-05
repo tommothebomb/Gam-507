@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 6720265180140273652}
   - component: {fileID: 736915571194766310}
   m_Layer: 0
-  m_Name: tap_control
+  m_Name: tap faucet control thingy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -479,13 +479,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3018510763919737927}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.014340667, y: 0.17837001, z: 0.069478646}
+  m_LocalRotation: {x: -6.180097e-24, y: -0.92387956, z: 1.0558524e-24, w: 0.3826834}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 0.05, y: 0.05, z: -0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4849871742350221250}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 2461751646935737206}
+  m_LocalEulerAnglesHint: {x: 0, y: -135, z: 0}
 --- !u!33 &7702344312442657648
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -599,7 +599,7 @@ Transform:
   - {fileID: 7936872910073316259}
   - {fileID: 385909605690440544}
   - {fileID: 3372607168472541577}
-  - {fileID: 2095582057862097613}
+  - {fileID: 2461751646935737206}
   m_Father: {fileID: 3284940826528632543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3941337768922239476
@@ -805,6 +805,38 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3739273956656677841, guid: b931f69ad03ff0a41be1d1a29a20a9e0, type: 3}
+--- !u!1 &4456184414636222354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2461751646935737206}
+  m_Layer: 0
+  m_Name: tap control pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2461751646935737206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4456184414636222354}
+  serializedVersion: 2
+  m_LocalRotation: {x: 6.617445e-24, y: 0.92387956, z: 0, w: 0.38268328}
+  m_LocalPosition: {x: 0.0123, y: 0.1751, z: 0.0711}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2095582057862097613}
+  m_Father: {fileID: 4849871742350221250}
+  m_LocalEulerAnglesHint: {x: 0, y: 135, z: 0}
 --- !u!1 &6272485137319711169
 GameObject:
   m_ObjectHideFlags: 0
