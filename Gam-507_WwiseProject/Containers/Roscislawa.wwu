@@ -10,6 +10,7 @@
 								<MusicSegment Name="Blender" ID="{923379AE-40B9-48B8-9033-700F0B316E15}" ShortID="696591860">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -80,6 +81,7 @@
 								<MusicSegment Name="Broom falling" ID="{6C8D0746-EB07-478E-8BEA-CB3D4ACEDF96}" ShortID="255905301">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -150,6 +152,7 @@
 								<MusicSegment Name="Broom rattle" ID="{F60839B9-7C88-47C3-95AA-2289E2EA772E}" ShortID="631633044">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -220,6 +223,7 @@
 								<MusicSegment Name="Faucet" ID="{8EC10CB1-2F75-4D6A-B850-A41A29E908DB}" ShortID="442734056">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -290,6 +294,7 @@
 								<MusicSegment Name="Garbage disposal" ID="{3F11577A-C843-4E49-A661-6C40FBE7F349}" ShortID="394205809">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -360,6 +365,7 @@
 								<MusicSegment Name="Hob click" ID="{A9DAD398-4EC6-45DE-96EB-AF165AFF1B53}" ShortID="24433341">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -430,6 +436,7 @@
 								<MusicSegment Name="Hob flame" ID="{5FF4FCF8-6BF1-46DA-9B49-DACDC87B997E}" ShortID="524951362">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -500,6 +507,7 @@
 								<MusicSegment Name="Microwave button" ID="{052319D3-92AF-44C7-91A1-53695FF56CB8}" ShortID="833738357">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -570,6 +578,7 @@
 								<MusicSegment Name="Microwave door close" ID="{8022AAC5-68CA-4A34-B5FB-320A6BC21C20}" ShortID="605739924">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -640,6 +649,7 @@
 								<MusicSegment Name="Microwave door open" ID="{7E17352D-0B44-4AB9-9859-D2F2439601D4}" ShortID="46219046">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -780,6 +790,7 @@
 								<MusicSegment Name="Plant rustle" ID="{C9492A54-075C-46AC-B8E9-64E6EA72C7E8}" ShortID="480754586">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="27500"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -920,6 +931,7 @@
 								<MusicSegment Name="Toaster ejection" ID="{B08AF161-2B09-496B-A819-9E205D936030}" ShortID="175792583">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -990,6 +1002,7 @@
 								<MusicSegment Name="Toaster lever" ID="{AB6BDEBB-7EAC-4761-A4B8-E595E6B11DC2}" ShortID="443750090">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
