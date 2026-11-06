@@ -1,20 +1,33 @@
-using TMPro;
 using UnityEngine;
 
 public class DayNightCycle : MonoBehaviour
 {
+    [Header ("Day Night Settings")]
     [Range (0, 24)]
     public float currentTime = 8f;
-    public float realMinutesPerGameHour = 1f;
-    public Light sun;
-    public float dayIntensity = 1.2f;
-    public float nightIntensity = 0f;
+    [SerializeField] float realMinutesPerGameHour = 1f;
+    [SerializeField] Light sun;
+    [SerializeField] float dayIntensity = 1.2f;
+    [SerializeField] float nightIntensity = 0f;
+
+    [Header ("Ceiling Lights")]
+    [SerializeField] float lightTurnOnTime = 19f;
+    [SerializeField] float lightTurnOffTime = 7f;
+    [SerializeField] Material lightOnMaterial;
+    [SerializeField] Material lightOffMaterial;
+    private bool isCeilingLightOn;
+
+    [SerializeField] Renderer[] ceilingLightRenderer;
+    [SerializeField] Light[] ceilingPointLight;
+    [SerializeField] Light[] ceilingSpotLight;
 
     void Update()
     {
         currentTime += Time.deltaTime / (realMinutesPerGameHour * 60f);
 
         currentTime = Mathf.Repeat(currentTime, 24f);
+
+        UpdateCeilingLight();
 
         float sunRotation = (currentTime / 24f) * 360f - 90f;
 
@@ -41,6 +54,40 @@ public class DayNightCycle : MonoBehaviour
         else
         {
             sun.color = nightColor;
+        }
+    }
+
+    void UpdateCeilingLight()
+    {
+        bool shouldBeOn = currentTime >= lightTurnOnTime || currentTime < lightTurnOffTime;
+
+        if (shouldBeOn != isCeilingLightOn)
+        {
+            isCeilingLightOn = shouldBeOn;
+
+            foreach (Renderer lightRenderer in ceilingLightRenderer)
+            {
+                if (lightRenderer != null)
+                {
+                    lightRenderer.sharedMaterial = isCeilingLightOn ? lightOnMaterial : lightOffMaterial;
+                }
+            }
+        }
+
+        foreach (Light pointLight in ceilingPointLight)
+        {
+            if (pointLight != null)
+            {
+                pointLight.enabled = isCeilingLightOn;
+            }
+        }
+
+        foreach (Light spotLight in ceilingSpotLight)
+        {
+            if (spotLight != null)
+            {
+                spotLight.enabled = isCeilingLightOn;
+            }
         }
     }
 }
