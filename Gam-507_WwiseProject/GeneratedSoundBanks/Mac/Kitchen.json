@@ -1,0 +1,734 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1586158131",
+    "Type": "User",
+    "GUID": "{DFED22DB-9D72-4625-8B20-BFF28FE7B4C7}",
+    "Language": "SFX",
+    "Hash": "{C4A117B7-EF6C-9F99-F94E-C294E0CAA1F7}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Roscislawa\\Kitchen",
+    "ShortName": "Kitchen",
+    "Path": "Kitchen.bnk",
+    "Media": [
+     {
+      "Id": "56960220",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-037.wav",
+      "CachePath": "A6/{A6F71B23-1D8F-10E9-75FA-0F3249BFBD0F}.wem"
+     },
+     {
+      "Id": "75420453",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-046.wav",
+      "CachePath": "70/{705D59AB-5A96-08C1-3E12-E87B23C7E0BF}.wem"
+     },
+     {
+      "Id": "122699877",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-032.wav",
+      "CachePath": "E2/{E2673EF6-2770-B503-F033-C1CC59354B8D}.wem"
+     },
+     {
+      "Id": "139868115",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-048.wav",
+      "CachePath": "07/{07C4C3C3-D38D-7FC3-F66C-4219588834FB}.wem"
+     },
+     {
+      "Id": "164553671",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-031.wav",
+      "CachePath": "AA/{AAE14993-E4D9-DAAD-7810-E2DC789DD3E8}.wem"
+     },
+     {
+      "Id": "177179192",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-053.wav",
+      "CachePath": "C3/{C36D722C-58D2-9494-63B5-0568AE0FFE86}.wem"
+     },
+     {
+      "Id": "253600627",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-034.wav",
+      "CachePath": "D5/{D5BA47DF-4EA5-7163-FF4F-DB2CBCFD7FDE}.wem"
+     },
+     {
+      "Id": "254476878",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-049.wav",
+      "CachePath": "9B/{9BCBE345-9726-5A2E-399E-B8FA252DDBF4}.wem"
+     },
+     {
+      "Id": "254727835",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-057.wav",
+      "CachePath": "E3/{E34B8EC7-DB87-7B9D-9FCD-72FC5EBBACEC}.wem"
+     },
+     {
+      "Id": "291966812",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-060.wav",
+      "CachePath": "25/{256C7FE1-8726-6B1D-5635-6F4B6713B537}.wem"
+     },
+     {
+      "Id": "313574756",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-047.wav",
+      "CachePath": "33/{336169EF-18A9-8BC9-D3C1-4C80A1FFE904}.wem"
+     },
+     {
+      "Id": "346867583",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-056.wav",
+      "CachePath": "08/{081155EE-8959-A2E5-2FDB-320D87C9A714}.wem"
+     },
+     {
+      "Id": "377712691",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-036.wav",
+      "CachePath": "F7/{F79ECDCC-AF59-717D-B01E-2C5438FC528A}.wem"
+     },
+     {
+      "Id": "424851816",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-041.wav",
+      "CachePath": "E0/{E088643A-8233-58AF-7455-6E3262E86F2F}.wem"
+     },
+     {
+      "Id": "430415088",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-043.wav",
+      "CachePath": "5E/{5EECEA89-97B0-2E53-BBAA-12394405A839}.wem"
+     },
+     {
+      "Id": "445707285",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-040.wav",
+      "CachePath": "EB/{EB1ED4A2-BB95-0B74-C7AF-852C012FFD75}.wem"
+     },
+     {
+      "Id": "495664148",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-050.wav",
+      "CachePath": "78/{78609AD3-5B8E-56B8-E787-4284152D9F11}.wem"
+     },
+     {
+      "Id": "519167652",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-059.wav",
+      "CachePath": "5A/{5AD69412-4D7C-B1E8-083D-637A2B3DF5F2}.wem"
+     },
+     {
+      "Id": "540328741",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-035.wav",
+      "CachePath": "4B/{4BA9CA14-7051-B11A-C08B-DBDB4CB003F7}.wem"
+     },
+     {
+      "Id": "559662226",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-051.wav",
+      "CachePath": "C0/{C0A6EF05-0BAD-DB74-76A3-86E248666049}.wem"
+     },
+     {
+      "Id": "579537519",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-038.wav",
+      "CachePath": "71/{71349EA5-4186-2A2C-599B-D60B7BEF27F8}.wem"
+     },
+     {
+      "Id": "664495416",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-044.wav",
+      "CachePath": "B7/{B75A4B10-855A-5C66-B1EE-D57FF4FCEDBA}.wem"
+     },
+     {
+      "Id": "672508387",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-055.wav",
+      "CachePath": "64/{6414F0A1-74FD-31C8-2097-8D9E19F72F78}.wem"
+     },
+     {
+      "Id": "702891835",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-042.wav",
+      "CachePath": "0F/{0FCB73D1-2566-2443-7C0B-02767586ECCA}.wem"
+     },
+     {
+      "Id": "886367113",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-054.wav",
+      "CachePath": "CE/{CE5C1B02-F280-DAC8-6BD3-491CB5484121}.wem"
+     },
+     {
+      "Id": "963671071",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-039.wav",
+      "CachePath": "B3/{B3EF5C44-3CF0-97E0-26B2-ABA9BEF208B9}.wem"
+     },
+     {
+      "Id": "986660540",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-058.wav",
+      "CachePath": "39/{3937A92A-A292-D393-2DC0-EB53E013BE25}.wem"
+     },
+     {
+      "Id": "1053435619",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-033.wav",
+      "CachePath": "BA/{BA952F81-767D-F171-AC38-EFA3898F18CF}.wem"
+     },
+     {
+      "Id": "1055799433",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameSounds-045.wav",
+      "CachePath": "5D/{5DAB0AD5-B8B7-0449-5722-D4D66D3053DC}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "826038409",
+      "Name": "Play_Fridge_Close12",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Fridge\\Play_Fridge_Close12",
+      "GUID": "{7DA93BC2-8A2D-478F-AA57-0E59AEC10ACA}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
+      "MediaRefs": [
+       {
+        "Id": "702891835"
+       }
+      ]
+     },
+     {
+      "Id": "826038415",
+      "Name": "Play_Fridge_Close14",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Fridge\\Play_Fridge_Close14",
+      "GUID": "{AC2BEE33-0080-4844-8802-E717BBD68CC4}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "664495416"
+       }
+      ]
+     },
+     {
+      "Id": "2921916046",
+      "Name": "Play_Fridge_Open11",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Fridge\\Play_Fridge_Open11",
+      "GUID": "{A6C2F47F-2DA6-4669-9FDC-C836411B15D2}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1748073",
+      "DurationMax": "1.1748073",
+      "MediaRefs": [
+       {
+        "Id": "424851816"
+       }
+      ]
+     },
+     {
+      "Id": "2921916044",
+      "Name": "Play_Fridge_Open13",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Fridge\\Play_Fridge_Open13",
+      "GUID": "{C4DADAB3-5918-4904-911F-B67B4D04D54C}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "430415088"
+       }
+      ]
+     },
+     {
+      "Id": "2361751234",
+      "Name": "Play_MicrowaveBing30",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Microwave\\Play_MicrowaveBing30",
+      "GUID": "{1E84BA1C-D8E3-4CAB-8174-5DEE15FD0A51}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
+      "MediaRefs": [
+       {
+        "Id": "291966812"
+       }
+      ]
+     },
+     {
+      "Id": "4104439926",
+      "Name": "Play_MicrowaveClose27",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Microwave\\Play_MicrowaveClose27",
+      "GUID": "{DC4C67A8-277D-4980-9FB7-C42A433F5244}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1",
+      "DurationMax": "1",
+      "MediaRefs": [
+       {
+        "Id": "254727835"
+       }
+      ]
+     },
+     {
+      "Id": "3314291739",
+      "Name": "Play_MicrowaveHum28",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Microwave\\Play_MicrowaveHum28",
+      "GUID": "{393745F9-0FD0-4EDE-8EDC-2BE16D6AE3BB}",
+      "MaxAttenuation": "250",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "519167652"
+       }
+      ]
+     },
+     {
+      "Id": "1966100289",
+      "Name": "Play_MicrowaveOpen26",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Microwave\\Play_MicrowaveOpen26",
+      "GUID": "{5CBACC2A-D4FA-40A1-9164-6CECBB360507}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1",
+      "DurationMax": "1",
+      "MediaRefs": [
+       {
+        "Id": "346867583"
+       }
+      ]
+     },
+     {
+      "Id": "3057072508",
+      "Name": "Play_MicrowaveStartHum29",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Microwave\\Play_MicrowaveStartHum29",
+      "GUID": "{BC5BDC21-DAD0-4363-AB25-23E98A350D84}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5",
+      "DurationMax": "0.5",
+      "MediaRefs": [
+       {
+        "Id": "986660540"
+       }
+      ]
+     },
+     {
+      "Id": "2661019975",
+      "Name": "Play_Plant_shake01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Plant\\Play_Plant_shake01",
+      "GUID": "{5EBDE954-34CB-4C82-B14D-F3334521BF59}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
+      "MediaRefs": [
+       {
+        "Id": "164553671"
+       }
+      ]
+     },
+     {
+      "Id": "2661019972",
+      "Name": "Play_Plant_shake02",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Plant\\Play_Plant_shake02",
+      "GUID": "{577B3F01-F3B8-4765-90B6-2EA52EA48858}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
+      "MediaRefs": [
+       {
+        "Id": "122699877"
+       }
+      ]
+     },
+     {
+      "Id": "2661019973",
+      "Name": "Play_Plant_shake03",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Plant\\Play_Plant_shake03",
+      "GUID": "{6F640E63-A3D0-481C-86D2-2B8657AF0982}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "1053435619"
+       }
+      ]
+     },
+     {
+      "Id": "2661019970",
+      "Name": "Play_Plant_shake04",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Plant\\Play_Plant_shake04",
+      "GUID": "{07566D30-6001-4E71-B89C-BEB9A308C9E6}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1",
+      "DurationMax": "1",
+      "MediaRefs": [
+       {
+        "Id": "253600627"
+       }
+      ]
+     },
+     {
+      "Id": "2661019971",
+      "Name": "Play_Plant_shake05",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Plant\\Play_Plant_shake05",
+      "GUID": "{3A457836-A27A-4E4B-8815-5FF1392D859C}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
+      "MediaRefs": [
+       {
+        "Id": "540328741"
+       }
+      ]
+     },
+     {
+      "Id": "3916972310",
+      "Name": "Play_Plant_Shake206",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Plant\\Play_Plant_Shake206",
+      "GUID": "{A5207909-5B56-4CF5-89D6-08E0CBDC5B2E}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2233107",
+      "DurationMax": "1.2233107",
+      "MediaRefs": [
+       {
+        "Id": "377712691"
+       }
+      ]
+     },
+     {
+      "Id": "3916972311",
+      "Name": "Play_Plant_Shake207",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Plant\\Play_Plant_Shake207",
+      "GUID": "{752CD8AE-663B-403F-A720-4798490357C5}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1.3949434",
+      "DurationMax": "1.3949434",
+      "MediaRefs": [
+       {
+        "Id": "56960220"
+       }
+      ]
+     },
+     {
+      "Id": "3916972312",
+      "Name": "Play_Plant_Shake208",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Plant\\Play_Plant_Shake208",
+      "GUID": "{936F3570-50F3-4607-9138-024EF9EF8226}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2754875",
+      "DurationMax": "1.2754875",
+      "MediaRefs": [
+       {
+        "Id": "579537519"
+       }
+      ]
+     },
+     {
+      "Id": "3916972313",
+      "Name": "Play_Plant_Shake209",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Plant\\Play_Plant_Shake209",
+      "GUID": "{85A464B2-949D-431F-B8A9-FFD7EB55696C}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
+      "MediaRefs": [
+       {
+        "Id": "963671071"
+       }
+      ]
+     },
+     {
+      "Id": "3933749891",
+      "Name": "Play_Plant_Shake210",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Plant\\Play_Plant_Shake210",
+      "GUID": "{EBB81DC2-27AB-433A-8001-FBFE0BF4C58C}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
+      "MediaRefs": [
+       {
+        "Id": "445707285"
+       }
+      ]
+     },
+     {
+      "Id": "3528540685",
+      "Name": "Play_StoveKnob_Burn20",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Stove\\Play_StoveKnob_Burn20",
+      "GUID": "{B6B1482C-06EE-4922-B817-CAC8F9DEEE3F}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "4",
+      "DurationMax": "4",
+      "MediaRefs": [
+       {
+        "Id": "495664148"
+       }
+      ]
+     },
+     {
+      "Id": "3528540684",
+      "Name": "Play_StoveKnob_Burn21",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Stove\\Play_StoveKnob_Burn21",
+      "GUID": "{5D2524A9-6321-47BF-A319-6B34BB424AD6}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "4.5",
+      "DurationMax": "4.5",
+      "MediaRefs": [
+       {
+        "Id": "559662226"
+       }
+      ]
+     },
+     {
+      "Id": "2074530137",
+      "Name": "Play_StoveKnobs16",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Stove\\Play_StoveKnobs16",
+      "GUID": "{9E20C803-34F7-4D6E-93EA-BC212230369B}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "2.5",
+      "DurationMax": "2.5",
+      "MediaRefs": [
+       {
+        "Id": "75420453"
+       }
+      ]
+     },
+     {
+      "Id": "2074530136",
+      "Name": "Play_StoveKnobs17",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Stove\\Play_StoveKnobs17",
+      "GUID": "{818E6F91-36BC-466D-8C74-B4C5B7D3C028}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "2.144966",
+      "DurationMax": "2.144966",
+      "MediaRefs": [
+       {
+        "Id": "313574756"
+       }
+      ]
+     },
+     {
+      "Id": "2074530135",
+      "Name": "Play_StoveKnobs18",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Stove\\Play_StoveKnobs18",
+      "GUID": "{EE98B90B-58C3-4CB1-9F3F-778A0CC88C32}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "2.5",
+      "DurationMax": "2.5",
+      "MediaRefs": [
+       {
+        "Id": "139868115"
+       }
+      ]
+     },
+     {
+      "Id": "2074530134",
+      "Name": "Play_StoveKnobs19",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Stove\\Play_StoveKnobs19",
+      "GUID": "{5BF40E50-6958-40D3-9D31-AD399EF658CF}",
+      "MaxAttenuation": "250",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "254476878"
+       }
+      ]
+     },
+     {
+      "Id": "2005916398",
+      "Name": "Play_TapContainer",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Tap\\Play_TapContainer",
+      "GUID": "{37725630-BEED-40A8-BEA7-08579C5B6260}",
+      "MaxAttenuation": "250",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "845985344",
+         "Id": "930712164",
+         "GUID": "{FD1E765D-1D59-4978-9D3B-386B225B31FC}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "672508387"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "845985344",
+         "Id": "1651971902",
+         "GUID": "{4D3CE863-7FC2-471A-B61D-6329BB0F1347}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "177179192"
+         },
+         {
+          "Id": "886367113"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "845985344",
+         "Id": "930712164",
+         "GUID": "{FD1E765D-1D59-4978-9D3B-386B225B31FC}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "672508387"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "845985344",
+         "Id": "1651971902",
+         "GUID": "{4D3CE863-7FC2-471A-B61D-6329BB0F1347}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "177179192"
+         },
+         {
+          "Id": "886367113"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "2722711969",
+      "Name": "Play_Toaster_Set15",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Play_Toaster_Set15",
+      "GUID": "{A774109E-67F9-4F84-884B-1B2DCF3389DC}",
+      "DurationType": "OneShot",
+      "DurationMin": "1",
+      "DurationMax": "1",
+      "MediaRefs": [
+       {
+        "Id": "1055799433"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "845985344",
+      "Name": "Tap",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\Tap",
+      "GUID": "{4C014796-3D55-4337-89CA-D14042E98D86}",
+      "Switches": [
+       {
+        "Id": "930712164",
+        "Name": "Off",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\Tap\\Off",
+        "GUID": "{FD1E765D-1D59-4978-9D3B-386B225B31FC}"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "On",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\Tap\\On",
+        "GUID": "{4D3CE863-7FC2-471A-B61D-6329BB0F1347}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C84B1CDF-D30F-481D-BDBD-524482DF4CB4}"
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1295599627",
+    "Type": "Event",
+    "GUID": "{39C1C09F-8920-4CF4-B7FD-8D337D81F02E}",
+    "Language": "SFX",
+    "Hash": "{96D599D7-9F05-21A1-8FC2-64A587BBADD0}",
+    "ObjectPath": "Play_KitchenRoomTone22",
+    "ShortName": "Play_KitchenRoomTone22",
+    "Path": "Event/Play_KitchenRoomTone22.bnk",
+    "Media": [
+     {
+      "Id": "869642888",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GameSounds-052.wav",
+      "Path": "Media/869642888.wem",
+      "CachePath": "6B/{6BB3BA5E-548D-544A-C86D-DEEB61C08137}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1295599627",
+      "Name": "Play_KitchenRoomTone22",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Ambient\\Kitchen\\Play_KitchenRoomTone22",
+      "GUID": "{39C1C09F-8920-4CF4-B7FD-8D337D81F02E}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "869642888"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{990DDF1A-4CBA-4A77-3CD8-42E9DE551D7B}"
+ }
+}
