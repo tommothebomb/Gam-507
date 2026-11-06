@@ -12,6 +12,12 @@
 						<Switch Name="SpaceShip" ID="{00321BF5-380C-43DB-B3DF-ED934F2B0F3B}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Tap" ID="{4C014796-3D55-4337-89CA-D14042E98D86}">
+					<ChildrenList>
+						<Switch Name="On" ID="{4D3CE863-7FC2-471A-B61D-6329BB0F1347}"/>
+						<Switch Name="Off" ID="{FD1E765D-1D59-4978-9D3B-386B225B31FC}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

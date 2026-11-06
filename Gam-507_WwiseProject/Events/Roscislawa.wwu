@@ -1,6 +1,353 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" SchemaVersion="133" RootDocumentID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}" ParentDocumentID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}">
 	<Events>
-		<WorkUnit Name="Roscislawa" ID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" OwnerID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}" PersistMode="Nested"/>
+		<WorkUnit Name="Roscislawa" ID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" OwnerID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="SFX" ID="{251237CE-06BA-416D-ACFE-A648EA38F87D}" ShortID="268422775">
+					<ChildrenList>
+						<Folder Name="Kitchen" ID="{2DC8243C-80E6-4EBB-B746-6B802D234E8A}" ShortID="547283638">
+							<ChildrenList>
+								<Folder Name="Fridge" ID="{76DC9005-3937-418E-B465-669ED784E4FB}" ShortID="118401005">
+									<ChildrenList>
+										<Event Name="Play_Fridge_Open13" ID="{C4DADAB3-5918-4904-911F-B67B4D04D54C}">
+											<ChildrenList>
+												<Action Name="" ID="{6B947511-3F41-4214-8EBE-F7CE8FDF3555}" ShortID="116534632">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Fridge Open13" ID="{7558839E-DE9B-4E55-BE6F-057D6392E3E3}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_Fridge_Close12" ID="{7DA93BC2-8A2D-478F-AA57-0E59AEC10ACA}">
+											<ChildrenList>
+												<Action Name="" ID="{EFDDEB1D-4084-4544-9220-B4E171849F60}" ShortID="734842831">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Fridge Close12" ID="{71DAE778-3263-4A0B-88DB-7B0BE100A2C8}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_Fridge_Close14" ID="{AC2BEE33-0080-4844-8802-E717BBD68CC4}">
+											<ChildrenList>
+												<Action Name="" ID="{DFC89EA3-D6BC-4F29-A214-3382FD315B01}" ShortID="1064513397">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Fridge Close14" ID="{46C524B8-7C87-48E9-9B79-4534B7D57706}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_Fridge_Open11" ID="{A6C2F47F-2DA6-4669-9FDC-C836411B15D2}">
+											<ChildrenList>
+												<Action Name="" ID="{7F2F2736-E9D2-4299-BDD5-F22C2F794BD9}" ShortID="61848216">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Fridge Open11" ID="{84BD9380-6735-4B9D-AD28-4F7EE38793D3}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Microwave" ID="{794DF708-2E83-4E13-B41C-14E5074ADDF6}" ShortID="961391757">
+									<ChildrenList>
+										<Event Name="Play_MicrowaveHum28" ID="{393745F9-0FD0-4EDE-8EDC-2BE16D6AE3BB}">
+											<ChildrenList>
+												<Action Name="" ID="{43C14C5A-4A87-4811-9232-BD8C3B112FAC}" ShortID="556516658">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MicrowaveHum28" ID="{0DD2B5E6-5417-4053-A533-AAF0193E4408}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_MicrowaveStartHum29" ID="{BC5BDC21-DAD0-4363-AB25-23E98A350D84}">
+											<ChildrenList>
+												<Action Name="" ID="{2A62B858-86BC-4E36-BA33-FABD3577723F}" ShortID="393409766">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MicrowaveStartHum29" ID="{BD717E38-8BE4-4811-BC38-3BF9DA307652}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_MicrowaveBing30" ID="{1E84BA1C-D8E3-4CAB-8174-5DEE15FD0A51}">
+											<ChildrenList>
+												<Action Name="" ID="{3DA186E1-67F0-4BBF-A712-63D21587D836}" ShortID="516721597">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MicrowaveBing30" ID="{F82A085C-16C8-4D3C-897D-CCF71DE3702F}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_MicrowaveClose27" ID="{DC4C67A8-277D-4980-9FB7-C42A433F5244}">
+											<ChildrenList>
+												<Action Name="" ID="{8EEB3873-2403-4395-B249-240B30D54D47}" ShortID="63272453">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MicrowaveClose27" ID="{FCA4BB3B-C746-479B-A237-B4801148D915}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_MicrowaveOpen26" ID="{5CBACC2A-D4FA-40A1-9164-6CECBB360507}">
+											<ChildrenList>
+												<Action Name="" ID="{CBB3F5EB-01A7-4D38-B03A-B43F0DA33179}" ShortID="1011346546">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MicrowaveOpen26" ID="{7496A3EA-9668-4F48-BBB6-0C923CB03625}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Plant" ID="{67E5B78B-697B-42B9-97CB-48FFC901A9AA}" ShortID="871976164">
+									<ChildrenList>
+										<Event Name="Play_Plant_shake03" ID="{6F640E63-A3D0-481C-86D2-2B8657AF0982}">
+											<ChildrenList>
+												<Action Name="" ID="{AFC02EDC-7EB2-4660-8BF9-761AF21A117F}" ShortID="821303559">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Plant shake03" ID="{253E494A-3208-4173-8F83-EA49C9497D7E}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_Plant_shake05" ID="{3A457836-A27A-4E4B-8815-5FF1392D859C}">
+											<ChildrenList>
+												<Action Name="" ID="{9E62419B-BC8E-4994-9A4A-88094C651382}" ShortID="188723479">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Plant shake05" ID="{03AF5FC4-E61D-4DAE-93B2-9D5A51329325}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_Plant_shake02" ID="{577B3F01-F3B8-4765-90B6-2EA52EA48858}">
+											<ChildrenList>
+												<Action Name="" ID="{69BAE4DB-A64B-4BCE-AA12-BBB25B1033C4}" ShortID="8650760">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Plant shake02" ID="{3B514413-C5C9-403E-9B1B-1334573BF3F2}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_Plant_shake01" ID="{5EBDE954-34CB-4C82-B14D-F3334521BF59}">
+											<ChildrenList>
+												<Action Name="" ID="{63AB6DD2-A6F1-46EC-8B0E-E59A3C6C916D}" ShortID="438809724">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Plant shake01" ID="{3CC703D5-D9D9-4C25-B738-47EECCCF1607}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_Plant_Shake207" ID="{752CD8AE-663B-403F-A720-4798490357C5}">
+											<ChildrenList>
+												<Action Name="" ID="{ECCF7852-FF36-4B35-8908-2FC7DC191409}" ShortID="258187169">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Plant Shake207" ID="{97BBBE4E-C3E5-4E72-AA24-A673F2C3222B}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_Plant_Shake206" ID="{A5207909-5B56-4CF5-89D6-08E0CBDC5B2E}">
+											<ChildrenList>
+												<Action Name="" ID="{449659E1-4025-4B7A-BF0D-417A891D0B48}" ShortID="875712666">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Plant Shake206" ID="{FB002604-2714-4CAE-AA3A-A383CAC7442F}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_Plant_Shake208" ID="{936F3570-50F3-4607-9138-024EF9EF8226}">
+											<ChildrenList>
+												<Action Name="" ID="{564DC0AB-EE69-4402-9D35-0B317B1CA17C}" ShortID="1000893599">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Plant Shake208" ID="{48F8343E-47C4-48BB-AA5F-53BAF04180F7}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_Plant_shake04" ID="{07566D30-6001-4E71-B89C-BEB9A308C9E6}">
+											<ChildrenList>
+												<Action Name="" ID="{3C653E9F-2A59-48AC-8955-C844F8CF7B9B}" ShortID="533988988">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Plant shake04" ID="{1535DE6E-6B46-4166-A6EE-72D56C38C319}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_Plant_Shake209" ID="{85A464B2-949D-431F-B8A9-FFD7EB55696C}">
+											<ChildrenList>
+												<Action Name="" ID="{8F0391CE-274B-47DF-957E-1EEE7BEAD753}" ShortID="275725803">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Plant Shake209" ID="{F27E8009-9EC3-410B-822F-13EAAF19E0BD}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_Plant_Shake210" ID="{EBB81DC2-27AB-433A-8001-FBFE0BF4C58C}">
+											<ChildrenList>
+												<Action Name="" ID="{491D4376-852C-45DA-B86B-437433A15889}" ShortID="372170103">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Plant Shake210" ID="{6A4A9AFE-3014-452D-8CD1-DCA97BC898A6}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Stove" ID="{D87ED12F-D15F-4652-B073-A458D63BF1FF}" ShortID="405105500">
+									<ChildrenList>
+										<Event Name="Play_StoveKnobs19" ID="{5BF40E50-6958-40D3-9D31-AD399EF658CF}">
+											<ChildrenList>
+												<Action Name="" ID="{37D34FF5-E5E8-4D5D-A961-055A56939BC5}" ShortID="109520643">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="StoveKnobs19" ID="{9A229460-A7B3-457D-935E-EB2F1987F9DF}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_StoveKnob_Burn21" ID="{5D2524A9-6321-47BF-A319-6B34BB424AD6}">
+											<ChildrenList>
+												<Action Name="" ID="{5B60D13E-C6F3-42A1-8F77-1393BAE2DEFB}" ShortID="41859090">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="StoveKnob&amp;Burn21" ID="{C083F7B4-043E-4B8D-9D1A-4F68E35BF0AC}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_StoveKnob_Burn20" ID="{B6B1482C-06EE-4922-B817-CAC8F9DEEE3F}">
+											<ChildrenList>
+												<Action Name="" ID="{CE51EC47-0AE7-498D-B492-154B5C28F5EF}" ShortID="368683337">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="StoveKnob&amp;Burn20" ID="{CE4980EC-2F84-483D-977C-F3C300E33E71}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_StoveKnobs16" ID="{9E20C803-34F7-4D6E-93EA-BC212230369B}">
+											<ChildrenList>
+												<Action Name="" ID="{777449BA-EFF2-4F24-B86E-E6413937F5D0}" ShortID="845814281">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="StoveKnobs16" ID="{D1540995-8FC7-451D-B918-24C7D743AD6C}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_StoveKnobs17" ID="{818E6F91-36BC-466D-8C74-B4C5B7D3C028}">
+											<ChildrenList>
+												<Action Name="" ID="{5ACEE224-9C6F-4219-9E64-56453D4C6895}" ShortID="791671388">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="StoveKnobs17" ID="{F1B4710E-AC4D-4195-96B0-6F53602C7C33}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_StoveKnobs18" ID="{EE98B90B-58C3-4CB1-9F3F-778A0CC88C32}">
+											<ChildrenList>
+												<Action Name="" ID="{EFE09630-4F1D-4863-A693-8188DDB41482}" ShortID="619923556">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="StoveKnobs18" ID="{0A4C0010-397F-4D3D-9BE6-83CFF5AB2BF5}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Tap" ID="{9485DAA6-7294-46DD-A9B7-6B6A92BC7A52}" ShortID="631319207">
+									<ChildrenList>
+										<Event Name="Play_TapContainer" ID="{37725630-BEED-40A8-BEA7-08579C5B6260}">
+											<ChildrenList>
+												<Action Name="" ID="{272EBF8D-2235-408B-96DD-D6CE95D9C95D}" ShortID="525316382">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="TapContainer" ID="{7F6B1EC9-9FA5-4C1E-BB50-6AB60A82020E}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+								<Event Name="Play_Toaster_Set15" ID="{A774109E-67F9-4F84-884B-1B2DCF3389DC}">
+									<ChildrenList>
+										<Action Name="" ID="{317B6E0C-9D6A-49AE-920C-B153F91AA2CE}" ShortID="385770875">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Toaster Set15" ID="{777A1F76-3755-491F-A160-5253F1F600BF}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambient" ID="{031BD399-92E3-4992-A94A-3EC8B4C74E83}" ShortID="636059141">
+					<ChildrenList>
+						<Folder Name="Kitchen" ID="{9FFF247D-4709-42C4-8920-8CFB1A3C6C69}" ShortID="162451515">
+							<ChildrenList>
+								<Event Name="Play_KitchenRoomTone22" ID="{39C1C09F-8920-4CF4-B7FD-8D337D81F02E}">
+									<ChildrenList>
+										<Action Name="" ID="{D23CC781-021B-453F-A874-9ED3C2C5872A}" ShortID="91440669">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="KitchenRoomTone22" ID="{920D7716-5FD2-4539-BEBC-ACECCD61F39E}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
