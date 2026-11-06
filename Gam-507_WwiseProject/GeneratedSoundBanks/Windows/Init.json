@@ -42,6 +42,46 @@
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
      }
     ],
+    "SwitchGroups": [
+     {
+      "Id": "2678230316",
+      "Name": "Levels",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\Levels",
+      "GUID": "{58786826-8D10-42AE-B557-72CAA48B33A9}",
+      "Switches": [
+       {
+        "Id": "554650843",
+        "Name": "SpaceShip",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\Levels\\SpaceShip",
+        "GUID": "{00321BF5-380C-43DB-B3DF-ED934F2B0F3B}"
+       },
+       {
+        "Id": "2678230380",
+        "Name": "Level3",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\Levels\\Level3",
+        "GUID": "{AC6B1713-AF29-4D96-8865-62A0ECDC0E5C}"
+       },
+       {
+        "Id": "2678230381",
+        "Name": "Level2",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\Levels\\Level2",
+        "GUID": "{19FC4824-FA37-4EAA-B1B7-BB346B94132D}"
+       },
+       {
+        "Id": "2678230382",
+        "Name": "Level1",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\Levels\\Level1",
+        "GUID": "{2DF4A958-3C2B-4D0F-B5CD-7A70F3C412C8}"
+       },
+       {
+        "Id": "3604647259",
+        "Name": "MainMenu",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\Levels\\MainMenu",
+        "GUID": "{8E5FC8C8-CB6D-4B18-B105-94D69C0C6C89}"
+       }
+      ]
+     }
+    ],
     "AcousticTextures": [
      {
       "Id": "504532776",
@@ -282,6 +322,6 @@
     ]
    }
   ],
-  "FileHash": "{2DC174B2-3E7F-BA40-ECA8-F39F0517B97D}"
+  "FileHash": "{CB024D1A-B524-DC7E-9CA0-30ECE15C46F0}"
  }
 }
