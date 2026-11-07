@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{45845EE0-310A-423D-99E9-FD87425BD9A1}" SchemaVersion="133" RootDocumentID="{0D376A44-6A57-43A2-8E2B-B283084D3CBB}" ParentDocumentID="{0D376A44-6A57-43A2-8E2B-B283084D3CBB}">
 	<Switches>
-		<WorkUnit Name="Roscislawa" ID="{45845EE0-310A-423D-99E9-FD87425BD9A1}" OwnerID="{0D376A44-6A57-43A2-8E2B-B283084D3CBB}" PersistMode="Nested"/>
+		<WorkUnit Name="Roscislawa" ID="{45845EE0-310A-423D-99E9-FD87425BD9A1}" OwnerID="{0D376A44-6A57-43A2-8E2B-B283084D3CBB}" PersistMode="Nested">
+			<ChildrenList>
+				<SwitchGroup Name="Levels" ID="{58786826-8D10-42AE-B557-72CAA48B33A9}">
+					<ChildrenList>
+						<Switch Name="Level1" ID="{2DF4A958-3C2B-4D0F-B5CD-7A70F3C412C8}"/>
+						<Switch Name="Level2" ID="{19FC4824-FA37-4EAA-B1B7-BB346B94132D}"/>
+						<Switch Name="Level3" ID="{AC6B1713-AF29-4D96-8865-62A0ECDC0E5C}"/>
+						<Switch Name="MainMenu" ID="{8E5FC8C8-CB6D-4B18-B105-94D69C0C6C89}"/>
+						<Switch Name="SpaceShip" ID="{00321BF5-380C-43DB-B3DF-ED934F2B0F3B}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Tap" ID="{4C014796-3D55-4337-89CA-D14042E98D86}">
+					<ChildrenList>
+						<Switch Name="On" ID="{4D3CE863-7FC2-471A-B61D-6329BB0F1347}"/>
+						<Switch Name="Off" ID="{FD1E765D-1D59-4978-9D3B-386B225B31FC}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0AA075D2-EABC-4A21-A20C-F921A308F839}" SchemaVersion="133" RootDocumentID="{5ACEEBCD-CE2C-40DC-A3FC-C5E634E74A78}" ParentDocumentID="{5ACEEBCD-CE2C-40DC-A3FC-C5E634E74A78}">
 	<States>
-		<WorkUnit Name="Roscislawa" ID="{0AA075D2-EABC-4A21-A20C-F921A308F839}" OwnerID="{5ACEEBCD-CE2C-40DC-A3FC-C5E634E74A78}" PersistMode="Nested"/>
+		<WorkUnit Name="Roscislawa" ID="{0AA075D2-EABC-4A21-A20C-F921A308F839}" OwnerID="{5ACEEBCD-CE2C-40DC-A3FC-C5E634E74A78}" PersistMode="Nested">
+			<ChildrenList>
+				<StateGroup Name="New_State_Group" ID="{3B632ABB-A4A4-4744-A52F-16039DE49573}">
+					<ChildrenList>
+						<State Name="None" ID="{0E109A3B-7EEB-45F2-91E1-A2034A11F173}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

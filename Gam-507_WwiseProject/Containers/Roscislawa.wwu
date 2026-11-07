@@ -10,6 +10,7 @@
 								<MusicSegment Name="Blender" ID="{923379AE-40B9-48B8-9033-700F0B316E15}" ShortID="696591860">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -80,6 +81,7 @@
 								<MusicSegment Name="Broom falling" ID="{6C8D0746-EB07-478E-8BEA-CB3D4ACEDF96}" ShortID="255905301">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -150,6 +152,7 @@
 								<MusicSegment Name="Broom rattle" ID="{F60839B9-7C88-47C3-95AA-2289E2EA772E}" ShortID="631633044">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -220,6 +223,7 @@
 								<MusicSegment Name="Faucet" ID="{8EC10CB1-2F75-4D6A-B850-A41A29E908DB}" ShortID="442734056">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -290,6 +294,7 @@
 								<MusicSegment Name="Garbage disposal" ID="{3F11577A-C843-4E49-A661-6C40FBE7F349}" ShortID="394205809">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -360,6 +365,7 @@
 								<MusicSegment Name="Hob click" ID="{A9DAD398-4EC6-45DE-96EB-AF165AFF1B53}" ShortID="24433341">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -430,6 +436,7 @@
 								<MusicSegment Name="Hob flame" ID="{5FF4FCF8-6BF1-46DA-9B49-DACDC87B997E}" ShortID="524951362">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -500,6 +507,7 @@
 								<MusicSegment Name="Microwave button" ID="{052319D3-92AF-44C7-91A1-53695FF56CB8}" ShortID="833738357">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -570,6 +578,7 @@
 								<MusicSegment Name="Microwave door close" ID="{8022AAC5-68CA-4A34-B5FB-320A6BC21C20}" ShortID="605739924">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -640,6 +649,7 @@
 								<MusicSegment Name="Microwave door open" ID="{7E17352D-0B44-4AB9-9859-D2F2439601D4}" ShortID="46219046">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -780,6 +790,7 @@
 								<MusicSegment Name="Plant rustle" ID="{C9492A54-075C-46AC-B8E9-64E6EA72C7E8}" ShortID="480754586">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="27500"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -920,6 +931,7 @@
 								<MusicSegment Name="Toaster ejection" ID="{B08AF161-2B09-496B-A819-9E205D936030}" ShortID="175792583">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -990,6 +1002,7 @@
 								<MusicSegment Name="Toaster lever" ID="{AB6BDEBB-7EAC-4761-A4B8-E595E6B11DC2}" ShortID="443750090">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1057,6 +1070,1150 @@
 										</ObjectList>
 									</ObjectLists>
 								</MusicSegment>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="KitchenSlawa" ID="{2C82D519-7F3A-45A1-859A-74FDF1413A73}" ShortID="417948209">
+							<ChildrenList>
+								<Folder Name="Plants" ID="{C1C70423-A054-4796-B50C-00AA0D4157B9}" ShortID="809491381">
+									<ChildrenList>
+										<Sound Name="Plant shake01" ID="{3CC703D5-D9D9-4C25-B738-47EECCCF1607}" ShortID="239652289">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-001" ID="{E6A465BE-4983-42F7-84D4-D2AE464A88D2}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="436804043"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-031" ID="{FD795124-922E-4FC6-BE03-EAB75BFD6CF7}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-031.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="164553671"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-031" ID="{FD795124-922E-4FC6-BE03-EAB75BFD6CF7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Plant shake02" ID="{3B514413-C5C9-403E-9B1B-1334573BF3F2}" ShortID="901275780">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-002" ID="{86A713FB-331C-4CB0-AD7B-27073B4E2013}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="458590446"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-032" ID="{75769D69-DE58-4C6C-890C-EE4D1D5F471A}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-032.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="122699877"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-032" ID="{75769D69-DE58-4C6C-890C-EE4D1D5F471A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Plant shake03" ID="{253E494A-3208-4173-8F83-EA49C9497D7E}" ShortID="242393363">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-003" ID="{78BB202C-7168-4A9F-BBB4-917716D4169D}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="768961408"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-033" ID="{2F10249A-00A5-4CD8-A3A4-0EF4025FBE27}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-033.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1053435619"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-033" ID="{2F10249A-00A5-4CD8-A3A4-0EF4025FBE27}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Plant shake04" ID="{1535DE6E-6B46-4166-A6EE-72D56C38C319}" ShortID="385209411">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-004" ID="{84C987E6-6500-4BD3-BB13-1D79612703FD}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="53278475"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-034" ID="{A4D513D8-51F9-4FDB-84EC-25102AB5DF93}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-034.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="253600627"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-034" ID="{A4D513D8-51F9-4FDB-84EC-25102AB5DF93}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Plant shake05" ID="{03AF5FC4-E61D-4DAE-93B2-9D5A51329325}" ShortID="535853446">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-005" ID="{43CB6631-F13C-410C-BAD9-8B778437997D}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="951752067"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-035" ID="{2BD3B174-57C4-4ADA-BDE6-8F23F24A71AE}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-035.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="540328741"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-035" ID="{2BD3B174-57C4-4ADA-BDE6-8F23F24A71AE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Plant Shake206" ID="{FB002604-2714-4CAE-AA3A-A383CAC7442F}" ShortID="651700049">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-006" ID="{D02EACB1-A74A-4D66-AC9A-08716C97124C}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-006.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="598186754"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-036" ID="{80EA942C-9B80-4BD9-B3BD-23EB2096B3CF}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-036.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="377712691"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-036" ID="{80EA942C-9B80-4BD9-B3BD-23EB2096B3CF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Plant Shake207" ID="{97BBBE4E-C3E5-4E72-AA24-A673F2C3222B}" ShortID="398958870">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-007" ID="{C4E3AF65-0932-4C81-AF89-23361DF2C952}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-007.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1029452591"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-037" ID="{EABCB887-4CF5-407B-B37D-1D12B9B540B5}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-037.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="56960220"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-037" ID="{EABCB887-4CF5-407B-B37D-1D12B9B540B5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Plant Shake208" ID="{48F8343E-47C4-48BB-AA5F-53BAF04180F7}" ShortID="715549727">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-008" ID="{A59E6FE1-17F7-4B63-BE45-88200EBEBCBF}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-008.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="960428142"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-038" ID="{1452F94C-595B-4F7A-97DB-DF472210E3D9}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-038.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="579537519"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-038" ID="{1452F94C-595B-4F7A-97DB-DF472210E3D9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Plant Shake209" ID="{F27E8009-9EC3-410B-822F-13EAAF19E0BD}" ShortID="883472522">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-009" ID="{4B131C86-D320-4DB4-8157-051DDF931A0C}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-009.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="144217951"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-039" ID="{990AD946-00A0-4327-A9D3-B47D060FEF3B}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-039.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="963671071"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-039" ID="{990AD946-00A0-4327-A9D3-B47D060FEF3B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Plant Shake210" ID="{6A4A9AFE-3014-452D-8CD1-DCA97BC898A6}" ShortID="675620161">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-010" ID="{B7C24430-C965-45A3-ACC8-46C65B9CBA36}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-010.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="333560926"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-040" ID="{FDD8FA71-74B1-40BE-BF3D-C33A623EE826}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-040.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="445707285"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-040" ID="{FDD8FA71-74B1-40BE-BF3D-C33A623EE826}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Fridge" ID="{5A810BC9-1309-47F8-A936-A016CD740101}" ShortID="557345466">
+									<ChildrenList>
+										<Sound Name="Fridge Open11" ID="{84BD9380-6735-4B9D-AD28-4F7EE38793D3}" ShortID="589257192">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-011" ID="{69FFD854-4A96-4558-AE88-279BE6648170}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-011.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="598163604"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-041" ID="{2C8E25B9-970B-4FF8-AC7B-E3738F00EC57}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-041.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="424851816"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-041" ID="{2C8E25B9-970B-4FF8-AC7B-E3738F00EC57}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Fridge Close12" ID="{71DAE778-3263-4A0B-88DB-7B0BE100A2C8}" ShortID="740047597">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-012" ID="{C272971E-576E-4593-AD40-14E1CB534FF9}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-012.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="917916732"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-042" ID="{DD89F0C8-0609-47CA-AB38-778EDB2A0E22}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-042.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="702891835"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-042" ID="{DD89F0C8-0609-47CA-AB38-778EDB2A0E22}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Fridge Open13" ID="{7558839E-DE9B-4E55-BE6F-057D6392E3E3}" ShortID="55800430">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-013" ID="{B051A166-FFC4-4660-A0AE-3F241B2E1B93}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-013.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="619245139"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-043" ID="{89D7ED6A-794E-46FF-8271-9DA4B3725E99}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-043.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="430415088"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-043" ID="{89D7ED6A-794E-46FF-8271-9DA4B3725E99}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Fridge Close14" ID="{46C524B8-7C87-48E9-9B79-4534B7D57706}" ShortID="193049771">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-014" ID="{5E9EF525-AB5D-4333-89E8-3F5D2745F8A4}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-014.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="262918579"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-044" ID="{59669B1E-914D-4C55-B065-F1B9C203320B}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-044.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="664495416"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-044" ID="{59669B1E-914D-4C55-B065-F1B9C203320B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Toaster" ID="{1CB4E682-0097-4617-94DF-30BFF1A9F3D6}" ShortID="494444374">
+									<ChildrenList>
+										<Sound Name="Toaster Set15" ID="{777A1F76-3755-491F-A160-5253F1F600BF}" ShortID="802747701">
+											<PropertyList>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-015" ID="{AB482EB3-1A80-455C-93B3-5B65D9394B23}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-015.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="870536205"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-045" ID="{F1059F44-A9E7-4978-A238-300EE27D643F}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-045.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1055799433"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-045" ID="{F1059F44-A9E7-4978-A238-300EE27D643F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Stove" ID="{3E243DD4-A12A-4EAA-AD1F-E6BD835C15EE}" ShortID="948268915">
+									<ChildrenList>
+										<Sound Name="StoveKnobs16" ID="{D1540995-8FC7-451D-B918-24C7D743AD6C}" ShortID="381140088">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-016" ID="{DA2C020F-98A0-4F93-9BEF-32E9B5843764}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-016.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="531510860"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-046" ID="{A51405C6-745A-45E4-82A1-140D4A6E3F69}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-046.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="75420453"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-046" ID="{A51405C6-745A-45E4-82A1-140D4A6E3F69}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="StoveKnobs17" ID="{F1B4710E-AC4D-4195-96B0-6F53602C7C33}" ShortID="615381685">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-017" ID="{62EED2A2-894A-4FBC-AB48-AB5020AD00BE}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-017.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1047870905"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-047" ID="{F42AA634-5286-49DE-9B6D-74180362128D}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-047.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="313574756"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-047" ID="{F42AA634-5286-49DE-9B6D-74180362128D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="StoveKnobs18" ID="{0A4C0010-397F-4D3D-9BE6-83CFF5AB2BF5}" ShortID="1012364742">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-018" ID="{7D2555BD-E01F-4E18-A0F1-FD0E0273502B}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-018.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="878448439"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-048" ID="{60849171-DB3C-489D-8061-10555F73D88B}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-048.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="139868115"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-048" ID="{60849171-DB3C-489D-8061-10555F73D88B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="StoveKnobs19" ID="{9A229460-A7B3-457D-935E-EB2F1987F9DF}" ShortID="742820705">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-019" ID="{5BBAE3AC-1456-402A-830F-894E945AD48D}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-019.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="558796907"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-049" ID="{E4A70C58-75FA-4B7A-99E2-D741CB02987E}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-049.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="254476878"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-049" ID="{E4A70C58-75FA-4B7A-99E2-D741CB02987E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="StoveKnob&amp;Burn20" ID="{CE4980EC-2F84-483D-977C-F3C300E33E71}" ShortID="887700044">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-020" ID="{61147C83-4511-4E74-B1BD-12C6059D79D1}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-020.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="501939173"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-050" ID="{0B7DD30C-B85E-4685-BB56-06DECC86D239}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-050.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="495664148"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-050" ID="{0B7DD30C-B85E-4685-BB56-06DECC86D239}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="StoveKnob&amp;Burn21" ID="{C083F7B4-043E-4B8D-9D1A-4F68E35BF0AC}" ShortID="1058239400">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-021" ID="{D4633F5B-5B2B-49EF-B9FD-55022365C432}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-021.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="938667634"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-051" ID="{74C692EC-78A6-4404-8969-ED79E47F4D78}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-051.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="559662226"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-051" ID="{74C692EC-78A6-4404-8969-ED79E47F4D78}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Tap" ID="{67599D77-605F-4B6C-9211-1C80DC2C08CA}" ShortID="753683778">
+									<ChildrenList>
+										<SwitchContainer Name="TapContainer" ID="{7F6B1EC9-9FA5-4C1E-BB50-6AB60A82020E}" ShortID="390295537">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="Tap" ID="{4C014796-3D55-4337-89CA-D14042E98D86}" WorkUnitID="{45845EE0-310A-423D-99E9-FD87425BD9A1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="TapStart25" ID="{981D9419-2F63-4D0D-AA4A-F9AB8A68182F}" ShortID="600905298">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GameSounds-023" ID="{DABCF078-00A1-476A-9F56-E23CA63C0031}">
+															<Language>SFX</Language>
+															<AudioFile>GameSounds-023.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="673724012"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GameSounds-053" ID="{22D52FF4-E9B6-4349-978C-2F0738F7D44B}">
+															<Language>SFX</Language>
+															<AudioFile>GameSounds-053.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="177179192"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="GameSounds-053" ID="{22D52FF4-E9B6-4349-978C-2F0738F7D44B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="TapRunning24" ID="{57B945B3-AAD3-4D8E-A342-7385BD45F3BF}" ShortID="869029806">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>31</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GameSounds-024" ID="{C0C18EC1-7973-408A-95F2-2B79ABC94212}">
+															<Language>SFX</Language>
+															<AudioFile>GameSounds-024.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="984866630"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GameSounds-054" ID="{E32B1F73-63B7-46E4-B148-C1A604FBCA1D}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.63561"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.23257"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>GameSounds-054.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="886367113"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="GameSounds-054" ID="{E32B1F73-63B7-46E4-B148-C1A604FBCA1D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="TapEnd23" ID="{19D8A6AA-71E7-4C3C-8313-A089AF31BE10}" ShortID="93885248">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GameSounds-025" ID="{BD95893D-61E0-4028-ADD8-0FC898C344DD}">
+															<Language>SFX</Language>
+															<AudioFile>GameSounds-025.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1051611363"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GameSounds-055" ID="{B05E9B2C-9316-49C5-A898-E506634375AB}">
+															<Language>SFX</Language>
+															<AudioFile>GameSounds-055.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="672508387"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="GameSounds-055" ID="{B05E9B2C-9316-49C5-A898-E506634375AB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="TapStart25" ID="{981D9419-2F63-4D0D-AA4A-F9AB8A68182F}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="TapEnd23" ID="{19D8A6AA-71E7-4C3C-8313-A089AF31BE10}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="TapRunning24" ID="{57B945B3-AAD3-4D8E-A342-7385BD45F3BF}"/>
+														<PropertyList>
+															<Property Name="ContinuePlay" Type="bool" Value="True"/>
+														</PropertyList>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Off" ID="{FD1E765D-1D59-4978-9D3B-386B225B31FC}"/>
+														<ItemList>
+															<ItemRef Name="TapEnd23" ID="{19D8A6AA-71E7-4C3C-8313-A089AF31BE10}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="On" ID="{4D3CE863-7FC2-471A-B61D-6329BB0F1347}"/>
+														<ItemList>
+															<ItemRef Name="TapStart25" ID="{981D9419-2F63-4D0D-AA4A-F9AB8A68182F}"/>
+															<ItemRef Name="TapRunning24" ID="{57B945B3-AAD3-4D8E-A342-7385BD45F3BF}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Microwave" ID="{A24E716D-40E2-442C-9382-E3E2F43D0388}" ShortID="104972541">
+									<ChildrenList>
+										<Sound Name="MicrowaveOpen26" ID="{7496A3EA-9668-4F48-BBB6-0C923CB03625}" ShortID="598354036">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-026" ID="{49190550-5005-4097-BD12-5C7206DED400}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-026.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1062481682"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-056" ID="{985E8E38-284E-4E3B-BACF-ABA86FEE656B}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-056.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="346867583"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-056" ID="{985E8E38-284E-4E3B-BACF-ABA86FEE656B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MicrowaveClose27" ID="{FCA4BB3B-C746-479B-A237-B4801148D915}" ShortID="247905373">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-027" ID="{531EBA81-2B0D-433C-A599-87C7D6E218CF}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-027.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="944796400"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-057" ID="{EAFDEF06-6195-47D5-8563-4799DE7DAAA0}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-057.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="254727835"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-057" ID="{EAFDEF06-6195-47D5-8563-4799DE7DAAA0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MicrowaveStartHum29" ID="{BD717E38-8BE4-4811-BC38-3BF9DA307652}" ShortID="85093004">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-028" ID="{C125FCCE-E151-445A-9A43-AF520BBA25E1}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-028.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="950484862"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-058" ID="{109928A3-39DB-438B-8050-4AAB645E5520}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-058.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="986660540"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-058" ID="{109928A3-39DB-438B-8050-4AAB645E5520}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MicrowaveHum28" ID="{0DD2B5E6-5417-4053-A533-AAF0193E4408}" ShortID="948590292">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-029" ID="{4140BB41-118A-436A-ABC0-56039B67F8BA}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-029.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="267338580"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-059" ID="{B29F1D01-674C-4F95-9A97-CF0919FAFAF3}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-059.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="519167652"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-059" ID="{B29F1D01-674C-4F95-9A97-CF0919FAFAF3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MicrowaveBing30" ID="{F82A085C-16C8-4D3C-897D-CCF71DE3702F}" ShortID="66936005">
+											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" WorkUnitID="{1CF41C10-48EF-4DBC-9EA5-7412EAEBFAC9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-030" ID="{D6E235B3-0F14-4847-B580-67DC03E24DF5}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-030.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="234757174"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="GameSounds-060" ID="{19C8447D-C86C-46CB-BAB9-B377C18F240A}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-060.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="291966812"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-060" ID="{19C8447D-C86C-46CB-BAB9-B377C18F240A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Amb" ID="{803B6408-F5B3-492A-9608-58C3083CDCE1}" ShortID="992792054">
+									<ChildrenList>
+										<Sound Name="KitchenRoomTone22" ID="{920D7716-5FD2-4539-BEBC-ACECCD61F39E}" ShortID="101093728">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Ambience" ID="{B23447F3-6EDD-4D1F-A9E8-01A71657CB23}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GameSounds-052" ID="{4A87126F-EED2-421D-8EC8-4B567132EB32}">
+													<Language>SFX</Language>
+													<AudioFile>GameSounds-052.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="869642888"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GameSounds-052" ID="{4A87126F-EED2-421D-8EC8-4B567132EB32}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
