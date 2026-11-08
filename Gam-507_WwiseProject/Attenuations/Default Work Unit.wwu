@@ -5,6 +5,9 @@
 			<ChildrenList>
 				<WorkUnit Name="Roscislawa" ID="{B1DCC4B2-1D5D-4379-8027-DE7D99B11518}" PersistMode="Reference"/>
 				<Attenuation Name="KitchenThings" ID="{49AC27DD-47D7-44FE-A062-27FF00E864B6}" ShortID="850059565">
+					<PropertyList>
+						<Property Name="RadiusMax" Type="Real64" Value="250"/>
+					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
@@ -19,7 +22,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>100</XPos>
+											<XPos>250</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -46,7 +49,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>100</XPos>
+											<XPos>250</XPos>
 											<YPos>100</YPos>
 											<Flags>37</Flags>
 										</Point>

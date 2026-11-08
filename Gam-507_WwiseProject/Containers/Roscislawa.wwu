@@ -1078,7 +1078,7 @@
 									<ChildrenList>
 										<Sound Name="Plant shake01" ID="{3CC703D5-D9D9-4C25-B738-47EECCCF1607}" ShortID="239652289">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1114,7 +1114,7 @@
 										</Sound>
 										<Sound Name="Plant shake02" ID="{3B514413-C5C9-403E-9B1B-1334573BF3F2}" ShortID="901275780">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1150,7 +1150,7 @@
 										</Sound>
 										<Sound Name="Plant shake03" ID="{253E494A-3208-4173-8F83-EA49C9497D7E}" ShortID="242393363">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1186,7 +1186,7 @@
 										</Sound>
 										<Sound Name="Plant shake04" ID="{1535DE6E-6B46-4166-A6EE-72D56C38C319}" ShortID="385209411">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1222,7 +1222,7 @@
 										</Sound>
 										<Sound Name="Plant shake05" ID="{03AF5FC4-E61D-4DAE-93B2-9D5A51329325}" ShortID="535853446">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1258,7 +1258,7 @@
 										</Sound>
 										<Sound Name="Plant Shake206" ID="{FB002604-2714-4CAE-AA3A-A383CAC7442F}" ShortID="651700049">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1294,7 +1294,7 @@
 										</Sound>
 										<Sound Name="Plant Shake207" ID="{97BBBE4E-C3E5-4E72-AA24-A673F2C3222B}" ShortID="398958870">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1330,7 +1330,7 @@
 										</Sound>
 										<Sound Name="Plant Shake208" ID="{48F8343E-47C4-48BB-AA5F-53BAF04180F7}" ShortID="715549727">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1366,7 +1366,7 @@
 										</Sound>
 										<Sound Name="Plant Shake209" ID="{F27E8009-9EC3-410B-822F-13EAAF19E0BD}" ShortID="883472522">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1402,7 +1402,7 @@
 										</Sound>
 										<Sound Name="Plant Shake210" ID="{6A4A9AFE-3014-452D-8CD1-DCA97BC898A6}" ShortID="675620161">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1442,7 +1442,7 @@
 									<ChildrenList>
 										<Sound Name="Fridge Open11" ID="{84BD9380-6735-4B9D-AD28-4F7EE38793D3}" ShortID="589257192">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1478,7 +1478,7 @@
 										</Sound>
 										<Sound Name="Fridge Close12" ID="{71DAE778-3263-4A0B-88DB-7B0BE100A2C8}" ShortID="740047597">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1514,7 +1514,7 @@
 										</Sound>
 										<Sound Name="Fridge Open13" ID="{7558839E-DE9B-4E55-BE6F-057D6392E3E3}" ShortID="55800430">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1550,7 +1550,7 @@
 										</Sound>
 										<Sound Name="Fridge Close14" ID="{46C524B8-7C87-48E9-9B79-4534B7D57706}" ShortID="193049771">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1626,7 +1626,7 @@
 									<ChildrenList>
 										<Sound Name="StoveKnobs16" ID="{D1540995-8FC7-451D-B918-24C7D743AD6C}" ShortID="381140088">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1662,7 +1662,7 @@
 										</Sound>
 										<Sound Name="StoveKnobs17" ID="{F1B4710E-AC4D-4195-96B0-6F53602C7C33}" ShortID="615381685">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1698,7 +1698,7 @@
 										</Sound>
 										<Sound Name="StoveKnobs18" ID="{0A4C0010-397F-4D3D-9BE6-83CFF5AB2BF5}" ShortID="1012364742">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1734,7 +1734,7 @@
 										</Sound>
 										<Sound Name="StoveKnobs19" ID="{9A229460-A7B3-457D-935E-EB2F1987F9DF}" ShortID="742820705">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1770,7 +1770,7 @@
 										</Sound>
 										<Sound Name="StoveKnob&amp;Burn20" ID="{CE4980EC-2F84-483D-977C-F3C300E33E71}" ShortID="887700044">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1806,7 +1806,7 @@
 										</Sound>
 										<Sound Name="StoveKnob&amp;Burn21" ID="{C083F7B4-043E-4B8D-9D1A-4F68E35BF0AC}" ShortID="1058239400">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -1846,7 +1846,7 @@
 									<ChildrenList>
 										<SwitchContainer Name="TapContainer" ID="{7F6B1EC9-9FA5-4C1E-BB50-6AB60A82020E}" ShortID="390295537">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
@@ -1866,6 +1866,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="TapStart25" ID="{981D9419-2F63-4D0D-AA4A-F9AB8A68182F}" ShortID="600905298">
+													<PropertyList>
+														<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -1896,6 +1899,7 @@
 												</Sound>
 												<Sound Name="TapRunning24" ID="{57B945B3-AAD3-4D8E-A342-7385BD45F3BF}" ShortID="869029806">
 													<PropertyList>
+														<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 														<Property Name="Lowpass" Type="int16">
 															<ValueList>
@@ -1937,6 +1941,9 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="TapEnd23" ID="{19D8A6AA-71E7-4C3C-8313-A089AF31BE10}" ShortID="93885248">
+													<PropertyList>
+														<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -2004,7 +2011,7 @@
 									<ChildrenList>
 										<Sound Name="MicrowaveOpen26" ID="{7496A3EA-9668-4F48-BBB6-0C923CB03625}" ShortID="598354036">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -2040,7 +2047,7 @@
 										</Sound>
 										<Sound Name="MicrowaveClose27" ID="{FCA4BB3B-C746-479B-A237-B4801148D915}" ShortID="247905373">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -2076,7 +2083,7 @@
 										</Sound>
 										<Sound Name="MicrowaveStartHum29" ID="{BD717E38-8BE4-4811-BC38-3BF9DA307652}" ShortID="85093004">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -2112,7 +2119,7 @@
 										</Sound>
 										<Sound Name="MicrowaveHum28" ID="{0DD2B5E6-5417-4053-A533-AAF0193E4408}" ShortID="948590292">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
@@ -2149,7 +2156,7 @@
 										</Sound>
 										<Sound Name="MicrowaveBing30" ID="{F82A085C-16C8-4D3C-897D-CCF71DE3702F}" ShortID="66936005">
 											<PropertyList>
-												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="2.5"/>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -2189,6 +2196,7 @@
 									<ChildrenList>
 										<Sound Name="KitchenRoomTone22" ID="{920D7716-5FD2-4539-BEBC-ACECCD61F39E}" ShortID="101093728">
 											<PropertyList>
+												<Property Name="AttenuationDistanceScaling" Type="Real32" Value="1.5"/>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
