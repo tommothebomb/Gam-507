@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{39C1C09F-8920-4CF4-B7FD-8D337D81F02E}",
     "Language": "SFX",
-    "Hash": "{96D599D7-9F05-21A1-8FC2-64A587BBADD0}",
+    "Hash": "{06EF9639-58A4-DD60-7A2E-529E7F092B53}",
     "ObjectPath": "Play_KitchenRoomTone22",
     "ShortName": "Play_KitchenRoomTone22",
     "Path": "Event/Play_KitchenRoomTone22.bnk",
@@ -41,6 +41,6 @@
     ]
    }
   ],
-  "FileHash": "{56073E06-4B9D-0A64-297E-7889551E598E}"
+  "FileHash": "{BCC9D446-04C7-E183-AA17-895E3B7A9378}"
  }
 }
