@@ -71,6 +71,8 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public Transform shootPoint;
     [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
     public GameObject playerStuckWeb;
+    [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
+    public Transform ratNest;
 
 
     private void Awake()
@@ -113,15 +115,15 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
         stateMachine.currentEnemyState.FrameUpdate();
 
         // walk and idle animations \\
-        if (agent.velocity.magnitude >= 0.1f && enemyAnimController.isMoving == false && enemyAnimController.isAttacking == false) 
-        { 
-            enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Moving); 
-            enemyAnimController.isMoving = true; 
+        if (agent.velocity.magnitude >= 0.1f && enemyAnimController.isMoving == false && enemyAnimController.isAttacking == false)
+        {
+            enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Moving);
+            enemyAnimController.isMoving = true;
         }
-        else if (agent.velocity.magnitude < 0.1f && enemyAnimController.isMoving == true && enemyAnimController.isAttacking == false) 
-        { 
-            enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Idle); 
-            enemyAnimController.isMoving = false; 
+        else if (agent.velocity.magnitude < 0.1f && enemyAnimController.isMoving == true && enemyAnimController.isAttacking == false)
+        {
+            enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Idle);
+            enemyAnimController.isMoving = false;
         }
     }
 
@@ -134,6 +136,9 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public void TakeDamage(float damageAmount)
     {
         CurrentHealth -= damageAmount;
+        // play damage animation somehow
+        // depenidng on how materials work, could use enemy material and flash red?
+        // confirmed will work for spider
         if (CurrentHealth <= 0) stateMachine.ChangeState(deathState);
     }
 
@@ -153,7 +158,7 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
 
     // animation handler \\
     // will allow for animations to be handled from the animator inside of unity
-    void AnimationTriggerEvent(AnimationTriggers trigger)
+    public void AnimationTriggerEvent(AnimationTriggers trigger)
     {
         stateMachine.currentEnemyState.AnimationTriggerEvent(trigger);
     }

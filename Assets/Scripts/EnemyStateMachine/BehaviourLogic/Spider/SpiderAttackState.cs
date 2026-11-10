@@ -8,58 +8,42 @@ public class SpiderAttackState : EnemyAttackSOBase
     bool attackPlaying;
 
 
-    public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
-    {
-        base.Initialize(gameObject, enemyBase);
-    }
-
     public override void DoEnterLogic()
     {
-        base.DoEnterLogic();
         attackPlaying = false;
         enemyBase.agent.SetDestination(enemyBase.player.transform.position);
     }
 
     public override void DoUpdateLogic()
     {
-        base.DoUpdateLogic();
-
-        if (enemyBase.IsWithinAttackDist && !attackPlaying)
+        // when spider gets close enough, trigger attack anim
+        if (enemyBase.agent.remainingDistance <= 2 && !attackPlaying)
         {
             attackPlaying = true;
             enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Attack2);
         }
     }
 
+    // back away from player before swapping back to chase
     void MoveBack()
     {
         Vector3 backAwayPos = gameObject.transform.position - (gameObject.transform.forward * -distToBackUp);
         enemyBase.agent.SetDestination(backAwayPos);
         enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
     }
-
-    public override void DoPhysicsUpdateLogic()
-    {
-        base.DoPhysicsUpdateLogic();
-    }
-
-    public override void DoExitLogic()
-    {
-        base.DoExitLogic();
-    }
     public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
     {
-        base.DoAnimationTriggerLogic(trigger);
-
+        // deal damage at point in animation where spider pierces player
         if (trigger == EnemyBase.AnimationTriggers.Attack2)
         {
             enemyBase.player.GetComponent<IDamageable>().TakeDamage(enemyBase.damageDeals);
         }
+        // at end of anim, set bools back, remove web, allow player to move again and back away
         else if (trigger == EnemyBase.AnimationTriggers.EndAttack2)
         {
+            enemyBase.enemyAnimController.isAttacking = false;
             enemyBase.playerStuckWeb.SetActive(false);
             enemyBase.player.GetComponent<PlayerMovement>().enabled = true;
-            enemyBase.enemyAnimController.isAttacking = false;
             MoveBack();
         }
     }

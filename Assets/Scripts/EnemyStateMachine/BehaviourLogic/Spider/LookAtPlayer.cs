@@ -1,7 +1,7 @@
 using UnityEngine;
 
 // Libby/Jordan Script \\
-public class ShootPointLookAt : MonoBehaviour
+public class LookAtPlayer : MonoBehaviour
 {
     [Tooltip("must assign player model to this or will target wrong transform")]
     [SerializeField] Transform playerModel;

@@ -16,14 +16,8 @@ public class SpiderChaseState : EnemyChaseSOBase
     float shootTimer;
 
 
-    public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
-    {
-        base.Initialize(gameObject, enemyBase);
-    }
-
     public override void DoEnterLogic()
     {
-        base.DoEnterLogic();
         enemyBase.shootPoint.gameObject.SetActive(true);
         destinationTimer = 0;
         shootTimer = 0;
@@ -32,7 +26,6 @@ public class SpiderChaseState : EnemyChaseSOBase
 
     public override void DoUpdateLogic()
     {
-        base.DoUpdateLogic();
         // used in multiple equasions and only runs when this state is active so hoping this is excuseable
         distanceFromPlayer = Vector3.Distance(gameObject.transform.position, enemyBase.player.transform.position);
 
@@ -78,19 +71,13 @@ public class SpiderChaseState : EnemyChaseSOBase
         logic.enemyBase = enemyBase;
     }
 
-    public override void DoPhysicsUpdateLogic()
-    {
-        base.DoPhysicsUpdateLogic();
-    }
-
     public override void DoExitLogic()
     {
-        base.DoExitLogic();
         enemyBase.shootPoint.gameObject.SetActive(false);
     }
+
     public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
     {
-        base.DoAnimationTriggerLogic(trigger);
         if (trigger == EnemyBase.AnimationTriggers.Attack1) ShootWeb();
         else if (trigger == EnemyBase.AnimationTriggers.EndAttack1) enemyBase.enemyAnimController.isAttacking = false;
     }

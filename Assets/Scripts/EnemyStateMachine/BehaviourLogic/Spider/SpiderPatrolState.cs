@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpiderPatrolState : EnemyPatrolSOBase
 {
     // spider enemies will be relatively stationary in the patrol state, staying hidden from the player
-    ShootPointLookAt thisLookAt;
+    LookAtPlayer thisLookAt;
     bool atStartPos;
     Vector3 startPos;
     Vector3 startRot;
@@ -15,7 +15,7 @@ public class SpiderPatrolState : EnemyPatrolSOBase
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
     {
         base.Initialize(gameObject, enemyBase);
-        thisLookAt = gameObject.GetComponent<ShootPointLookAt>();
+        thisLookAt = gameObject.GetComponent<LookAtPlayer>();
         startPos = gameObject.transform.position;
         startRot = gameObject.transform.eulerAngles;
         atStartPos = true;
@@ -23,7 +23,7 @@ public class SpiderPatrolState : EnemyPatrolSOBase
 
     public override void DoEnterLogic()
     {
-        base.DoEnterLogic();
+        // turn off shoot point and look at to save on processing
         thisLookAt.enabled = false;
         enemyBase.shootPoint.gameObject.SetActive(false);
         enemyBase.agent.SetDestination(startPos);
@@ -32,10 +32,10 @@ public class SpiderPatrolState : EnemyPatrolSOBase
 
     public override void DoUpdateLogic()
     {
-        base.DoUpdateLogic();
-
+        // change state when player within aggro zone and aggro radius
         if (enemyBase.IsAggroable && enemyBase.IsAggroed) enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
 
+        // while returning to start position, once close enough make enemy turn to face the correct direction
         if (atStartPos) return;
         if (Vector3.Distance(gameObject.transform.position, startPos) <= 2)
         {
@@ -45,14 +45,8 @@ public class SpiderPatrolState : EnemyPatrolSOBase
         }
     }
 
-    public override void DoPhysicsUpdateLogic()
-    {
-        base.DoPhysicsUpdateLogic();
-    }
-
     public override void DoExitLogic()
     {
-        base.DoExitLogic();
         thisLookAt.enabled = true;
         atStartPos = false;
     }
