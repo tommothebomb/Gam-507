@@ -1,3 +1,4 @@
+using System.Runtime.ExceptionServices;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -5,28 +6,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Debug")]
-    [SerializeField] float Velocity;
-    [SerializeField] Transform DirectionArrow;
-    [SerializeField] Transform VelocityArrow;
-    [SerializeField] Vector3 moveKeys;
-    [SerializeField] Vector3 outputDir;
-    [SerializeField] Vector3 currentDir;
-    [SerializeField] float currentangle;
-    [SerializeField] float angle;
-
-    [Header("Core")]
-    [SerializeField] float maxSpeed;
-    [SerializeField] float acceleration;
-    [SerializeField] float turningArc;
-    [SerializeField] Rigidbody rb;
-    [SerializeField] Transform cameraDir;
-    InputAction movementKeys;
-
-    [Header("asstetics")]
-    [SerializeField] Transform Model;
-    [SerializeField] Animator animator; //not implented yet
-
     public enum PlayerStates
     {
         Idle,
@@ -36,36 +15,74 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+    [Header("Debug")]
+    [SerializeField] float Velocity;
+    [SerializeField] Vector3 moveKeys;
+
+    [Header("Movement")]
+    [SerializeField] float maxSpeed;
+    [SerializeField] float acceleration;
+    Vector3 outputDir;
+    Vector3 currentDir;
+    float angle;
+    [SerializeField] Rigidbody rb;
+    [SerializeField] Transform cameraDir;
+    InputAction movementKeys;
+
+    [SerializeField] bool isSliding;
+
+
+    [Header("Visuals")]
+    [SerializeField] Transform Model;
+    [SerializeField] Animator animatorController;
+    //[SerializeField] Animator animator; //not implented yet
 
     [Header("Jump")]
-    InputAction jumpKey;
     [SerializeField] bool isGrounded;
+    InputAction jumpKey;
     [SerializeField] float jumpForce;
-
     [SerializeField] LayerMask GroundMask;
-
-    Vector2 jumpVelocity; //Horizontal and vertical velocity of a jump
     [SerializeField] float additionalAirJump;
     float remaingAirJumps;
-    //double jump?//triple jump/combo jump
+
+    [Header("Grab")]
+    [SerializeField] bool IsGrab;
+    InputAction grabKey;
+    [SerializeField] Vector3 grabPoint; //the postion the player grabbed
+    [SerializeField] Transform hands;
+    [SerializeField] LayerMask interactableLayerMask;
+    float combinedMass;
+
+    [SerializeField] GameObject GrabbedObject;
 
     private void Start()
     {
         movementKeys = InputSystem.actions.FindAction("Move");
         jumpKey = InputSystem.actions.FindAction("Jump");
+        grabKey = InputSystem.actions.FindAction("Interact");
 
+        grabKey.performed += ctx => StartGrab();
         jumpKey.performed += ctx => Jump();
     }
 
     private void FixedUpdate()
     {
-        /////////
-        Move();
-    }
-    private void Update()
-    {
-        //grounded Check
         isGrounded = GroundedCheck();
+        ////////
+        if (IsGrab)
+        {
+            GrabMove();
+        }
+        else
+        {
+            Move();
+        }
+
+
+        if (currentDir.normalized.magnitude != 0)
+        {
+            Model.rotation = Quaternion.LookRotation(currentDir);
+        }
     }
 
     void Move()
@@ -75,56 +92,148 @@ public class PlayerMovement : MonoBehaviour
         //Movedir = new Vector3(Movedir.y, 0, Movedir.x);
         Vector3 Movedir = movementKeys.ReadValue<Vector2>();
         moveKeys = Movedir;
-        Movedir = new Vector3(Movedir.x, 0, Movedir.y);
+        Movedir = new Vector3(Movedir.x, 0, Movedir.y).normalized;
 
 
         //the direction the camera is looking, this is your forward direction
         //Vector3 direction = new Vector3(cameraDir.forward.x, 0, cameraDir.forward.z);
-        Vector2 direction = new Vector2(cameraDir.forward.x, cameraDir.forward.z).normalized;
-        outputDir = direction; //direction vector2 the player is looking
+        outputDir = new Vector2(cameraDir.forward.x, cameraDir.forward.z).normalized;
+         //direction vector2 the player is looking
 
-        angle = (Vector2.SignedAngle(direction,Vector2.up)); //anlge direction player is looking from basic forwards
+        angle = (Vector2.SignedAngle(outputDir,Vector2.up)); //anlge direction player is looking from basic forwards
 
         Vector3 variable = Quaternion.AngleAxis(angle, Vector3.up) * Movedir;
-        currentDir = Vector3.Lerp(currentDir, variable, 0.3f);
-        //get the diffance of currentdir and variable to then rotate current dir to the variable
+
+        if (isGrounded)
+        {
+            currentDir = Vector3.Lerp(currentDir, variable, 0.8f);
+        }
+        else
+        {
+            currentDir = Vector3.Lerp(currentDir, variable, 0.1f);
+        }
+            //get the diffance of currentdir and variable to then rotate current dir to the variable
 
 
-        rb.linearVelocity += currentDir * acceleration;
+            rb.linearVelocity += currentDir * acceleration;
 
-        //speed clamp
-        if  (rb.linearVelocity.magnitude > maxSpeed && isGrounded)
+        //speed clamp airborn
+        if  (rb.linearVelocity.magnitude > maxSpeed && !isGrounded)
         {
             Vector3 SpeedClamp = rb.linearVelocity.normalized * maxSpeed;
             rb.linearVelocity = new Vector3(SpeedClamp.x, rb.linearVelocity.y, SpeedClamp.z);
+        }
+        else if (rb.linearVelocity.magnitude > maxSpeed) //speed clamp grounded
+        {
+            Vector3 SpeedClamp = rb.linearVelocity.normalized * maxSpeed;
+            rb.linearVelocity = new Vector3(SpeedClamp.x, SpeedClamp.y, SpeedClamp.z);
         }
 
 
         //VALUE DEBUG
         //VelocityArrow.rotation = Quaternion.LookRotation(currentDir); //direction of travel
-
-        if (Movedir.magnitude != 0)
-        {
-            Model.rotation = Quaternion.LookRotation(currentDir);
-        } //direction of intent 
         Velocity = rb.linearVelocity.magnitude; //total speed
 
     }
 
+    void GrabMove()
+    {
+        //using the hands as the movement direction
+        //speed is / by objects mass and multipled by the diffrent of player mass to object mass so the force is applied equaly
+        Rigidbody GrabRb = GrabbedObject.GetComponent<Rigidbody>(); 
+
+        Vector3 Movedir = movementKeys.ReadValue<Vector2>();
+        moveKeys = Movedir;
+        Movedir = new Vector3(Movedir.x, 0, Movedir.y).normalized;
+
+        outputDir = new Vector2(hands.forward.x, hands.forward.z).normalized;
+        angle = (Vector2.SignedAngle(outputDir, Vector2.up)); //anlge direction player is looking from basic forwards
+
+        Vector3 FinalVelocity = Quaternion.AngleAxis(angle, Vector3.up) * Movedir;
+
+       currentDir = Vector3.Lerp(currentDir, FinalVelocity, 0.8f);
+        //get the diffance of currentdir and variable to then rotate current dir to the variable
+
+        //we need to add the weight of the grabbed object aswell into out calculations
+        rb.linearVelocity += currentDir * acceleration;
+
+        Debug.DrawRay(hands.position, hands.forward, Color.blue);
+
+
+        if (rb.linearVelocity.magnitude > maxSpeed / combinedMass)
+        {
+            Vector3 SpeedClamp = rb.linearVelocity.normalized * (maxSpeed/combinedMass);
+            rb.linearVelocity = new Vector3(SpeedClamp.x, SpeedClamp.y, SpeedClamp.z);
+        }
+
+
+        GrabRb.linearVelocity = rb.linearVelocity;
+        /*
+        if (rb.linearVelocity.magnitude > maxSpeed && !isGrounded)
+        {
+            Vector3 SpeedClamp = rb.linearVelocity.normalized * maxSpeed;
+            rb.linearVelocity = new Vector3(SpeedClamp.x, rb.linearVelocity.y, SpeedClamp.z);
+        }
+        else if (rb.linearVelocity.magnitude > maxSpeed) //speed clamp grounded
+        {
+            Vector3 SpeedClamp = rb.linearVelocity.normalized * maxSpeed;
+            rb.linearVelocity = new Vector3(SpeedClamp.x, SpeedClamp.y, SpeedClamp.z);
+        }*/
+
+
+        //VALUE DEBUG
+        Velocity = rb.linearVelocity.magnitude; //total speeds
+    }
 
     void Jump()
     {
         if (!isGrounded && remaingAirJumps == 0 ) { return; }
         Debug.Log("Jump");
         remaingAirJumps -= 1;
-        rb.AddForce(new Vector3(currentDir.x , 1 , currentDir.z) * jumpForce);
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+        rb.AddForce(new Vector3(currentDir.x , 0.5f , currentDir.z) * jumpForce);
     }
+
+    #region Grab
+    void StartGrab()
+    {
+        Debug.Log("grab");
+
+        Ray grabRay = new Ray() { origin = transform.position, direction = Model.transform.forward };
+        RaycastHit hit;
+        Physics.Raycast(grabRay,out hit, 3f, interactableLayerMask);
+        Debug.DrawRay(grabRay.origin, grabRay.direction * 3, Color.red,3f);
+
+
+        if (hit.collider != null)
+        {
+            IsGrab = true;
+
+            hands.position = hit.point;
+            hands.parent = null;
+
+            Debug.DrawRay(hit.point, hit.normal,Color.green,2f);
+            hands.LookAt(-hit.normal + hit.point);
+            Debug.Log(hit.normal);
+
+            hands.transform.parent = hit.transform;
+            GrabbedObject = hit.transform.gameObject;
+
+            combinedMass = GrabbedObject.GetComponent<Rigidbody>().mass + rb.mass;
+        }
+
+    }
+
+
+    #endregion
+
+
     #region Utility
     bool GroundedCheck()
     {
         RaycastHit hit;
-        Physics.Raycast(transform.position, Vector2.down,out hit, 0.75f, GroundMask);
-        Debug.DrawRay(transform.position, Vector2.down * 0.75f, Color.green);
+        Physics.Raycast(transform.position, Vector2.down,out hit, 1.15f, GroundMask);
+        Debug.DrawRay(transform.position, Vector2.down * 1.15f, Color.green);
 
 
         if (hit.collider != null)
@@ -132,13 +241,18 @@ public class PlayerMovement : MonoBehaviour
             remaingAirJumps = additionalAirJump;
             //is grounded
             //check ground normal for slide = on slide// add a downward force to the player
-            Debug.Log(Vector3.Dot(Vector3.up, hit.normal));
+            //Debug.Log(Vector3.Dot(Vector3.up, hit.normal));
             if (Vector3.Dot(Vector3.up, hit.normal) < 0.9f)
             {
                 Debug.Log("IM SLIDING YO");
+                isSliding = true;
             }
-
-            return true;
+            else if (isSliding)
+            {
+                isSliding = false;
+            }
+                //jump end
+                return true;
         }
         else 
         {
