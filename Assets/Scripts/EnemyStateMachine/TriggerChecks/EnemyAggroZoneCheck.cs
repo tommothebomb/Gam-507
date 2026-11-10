@@ -9,11 +9,6 @@ public class EnemyAggroZoneCheck : MonoBehaviour
     [SerializeField] EnemyBase[] enemiesInZone;
 
 
-    private void Awake()
-    {
-
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

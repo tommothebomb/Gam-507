@@ -6,12 +6,14 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
 {
+    [Tooltip("make sure is assigned as the players model")]
     public GameObject player;
     public PoolManager pooler;
 
     // from IDamageable interface \\
     [field: SerializeField] public float MaxHealth { get; set; }
     public float CurrentHealth { get; set; }
+    public float damageDeals;
 
     // from ITriggerCheckable interface \\
     public bool IsAggroable { get; set; }
@@ -22,13 +24,16 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public enum AnimationTriggers
     {
         Idle,
-        Chasing,
+        Moving, // use this for walking, called moving in case some enemies cant walk
         Attack1, // lots of options so more versitile between enemy types
+        EndAttack1, 
         Attack2, // dont need to use all of them
+        EndAttack2, 
         Attack3,
         TakingDamage,
-        PlayFootsteps
+        Death
     }
+    public EnemyAnimations enemyAnimController;
 
     #region // state machine variables \\
     public EnemyStateMachine stateMachine { get; set; }
@@ -50,18 +55,22 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public EnemyDeathSOBase enemyDeathBaseInstance { get; set; }
     #endregion
 
-    // stats \\
-    [SerializeField] protected float damageDeals;
     [Header("Navmesh Settings")]
-    [SerializeField] protected NavMeshAgent agent;
+    public NavMeshAgent agent;
     [Tooltip("any values left at 0 will be assigned the navmesh agents default values")]
-    [SerializeField] protected float speed;
+    public float speed;
     [Tooltip("any values left at 0 will be assigned the navmesh agents default values")]
-    [SerializeField] protected float turningSpeed;
+    public float turningSpeed;
     [Tooltip("any values left at 0 will be assigned the navmesh agents default values")]
-    [SerializeField] protected float acceleration;
+    public float acceleration;
     [Tooltip("stopping distance default is already zero so will set this to whatever you put here")]
-    [SerializeField] protected float stoppingDist;
+    public float stoppingDist;
+
+    [Header("Per Enemy Variables")]
+    [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
+    public Transform shootPoint;
+    [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
+    public GameObject playerStuckWeb;
 
 
     private void Awake()
@@ -102,7 +111,20 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     private void Update()
     {
         stateMachine.currentEnemyState.FrameUpdate();
+
+        // walk and idle animations \\
+        if (agent.velocity.magnitude >= 0.1f && enemyAnimController.isMoving == false && enemyAnimController.isAttacking == false) 
+        { 
+            enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Moving); 
+            enemyAnimController.isMoving = true; 
+        }
+        else if (agent.velocity.magnitude < 0.1f && enemyAnimController.isMoving == true && enemyAnimController.isAttacking == false) 
+        { 
+            enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Idle); 
+            enemyAnimController.isMoving = false; 
+        }
     }
+
     private void FixedUpdate()
     {
         stateMachine.currentEnemyState.PhysicsUpdate();

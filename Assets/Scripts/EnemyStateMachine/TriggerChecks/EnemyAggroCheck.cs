@@ -6,7 +6,6 @@ public class EnemyAggroCheck : MonoBehaviour
     // place this script on the enemy aggro trigger
     // trigger MUST be child of enemy
 
-    [SerializeField] GameObject player;
     EnemyBase thisBase;
 
 
