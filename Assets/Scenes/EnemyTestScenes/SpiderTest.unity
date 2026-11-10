@@ -402,6 +402,7 @@ MonoBehaviour:
   stoppingDist: 2
   shootPoint: {fileID: 188155504}
   playerStuckWeb: {fileID: 0}
+  ratNest: {fileID: 0}
 --- !u!114 &199199445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,7 +560,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.5833333
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: c1a80697f672a474abe36e8dfea86f74, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 27e167d302c43864fa8dd47c800ef0a3, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &893619797
 GameObject:
@@ -1488,6 +1489,10 @@ PrefabInstance:
     - target: {fileID: 6087190533333980479, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: m_Name
       value: GiantHouseSpider
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087190533333980479, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7484457934383947461, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: playerModel

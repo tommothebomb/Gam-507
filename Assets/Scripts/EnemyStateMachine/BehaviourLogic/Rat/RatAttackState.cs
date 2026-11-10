@@ -7,25 +7,26 @@ public class RatAttackState : EnemyAttackSOBase
     // when player is within attack trigger will swap to this state
     // will do a lunge attack before retreating back a small amount, similar to spider
     // this could be entirely animation/anitmation trigger based if the designers model and animate the rat
-    Vector3 moveBackPos;
+    bool hasAttacked;
+    float i;
 
-
-    public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
-    {
-        base.Initialize(gameObject, enemyBase);
-    }
 
     public override void DoEnterLogic()
     {
-        // will set destinastion to current transform.pos and play attack anim
-        Debug.Log("attack player");
+        Debug.Log("entered attack");
+        hasAttacked = false;
+        enemyBase.agent.isStopped = true;
+        enemyBase.agent.ResetPath();
         enemyBase.agent.SetDestination(gameObject.transform.position);
-        moveBackPos = gameObject.transform.position - (gameObject.transform.forward * 6);
-        Debug.Log(moveBackPos);
+        enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Attack1);
+        Debug.Log("Rat position: " + gameObject.transform.position);
+        Debug.Log("Agent destination: " + enemyBase.agent.destination);
+        Debug.LogError("aaaaaaaaaaaaaaaaa");
     }
+
     public override void DoUpdateLogic()
     {
-        if (enemyBase.agent.destination == moveBackPos && enemyBase.agent.remainingDistance <= 1) enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
+        if (enemyBase.agent.remainingDistance <= 1 && hasAttacked) enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
     }
 
     public override void DoPhysicsUpdateLogic()
@@ -43,7 +44,8 @@ public class RatAttackState : EnemyAttackSOBase
         if (trigger == EnemyBase.AnimationTriggers.Attack1)
         {
             enemyBase.player.GetComponent<IDamageable>().TakeDamage(enemyBase.damageDeals);
+            Debug.Log("attacked");
         }
-        else if (trigger == EnemyBase.AnimationTriggers.EndAttack1) enemyBase.enemyAnimController.isAttacking = false;
+        else if (trigger == EnemyBase.AnimationTriggers.EndAttack1) { enemyBase.enemyAnimController.isAttacking = false; hasAttacked = true; }
     }
 }

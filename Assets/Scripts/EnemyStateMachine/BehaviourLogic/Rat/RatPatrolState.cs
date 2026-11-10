@@ -7,6 +7,7 @@ public class RatPatrolState : EnemyPatrolSOBase
     // want this to have the rats sitting around an area eating food
     // eating will be an animation loop
     // will go back to starting points when swap back to this state, need to set starting pos when initialize
+    LookAtPlayer thisLookAt;
     bool atStartPos;
     Vector3 startPos;
     Vector3 startRot;
@@ -16,6 +17,7 @@ public class RatPatrolState : EnemyPatrolSOBase
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
     {
         base.Initialize(gameObject, enemyBase);
+        thisLookAt = gameObject.GetComponent<LookAtPlayer>();
         startPos = gameObject.transform.position;
         startRot = gameObject.transform.eulerAngles;
         atStartPos = true;
@@ -24,9 +26,12 @@ public class RatPatrolState : EnemyPatrolSOBase
     public override void DoEnterLogic()
     {
         Debug.Log("entered patrol");
+        thisLookAt.enabled = false;
         enemyBase.agent.SetDestination(startPos);
+        Debug.Log(startPos);
         rotationTime = 0;
     }
+
     public override void DoUpdateLogic()
     {
         // will chase player as soon as they enter rats zone, dont need to be within certain radius
@@ -41,14 +46,13 @@ public class RatPatrolState : EnemyPatrolSOBase
             if (rotationTime >= 1.5f) atStartPos = true;
         }
     }
-    public override void DoPhysicsUpdateLogic()
-    {
 
-    }
     public override void DoExitLogic()
     {
-
+        thisLookAt.enabled = true;
+        atStartPos = false;
     }
+
     public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
     {
 

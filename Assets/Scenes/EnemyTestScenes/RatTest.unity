@@ -385,7 +385,7 @@ Transform:
   m_GameObject: {fileID: 76205524}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0.6}
+  m_LocalPosition: {x: 0, y: 1, z: 1.5}
   m_LocalScale: {x: 3, y: 0.5, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1208,7 +1208,6 @@ GameObject:
   - component: {fileID: 427965657}
   - component: {fileID: 427965660}
   - component: {fileID: 427965659}
-  - component: {fileID: 427965658}
   m_Layer: 0
   m_Name: RatBody
   m_TagString: Untagged
@@ -1231,29 +1230,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1877553255}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!136 &427965658
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 427965656}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &427965659
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1374,7 +1350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAggroZoneCheck
   enemiesInZone:
-  - {fileID: 1877553256}
+  - {fileID: 1877553262}
 --- !u!65 &447159435
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1443,6 +1419,67 @@ Transform:
   - {fileID: 823461426}
   m_Father: {fileID: 1424918142}
   m_LocalEulerAnglesHint: {x: 41.112484, y: -18.586897, z: 40.04935}
+--- !u!1001 &467662414
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.44386116
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8960956
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 127.299
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087190533333980479, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: m_Name
+      value: GiantHouseSpider
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087190533333980479, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 011db479a450bcc44baf221aa960e310, type: 3}
 --- !u!1 &484329757
 GameObject:
   m_ObjectHideFlags: 0
@@ -4081,10 +4118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3702cb50852826142a4039903c1bc72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PoolManager
-  pools:
-  - tag: webProjectile
-    prefab: {fileID: 5048398109924434597, guid: 0176685f1d3a1f545a94013e12d32632, type: 3}
-    size: 20
+  pools: []
 --- !u!4 &1747683894
 Transform:
   m_ObjectHideFlags: 0
@@ -4480,10 +4514,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1877553255}
-  - component: {fileID: 1877553257}
-  - component: {fileID: 1877553256}
   - component: {fileID: 1877553259}
   - component: {fileID: 1877553258}
+  - component: {fileID: 1877553260}
+  - component: {fileID: 1877553261}
+  - component: {fileID: 1877553263}
+  - component: {fileID: 1877553262}
   m_Layer: 0
   m_Name: RatEnemy
   m_TagString: Untagged
@@ -4516,57 +4552,6 @@ Transform:
   - {fileID: 76205525}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1877553256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1877553254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf0cccde35912d34ea9ef7982395cac4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RatEnemyBase
-  player: {fileID: 1705175954}
-  pooler: {fileID: 1747683893}
-  <MaxHealth>k__BackingField: 10
-  damageDeals: 3
-  enemyAnimController: {fileID: 1877553258}
-  enemyPatrolBase: {fileID: 11400000, guid: a93504b22b842fd4bbc3ab5f76dcbfb0, type: 2}
-  enemyChaseBase: {fileID: 11400000, guid: 38af61055d4c7404291d4eda8113d716, type: 2}
-  enemyAttackBase: {fileID: 11400000, guid: 0f6116c3406aa264fb4a05d12665f725, type: 2}
-  enemyDeathBase: {fileID: 11400000, guid: 275d868da64d94747b1c1d364db9fe14, type: 2}
-  agent: {fileID: 1877553257}
-  speed: 5
-  turningSpeed: 270
-  acceleration: 2
-  stoppingDist: 2
-  shootPoint: {fileID: 1877553255}
-  playerStuckWeb: {fileID: 1877553254}
-  ratNest: {fileID: 2090752791}
---- !u!195 &1877553257
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1877553254}
-  m_Enabled: 1
-  m_AgentTypeID: -1372625422
-  m_Radius: 2
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &1877553258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4604,6 +4589,91 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1877553260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877553254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3fb2c5f4135fd438c1dc149d204c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookAtPlayer
+  playerModel: {fileID: 1705175955}
+--- !u!65 &1877553261
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877553254}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2, z: 4}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1877553262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877553254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf0cccde35912d34ea9ef7982395cac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatEnemyBase
+  player: {fileID: 1705175954}
+  pooler: {fileID: 1747683893}
+  <MaxHealth>k__BackingField: 10
+  damageDeals: 3
+  enemyAnimController: {fileID: 1877553258}
+  enemyPatrolBase: {fileID: 11400000, guid: a93504b22b842fd4bbc3ab5f76dcbfb0, type: 2}
+  enemyChaseBase: {fileID: 11400000, guid: 38af61055d4c7404291d4eda8113d716, type: 2}
+  enemyAttackBase: {fileID: 11400000, guid: 0f6116c3406aa264fb4a05d12665f725, type: 2}
+  enemyDeathBase: {fileID: 11400000, guid: 275d868da64d94747b1c1d364db9fe14, type: 2}
+  agent: {fileID: 1877553263}
+  speed: 5
+  turningSpeed: 360
+  acceleration: 2
+  stoppingDist: 5
+  shootPoint: {fileID: 1877553255}
+  playerStuckWeb: {fileID: 1877553254}
+  ratNest: {fileID: 2090752791}
+--- !u!195 &1877553263
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877553254}
+  m_Enabled: 1
+  m_AgentTypeID: -1372625422
+  m_Radius: 2
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1963874494
 GameObject:
   m_ObjectHideFlags: 0
@@ -5147,3 +5217,4 @@ SceneRoots:
   - {fileID: 2090752791}
   - {fileID: 1838054658}
   - {fileID: 1877553255}
+  - {fileID: 467662414}
