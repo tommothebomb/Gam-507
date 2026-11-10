@@ -51,9 +51,16 @@ public class SpiderAttackState : EnemyAttackSOBase
     {
         base.DoAnimationTriggerLogic(trigger);
 
-        enemyBase.player.GetComponent<IDamageable>().TakeDamage(enemyBase.damageDeals);
-        Debug.Log("damaged player");
-        // destroy web and unstick player
-        MoveBack();
+        if (trigger == EnemyBase.AnimationTriggers.Attack2)
+        {
+            enemyBase.player.GetComponent<IDamageable>().TakeDamage(enemyBase.damageDeals);
+        }
+        else if (trigger == EnemyBase.AnimationTriggers.EndAttack2)
+        {
+            enemyBase.playerStuckWeb.SetActive(false);
+            enemyBase.player.GetComponent<PlayerMovement>().enabled = true;
+            enemyBase.enemyAnimController.isAttacking = false;
+            MoveBack();
+        }
     }
 }

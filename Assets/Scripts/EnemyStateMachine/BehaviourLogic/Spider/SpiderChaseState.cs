@@ -91,6 +91,7 @@ public class SpiderChaseState : EnemyChaseSOBase
     public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
     {
         base.DoAnimationTriggerLogic(trigger);
-        ShootWeb();
+        if (trigger == EnemyBase.AnimationTriggers.Attack1) ShootWeb();
+        else if (trigger == EnemyBase.AnimationTriggers.EndAttack1) enemyBase.enemyAnimController.isAttacking = false;
     }
 }

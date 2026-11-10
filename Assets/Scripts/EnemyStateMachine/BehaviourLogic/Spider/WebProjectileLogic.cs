@@ -30,8 +30,8 @@ public class WebProjectileLogic : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // make player 'stuck'
-            // spawn visual for web trap
+            enemyBase.player.GetComponent<PlayerMovement>().enabled = false;
+            enemyBase.playerStuckWeb.SetActive(true);
             enemyBase.stateMachine.ChangeState(enemyBase.attackState);
             FadeWebThenSetInactive();
         }

@@ -56,9 +56,4 @@ public class SpiderPatrolState : EnemyPatrolSOBase
         thisLookAt.enabled = true;
         atStartPos = false;
     }
-    public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
-    {
-        base.DoAnimationTriggerLogic(trigger);
-        // play idle animation
-    }
 }

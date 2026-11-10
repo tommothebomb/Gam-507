@@ -24,9 +24,11 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public enum AnimationTriggers
     {
         Idle,
-        Walking, // use this for walking, called chasing in case some enemies cant walk
+        Moving, // use this for walking, called moving in case some enemies cant walk
         Attack1, // lots of options so more versitile between enemy types
+        EndAttack1, 
         Attack2, // dont need to use all of them
+        EndAttack2, 
         Attack3,
         TakingDamage,
         Death
@@ -53,11 +55,6 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public EnemyDeathSOBase enemyDeathBaseInstance { get; set; }
     #endregion
 
-    // shoot point to be used if enemy uses projectiles \\
-    [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
-    public Transform shootPoint;
-    [SerializeField] Animator animator;
-
     [Header("Navmesh Settings")]
     public NavMeshAgent agent;
     [Tooltip("any values left at 0 will be assigned the navmesh agents default values")]
@@ -68,6 +65,12 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public float acceleration;
     [Tooltip("stopping distance default is already zero so will set this to whatever you put here")]
     public float stoppingDist;
+
+    [Header("Per Enemy Variables")]
+    [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
+    public Transform shootPoint;
+    [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
+    public GameObject playerStuckWeb;
 
 
     private void Awake()
@@ -109,8 +112,17 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     {
         stateMachine.currentEnemyState.FrameUpdate();
 
-        if (agent.velocity.magnitude >= 0.1f && animator.GetBool("IsWalking") == false) animator.SetBool("IsWalking", true);
-        else if (agent.velocity.magnitude < 0.1f && animator.GetBool("IsWalking") == true) animator.SetBool("IsWalking", false);
+        // walk and idle animations \\
+        if (agent.velocity.magnitude >= 0.1f && enemyAnimController.isMoving == false && enemyAnimController.isAttacking == false) 
+        { 
+            enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Moving); 
+            enemyAnimController.isMoving = true; 
+        }
+        else if (agent.velocity.magnitude < 0.1f && enemyAnimController.isMoving == true && enemyAnimController.isAttacking == false) 
+        { 
+            enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Idle); 
+            enemyAnimController.isMoving = false; 
+        }
     }
 
     private void FixedUpdate()
