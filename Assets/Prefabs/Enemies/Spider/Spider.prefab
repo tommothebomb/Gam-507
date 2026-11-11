@@ -2468,7 +2468,7 @@ GameObject:
   - component: {fileID: 7484457934383947461}
   - component: {fileID: 720966031467725266}
   m_Layer: 0
-  m_Name: GiantHouseSpider
+  m_Name: Spider
   m_TagString: Spider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
