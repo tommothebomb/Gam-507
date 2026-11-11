@@ -72,6 +72,7 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public GameObject playerStuckWeb;
     [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
     public Transform ratNest;
+    public bool takeLessDamage;
 
 
     private void Awake()
@@ -132,7 +133,8 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     // from IDamageable interface \\
     public void TakeDamage(float damageAmount)
     {
-        CurrentHealth -= damageAmount;
+        if (takeLessDamage) CurrentHealth -= (damageAmount / 2);
+        else CurrentHealth -= damageAmount;
         // play damage animation somehow
         // depenidng on how materials work, could use enemy material and flash red?
         // confirmed will work for spider

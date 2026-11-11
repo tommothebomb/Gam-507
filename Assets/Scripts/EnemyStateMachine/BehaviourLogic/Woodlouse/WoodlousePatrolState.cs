@@ -4,9 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WoodlousePatrolState", menuName = "Scriptable Objects/Patrol/WoodlousePatrolState")]
 public class WoodlousePatrolState : EnemyPatrolSOBase
 {
-    // want this to have the rats sitting around an area eating food
-    // eating will be an animation loop
-    // will go back to starting points when swap back to this state, need to set starting pos when initialize
+    // spider enemies will be relatively stationary in the patrol state, staying hidden from the player
     LookAtPlayer thisLookAt;
     bool atStartPos;
     Vector3 startPos;
@@ -27,18 +25,19 @@ public class WoodlousePatrolState : EnemyPatrolSOBase
     {
         // turn off shoot point and look at to save on processing
         thisLookAt.enabled = false;
+        enemyBase.shootPoint.gameObject.SetActive(false);
         enemyBase.agent.SetDestination(startPos);
         rotationTime = 0;
     }
 
     public override void DoUpdateLogic()
     {
-        // will chase player as soon as they enter rats zone, dont need to be within certain radius
-        if (enemyBase.IsAggroable) enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
+        // change state when player within aggro zone and aggro radius
+        if (enemyBase.IsAggroable && enemyBase.IsAggroed) enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
 
         // while returning to start position, once close enough make enemy turn to face the correct direction
         if (atStartPos) return;
-        if (Vector3.Distance(gameObject.transform.position, startPos) <= 2)
+        if (Vector3.Distance(gameObject.transform.position, startPos) <= 4)
         {
             rotationTime += Time.deltaTime;
             gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, Quaternion.Euler(startRot), rotationTime * 0.1f);

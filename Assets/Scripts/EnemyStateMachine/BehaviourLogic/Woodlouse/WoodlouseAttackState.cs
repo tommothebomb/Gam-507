@@ -4,33 +4,47 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WoodlouseAttackState", menuName = "Scriptable Objects/Attack/WoodlouseAttackState")]
 public class WoodlouseAttackState : EnemyAttackSOBase
 {
-    // when player is within attack trigger will swap to this state
-    // will do a lunge attack before retreating back a small amount, similar to spider
-    // this could be entirely animation/anitmation trigger based if the designers model and animate the rat
+    [SerializeField] float distToBackUp;
+    bool attackPlaying;
 
 
     public override void DoEnterLogic()
     {
-        enemyBase.agent.SetDestination(gameObject.transform.position);
-        enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Attack1);
+        attackPlaying = false;
+        enemyBase.agent.SetDestination(enemyBase.player.transform.position);
     }
 
     public override void DoUpdateLogic()
     {
-
+        // when spider gets close enough, trigger attack anim
+        if (enemyBase.agent.remainingDistance <= 2 && !attackPlaying)
+        {
+            attackPlaying = true;
+            enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Attack2);
+        }
     }
 
+    // back away from player before swapping back to chase
+    void MoveBack()
+    {
+        Vector3 backAwayPos = gameObject.transform.position - (gameObject.transform.forward * -distToBackUp);
+        enemyBase.agent.SetDestination(backAwayPos);
+        enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
+    }
     public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
     {
-        if (trigger == EnemyBase.AnimationTriggers.Attack1)
+        // deal damage at point in animation where spider pierces player
+        if (trigger == EnemyBase.AnimationTriggers.Attack2)
         {
             enemyBase.player.GetComponent<IDamageable>().TakeDamage(enemyBase.damageDeals);
-            Debug.Log("attacked");
         }
-        else if (trigger == EnemyBase.AnimationTriggers.EndAttack1)
+        // at end of anim, set bools back, remove web, allow player to move again and back away
+        else if (trigger == EnemyBase.AnimationTriggers.EndAttack2)
         {
             enemyBase.enemyAnimController.isAttacking = false;
-            enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
+            enemyBase.playerStuckWeb.SetActive(false);
+            enemyBase.player.GetComponent<PlayerMovement>().enabled = true;
+            MoveBack();
         }
     }
 }
