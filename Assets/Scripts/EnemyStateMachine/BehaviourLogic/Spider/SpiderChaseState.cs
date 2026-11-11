@@ -14,6 +14,7 @@ public class SpiderChaseState : EnemyChaseSOBase
     float timeBetweenDestinationSet;
     float distanceFromPlayer;
     float shootTimer;
+    bool isShooting;
 
 
     public override void DoEnterLogic()
@@ -31,7 +32,7 @@ public class SpiderChaseState : EnemyChaseSOBase
 
         // follow/stalk player from a distance --> needs to follow at a distance but player also needs to be able to get close enough to attack so cant use navmeshagent stopping dist
         destinationTimer += Time.deltaTime;
-        if (destinationTimer >= timeBetweenDestinationSet) FindNewDestination(); 
+        if (destinationTimer >= timeBetweenDestinationSet && !isShooting) FindNewDestination(); 
 
         // to prevent constant shooting 
         shootTimer += Time.deltaTime;
@@ -41,6 +42,7 @@ public class SpiderChaseState : EnemyChaseSOBase
             if (enemyBase.agent.velocity.sqrMagnitude <= 0.2f && distanceFromPlayer <= minDistFromPlayerToShoot)
             {
                 shootTimer = 0;
+                isShooting = true;
                 enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Attack1);
             }
         }
@@ -79,6 +81,6 @@ public class SpiderChaseState : EnemyChaseSOBase
     public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
     {
         if (trigger == EnemyBase.AnimationTriggers.Attack1) ShootWeb();
-        else if (trigger == EnemyBase.AnimationTriggers.EndAttack1) enemyBase.enemyAnimController.isAttacking = false;
+        else if (trigger == EnemyBase.AnimationTriggers.EndAttack1) { enemyBase.enemyAnimController.isAttacking = false; isShooting = false; }
     }
 }

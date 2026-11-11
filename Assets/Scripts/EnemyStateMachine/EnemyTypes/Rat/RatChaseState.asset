@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce59fe383defa024f9d268f8b801ee4e, type: 3}
+  m_Script: {fileID: 11500000, guid: b6286eb15dd122649aa1929c55287137, type: 3}
   m_Name: RatChaseState
   m_EditorClassIdentifier: Assembly-CSharp::RatChaseState
-  hurtSpeed: 2
-  isHurt: 0
+  healtAmountToRetreat: 0
+  hurtSpeed: 0

@@ -25,10 +25,9 @@ public class RatPatrolState : EnemyPatrolSOBase
 
     public override void DoEnterLogic()
     {
-        Debug.Log("entered patrol");
+        // turn off shoot point and look at to save on processing
         thisLookAt.enabled = false;
         enemyBase.agent.SetDestination(startPos);
-        Debug.Log(startPos);
         rotationTime = 0;
     }
 
@@ -51,10 +50,5 @@ public class RatPatrolState : EnemyPatrolSOBase
     {
         thisLookAt.enabled = true;
         atStartPos = false;
-    }
-
-    public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
-    {
-
     }
 }

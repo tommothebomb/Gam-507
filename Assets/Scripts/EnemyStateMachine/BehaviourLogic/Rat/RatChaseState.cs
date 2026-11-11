@@ -8,6 +8,7 @@ public class RatChaseState : EnemyChaseSOBase
     // if health is low, will move slower and retreat from player to a designated 'nest'
     // else will chase player
     LookAtPlayer thisLookAt;
+    [SerializeField] float healtAmountToRetreat;
     [SerializeField] float hurtSpeed;
     bool isHurt;
 
@@ -16,38 +17,41 @@ public class RatChaseState : EnemyChaseSOBase
     {
         base.Initialize(gameObject, enemyBase);
         thisLookAt = gameObject.GetComponent<LookAtPlayer>();
-        isHurt = false; 
+        isHurt = false;
     }
 
     public override void DoEnterLogic()
     {
-        Debug.Log("entered chase");
+
     }
 
-    public override void DoUpdateLogic() 
+    public override void DoUpdateLogic()
     {
-        // check aggro and set back to patrol if needed
-        if (!enemyBase.IsAggroable) enemyBase.stateMachine.ChangeState(enemyBase.patrolState);
-        // if player within attack radius, swap to attack state
-        if (enemyBase.IsWithinAttackDist) enemyBase.stateMachine.ChangeState(enemyBase.attackState);
-
-        // swap to retreat if takes enough damage
-        if (isHurt)
+        if (enemyBase.CurrentHealth <= healtAmountToRetreat && !isHurt) // to prevent running every frame when doesn't need to
         {
+            isHurt = true;
             thisLookAt.enabled = false;
             enemyBase.agent.speed = hurtSpeed;
             enemyBase.agent.SetDestination(enemyBase.ratNest.position);
         }
-        else enemyBase.agent.SetDestination(enemyBase.player.transform.position);
+        else if (!isHurt) // normal state
+        { 
+            enemyBase.agent.SetDestination(enemyBase.player.transform.position); 
+        }
+
+        // check aggro and set back to patrol if needed
+        if (!enemyBase.IsAggroable) enemyBase.stateMachine.ChangeState(enemyBase.patrolState);
+        // if player within attack radius, swap to attack state
+        if (enemyBase.IsWithinAttackDist && !isHurt) enemyBase.stateMachine.ChangeState(enemyBase.attackState);
     }
 
-    public override void DoExitLogic() 
+    public override void DoExitLogic()
     {
 
     }
 
-    public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger) 
-    { 
+    public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
+    {
 
     }
 }

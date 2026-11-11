@@ -37,7 +37,7 @@ public class SpiderPatrolState : EnemyPatrolSOBase
 
         // while returning to start position, once close enough make enemy turn to face the correct direction
         if (atStartPos) return;
-        if (Vector3.Distance(gameObject.transform.position, startPos) <= 2)
+        if (Vector3.Distance(gameObject.transform.position, startPos) <= 4)
         {
             rotationTime += Time.deltaTime;
             gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, Quaternion.Euler(startRot), rotationTime * 0.1f);

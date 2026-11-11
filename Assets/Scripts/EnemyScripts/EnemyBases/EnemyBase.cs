@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.AI;
 
 // Libby/Jordan Script \\
-[RequireComponent(typeof(NavMeshAgent))]
 public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
 {
     [Tooltip("make sure is assigned as the players model")]
@@ -88,8 +87,6 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
         chaseState = new EnemyChaseState(this, stateMachine);
         attackState = new EnemyAttackState(this, stateMachine);
         deathState = new EnemyDeathState(this, stateMachine);
-
-        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Start()
