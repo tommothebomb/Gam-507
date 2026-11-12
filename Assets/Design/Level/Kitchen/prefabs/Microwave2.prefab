@@ -235,6 +235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8864201577958438538}
+  - component: {fileID: 6595931738008288847}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -260,6 +261,28 @@ Transform:
   - {fileID: 553201940599630295}
   m_Father: {fileID: 4344889018279595497}
   m_LocalEulerAnglesHint: {x: 39.965, y: -90, z: -90}
+--- !u!95 &6595931738008288847
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4657391829654226158}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b7db57a3e1935fd4aaec04fe805ad019, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5486553267539374031
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +442,7 @@ GameObject:
   - component: {fileID: 6055995502178470441}
   - component: {fileID: 7010394002639330701}
   - component: {fileID: 5817889360927699704}
+  - component: {fileID: 1584820552658538022}
   m_Layer: 0
   m_Name: button
   m_TagString: Untagged
@@ -520,6 +544,28 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6686669030262739812, guid: 58fd043976c19b046ae4987af05abd1e, type: 3}
+--- !u!95 &1584820552658538022
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6268202056620814984}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41c0dd3660c69cc44a909a7018d28aa9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7773374737103403828
 GameObject:
   m_ObjectHideFlags: 0
