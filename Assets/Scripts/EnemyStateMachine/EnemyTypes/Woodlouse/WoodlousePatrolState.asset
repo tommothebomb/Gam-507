@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c233b28d57342347b2b712dbd196319, type: 3}
   m_Name: WoodlousePatrolState
   m_EditorClassIdentifier: Assembly-CSharp::WoodlousePatrolState
+  maxRoamRadius: 20

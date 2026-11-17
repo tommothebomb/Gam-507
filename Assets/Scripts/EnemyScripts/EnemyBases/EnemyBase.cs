@@ -73,6 +73,7 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
     public Transform ratNest;
     public bool takeLessDamage;
+    public bool hitCollider;
 
 
     private void Awake()
