@@ -47,13 +47,13 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Grab")]
     [SerializeField] bool IsGrab;
+    bool usingHinge;
     InputAction grabKey;
     [SerializeField] Vector3 grabPoint; //the postion the player grabbed
     [SerializeField] Transform hands;
     [SerializeField] LayerMask interactableLayerMask;
     float grabPullSpeed;
     [SerializeField] Vector2 grabEffecicency; //X is push speed Y is pull speed ()
-
     [SerializeField] GameObject GrabbedObject;
 
     private void Awake()
@@ -158,12 +158,20 @@ public class PlayerMovement : MonoBehaviour
         //get the diffance of currentdir and variable to then rotate current dir to the variable
 
         //we need to add the weight of the grabbed object aswell into out calculations
-       // GrabRb.linearVelocity = rb.linearVelocity;
-        GrabRb.linearVelocity = (currentDir * maxSpeed);
-        //GrabRb.linearVelocity = rb.linearVelocity;
+        // GrabRb.linearVelocity = rb.linearVelocity;
+        
+        GrabRb.linearVelocity += (currentDir * maxSpeed);
 
+        //this.transform.position = hands.GetChild(0).transform.position;
+        
+        /*else IM OLD - CODE
+        {
+            this.transform.position = hands.GetChild(0).transform.position;
+            HingeJoint Hjoint = GrabbedObject.GetComponent<HingeJoint>();
+            Hjoint.motor = new JointMotor {targetVelocity = maxSpeed * Movedir.z,force = currentDir.magnitude * maxSpeed};
+        }*/
 
-        Debug.DrawRay(hands.position, hands.forward, Color.blue);
+       Debug.DrawRay(hands.position, hands.forward, Color.blue);
 
         if (GrabRb.linearVelocity.magnitude > maxSpeed)
         {
@@ -228,9 +236,11 @@ public class PlayerMovement : MonoBehaviour
 
             currentDir = Vector3.zero;
 
-            /* fixed joint method - worked mostly - couldnt do hinges */
-            var joint = GrabbedObject.AddComponent<FixedJoint>();
-            joint.connectedBody = rb;
+            // fixed joint method - worked mostly - couldnt do hinges 
+
+           // var joint = GrabbedObject.AddComponent<FixedJoint>();
+            //joint.connectedBody = rb;
+            
             //rb.isKinematic = true;
 
             /* parenting method - didnt decelerate properly and didnt include player collision
