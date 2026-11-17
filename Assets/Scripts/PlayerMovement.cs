@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 outputDir;
     Vector3 currentDir;
     float angle;
-    [SerializeField] Rigidbody rb;
+    Rigidbody rb;
     [SerializeField] Transform cameraDir;
     InputAction movementKeys;
 
@@ -51,12 +51,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Vector3 grabPoint; //the postion the player grabbed
     [SerializeField] Transform hands;
     [SerializeField] LayerMask interactableLayerMask;
-    float combinedMass;
+    float grabPullSpeed;
+    [SerializeField] Vector2 grabEffecicency; //X is push speed Y is pull speed ()
 
     [SerializeField] GameObject GrabbedObject;
 
-    private void Start()
+    private void Awake()
     {
+        rb = GetComponent<Rigidbody>();
+
         movementKeys = InputSystem.actions.FindAction("Move");
         jumpKey = InputSystem.actions.FindAction("Jump");
         grabKey = InputSystem.actions.FindAction("Interact");
@@ -110,12 +113,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            currentDir = Vector3.Lerp(currentDir, variable, 0.1f);
+            currentDir = Vector3.Lerp(currentDir, variable, 0.05f);
         }
             //get the diffance of currentdir and variable to then rotate current dir to the variable
 
 
-            rb.linearVelocity += currentDir * acceleration;
+        rb.linearVelocity += currentDir * acceleration;
 
         //speed clamp airborn
         if  (rb.linearVelocity.magnitude > maxSpeed && !isGrounded)
@@ -144,30 +147,30 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 Movedir = movementKeys.ReadValue<Vector2>();
         moveKeys = Movedir;
-        Movedir = new Vector3(Movedir.x, 0, Movedir.y).normalized;
+        Movedir = new Vector3(0, 0, Movedir.y).normalized;
 
         outputDir = new Vector2(hands.forward.x, hands.forward.z).normalized;
         angle = (Vector2.SignedAngle(outputDir, Vector2.up)); //anlge direction player is looking from basic forwards
 
         Vector3 FinalVelocity = Quaternion.AngleAxis(angle, Vector3.up) * Movedir;
 
-       currentDir = Vector3.Lerp(currentDir, FinalVelocity, 0.8f);
+       currentDir = Vector3.Lerp(currentDir, FinalVelocity, 1f);
         //get the diffance of currentdir and variable to then rotate current dir to the variable
 
         //we need to add the weight of the grabbed object aswell into out calculations
-        rb.linearVelocity += currentDir * acceleration;
+       // GrabRb.linearVelocity = rb.linearVelocity;
+        GrabRb.linearVelocity = (currentDir * maxSpeed);
+        //GrabRb.linearVelocity = rb.linearVelocity;
+
 
         Debug.DrawRay(hands.position, hands.forward, Color.blue);
 
-
-        if (rb.linearVelocity.magnitude > maxSpeed / combinedMass)
+        if (GrabRb.linearVelocity.magnitude > maxSpeed)
         {
-            Vector3 SpeedClamp = rb.linearVelocity.normalized * (maxSpeed/combinedMass);
-            rb.linearVelocity = new Vector3(SpeedClamp.x, SpeedClamp.y, SpeedClamp.z);
+            Vector3 SpeedClamp = GrabRb.linearVelocity.normalized * (maxSpeed);
+            GrabRb.linearVelocity = new Vector3(SpeedClamp.x, SpeedClamp.y, SpeedClamp.z);
         }
 
-
-        GrabRb.linearVelocity = rb.linearVelocity;
         /*
         if (rb.linearVelocity.magnitude > maxSpeed && !isGrounded)
         {
@@ -182,7 +185,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         //VALUE DEBUG
-        Velocity = rb.linearVelocity.magnitude; //total speeds
+        Velocity = GrabRb.linearVelocity.magnitude; //total speeds
     }
 
     void Jump()
@@ -210,16 +213,30 @@ public class PlayerMovement : MonoBehaviour
             IsGrab = true;
 
             hands.position = hit.point;
-            hands.parent = null;
+            //hands.parent = null;
 
             Debug.DrawRay(hit.point, hit.normal,Color.green,2f);
             hands.LookAt(-hit.normal + hit.point);
             Debug.Log(hit.normal);
 
+            rb.linearVelocity = Vector3.zero;
+
             hands.transform.parent = hit.transform;
             GrabbedObject = hit.transform.gameObject;
 
-            combinedMass = GrabbedObject.GetComponent<Rigidbody>().mass + rb.mass;
+            //combinedMass = GrabbedObject.GetComponent<Rigidbody>().mass + rb.mass;
+
+            currentDir = Vector3.zero;
+
+            /* fixed joint method - worked mostly - couldnt do hinges */
+            var joint = GrabbedObject.AddComponent<FixedJoint>();
+            joint.connectedBody = rb;
+            //rb.isKinematic = true;
+
+            /* parenting method - didnt decelerate properly and didnt include player collision
+            rb.isKinematic = true;
+            this.transform.parent = GrabbedObject.transform;
+            */
         }
 
     }
