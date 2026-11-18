@@ -35,7 +35,7 @@ public class WebProjectileLogic : MonoBehaviour
             enemyBase.stateMachine.ChangeState(enemyBase.attackState);
             FadeWebThenSetInactive();
         }
-        else if (!collision.gameObject.CompareTag("Spider")) FadeWebThenSetInactive(); // to prevent spider spawning it to se it inactive immediately
+        else if (!collision.gameObject.CompareTag("Enemy")) FadeWebThenSetInactive(); // to prevent spider spawning it to se it inactive immediately
     }
 
     void FadeWebThenSetInactive()

@@ -8,6 +8,9 @@ public class RatChaseState : EnemyChaseSOBase
     // if health is low, will move slower and retreat from player to a designated 'nest'
     // else will chase player
     LookAtPlayer thisLookAt;
+    [SerializeField] float attackInterval;
+    float attackTimer;
+    bool canAttack;
     [SerializeField] float healtAmountToRetreat;
     [SerializeField] float hurtSpeed;
     bool isHurt;
@@ -22,7 +25,8 @@ public class RatChaseState : EnemyChaseSOBase
 
     public override void DoEnterLogic()
     {
-
+        attackTimer = 0;
+        canAttack = false;
     }
 
     public override void DoUpdateLogic()
@@ -33,6 +37,7 @@ public class RatChaseState : EnemyChaseSOBase
             thisLookAt.enabled = false;
             enemyBase.agent.speed = hurtSpeed;
             enemyBase.agent.SetDestination(enemyBase.ratNest.position);
+            enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Hurt);
         }
         else if (!isHurt) // normal state
         { 
@@ -41,17 +46,9 @@ public class RatChaseState : EnemyChaseSOBase
 
         // check aggro and set back to patrol if needed
         if (!enemyBase.IsAggroable) enemyBase.stateMachine.ChangeState(enemyBase.patrolState);
-        // if player within attack radius, swap to attack state
-        if (enemyBase.IsWithinAttackDist && !isHurt) enemyBase.stateMachine.ChangeState(enemyBase.attackState);
-    }
-
-    public override void DoExitLogic()
-    {
-
-    }
-
-    public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
-    {
-
+        // if player within attack radius, isnt hurt and attack interval reached, swap to attack state
+        attackTimer += Time.deltaTime;
+        if (attackTimer >= attackInterval) canAttack = true;
+        if (enemyBase.IsWithinAttackDist && !isHurt && canAttack) enemyBase.stateMachine.ChangeState(enemyBase.attackState);
     }
 }

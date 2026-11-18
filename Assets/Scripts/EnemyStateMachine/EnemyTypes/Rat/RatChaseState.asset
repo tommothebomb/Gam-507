@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6286eb15dd122649aa1929c55287137, type: 3}
   m_Name: RatChaseState
   m_EditorClassIdentifier: Assembly-CSharp::RatChaseState
-  healtAmountToRetreat: 0
-  hurtSpeed: 0
+  attackInterval: 3
+  healtAmountToRetreat: 3
+  hurtSpeed: 2

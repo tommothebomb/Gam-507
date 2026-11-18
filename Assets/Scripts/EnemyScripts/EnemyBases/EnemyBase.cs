@@ -29,6 +29,7 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
         Attack2, // dont need to use all of them
         EndAttack2, 
         Attack3,
+        EndAttack3,
         TakingDamage,
         Death
     }
@@ -72,6 +73,9 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public GameObject playerStuckWeb;
     [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
     public Transform ratNest;
+    public bool takeLessDamage = false;
+    public bool hitCollider = false;
+    public bool hitPlayerCollider = false;
 
 
     private void Awake()
@@ -112,12 +116,12 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
         stateMachine.currentEnemyState.FrameUpdate();
 
         // walk and idle animations \\
-        if (agent.velocity.magnitude >= 0.1f && enemyAnimController.isMoving == false && enemyAnimController.isAttacking == false)
+        if (agent.velocity.magnitude >= 0.001f && enemyAnimController.isMoving == false && enemyAnimController.isAttacking == false)
         {
             enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Moving);
             enemyAnimController.isMoving = true;
         }
-        else if (agent.velocity.magnitude < 0.1f && enemyAnimController.isMoving == true && enemyAnimController.isAttacking == false)
+        else if (agent.velocity.magnitude < 0.001f && enemyAnimController.isMoving == true && enemyAnimController.isAttacking == false)
         {
             enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Idle);
             enemyAnimController.isMoving = false;
@@ -132,7 +136,8 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     // from IDamageable interface \\
     public void TakeDamage(float damageAmount)
     {
-        CurrentHealth -= damageAmount;
+        if (takeLessDamage) CurrentHealth -= (damageAmount / 2);
+        else CurrentHealth -= damageAmount;
         // play damage animation somehow
         // depenidng on how materials work, could use enemy material and flash red?
         // confirmed will work for spider
