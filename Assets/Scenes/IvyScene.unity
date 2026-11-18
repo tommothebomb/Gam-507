@@ -738,37 +738,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186541922}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &268184513
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 268184514}
-  m_Layer: 6
-  m_Name: PlayerHandsAncore
-  m_TagString: Untagged
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &268184514
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268184513}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 526836732}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &277199311
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,7 +2008,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 268184514}
   - {fileID: 1495084398}
   - {fileID: 1898366519}
   m_Father: {fileID: 630142882}
@@ -2682,12 +2650,14 @@ MonoBehaviour:
   IsGrab: 0
   grabPoint: {x: 0, y: 0, z: 0}
   hands: {fileID: 526836732}
+  playerAncore: {fileID: 0}
   interactableLayerMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 513
   grabPullSpeed: 3
   grabEffecicency: {x: 0, y: 0}
   GrabbedObject: {fileID: 0}
+  defaultConstraints: 112
 --- !u!54 &713284178
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2999,7 +2969,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!1 &766259256 stripped
 GameObject:

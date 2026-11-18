@@ -56,6 +56,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Vector2 grabEffecicency; //X is push speed Y is pull speed ()
     [SerializeField] GameObject GrabbedObject;
 
+    [SerializeField] RigidbodyConstraints originalConstraints;
+    [SerializeField] RigidbodyConstraints defaultConstraints;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -141,6 +144,7 @@ public class PlayerMovement : MonoBehaviour
 
     void GrabMove()
     {
+        #region ObjectMovement
         //using the hands as the movement direction
         //speed is / by objects mass and multipled by the diffrent of player mass to object mass so the force is applied equaly
         Rigidbody GrabRb = GrabbedObject.GetComponent<Rigidbody>(); 
@@ -164,7 +168,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (usingHinge)
         {
-            this.transform.position = hands.GetChild(0).transform.position;
+            this.transform.position = hands.position + (-hands.transform.forward / 1.75f);
         }
 
         /*else IM OLD - CODE
@@ -196,7 +200,17 @@ public class PlayerMovement : MonoBehaviour
 
 
         //VALUE DEBUG
-        Velocity = GrabRb.linearVelocity.magnitude; //total speeds
+        Velocity = GrabRb.linearVelocity.magnitude; //total speeds 
+        #endregion
+
+        #region Falling Detection
+        //this region is for is the ojbect or player is unsupported they shall break connection and the object should return to nature (basicaly isgrounded but for cube)
+
+
+
+
+        #endregion
+
     }
 
     void Jump()
@@ -226,7 +240,7 @@ public class PlayerMovement : MonoBehaviour
             IsGrab = true;
 
             hands.position = hit.point;
-            //hands.parent = null;
+           //hands.parent = null;
 
             Debug.DrawRay(hit.point, hit.normal,Color.green,2f);
             hands.LookAt(-hit.normal + hit.point);
@@ -237,24 +251,28 @@ public class PlayerMovement : MonoBehaviour
             hands.transform.parent = hit.transform;
             GrabbedObject = hit.transform.gameObject;
 
-            //combinedMass = GrabbedObject.GetComponent<Rigidbody>().mass + rb.mass;
+
+
+            originalConstraints = GrabbedObject.GetComponent<Rigidbody>().constraints;
+
 
             currentDir = Vector3.zero;
 
-            // fixed joint method - worked mostly - couldnt do hinges 
+           // fixed joint method - worked mostly - couldnt do hinges 
 
            
-           GrabbedObject.GetComponent<Rigidbody>().isKinematic = false;
+            GrabbedObject.GetComponent<Rigidbody>().isKinematic = false;
 
-           if (!GrabbedObject.GetComponent<ConfigurableJoint>()) {
-                this.transform.position = hands.GetChild(0).transform.position;
+            if (!GrabbedObject.GetComponent<ConfigurableJoint>()) {
+                this.transform.position = hands.position + (-hands.transform.forward / 1.75f);
                 var joint = GrabbedObject.AddComponent<FixedJoint>();
                 joint.connectedBody = rb;
-            }
-           else
-           {
+                //dGrabbedObject.GetComponent<Rigidbody>().constraints = defaultConstraints;
+             }
+            else
+            {
                 usingHinge = true;
-           }
+            }
 
             /*transform.position = hands.GetChild(0).position;
             var joint = GrabbedObject.AddComponent<FixedJoint>();
@@ -286,6 +304,8 @@ public class PlayerMovement : MonoBehaviour
 
         IsGrab = false;
         GrabbedObject = null;
+
+        GrabbedObject.GetComponent<Rigidbody>().constraints = originalConstraints;
 
         hands.transform.parent = transform;
     }
