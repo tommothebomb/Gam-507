@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Vector3 grabPoint; //the postion the player grabbed
     [SerializeField] Transform hands;
     [SerializeField] LayerMask interactableLayerMask;
-    float grabPullSpeed;
+    [SerializeField] float grabPullSpeed;
     [SerializeField] Vector2 grabEffecicency; //X is push speed Y is pull speed ()
     [SerializeField] GameObject GrabbedObject;
 
@@ -154,16 +154,19 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 FinalVelocity = Quaternion.AngleAxis(angle, Vector3.up) * Movedir;
 
-       currentDir = Vector3.Lerp(currentDir, FinalVelocity, 1f);
+        currentDir = Vector3.Lerp(currentDir, FinalVelocity, 1f);
         //get the diffance of currentdir and variable to then rotate current dir to the variable
 
         //we need to add the weight of the grabbed object aswell into out calculations
         // GrabRb.linearVelocity = rb.linearVelocity;
         
-        GrabRb.linearVelocity += (currentDir * maxSpeed);
+        GrabRb.linearVelocity = (currentDir * grabPullSpeed);
 
-        //this.transform.position = hands.GetChild(0).transform.position;
-        
+        if (usingHinge)
+        {
+            this.transform.position = hands.GetChild(0).transform.position;
+        }
+
         /*else IM OLD - CODE
         {
             this.transform.position = hands.GetChild(0).transform.position;
@@ -173,9 +176,9 @@ public class PlayerMovement : MonoBehaviour
 
        Debug.DrawRay(hands.position, hands.forward, Color.blue);
 
-        if (GrabRb.linearVelocity.magnitude > maxSpeed)
+        if (GrabRb.linearVelocity.magnitude > grabPullSpeed)
         {
-            Vector3 SpeedClamp = GrabRb.linearVelocity.normalized * (maxSpeed);
+            Vector3 SpeedClamp = GrabRb.linearVelocity.normalized * (grabPullSpeed);
             GrabRb.linearVelocity = new Vector3(SpeedClamp.x, SpeedClamp.y, SpeedClamp.z);
         }
 
@@ -198,7 +201,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
-        if (!isGrounded && remaingAirJumps == 0 ) { return; }
+        if ((!isGrounded && remaingAirJumps == 0) || IsGrab ) { return; }
         Debug.Log("Jump");
         remaingAirJumps -= 1;
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
@@ -208,6 +211,8 @@ public class PlayerMovement : MonoBehaviour
     #region Grab
     void StartGrab()
     {
+        if (!isGrounded) { return; }
+        if (IsGrab) { EndGrab();  return; }
         Debug.Log("grab");
 
         Ray grabRay = new Ray() { origin = transform.position, direction = Model.transform.forward };
@@ -216,7 +221,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.DrawRay(grabRay.origin, grabRay.direction * 3, Color.red,3f);
 
 
-        if (hit.collider != null)
+        if (hit.collider != null && hit.collider.gameObject.CompareTag("Interactable"))
         {
             IsGrab = true;
 
@@ -238,17 +243,51 @@ public class PlayerMovement : MonoBehaviour
 
             // fixed joint method - worked mostly - couldnt do hinges 
 
-           // var joint = GrabbedObject.AddComponent<FixedJoint>();
-            //joint.connectedBody = rb;
-            
-            //rb.isKinematic = true;
+           
+           GrabbedObject.GetComponent<Rigidbody>().isKinematic = false;
 
+           if (!GrabbedObject.GetComponent<ConfigurableJoint>()) {
+                this.transform.position = hands.GetChild(0).transform.position;
+                var joint = GrabbedObject.AddComponent<FixedJoint>();
+                joint.connectedBody = rb;
+            }
+           else
+           {
+                usingHinge = true;
+           }
+
+            /*transform.position = hands.GetChild(0).position;
+            var joint = GrabbedObject.AddComponent<FixedJoint>();
+            joint.connectedBody = rb;*/    //rb.isKinematic = true;
             /* parenting method - didnt decelerate properly and didnt include player collision
             rb.isKinematic = true;
             this.transform.parent = GrabbedObject.transform;
             */
         }
 
+
+
+
+    }
+
+    //when relasing the grab button or nolonger being able to grab said object
+    void EndGrab()
+    {
+        if (usingHinge)
+        {
+            usingHinge = false;
+        }
+        else
+        {
+            Destroy(GrabbedObject.GetComponent<FixedJoint>());
+        }
+        GrabbedObject.GetComponent<Rigidbody>().isKinematic = true;
+
+
+        IsGrab = false;
+        GrabbedObject = null;
+
+        hands.transform.parent = transform;
     }
 
 
