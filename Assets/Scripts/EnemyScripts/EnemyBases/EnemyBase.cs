@@ -116,12 +116,12 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
         stateMachine.currentEnemyState.FrameUpdate();
 
         // walk and idle animations \\
-        if (agent.velocity.magnitude >= 0.1f && enemyAnimController.isMoving == false && enemyAnimController.isAttacking == false)
+        if (agent.velocity.magnitude >= 0.001f && enemyAnimController.isMoving == false && enemyAnimController.isAttacking == false)
         {
             enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Moving);
             enemyAnimController.isMoving = true;
         }
-        else if (agent.velocity.magnitude < 0.1f && enemyAnimController.isMoving == true && enemyAnimController.isAttacking == false)
+        else if (agent.velocity.magnitude < 0.001f && enemyAnimController.isMoving == true && enemyAnimController.isAttacking == false)
         {
             enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Idle);
             enemyAnimController.isMoving = false;

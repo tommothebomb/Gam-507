@@ -2567,7 +2567,7 @@ MonoBehaviour:
   agent: {fileID: 4346149276190903701}
   speed: 20
   turningSpeed: 0
-  acceleration: 30
+  acceleration: 20
   stoppingDist: 2
   shootPoint: {fileID: 4386486051900778743}
   playerStuckWeb: {fileID: 0}

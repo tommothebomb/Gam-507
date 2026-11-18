@@ -14,6 +14,7 @@ public class SpiderAttackState : EnemyAttackSOBase
         attackPlaying = false;
         movingBack = false;
         enemyBase.agent.SetDestination(enemyBase.player.transform.position);
+        enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Moving);
     }
 
     public override void DoUpdateLogic()
@@ -30,6 +31,7 @@ public class SpiderAttackState : EnemyAttackSOBase
         if (movingBack && enemyBase.agent.remainingDistance < 0.2f)
         {
             enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
+            Debug.Log("changed state");
         }
     }
 
@@ -37,7 +39,7 @@ public class SpiderAttackState : EnemyAttackSOBase
     void MoveBack()
     {
         enemyBase.agent.isStopped = false;
-        Vector3 backAwayPos = gameObject.transform.position - (gameObject.transform.forward * -distToBackUp);
+        Vector3 backAwayPos = gameObject.transform.position + (gameObject.transform.forward * -distToBackUp);
         enemyBase.agent.SetDestination(backAwayPos);
         movingBack = true;
     }

@@ -1163,10 +1163,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GiantHouseSpider
       objectReference: {fileID: 0}
-    - target: {fileID: 6087190533333980479, guid: 011db479a450bcc44baf221aa960e310, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7484457934383947461, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: playerModel
       value: 
