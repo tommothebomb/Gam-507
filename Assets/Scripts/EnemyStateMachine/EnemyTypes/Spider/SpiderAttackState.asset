@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fde809102b63447a00ab7efffec7e5, type: 3}
   m_Name: SpiderAttackState
   m_EditorClassIdentifier: Assembly-CSharp::SpiderAttackState
+  distToBackUp: 8
