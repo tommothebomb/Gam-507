@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class WoodlousePatrolState : EnemyPatrolSOBase
 {
     // spider enemies will be relatively stationary in the patrol state, staying hidden from the player
-    LookAtPlayer thisLookAt;
     Vector3 startPos;
     [SerializeField] float maxRoamRadius;
     float minRoamRadius;
@@ -16,7 +15,6 @@ public class WoodlousePatrolState : EnemyPatrolSOBase
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
     {
         base.Initialize(gameObject, enemyBase);
-        thisLookAt = gameObject.GetComponent<LookAtPlayer>();
         startPos = gameObject.transform.position;
         minRoamRadius = maxRoamRadius * -1;
     }
@@ -24,7 +22,6 @@ public class WoodlousePatrolState : EnemyPatrolSOBase
     public override void DoEnterLogic()
     {
         // turn off shoot point and look at to save on processing
-        thisLookAt.enabled = false;
         FindRandomPointOnNavmesh();
     }
 
@@ -52,10 +49,5 @@ public class WoodlousePatrolState : EnemyPatrolSOBase
         NavMeshHit hit;
         if (NavMesh.SamplePosition(randomPoint, out hit, 2, NavMesh.AllAreas)) return true;
         else return false;
-    }
-
-    public override void DoExitLogic()
-    {
-        thisLookAt.enabled = true;
     }
 }

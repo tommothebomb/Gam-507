@@ -15,6 +15,7 @@ public class PlayerHealthManager : MonoBehaviour, IDamageable
     public void TakeDamage(float damageAmount)
     {
         CurrentHealth -= damageAmount;
+        Debug.Log(CurrentHealth);
         if (CurrentHealth <= 0)
         {
             Debug.Log("playerDied");

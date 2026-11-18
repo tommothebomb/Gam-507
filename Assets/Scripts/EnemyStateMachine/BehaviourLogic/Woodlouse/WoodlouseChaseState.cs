@@ -4,6 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WoodlouseChaseState", menuName = "Scriptable Objects/Chase/WoodlouseChaseState")]
 public class WoodlouseChaseState : EnemyChaseSOBase
 {
+    LookAtPlayer thisLookAt;
     [SerializeField] float chargeTimerMax;
     [SerializeField] float chargeTimerMin;
     float chargeTimer;
@@ -12,10 +13,20 @@ public class WoodlouseChaseState : EnemyChaseSOBase
     bool isCharging;
     float moveInterval = 0.5f;
     float moveTimer;
+    BoxCollider thisCol;
+    Vector3 sizeWhenRolling = new Vector3(3, 1.5f, 3);
 
+
+    public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
+    {
+        base.Initialize(gameObject, enemyBase);
+        thisCol = gameObject.GetComponent<BoxCollider>();
+        thisLookAt = gameObject.GetComponent<LookAtPlayer>();
+    }
 
     public override void DoEnterLogic()
     {
+        thisLookAt.enabled = true;
         moveTimer = 0;
         timeCharging = 0;
         isCharging = false;
@@ -56,8 +67,14 @@ public class WoodlouseChaseState : EnemyChaseSOBase
         enemyBase.agent.SetDestination(pointCloseToPlayerDestination);
     }
 
+    public override void DoExitLogic()
+    {
+        thisLookAt.enabled = false;
+    }
+
     public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
     {
-        if (trigger == EnemyBase.AnimationTriggers.EndAttack1) { enemyBase.stateMachine.ChangeState(enemyBase.attackState); } // not setting animator attacking bool to false as will immediately enter next attack animation in attack state
+        if (trigger == EnemyBase.AnimationTriggers.Attack1) { thisCol.size = sizeWhenRolling; }
+        else if (trigger == EnemyBase.AnimationTriggers.EndAttack1) { enemyBase.stateMachine.ChangeState(enemyBase.attackState); } // not setting animator attacking bool to false as will immediately enter next attack animation in attack state
     }
 }

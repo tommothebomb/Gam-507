@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d776b1a7415424eb37afbc386e3572, type: 3}
   m_Name: WoodlouseChaseState
   m_EditorClassIdentifier: Assembly-CSharp::WoodlouseChaseState
-  chargeTimerMax: 8
-  chargeTimerMin: 4
+  chargeTimerMax: 10
+  chargeTimerMin: 5
   distanceDestinationWillBeFromPlayer: 12

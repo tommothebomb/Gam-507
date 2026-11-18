@@ -13,6 +13,7 @@ public class EnemyAnimations : MonoBehaviour
         Attack1, // lots of options so more versitile between enemy types
         Attack2, // dont need to use all of them
         Attack3,
+        Hurt,
         Death
     }
 
@@ -32,6 +33,7 @@ public class EnemyAnimations : MonoBehaviour
             case AnimationStates.Attack2: isAttacking = true; animator.SetTrigger("ToAttack2"); break;
             case AnimationStates.Attack3: isAttacking = true; animator.SetTrigger("ToAttack3"); break;
             case AnimationStates.Death: isAttacking = true; animator.SetTrigger("ToDeath"); break;
+            case AnimationStates.Hurt: isAttacking = true; animator.SetTrigger("ToHurt"); break;
             default: animator.SetTrigger("ToIdle"); break;
         }
     }

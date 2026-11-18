@@ -29,6 +29,7 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
         Attack2, // dont need to use all of them
         EndAttack2, 
         Attack3,
+        EndAttack3,
         TakingDamage,
         Death
     }
@@ -72,8 +73,9 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     public GameObject playerStuckWeb;
     [Tooltip("if this doesnt apply to this enemy type, assign gameobject this script is on")]
     public Transform ratNest;
-    public bool takeLessDamage;
-    public bool hitCollider;
+    public bool takeLessDamage = false;
+    public bool hitCollider = false;
+    public bool hitPlayerCollider = false;
 
 
     private void Awake()

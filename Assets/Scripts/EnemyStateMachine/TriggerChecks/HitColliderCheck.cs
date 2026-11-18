@@ -16,9 +16,9 @@ public class HitColliderCheck : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         thisBase.hitCollider = true;
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        thisBase.hitCollider = false;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            thisBase.hitPlayerCollider = true;
+        }
     }
 }

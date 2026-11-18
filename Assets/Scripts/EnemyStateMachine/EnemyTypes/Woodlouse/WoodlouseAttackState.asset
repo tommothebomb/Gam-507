@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 133a0ff964ac3e94abef5feb46ef16c1, type: 3}
   m_Name: WoodlouseAttackState
   m_EditorClassIdentifier: Assembly-CSharp::WoodlouseAttackState
+  maxRollDistance: 20
+  rollSpeed: 10
+  rollAcceleration: 10
