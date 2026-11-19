@@ -14,10 +14,10 @@ public class EnemyAggroCheck : MonoBehaviour
         thisBase = GetComponentInParent<EnemyBase>();
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         // only set aggroed to true if player in same zone as enemy
-        if (other.CompareTag("Player") && thisBase.IsAggroable)
+        if (other.CompareTag("Player"))
         {
             thisBase.SetAggroStatus(true);
         }
