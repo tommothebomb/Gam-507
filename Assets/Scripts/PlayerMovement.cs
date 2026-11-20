@@ -142,12 +142,22 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    void Jump()
+    {
+        if ((!isGrounded && remaingAirJumps == 0) || IsGrab ) { return; }
+        Debug.Log("Jump");
+        remaingAirJumps -= 1;
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+        rb.AddForce(new Vector3(currentDir.x , 0.5f , currentDir.z) * jumpForce);
+    }
+
+    #region Grab
     void GrabMove()
     {
         #region ObjectMovement
         //using the hands as the movement direction
         //speed is / by objects mass and multipled by the diffrent of player mass to object mass so the force is applied equaly
-        Rigidbody GrabRb = GrabbedObject.GetComponent<Rigidbody>(); 
+        Rigidbody GrabRb = GrabbedObject.GetComponent<Rigidbody>();
 
         Vector3 Movedir = movementKeys.ReadValue<Vector2>();
         moveKeys = Movedir;
@@ -163,7 +173,7 @@ public class PlayerMovement : MonoBehaviour
 
         //we need to add the weight of the grabbed object aswell into out calculations
         // GrabRb.linearVelocity = rb.linearVelocity;
-        
+
         GrabRb.linearVelocity = (currentDir * grabPullSpeed);
 
         if (usingHinge)
@@ -178,7 +188,7 @@ public class PlayerMovement : MonoBehaviour
             Hjoint.motor = new JointMotor {targetVelocity = maxSpeed * Movedir.z,force = currentDir.magnitude * maxSpeed};
         }*/
 
-       Debug.DrawRay(hands.position, hands.forward, Color.blue);
+        Debug.DrawRay(hands.position, hands.forward, Color.blue);
 
         if (GrabRb.linearVelocity.magnitude > grabPullSpeed)
         {
@@ -205,24 +215,28 @@ public class PlayerMovement : MonoBehaviour
 
         #region Falling Detection
         //this region is for is the ojbect or player is unsupported they shall break connection and the object should return to nature (basicaly isgrounded but for cube)
+        //physics raycast down if no ground on the object then drop the iteam and do some more check for how it will fall
+        if(!usingHinge)
+        {
+            RaycastHit hit;
+            Debug.DrawRay(GrabbedObject.transform.position, Vector3.down * ((GrabbedObject.GetComponent<Collider>().bounds.size.y / 2) + 0.05f), Color.green);
+            Physics.Raycast(GrabbedObject.transform.position, Vector3.down, out hit, (GrabbedObject.GetComponent<Collider>().bounds.size.y/2) + 0.05f, GroundMask);
 
 
+            if (hit.collider == null)
+            {
+                //DROP Grab
+                Debug.Log("object not supported");
+            }
+            else
+            { Debug.Log(hit.point); }
+        }
 
 
         #endregion
 
     }
 
-    void Jump()
-    {
-        if ((!isGrounded && remaingAirJumps == 0) || IsGrab ) { return; }
-        Debug.Log("Jump");
-        remaingAirJumps -= 1;
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
-        rb.AddForce(new Vector3(currentDir.x , 0.5f , currentDir.z) * jumpForce);
-    }
-
-    #region Grab
     void StartGrab()
     {
         if (!isGrounded) { return; }
