@@ -11,13 +11,8 @@ public class RatAttackState : EnemyAttackSOBase
 
     public override void DoEnterLogic()
     {
-        enemyBase.agent.SetDestination(gameObject.transform.position);
+        enemyBase.agent.isStopped = true;
         enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Attack1);
-    }
-
-    public override void DoUpdateLogic()
-    {
-
     }
 
     public override void DoAnimationTriggerLogic(EnemyBase.AnimationTriggers trigger)
@@ -25,11 +20,11 @@ public class RatAttackState : EnemyAttackSOBase
         if (trigger == EnemyBase.AnimationTriggers.Attack1)
         {
             enemyBase.player.GetComponent<IDamageable>().TakeDamage(enemyBase.damageDeals);
-            Debug.Log("attacked");
         }
         else if (trigger == EnemyBase.AnimationTriggers.EndAttack1)
         {
             enemyBase.enemyAnimController.isAttacking = false;
+            enemyBase.agent.isStopped = false;
             enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
         }
     }

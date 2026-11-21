@@ -5,10 +5,12 @@ public class LookAtPlayer : MonoBehaviour
 {
     [Tooltip("must assign player model to this or will target wrong transform")]
     [SerializeField] Transform playerModel;
+    Vector3 playerPos;
 
 
     private void Update()
     {
-        transform.LookAt(playerModel);
+        playerPos = new Vector3(playerModel.position.x, gameObject.transform.position.y, playerModel.position.z);
+        transform.LookAt(playerPos);
     }
 }

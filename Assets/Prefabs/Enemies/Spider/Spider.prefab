@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 4373645301007818999}
   m_Layer: 0
   m_Name: Spider_LP.002
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 8876166133239846391}
   m_Layer: 0
   m_Name: R.Eye.002
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1089,7 +1089,7 @@ GameObject:
   - component: {fileID: 4634118765547977565}
   m_Layer: 0
   m_Name: L.Eye.002
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1593,7 +1593,7 @@ GameObject:
   - component: {fileID: 3684501002434574596}
   m_Layer: 0
   m_Name: AggroRadius
-  m_TagString: Spider
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1943,7 +1943,7 @@ GameObject:
   - component: {fileID: 658241710723229583}
   m_Layer: 0
   m_Name: L.Eye.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2086,7 +2086,7 @@ GameObject:
   - component: {fileID: 941303932420556818}
   m_Layer: 0
   m_Name: Spider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2195,7 +2195,7 @@ GameObject:
   - component: {fileID: 7519357802318542536}
   m_Layer: 0
   m_Name: AttackRadius
-  m_TagString: Spider
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2260,7 +2260,7 @@ GameObject:
   - component: {fileID: 4583416401738639796}
   m_Layer: 0
   m_Name: ShootPoint
-  m_TagString: Spider
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2468,8 +2468,8 @@ GameObject:
   - component: {fileID: 7484457934383947461}
   - component: {fileID: 720966031467725266}
   m_Layer: 0
-  m_Name: GiantHouseSpider
-  m_TagString: Spider
+  m_Name: Spider
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2567,11 +2567,14 @@ MonoBehaviour:
   agent: {fileID: 4346149276190903701}
   speed: 20
   turningSpeed: 0
-  acceleration: 30
+  acceleration: 20
   stoppingDist: 2
   shootPoint: {fileID: 4386486051900778743}
   playerStuckWeb: {fileID: 0}
   ratNest: {fileID: 3935091484898643713}
+  takeLessDamage: 0
+  hitCollider: 0
+  hitPlayerCollider: 0
 --- !u!195 &4346149276190903701
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2591,7 +2594,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: 0
+  m_BaseOffset: -0.3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &7484457934383947461
@@ -3270,7 +3273,7 @@ GameObject:
   - component: {fileID: 14227901035244847}
   m_Layer: 0
   m_Name: L.Eye
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3446,7 +3449,7 @@ GameObject:
   - component: {fileID: 2562669719106455946}
   m_Layer: 0
   m_Name: R.Eye.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3750,7 +3753,7 @@ GameObject:
   - component: {fileID: 8261007063238800532}
   m_Layer: 0
   m_Name: R.Eye.003
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
