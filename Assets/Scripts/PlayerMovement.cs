@@ -38,7 +38,11 @@ public class PlayerMovement : MonoBehaviour
     //[SerializeField] Animator animator; //not implented yet
 
     [Header("Jump")]
-    [SerializeField] bool isGrounded;
+    bool _isGrounded;
+    bool isGrounded
+    {
+        get { return _isGrounded; } set { _isGrounded = value; animatorController.SetBool("IsGrounded", value); }
+    }
     InputAction jumpKey;
     [SerializeField] float jumpForce;
     [SerializeField] LayerMask GroundMask;
@@ -59,6 +63,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] RigidbodyConstraints originalConstraints;
     [SerializeField] RigidbodyConstraints defaultConstraints;
 
+
+    [Header("Attack")]
+    InputAction attackKey;
+    //if attack while attacking or slightlyBefore
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -66,9 +75,12 @@ public class PlayerMovement : MonoBehaviour
         movementKeys = InputSystem.actions.FindAction("Move");
         jumpKey = InputSystem.actions.FindAction("Jump");
         grabKey = InputSystem.actions.FindAction("Interact");
+        attackKey = InputSystem.actions.FindAction("Attack");
 
         grabKey.performed += ctx => StartGrab();
         jumpKey.performed += ctx => Jump();
+        attackKey.performed += ctx => Attack();
+
     }
 
     private void FixedUpdate()
@@ -85,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
+        
         if (currentDir.normalized.magnitude != 0)
         {
             Model.rotation = Quaternion.LookRotation(currentDir);
@@ -93,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
+
         //W S = forward backwards  / Z
         //A D = forward Left Right / X
         //Movedir = new Vector3(Movedir.y, 0, Movedir.x);
@@ -140,6 +154,8 @@ public class PlayerMovement : MonoBehaviour
         //VelocityArrow.rotation = Quaternion.LookRotation(currentDir); //direction of travel
         Velocity = rb.linearVelocity.magnitude; //total speed
 
+        //Animation
+        animatorController.SetFloat("Velocity", currentDir.normalized.magnitude);
     }
 
     void Jump()
@@ -149,6 +165,9 @@ public class PlayerMovement : MonoBehaviour
         remaingAirJumps -= 1;
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
         rb.AddForce(new Vector3(currentDir.x , 0.5f , currentDir.z) * jumpForce);
+
+        //Animation
+        animatorController.SetTrigger("Jump");
     }
 
     #region Grab
@@ -218,29 +237,38 @@ public class PlayerMovement : MonoBehaviour
         //physics raycast down if no ground on the object then drop the iteam and do some more check for how it will fall
         if(!usingHinge)
         {
+            Collider grabbedCollider= GrabbedObject.GetComponent<Collider>();
+            Vector3 bounds = new Vector3(grabbedCollider.bounds.size.x/3, 0.2f, grabbedCollider.bounds.size.z/3);
             RaycastHit hit;
-            Debug.DrawRay(GrabbedObject.transform.position, Vector3.down * ((GrabbedObject.GetComponent<Collider>().bounds.size.y / 2) + 0.05f), Color.green);
-            Physics.Raycast(GrabbedObject.transform.position, Vector3.down, out hit, (GrabbedObject.GetComponent<Collider>().bounds.size.y/2) + 0.05f, GroundMask);
+            //Debug.DrawRay(GrabbedObject.transform.position, Vector3.down * ((GrabbedObject.GetComponent<Collider>().bounds.size.y / 2) + 0.05f), Color.green);
+            //Physics.Raycast(GrabbedObject.transform.position, Vector3.down, out hit, (GrabbedObject.GetComponent<Collider>().bounds.size.y/2) + 0.05f, GroundMask);
+            Physics.BoxCast(new Vector3(GrabbedObject.transform.position.x, GrabbedObject.transform.position.y-grabbedCollider.bounds.size.y/2, GrabbedObject.transform.position.z), bounds, Vector3.down,out hit);
 
+            
 
+            Debug.Log(hit.collider);
+
+            /*
             if (hit.collider == null)
             {
                 //DROP Grab
                 Debug.Log("object not supported");
             }
             else
-            { Debug.Log(hit.point); }
+            { Debug.Log(hit.point); }*/
         }
 
 
         #endregion
 
+        //Animation
+        animatorController.SetFloat("Velocity", Movedir.z);
     }
 
     void StartGrab()
     {
+        if (IsGrab) { EndGrab(); return; }
         if (!isGrounded) { return; }
-        if (IsGrab) { EndGrab();  return; }
         Debug.Log("grab");
 
         Ray grabRay = new Ray() { origin = transform.position, direction = Model.transform.forward };
@@ -295,6 +323,8 @@ public class PlayerMovement : MonoBehaviour
             rb.isKinematic = true;
             this.transform.parent = GrabbedObject.transform;
             */
+
+            animatorController.SetTrigger("Grab");
         }
 
 
@@ -316,17 +346,31 @@ public class PlayerMovement : MonoBehaviour
         GrabbedObject.GetComponent<Rigidbody>().isKinematic = true;
 
 
+        //GrabbedObject.GetComponent<Rigidbody>().constraints = originalConstraints;
+        GrabbedObject.GetComponent<Rigidbody>().useGravity = true;
+
         IsGrab = false;
         GrabbedObject = null;
 
-        GrabbedObject.GetComponent<Rigidbody>().constraints = originalConstraints;
-
         hands.transform.parent = transform;
+
+        animatorController.SetTrigger("EndGrab");
     }
 
 
     #endregion
 
+    #region
+
+    void Attack()
+    {
+        //just play the animation
+        Debug.Log("Attack");
+        animatorController.SetTrigger("Attack");
+    }
+
+
+    #endregion
 
     #region Utility
     bool GroundedCheck()
@@ -362,42 +406,5 @@ public class PlayerMovement : MonoBehaviour
     }
 
     #endregion
-
-    //2 directions
-    //one is the current diection of travel
-    //two is the ideal direction of travel
-    //you then lerp the current to the ideal and this gives us the turning arc
-    //variables to add to this
-    //  arc speed / turning speed
-            //air von
-
-
-
-
-    //script outline for myself 
-
-    //movement should add force in a direction the camera is looking only a small amount so their is a turning arc
-    //pivot point.rotation = direction
-    //jumping adds vertical force
-    //good air controll
-    //face the direction of travel + turming so if turning lean further to the direction of turning
-
-    //Animation states
-    //idle
-    //moving forwards
-    //turning direction
-    //jumping
-    //acending
-    //decending
-    //vertical
-    //horizontal
-    //landing
-    //pulling
-
-    //pulling objects
-    //grab the pulling object at a point
-    //use that point as the ancore
-    //if the object is hinged mvoe it accoring to the hinge
-    //if the objects free just slow the players movement by the objects weight (speed = weight of object combined with the pulling force of the player)
 
 }
