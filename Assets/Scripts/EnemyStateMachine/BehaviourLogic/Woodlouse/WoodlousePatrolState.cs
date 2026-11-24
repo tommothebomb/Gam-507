@@ -21,6 +21,7 @@ public class WoodlousePatrolState : EnemyPatrolSOBase
 
     public override void DoEnterLogic()
     {
+        base.DoEnterLogic();
         // turn off shoot point and look at to save on processing
         FindRandomPointOnNavmesh();
     }
@@ -49,5 +50,9 @@ public class WoodlousePatrolState : EnemyPatrolSOBase
         NavMeshHit hit;
         if (NavMesh.SamplePosition(randomPoint, out hit, 2, NavMesh.AllAreas)) return true;
         else return false;
+    }
+    public override void DoExitLogic()
+    {
+        base.DoExitLogic();
     }
 }

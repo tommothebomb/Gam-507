@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Libby/Jordan Script \\
 public class PlayerHealthManager : MonoBehaviour, IDamageable
@@ -12,7 +13,7 @@ public class PlayerHealthManager : MonoBehaviour, IDamageable
         Debug.Log(stats.currentHealth);
         if (stats.currentHealth <= 0)
         {
-            Debug.Log("playerDied");
+            SceneManager.LoadScene("LoseScene");
         }
     }
 }

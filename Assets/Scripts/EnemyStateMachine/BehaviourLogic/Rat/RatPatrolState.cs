@@ -25,6 +25,7 @@ public class RatPatrolState : EnemyPatrolSOBase
 
     public override void DoEnterLogic()
     {
+        base.DoEnterLogic();
         // turn off shoot point and look at to save on processing
         thisLookAt.enabled = false;
         enemyBase.agent.SetDestination(startPos);
@@ -48,6 +49,7 @@ public class RatPatrolState : EnemyPatrolSOBase
 
     public override void DoExitLogic()
     {
+        base.DoExitLogic();
         thisLookAt.enabled = true;
         atStartPos = false;
     }

@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 3333865393780599272}
   - component: {fileID: 4329361514480800788}
   - component: {fileID: 760962296912191101}
+  - component: {fileID: 3509955135679873951}
   m_Layer: 5
   m_Name: ShipHealth
   m_TagString: Untagged
@@ -328,6 +329,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3509955135679873951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548525056588389748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e871c610a82439f45ac104cfab218683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BiilboardUI
+  camTransform: {fileID: 0}
 --- !u!1 &2092202201240392244
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +469,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6, y: 3, z: 6}
+  m_Size: {x: 10, y: 3, z: 10}
   m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!114 &7371596490926263322
 MonoBehaviour:
@@ -494,7 +508,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4900925587893310907}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -503,7 +517,7 @@ RectTransform:
   - {fileID: 8949206728701598649}
   - {fileID: 1089962548277672260}
   m_Father: {fileID: 8269103630149995748}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -784,6 +798,7 @@ GameObject:
   - component: {fileID: 8500505879794532081}
   - component: {fileID: 2051175538622488270}
   - component: {fileID: 3189947760853613017}
+  - component: {fileID: 401716055343716755}
   m_Layer: 5
   m_Name: Repair
   m_TagString: Untagged
@@ -799,7 +814,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6147608712815286922}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -874,6 +889,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &401716055343716755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147608712815286922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e871c610a82439f45ac104cfab218683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BiilboardUI
+  camTransform: {fileID: 0}
 --- !u!1 &6663789481937324999
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,14 +927,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6663789481937324999}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8269103630149995748}
   m_Father: {fileID: 9150281426111127709}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1325610294268848114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -922,6 +950,8 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 1cdac206798e2324b823af0fe450c910, type: 2}
   shipHealth: {fileID: 11400000, guid: dad983ec47adf834babd1314fc606bbb, type: 2}
   player: {fileID: 0}
+  shipHealthSlider: {fileID: 4320892573462483397}
+  shipRepairSlider: {fileID: 5238014995773231938}
 --- !u!1 &7733365449551198365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +1074,7 @@ GameObject:
   - component: {fileID: 1035535655602591985}
   - component: {fileID: 4320892573462483397}
   m_Layer: 5
-  m_Name: HoldToRepair
+  m_Name: ShipHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
