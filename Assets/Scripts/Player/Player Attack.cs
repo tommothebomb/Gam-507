@@ -16,11 +16,9 @@ public class PlayerAttack : MonoBehaviour
 
    public void AttackKeyFrame()
     {
-        Debug.Log("IM GONNAA HIT YA");
         RaycastHit hit;
         foreach (Transform t in attackPoints)
         {
-            Debug.Log("attackPoint");
             Physics.SphereCast(t.position,attackRadius,t.transform.forward * 2,out hit,attackMask);
             Debug.DrawRay(t.position, t.transform.forward * 2, Color.blue,1);
 
@@ -28,10 +26,7 @@ public class PlayerAttack : MonoBehaviour
 
             if (hit.collider != null && hit.collider.TryGetComponent<IDamageable>(out IDamageable HitObj) == true)
             {
-                //run the damage function
                 HitObj.TakeDamage(1f);
-
-                Debug.Log("RAHHHHHH I HIT SOMETHINGGGGG AHHHHHHHHHHH");
                 return;
             }
         }

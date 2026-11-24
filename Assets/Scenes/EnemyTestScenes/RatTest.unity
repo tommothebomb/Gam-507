@@ -773,6 +773,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705175954}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1791126973
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4452421481918665920, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.437493
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452421481918665920, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9999992
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452421481918665920, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.756604
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452421481918665920, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452421481918665920, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452421481918665920, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452421481918665920, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452421481918665920, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452421481918665920, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452421481918665920, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921955708044254487, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
+      propertyPath: m_Name
+      value: PlayerV3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
 --- !u!1 &1838054652
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1838054654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,26 +864,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   Velocity: 0
-  DirectionArrow: {fileID: 0}
-  VelocityArrow: {fileID: 0}
   moveKeys: {x: 0, y: 0, z: 0}
-  outputDir: {x: 0, y: 0, z: 0}
-  currentDir: {x: 0, y: 0, z: 0}
-  currentangle: 0
-  angle: 0
   maxSpeed: 5
   acceleration: 1
-  turningArc: 0.4
-  rb: {fileID: 1838054656}
   cameraDir: {fileID: 6134817}
+  isSliding: 0
   Model: {fileID: 1705175955}
-  animator: {fileID: 0}
-  isGrounded: 0
+  animatorController: {fileID: 0}
   jumpForce: 0
   GroundMask:
     serializedVersion: 2
     m_Bits: 55
   additionalAirJump: 2
+  IsGrab: 0
+  grabPoint: {x: 0, y: 0, z: 0}
+  hands: {fileID: 0}
+  interactableLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  grabPullSpeed: 0
+  grabEffecicency: {x: 0, y: 0}
+  GrabbedObject: {fileID: 0}
+  originalConstraints: 0
+  defaultConstraints: 0
 --- !u!114 &1838054655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1383,3 +1443,4 @@ SceneRoots:
   - {fileID: 1002402390}
   - {fileID: 1838054658}
   - {fileID: 312192649}
+  - {fileID: 1791126973}
