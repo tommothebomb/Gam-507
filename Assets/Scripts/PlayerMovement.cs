@@ -96,17 +96,11 @@ public class PlayerMovement : MonoBehaviour
             Move();
         }
 
-
-        
-        if (currentDir.normalized.magnitude != 0)
-        {
-            Model.rotation = Quaternion.LookRotation(currentDir);
-        }
     }
 
     void Move()
     {
-
+        #region
         //W S = forward backwards  / Z
         //A D = forward Left Right / X
         //Movedir = new Vector3(Movedir.y, 0, Movedir.x);
@@ -148,14 +142,19 @@ public class PlayerMovement : MonoBehaviour
             Vector3 SpeedClamp = rb.linearVelocity.normalized * maxSpeed;
             rb.linearVelocity = new Vector3(SpeedClamp.x, SpeedClamp.y, SpeedClamp.z);
         }
+        #endregion
 
-
-        //VALUE DEBUG
-        //VelocityArrow.rotation = Quaternion.LookRotation(currentDir); //direction of travel
+        #region Visuals
         Velocity = rb.linearVelocity.magnitude; //total speed
 
+        if (currentDir.normalized.magnitude != 0)
+        {
+            Model.rotation = Quaternion.LookRotation(currentDir);
+        }
         //Animation
-        animatorController.SetFloat("Velocity", currentDir.normalized.magnitude);
+        animatorController.SetFloat("Velocity", rb.linearVelocity.magnitude);
+
+        #endregion
     }
 
     void Jump()
@@ -173,6 +172,7 @@ public class PlayerMovement : MonoBehaviour
     #region Grab
     void GrabMove()
     {
+        if (!isGrounded) { EndGrab();return; }
         #region ObjectMovement
         //using the hands as the movement direction
         //speed is / by objects mass and multipled by the diffrent of player mass to object mass so the force is applied equaly
@@ -198,6 +198,7 @@ public class PlayerMovement : MonoBehaviour
         if (usingHinge)
         {
             this.transform.position = hands.position + (-hands.transform.forward / 1.75f);
+            Model.rotation = Quaternion.LookRotation(hands.transform.forward);
         }
 
         /*else IM OLD - CODE
@@ -260,7 +261,6 @@ public class PlayerMovement : MonoBehaviour
 
 
         #endregion
-
         //Animation
         animatorController.SetFloat("Velocity", Movedir.z);
     }
@@ -323,6 +323,11 @@ public class PlayerMovement : MonoBehaviour
             rb.isKinematic = true;
             this.transform.parent = GrabbedObject.transform;
             */
+
+
+            
+            Model.rotation = Quaternion.LookRotation(hands.transform.forward);
+            
 
             animatorController.SetTrigger("Grab");
         }
