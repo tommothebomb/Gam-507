@@ -54,7 +54,7 @@ public class PlayerCamera : MonoBehaviour
         RaycastHit hit;
         Ray ray = new Ray(CameraPivotPoint.position, CameraPivotPoint.transform.forward * cameraGoalDistance);
 
-        Physics.Raycast(ray,out hit,Mathf.Abs(cameraGoalDistance), camLayerMask);
+        Physics.Raycast(ray,out hit,Mathf.Abs(cameraGoalDistance), camLayerMask,QueryTriggerInteraction.Ignore);
         if (hit.transform != null) //if the camera hits a wall smoothly lerp it to be iinfront of the wall 
         {
             //we use a walldistance instead of just setting the goal distance so that once the camera isnt hitting a wall anymore it returns to its original distance
