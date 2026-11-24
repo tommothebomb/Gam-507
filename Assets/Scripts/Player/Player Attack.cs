@@ -26,7 +26,7 @@ public class PlayerAttack : MonoBehaviour
 
             if (hit.collider != null && hit.collider.TryGetComponent<IDamageable>(out IDamageable HitObj) == true)
             {
-                HitObj.TakeDamage(1f);
+                HitObj.TakeDamage(Damage);
                 return;
             }
         }
