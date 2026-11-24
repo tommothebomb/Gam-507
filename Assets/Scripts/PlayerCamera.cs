@@ -75,7 +75,7 @@ public class PlayerCamera : MonoBehaviour
         //get the input Values
         mouseMovement = mouseDelta.ReadValue<Vector2>();
         //swap the X and Y
-        mouseMovement = new Vector2(mouseMovement.y, mouseMovement.x);
+        mouseMovement = new Vector2(-mouseMovement.y, mouseMovement.x);
 
         /*
         if (Mathf.Abs(mouseMovement.y) <= 0.25)

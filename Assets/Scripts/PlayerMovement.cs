@@ -132,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
             remaingAirJumps = additionalAirJump;
             //is grounded
             //check ground normal for slide = on slide// add a downward force to the player
-            Debug.Log(Vector3.Dot(Vector3.up, hit.normal));
+            //Debug.Log(Vector3.Dot(Vector3.up, hit.normal));
             if (Vector3.Dot(Vector3.up, hit.normal) < 0.9f)
             {
                 Debug.Log("IM SLIDING YO");
