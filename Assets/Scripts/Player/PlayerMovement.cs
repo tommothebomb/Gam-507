@@ -365,7 +365,7 @@ public class PlayerMovement : MonoBehaviour
 
     #endregion
 
-    #region
+    #region Attack
 
     void Attack()
     {
@@ -375,6 +375,14 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+    //called via keyframes when the player attacks
+    //do a spherecast at each connection points
+    public void AttackPoint()
+    {
+        Debug.Log("AHHHH");
+    }
+
+   
     #endregion
 
     #region Utility
