@@ -27,6 +27,7 @@ public class RatChaseState : EnemyChaseSOBase
     {
         attackTimer = 0;
         canAttack = false;
+        if (enemyBase.CurrentHealth > healtAmountToRetreat) isHurt = false;
     }
 
     public override void DoUpdateLogic()
@@ -42,6 +43,11 @@ public class RatChaseState : EnemyChaseSOBase
         else if (!isHurt) // normal state
         { 
             enemyBase.agent.SetDestination(enemyBase.player.transform.position); 
+        }
+
+        if (isHurt)
+        {
+            if (enemyBase.agent.remainingDistance <= 5) gameObject.SetActive(false);
         }
 
         // check aggro and set back to patrol if needed

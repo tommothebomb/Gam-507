@@ -8,6 +8,9 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     [Tooltip("make sure is assigned as the players model")]
     public GameObject player;
     public PoolManager pooler;
+    Vector3 startPosition;
+    Quaternion startRotation;
+    public bool isDead;
 
     // from IDamageable interface \\
     [field: SerializeField] public float MaxHealth { get; set; }
@@ -91,12 +94,27 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
         chaseState = new EnemyChaseState(this, stateMachine);
         attackState = new EnemyAttackState(this, stateMachine);
         deathState = new EnemyDeathState(this, stateMachine);
+
+        startPosition = transform.position;
+        startRotation = transform.rotation;
+    }
+
+    // reset health and transforms when object enabled 
+    private void OnEnable()
+    {
+        if (!isDead)
+        {
+            Debug.Log("resetting enemy");
+            CurrentHealth = MaxHealth;
+
+            transform.position = startPosition;
+            Debug.Log(startPosition);
+            transform.rotation = startRotation;
+        }
     }
 
     private void Start()
     {
-        CurrentHealth = MaxHealth;
-
         enemyPatrolBaseInstance.Initialize(gameObject, this);
         enemyChaseBaseInstance.Initialize(gameObject, this);
         enemyAttackBaseInstance.Initialize(gameObject, this);
