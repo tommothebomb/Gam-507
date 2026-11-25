@@ -7,11 +7,7 @@
 					<ChildrenList>
 						<Folder Name="Kitchen sounds" ID="{DEDEFBA9-C33F-43AE-BF69-48374AD1535B}" ShortID="647803912">
 							<ChildrenList>
-								<MusicSegment Name="Blender" ID="{923379AE-40B9-48B8-9033-700F0B316E15}" ShortID="696591860">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
+								<Sound Name="Blender" ID="{B42749C9-A038-4DD4-9FA6-841BFC11067B}" ShortID="286921674">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -21,68 +17,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Blender" ID="{352D038D-30DC-40FE-A7C1-57E65B7278F3}" ShortID="921381219">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{0C3BA6F4-1725-46FC-B772-C13F259D6678}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Blender" ID="{E29B56BA-DC19-48F4-B44B-44831EC0DB2A}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Blender.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="729093999"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{20DB527F-B3AF-405F-A9D1-AEE666A65558}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Blender" ID="{56A49EFD-2D4A-4CE5-9DFF-099DB2EB88D9}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Blender" ID="{E29B56BA-DC19-48F4-B44B-44831EC0DB2A}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Blender" ID="{C1274F3D-1127-4AA6-BAA2-A612B6B35FA8}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Blender.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="729093999"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{C1458963-34FE-41FC-A2C0-AF36417B599F}"/>
-											<MusicCue Name="Exit Cue" ID="{0746D059-C03D-4AB6-A42D-40724307F1BB}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Broom falling" ID="{6C8D0746-EB07-478E-8BEA-CB3D4ACEDF96}" ShortID="255905301">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blender" ID="{C1274F3D-1127-4AA6-BAA2-A612B6B35FA8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Broom falling" ID="{1E16B7A2-D5F9-4B39-B91D-367FEF39F3AC}" ShortID="913075400">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -92,68 +39,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Broom falling" ID="{99268E3B-ACB1-4B4C-99AC-98D20787FD35}" ShortID="72577705">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{51F4D486-ED2C-4B02-A8C7-B7762CE3DAC3}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Broom falling" ID="{96808D1C-2F27-4756-8E4D-31F12D55B2BB}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Broom falling.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="716327808"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{DE12A8F3-B117-4703-B6D5-D546664994B7}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Broom falling" ID="{FA40A787-223A-473E-AD24-763094637EB3}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Broom falling" ID="{96808D1C-2F27-4756-8E4D-31F12D55B2BB}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Broom falling" ID="{9EAEAA76-69D7-46CE-AFBF-3F53D7F9E0A0}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Broom falling.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="716327808"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{6FC82C81-0D4F-4029-B06C-01465A2FDC4C}"/>
-											<MusicCue Name="Exit Cue" ID="{BCB82C02-D6C8-4C38-BA64-3911D149C488}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Broom rattle" ID="{F60839B9-7C88-47C3-95AA-2289E2EA772E}" ShortID="631633044">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Broom falling" ID="{9EAEAA76-69D7-46CE-AFBF-3F53D7F9E0A0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Broom rattle" ID="{206B29DC-7C08-4DF3-8753-60371F770602}" ShortID="197993241">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -163,68 +61,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Broom rattle" ID="{99A3229A-8575-4BFA-B512-73B3FA55CDA0}" ShortID="350550339">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{5FC8FD71-048E-4038-95E8-E936428C0AA4}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Broom rattle" ID="{39501917-9C63-43D0-A557-370BE8EA2130}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Broom rattle.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="577890390"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{FAC989D1-D5DB-4E0E-B253-61F1D73291EF}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Broom rattle" ID="{BF1206A6-7931-44DA-AC3B-7724A4E13A21}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Broom rattle" ID="{39501917-9C63-43D0-A557-370BE8EA2130}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Broom rattle" ID="{B9A8BAE9-950D-48AD-BE12-C808E2A9D8FC}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Broom rattle.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="577890390"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{10569F7B-45F9-4D4C-AF43-D42FE3F98B1B}"/>
-											<MusicCue Name="Exit Cue" ID="{87C7EF83-BCE2-4043-8AE2-3F922EA7EBDE}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Faucet" ID="{8EC10CB1-2F75-4D6A-B850-A41A29E908DB}" ShortID="442734056">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Broom rattle" ID="{B9A8BAE9-950D-48AD-BE12-C808E2A9D8FC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Faucet" ID="{DD618FC3-C203-472A-97EB-75D7744158E6}" ShortID="281810040">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -234,68 +83,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Faucet" ID="{7D6B4CCF-891D-4597-92D6-040E6D8B2056}" ShortID="1070040154">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{967AE312-5546-4723-993E-DAC9C280F26F}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Faucet" ID="{F351D44F-B048-4ADC-A5C0-88C64C2382F7}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Faucet.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="801418449"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{025699F2-5CDC-45EE-87B4-EE2C07802FEA}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Faucet" ID="{3DBBDDF7-5517-4EC0-B745-0A2D2AD42DFC}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Faucet" ID="{F351D44F-B048-4ADC-A5C0-88C64C2382F7}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Faucet" ID="{820A7117-8BB1-4BDE-8909-7DC28931E329}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Faucet.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="801418449"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{C71E81E7-F02B-4B2D-A0B1-301E683D79B1}"/>
-											<MusicCue Name="Exit Cue" ID="{358BC3A0-C8D1-426D-997B-6B4F20F4DE08}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Garbage disposal" ID="{3F11577A-C843-4E49-A661-6C40FBE7F349}" ShortID="394205809">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Faucet" ID="{820A7117-8BB1-4BDE-8909-7DC28931E329}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Garbage disposal" ID="{2A48E423-BEDF-46CB-A350-853D31061699}" ShortID="202202102">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -305,68 +105,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Garbage disposal" ID="{5F1D83FB-C4F7-41C8-9C6B-7D36E50A58FF}" ShortID="65777089">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{CAF55C78-72B8-4C32-8F8D-E70B93F853A9}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Garbage disposal" ID="{321705F1-2B34-491C-B21B-AFDEEC7E0AF4}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Garbage disposal.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="803497468"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{DB265B2C-F18B-4AAD-B35D-0B92E6C9C53E}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Garbage disposal" ID="{8318F9A7-B4A8-4841-B8CC-C5A3956CA7AF}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Garbage disposal" ID="{321705F1-2B34-491C-B21B-AFDEEC7E0AF4}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Garbage disposal" ID="{90FCF4F3-E62A-4AA1-B8A3-1F007090CBC6}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Garbage disposal.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="803497468"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{4C4F3848-D616-4A1D-B694-442604B30BBC}"/>
-											<MusicCue Name="Exit Cue" ID="{42D2D972-9AE5-48F3-862B-F4E69FA2441B}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Hob click" ID="{A9DAD398-4EC6-45DE-96EB-AF165AFF1B53}" ShortID="24433341">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Garbage disposal" ID="{90FCF4F3-E62A-4AA1-B8A3-1F007090CBC6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Hob click" ID="{75C83594-82DD-4B08-A5BA-30BD3B453958}" ShortID="290418280">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -376,68 +127,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Hob click" ID="{81BDB6BA-319E-4FB9-A7B8-271F590D8132}" ShortID="784322981">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{D7040E27-0634-40A8-9296-DBCD25C0C62A}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Hob click" ID="{866729CE-BCD1-40CA-837D-8C37C5307A27}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Hob click.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="220525689"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{730251BC-0307-4CED-B690-3C59B356DEDE}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Hob click" ID="{344FCF80-50DD-47AC-8CFC-2C7005229E8D}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Hob click" ID="{866729CE-BCD1-40CA-837D-8C37C5307A27}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Hob click" ID="{85D1D435-B541-430C-8150-64A2E411FA95}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Hob click.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="220525689"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{33CE73B0-C1A0-4A4C-B15C-3E369633D677}"/>
-											<MusicCue Name="Exit Cue" ID="{5F76EE08-6E56-428A-95EA-12252A59EB07}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Hob flame" ID="{5FF4FCF8-6BF1-46DA-9B49-DACDC87B997E}" ShortID="524951362">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Hob click" ID="{85D1D435-B541-430C-8150-64A2E411FA95}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Hob flame" ID="{85140FF8-C268-4ACF-B662-93651BACA4B8}" ShortID="748722928">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -447,68 +149,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Hob flame" ID="{D0D8DCC1-9E63-4742-8826-3EB694F68579}" ShortID="51861022">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{7E508B8D-DDC0-4BFD-8707-E77A51035C02}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Hob flame" ID="{C431808A-ACE1-4FA7-A926-127B37CA826B}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Hob flame.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="653165124"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{CF6DEA37-24B7-442B-84C4-E7D5B22F21B9}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Hob flame" ID="{12CC7FB4-E819-40F6-803B-7588598CE4B6}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Hob flame" ID="{C431808A-ACE1-4FA7-A926-127B37CA826B}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Hob flame" ID="{671E4E15-9A2E-44D8-91F0-AA447D56219B}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Hob flame.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="653165124"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{2EA58D0E-3308-4460-9B43-4508ED3E32BE}"/>
-											<MusicCue Name="Exit Cue" ID="{CE505537-DD54-49C4-BA81-91E6E903BFB6}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Microwave button" ID="{052319D3-92AF-44C7-91A1-53695FF56CB8}" ShortID="833738357">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Hob flame" ID="{671E4E15-9A2E-44D8-91F0-AA447D56219B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Microwave button" ID="{77BB7602-390A-4AFA-A1E1-973EE6454C66}" ShortID="415568797">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -518,68 +171,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Microwave button" ID="{DA9EBAF6-ACA7-421A-9364-193CD6F7F07F}" ShortID="869498039">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{6B64D620-71DE-4AAA-B6D5-F6E53D8BB0D5}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Microwave button" ID="{CDFEE4B4-EB10-4114-94B4-20CE0E9773B0}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Microwave button.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="689253215"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{8F2E3E73-CF58-4C58-A49B-61856E939C4D}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Microwave button" ID="{2806380F-ADA1-4E34-BC9E-08E035F2117F}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Microwave button" ID="{CDFEE4B4-EB10-4114-94B4-20CE0E9773B0}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Microwave button" ID="{D2AE2DF6-D8B1-4CC3-91A4-9F76547B4B71}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Microwave button.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="689253215"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{9AAE6F7D-ED69-4920-BE52-EEAA947E006E}"/>
-											<MusicCue Name="Exit Cue" ID="{666F83F7-DACD-4B7F-A0D1-31CB741374A4}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Microwave door close" ID="{8022AAC5-68CA-4A34-B5FB-320A6BC21C20}" ShortID="605739924">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Microwave button" ID="{D2AE2DF6-D8B1-4CC3-91A4-9F76547B4B71}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Microwave door close" ID="{2C247A01-7CF1-48D3-8A85-4910F989B634}" ShortID="723565492">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -589,68 +193,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Microwave door close" ID="{DCE8D2E7-061D-456A-BDAF-08EAE973A7F6}" ShortID="971065334">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{428B5A7A-27BF-4AEB-AB60-C52E793CF56A}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Microwave door close" ID="{996752F7-A9B3-49AF-BEFC-0725D7D7C74A}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Microwave door close.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="514036536"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{EF73B462-EBD0-444B-B67B-CB91C7AD84D2}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Microwave door close" ID="{2494D4AC-2911-445F-95D2-4E9146CAB591}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Microwave door close" ID="{996752F7-A9B3-49AF-BEFC-0725D7D7C74A}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Microwave door close" ID="{4D8C6C59-507F-49FA-89D0-83C72A31B099}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Microwave door close.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="514036536"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{CC75D5F2-E253-4EB4-9C76-5169DB2248B7}"/>
-											<MusicCue Name="Exit Cue" ID="{25F25852-6647-4F4A-ADC8-465F3AD104CF}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Microwave door open" ID="{7E17352D-0B44-4AB9-9859-D2F2439601D4}" ShortID="46219046">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Microwave door close" ID="{4D8C6C59-507F-49FA-89D0-83C72A31B099}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Microwave door open" ID="{5FDDBE50-E961-46AE-82EF-41B60E769747}" ShortID="659710434">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -660,67 +215,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Microwave door open" ID="{57979978-2EF8-43FA-925C-60B8D2C71770}" ShortID="1000955460">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{24BA2A45-2BE5-4D86-A9BD-0BFB52E6007D}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Microwave door open" ID="{4200A605-5FC6-41AC-89E7-A9E32106A571}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Microwave door open.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="765590291"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{F3A327B7-02FD-46D1-B949-3D317E644DAF}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Microwave door open" ID="{623FB81E-0E83-4A0F-9846-A2454743F20A}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Microwave door open" ID="{4200A605-5FC6-41AC-89E7-A9E32106A571}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Microwave door open" ID="{EB521AEC-7D29-41D9-8B53-F239ED978A2F}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Microwave door open.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="765590291"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{DFB2BA25-3016-4D6D-8AA3-1EF2C124602B}"/>
-											<MusicCue Name="Exit Cue" ID="{85DF41F9-9BA8-4A68-B7AE-288E7A307AD1}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Mouse trap" ID="{E09C96FB-DBD3-4C89-90E2-9F4D880F35C6}" ShortID="884684173">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Microwave door open" ID="{EB521AEC-7D29-41D9-8B53-F239ED978A2F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Mouse trap" ID="{86713518-C6D0-4914-90DD-1325669E3896}" ShortID="436292436">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -730,68 +237,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Mouse trap" ID="{A30802F3-6EF3-456C-B47F-3516557A42A0}" ShortID="826224901">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{3FEA800A-46D1-4E17-A816-1924F555AA41}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Mouse trap" ID="{56789401-C704-45DE-9EC0-BB8DE6D52FB4}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Mouse trap.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="924176812"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{0B42F322-39CB-4CF8-8FD0-934CED361B13}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Mouse trap" ID="{992C7605-B7C3-42EB-9277-5EBDB24D75D4}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Mouse trap" ID="{56789401-C704-45DE-9EC0-BB8DE6D52FB4}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Mouse trap" ID="{8C55C591-7497-44F6-8F1F-BCBC684D71F9}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Mouse trap.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="924176812"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{9A4135F2-48EC-4E61-B7F2-63503BB592C0}"/>
-											<MusicCue Name="Exit Cue" ID="{993DEC2F-E4E3-4D25-88D3-5BB902F26D76}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Plant rustle" ID="{C9492A54-075C-46AC-B8E9-64E6EA72C7E8}" ShortID="480754586">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="27500"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Mouse trap" ID="{8C55C591-7497-44F6-8F1F-BCBC684D71F9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Plant rustle" ID="{FB290B10-6FE5-40D6-8B00-08F242C28297}" ShortID="12250722">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -801,67 +259,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Plant rustle" ID="{FE915996-5D54-42BB-9819-4A9F691BED54}" ShortID="436013796">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{BBCC1BC8-182A-4B00-B1D3-E20E7348E6B7}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Plant rustle" ID="{6A692C9C-49A9-4089-840D-FDD3215987B9}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Plant rustle.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="824585160"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{02DAB2D6-C74F-48E8-B1EF-3F0E3C305FD8}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Plant rustle" ID="{690E9E32-7D45-4EEA-A1B7-930ED10B8CA8}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="27500"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Plant rustle" ID="{6A692C9C-49A9-4089-840D-FDD3215987B9}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Plant rustle" ID="{0936CD7C-AE9F-43F2-95DF-9D2A292532FA}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Plant rustle.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="824585160"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{85FBCA76-E081-4FDD-A6D5-62D8C917B90F}"/>
-											<MusicCue Name="Exit Cue" ID="{3B3486FA-304D-4447-AA13-E318E88613BE}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="27500"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Plant rustling" ID="{265EBF01-A4A1-4C7D-B079-477FC88EA969}" ShortID="319732100">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Plant rustle" ID="{0936CD7C-AE9F-43F2-95DF-9D2A292532FA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Plant rustling" ID="{EA5AA8CD-F6F1-4373-A7D0-B59EA7FFD092}" ShortID="192088288">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -871,68 +281,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Plant rustling" ID="{127A048D-A71E-49FF-8111-B25EAC18A9FD}" ShortID="89337769">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{5EFFB821-7989-412C-99AA-AE4A6FFBFA53}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Plant rustling" ID="{F1EC16C2-07F7-4DE3-9AD3-5EDE39304566}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Plant rustling.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="757356168"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{A3BE26F4-1394-4E5C-9A16-D125C16C9421}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Plant rustling" ID="{407D3A48-5127-40D4-8EFB-3D310DF55F2C}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Plant rustling" ID="{F1EC16C2-07F7-4DE3-9AD3-5EDE39304566}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Plant rustling" ID="{F0CB9A38-4D9C-4B44-9A32-16B103912DC3}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Plant rustling.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="757356168"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{2D561DE7-310E-4B72-AB7C-0281C8887023}"/>
-											<MusicCue Name="Exit Cue" ID="{D175A49D-8B01-42B5-9B94-41130843E13B}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Toaster ejection" ID="{B08AF161-2B09-496B-A819-9E205D936030}" ShortID="175792583">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Plant rustling" ID="{F0CB9A38-4D9C-4B44-9A32-16B103912DC3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Toaster ejection" ID="{DD7C99E4-284A-477F-97D9-15FDFBBF1ABA}" ShortID="834708909">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -942,68 +303,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Toaster ejection" ID="{F9332FBA-8867-4E1E-A9FB-82B53B7098F8}" ShortID="284622521">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{10A279EC-3E0F-44FB-B3C7-8546D13517D0}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Toaster ejection" ID="{772A674D-94CC-4C86-9ECE-95F5702A8033}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Toaster ejection.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="204841170"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{B261B454-09D3-46FB-9B86-D26FED569434}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Toaster ejection" ID="{3AAF313E-13A6-47D7-9554-4E8FE66D4C58}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Toaster ejection" ID="{772A674D-94CC-4C86-9ECE-95F5702A8033}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Toaster ejection" ID="{2EDCB978-C74D-4FB5-90E8-C03446C34205}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Toaster ejection.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="204841170"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{C398ADB9-DEC0-4A0A-B8A0-6B1BA3B7B60B}"/>
-											<MusicCue Name="Exit Cue" ID="{2100180E-51D8-4D63-91F5-2049ED99B5EA}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Toaster lever" ID="{AB6BDEBB-7EAC-4761-A4B8-E595E6B11DC2}" ShortID="443750090">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="28978.4807256236"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Toaster ejection" ID="{2EDCB978-C74D-4FB5-90E8-C03446C34205}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Toaster lever" ID="{3E138B4B-313B-499C-9CFE-E28FD7C3C832}" ShortID="594784815">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
@@ -1013,63 +325,18 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Toaster lever" ID="{BD5F8D71-7775-46A1-AAE8-9FE57A69D9B6}" ShortID="698535778">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{7D6EDEEC-302F-4E7B-BCC2-A3C4A370F8D8}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Toaster lever" ID="{05DF2F56-9F87-4980-B6E0-943AA9D88FA3}">
-													<Language>SFX</Language>
-													<AudioFile>Sound FXs\Kitchen sounds\Toaster lever.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="954928746"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<MusicTrackSequence Name="" ID="{85DF6A70-6C9D-4CDA-B10A-C88D473CB88E}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<MusicClip Name="Toaster lever" ID="{12BED913-5E16-4605-B01B-87B8208A13B0}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="28978.4807256236"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="Toaster lever" ID="{05DF2F56-9F87-4980-B6E0-943AA9D88FA3}"/>
-																</MusicClip>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
+										<AudioFileSource Name="Toaster lever" ID="{51893E6C-4C50-4EE2-85D5-3790A9A4914A}">
+											<Language>SFX</Language>
+											<AudioFile>Sound FXs\Kitchen sounds\Toaster lever.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="954928746"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<MusicCue Name="Entry Cue" ID="{E94EBD79-3D4C-4F0D-9774-FD88448B8EF4}"/>
-											<MusicCue Name="Exit Cue" ID="{42583F57-97A6-4D7F-86C0-851A5D35D0C4}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28978.4807256236"/>
-												</PropertyList>
-											</MusicCue>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
+									<ActiveSourceList>
+										<ActiveSource Name="Toaster lever" ID="{51893E6C-4C50-4EE2-85D5-3790A9A4914A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="KitchenSlawa" ID="{2C82D519-7F3A-45A1-859A-74FDF1413A73}" ShortID="417948209">

@@ -6,20 +6,6 @@
 				<WorkUnit Name="Roscislawa" ID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" PersistMode="Reference"/>
 				<WorkUnit Name="Harrison" ID="{0653EA8E-19B9-4395-B257-AEFA6826B14B}" PersistMode="Reference"/>
 				<WorkUnit Name="Damien" ID="{4BE47704-534A-4C17-832F-F0C8C03CBB03}" PersistMode="Reference"/>
-				<Event Name="Stop_MicrowaveHum28" ID="{79C8C8C3-3A3D-4417-9F2E-61560F181A50}">
-					<ChildrenList>
-						<Action Name="" ID="{1AD64756-5B86-439F-9BD3-DC31000B9209}" ShortID="451460017">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MicrowaveHum28" ID="{0DD2B5E6-5417-4053-A533-AAF0193E4408}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

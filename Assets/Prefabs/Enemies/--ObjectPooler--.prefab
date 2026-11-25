@@ -47,4 +47,4 @@ MonoBehaviour:
   pools:
   - tag: webProjectile
     prefab: {fileID: 5048398109924434597, guid: 0176685f1d3a1f545a94013e12d32632, type: 3}
-    size: 20
+    size: 40
