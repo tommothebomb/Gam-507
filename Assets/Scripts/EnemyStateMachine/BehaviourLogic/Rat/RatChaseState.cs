@@ -15,8 +15,8 @@ public class RatChaseState : EnemyChaseSOBase
     [SerializeField] float hurtSpeed;
     bool isHurt;
     float destinationTimer;
-    float timeBetweenDestinationSet = 0.4f;
-    float distanceDestinationWillBeFromPlayer = 3.5f;
+    float timeBetweenDestinationSet = 0.5f;
+    float distanceDestinationWillBeFromPlayer = 4f;
 
 
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
@@ -30,16 +30,14 @@ public class RatChaseState : EnemyChaseSOBase
     {
         attackTimer = 0;
         canAttack = false;
-        if (enemyBase.currentHealth <= healtAmountToRetreat) isHurt = true;
+        if (enemyBase.currentHealth <= healtAmountToRetreat) SetHurtLogic();
     }
 
     public override void DoUpdateLogic()
     {
         if (enemyBase.currentHealth <= healtAmountToRetreat && !isHurt) // to prevent running every frame when doesn't need to
         {
-            Debug.Log("starting hurt");
             SetHurtLogic();
-            Debug.Log("ran hurt");
         }
         else if (!isHurt) // normal state 
         {
@@ -47,11 +45,14 @@ public class RatChaseState : EnemyChaseSOBase
             if (destinationTimer >= timeBetweenDestinationSet) FindNewDestination();
         }
 
-        //Debug.Log(enemyBase.agent.destination + " " + enemyBase.agent.remainingDistance);
-        if (enemyBase.agent.remainingDistance <= 0.5f && isHurt)
+        if (isHurt) // nesting for performance, dont want to call vector3.distance more than i need to
         {
-            gameObject.SetActive(false);
-            isHurt = false;
+            //if (enemyBase.agent.destination != enemyBase.ratNest.position) SetHurtLogic();
+            if (Vector3.Distance(gameObject.transform.position, enemyBase.ratNest.position) <= 4)
+            {
+                gameObject.SetActive(false);
+                isHurt = false;
+            }
         }
 
         // check aggro and set back to patrol if needed
@@ -64,14 +65,11 @@ public class RatChaseState : EnemyChaseSOBase
 
     void SetHurtLogic()
     {
-        Debug.Log("running hurt");
         enemyBase.agent.SetDestination(enemyBase.ratNest.position);
-        Debug.Log(enemyBase.agent.destination + " " + enemyBase.agent.nextPosition);
-        Debug.Log(enemyBase.agent.remainingDistance);
         enemyBase.agent.speed = hurtSpeed;
         thisLookAt.enabled = false;
-        isHurt = true;
         enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Hurt);
+        isHurt = true;
     }
 
     void FindNewDestination()

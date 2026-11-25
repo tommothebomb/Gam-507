@@ -28,7 +28,8 @@ public class RatPatrolState : EnemyPatrolSOBase
         base.DoEnterLogic();
         // turn off shoot point and look at to save on processing
         thisLookAt.enabled = false;
-        enemyBase.agent.SetDestination(startPos); 
+        if (gameObject.activeSelf) enemyBase.agent.SetDestination(startPos);
+        //Debug.Log("start called");
         rotationTime = 0;
         enemyBase.enemyAnimController.isAttacking = false;
     }
