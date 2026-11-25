@@ -24,6 +24,7 @@ public class WoodlousePatrolState : EnemyPatrolSOBase
     public override void DoEnterLogic()
     {
         base.DoEnterLogic();
+        enemyBase.enemyAnimController.isAttacking = false;
         // turn off shoot point and look at to save on processing
         FindRandomPointOnNavmesh();
     }

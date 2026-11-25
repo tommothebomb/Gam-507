@@ -97,20 +97,18 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
 
         startPosition = transform.position;
         startRotation = transform.rotation;
+        CurrentHealth = MaxHealth;
     }
 
     // reset health and transforms when object enabled 
-    private void OnEnable()
+    public void ResetEnemyPosAndHealth()
     {
-        if (!isDead)
-        {
-            Debug.Log("resetting enemy");
-            CurrentHealth = MaxHealth;
+        CurrentHealth = MaxHealth;
 
-            transform.position = startPosition;
-            Debug.Log(startPosition);
-            transform.rotation = startRotation;
-        }
+        transform.position = startPosition;
+        transform.rotation = startRotation;
+
+        enemyAnimController.isAttacking = false;
     }
 
     private void Start()

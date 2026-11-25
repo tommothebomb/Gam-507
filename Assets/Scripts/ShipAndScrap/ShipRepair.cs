@@ -46,15 +46,13 @@ public class ShipRepair : MonoBehaviour
     }
 
     void StartRepair() => isHoldingRepair = true;
-    void EndRepair() => isHoldingRepair = false;
+    void EndRepair() { isHoldingRepair = false; shipRepairSlider.value = 0; } 
 
     void UpdateShipHealthUI()
     {
         shipHealth.currentHealth += stats.currentScrap;
         stats.currentScrap = 0;
         float currentRepair = shipHealth.currentHealth / shipHealth.targetHealth;
-        Debug.Log(shipHealth.currentHealth + " " + shipHealth.targetHealth);
-        Debug.Log(currentRepair);
         shipHealthSlider.value = currentRepair;
 
         if (shipHealth.currentHealth >= shipHealth.targetHealth)

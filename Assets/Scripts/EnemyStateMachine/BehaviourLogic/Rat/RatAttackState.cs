@@ -19,7 +19,7 @@ public class RatAttackState : EnemyAttackSOBase
     {
         if (trigger == EnemyBase.AnimationTriggers.Attack1)
         {
-            enemyBase.player.GetComponent<IDamageable>().TakeDamage(enemyBase.damageDeals);
+            if (enemyBase.IsWithinAttackDist) enemyBase.player.GetComponent<IDamageable>().TakeDamage(enemyBase.damageDeals);
         }
         else if (trigger == EnemyBase.AnimationTriggers.EndAttack1)
         {

@@ -29,6 +29,7 @@ public class SpiderPatrolState : EnemyPatrolSOBase
         enemyBase.shootPoint.gameObject.SetActive(false);
         enemyBase.agent.SetDestination(startPos);
         rotationTime = 0;
+        enemyBase.enemyAnimController.isAttacking = false;
     }
 
     public override void DoUpdateLogic()

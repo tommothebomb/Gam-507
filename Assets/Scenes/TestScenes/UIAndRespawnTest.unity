@@ -543,7 +543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1836714328423351532, guid: 2e757658e0578594eaf66d04b0d55b5a, type: 3}
       propertyPath: activeOnStart
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1836714328423351532, guid: 2e757658e0578594eaf66d04b0d55b5a, type: 3}
       propertyPath: enemiesInZone.Array.size
@@ -652,7 +652,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4452421481918665920, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.4
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4452421481918665920, guid: e179385e539b0bd4dbd6dc4276dd7e03, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1198,6 +1198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Woodlouse
       objectReference: {fileID: 0}
+    - target: {fileID: 1925883793134320954, guid: a0578f528dd984d4fb0efb7407ba8c71, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1937156783922223618, guid: a0578f528dd984d4fb0efb7407ba8c71, type: 3}
       propertyPath: playerModel
       value: 
@@ -1222,6 +1226,10 @@ PrefabInstance:
       propertyPath: pooler
       value: 
       objectReference: {fileID: 2119725706}
+    - target: {fileID: 3662818328151875676, guid: a0578f528dd984d4fb0efb7407ba8c71, type: 3}
+      propertyPath: <MaxHealth>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4914769420395939881, guid: a0578f528dd984d4fb0efb7407ba8c71, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 36.4453
@@ -1563,6 +1571,10 @@ PrefabInstance:
       propertyPath: playerStuckWeb
       value: 
       objectReference: {fileID: 1411912493}
+    - target: {fileID: 1797886327411109229, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: <MaxHealth>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2165276288167498714, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 54.750397
@@ -2325,6 +2337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Woodlouse (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1925883793134320954, guid: a0578f528dd984d4fb0efb7407ba8c71, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1937156783922223618, guid: a0578f528dd984d4fb0efb7407ba8c71, type: 3}
       propertyPath: playerModel
       value: 
@@ -2337,6 +2353,10 @@ PrefabInstance:
       propertyPath: pooler
       value: 
       objectReference: {fileID: 2119725706}
+    - target: {fileID: 3662818328151875676, guid: a0578f528dd984d4fb0efb7407ba8c71, type: 3}
+      propertyPath: <MaxHealth>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6444148505352964903, guid: a0578f528dd984d4fb0efb7407ba8c71, type: 3}
       propertyPath: m_LocalPosition.x
       value: 83.5
@@ -2424,6 +2444,10 @@ PrefabInstance:
       propertyPath: playerStuckWeb
       value: 
       objectReference: {fileID: 1411912493}
+    - target: {fileID: 1797886327411109229, guid: 011db479a450bcc44baf221aa960e310, type: 3}
+      propertyPath: <MaxHealth>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3935091484898643713, guid: 011db479a450bcc44baf221aa960e310, type: 3}
       propertyPath: m_LocalPosition.x
       value: -81.4
@@ -2727,7 +2751,7 @@ Transform:
   m_GameObject: {fileID: 2090752790}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -64.8, y: 0, z: -90.2}
+  m_LocalPosition: {x: -64.8, y: 0, z: -99.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
