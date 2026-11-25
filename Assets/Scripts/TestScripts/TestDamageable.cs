@@ -7,7 +7,7 @@ public class TestDamageable : MonoBehaviour, IDamageable
 
     public void TakeDamage(float damageAmount)
     {
-        Debug.Log("owwi.. that hurt");
+        Debug.Log("owwi.. that hurt",this.gameObject);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

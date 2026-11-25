@@ -129,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
             //get the diffance of currentdir and variable to then rotate current dir to the variable
 
 
-        rb.linearVelocity += currentDir * acceleration;
+        rb.linearVelocity += variable * acceleration;
 
         //speed clamp airborn
         if  (rb.linearVelocity.magnitude > maxSpeed && !isGrounded)
@@ -197,7 +197,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (usingHinge)
         {
-            this.transform.position = hands.position + (-hands.transform.forward / 1.75f);
+            this.transform.position = hands.position + (-hands.transform.forward / 1.8f);
             Model.rotation = Quaternion.LookRotation(hands.transform.forward);
         }
 
@@ -306,7 +306,7 @@ public class PlayerMovement : MonoBehaviour
             GrabbedObject.GetComponent<Rigidbody>().isKinematic = false;
 
             if (!GrabbedObject.GetComponent<ConfigurableJoint>()) {
-                this.transform.position = hands.position + (-hands.transform.forward / 1.75f);
+                this.transform.position = hands.position + (-hands.transform.forward / 1.8f);
                 var joint = GrabbedObject.AddComponent<FixedJoint>();
                 joint.connectedBody = rb;
                 //dGrabbedObject.GetComponent<Rigidbody>().constraints = defaultConstraints;

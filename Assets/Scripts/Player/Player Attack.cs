@@ -19,8 +19,8 @@ public class PlayerAttack : MonoBehaviour
         RaycastHit hit;
         foreach (Transform t in attackPoints)
         {
-            Physics.SphereCast(t.position,attackRadius,t.transform.forward * 2,out hit,attackMask);
-            Debug.DrawRay(t.position, t.transform.forward * 2, Color.blue,1);
+            Physics.SphereCast(t.position,attackRadius,t.transform.forward*3,out hit,3,attackMask);
+            Debug.DrawRay(t.position, t.transform.forward*3, Color.blue,1);
 
             Debug.Log(hit.point);
 
