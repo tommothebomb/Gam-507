@@ -15,7 +15,7 @@ public class ResetScriptableObjectValues : MonoBehaviour
     [SerializeField] float targetHealth;
 
 
-    private void Start()
+    public void Start()
     {
         playerStats.currentScrap = 0;
         playerStats.maxHealth = maxHealth;

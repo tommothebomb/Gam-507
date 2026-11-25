@@ -16,7 +16,7 @@ public class RatChaseState : EnemyChaseSOBase
     bool isHurt;
     float destinationTimer;
     float timeBetweenDestinationSet = 0.5f;
-    float distanceDestinationWillBeFromPlayer = 4f;
+    float distanceDestinationWillBeFromPlayer = 5f;
 
 
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)

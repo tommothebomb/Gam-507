@@ -3,7 +3,8 @@ using UnityEngine;
 // Libby/Jordan Script \\
 public class ScrapPickup : MonoBehaviour
 {
-    [SerializeField] ParticleSystem thisPS;
+    [SerializeField] ParticleSystem drawPS;
+    [SerializeField] ParticleSystem collectPS;
 
 
     private void OnTriggerEnter(Collider other)
@@ -11,7 +12,8 @@ public class ScrapPickup : MonoBehaviour
         if (other.transform.gameObject.CompareTag("Player"))
         {
             other.transform.gameObject.GetComponent<IScrapCollectable>().CollectScrap();
-            thisPS.Play();
+            drawPS.Stop();
+            collectPS.Play();
             Destroy(gameObject);
         }
     }

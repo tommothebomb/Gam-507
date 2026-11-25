@@ -2557,8 +2557,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WalkingEnemyBase
   player: {fileID: 0}
   pooler: {fileID: 0}
-  <MaxHealth>k__BackingField: 4
-  damageDeals: 2
+  isDead: 0
+  <MaxHealth>k__BackingField: 2
+  currentHealth: 0
+  damageDeals: 1
   enemyAnimController: {fileID: 720966031467725266}
   enemyPatrolBase: {fileID: 11400000, guid: f081498ae43b3374b8ee1b69de5831ed, type: 2}
   enemyChaseBase: {fileID: 11400000, guid: fd70c8b8c7f40d64da9d178dee92288c, type: 2}

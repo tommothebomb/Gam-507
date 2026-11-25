@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 846515445765182076}
   - component: {fileID: 8558699894730264471}
   - component: {fileID: 5702665791212876799}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: webProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ MonoBehaviour:
   enemyBase: {fileID: 0}
   rb: {fileID: 5702665791212876799}
   webSpeed: 15
-  lifetime: 4
+  lifetime: 2
 --- !u!54 &5702665791212876799
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -110,6 +110,10 @@ PrefabInstance:
     - target: {fileID: 63965736751973707, guid: 129cd1571416ef9439076e67e91502d1, type: 3}
       propertyPath: m_Name
       value: SM_Cobwebs_09
+      objectReference: {fileID: 0}
+    - target: {fileID: 63965736751973707, guid: 129cd1571416ef9439076e67e91502d1, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7800531689008218332, guid: 129cd1571416ef9439076e67e91502d1, type: 3}
       propertyPath: m_LocalScale.x

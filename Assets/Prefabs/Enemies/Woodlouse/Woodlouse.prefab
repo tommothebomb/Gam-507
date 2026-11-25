@@ -372,8 +372,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WoodlouseEnemyBase
   player: {fileID: 0}
   pooler: {fileID: 0}
-  <MaxHealth>k__BackingField: 6
-  damageDeals: 3
+  isDead: 0
+  <MaxHealth>k__BackingField: 4
+  currentHealth: 0
+  damageDeals: 2
   enemyAnimController: {fileID: 5666454886192290234}
   enemyPatrolBase: {fileID: 11400000, guid: f51fc9fe23b02c644bfc46484cb8980e, type: 2}
   enemyChaseBase: {fileID: 11400000, guid: 2779e4c8afcd3924cb8f24aa6fe81571, type: 2}

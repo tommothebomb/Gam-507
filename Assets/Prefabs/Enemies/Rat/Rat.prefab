@@ -1619,8 +1619,9 @@ MonoBehaviour:
   player: {fileID: 0}
   pooler: {fileID: 0}
   isDead: 0
-  <MaxHealth>k__BackingField: 10
-  damageDeals: 4
+  <MaxHealth>k__BackingField: 6
+  currentHealth: 0
+  damageDeals: 3
   enemyAnimController: {fileID: 8622506315189991187}
   enemyPatrolBase: {fileID: 11400000, guid: a93504b22b842fd4bbc3ab5f76dcbfb0, type: 2}
   enemyChaseBase: {fileID: 11400000, guid: 38af61055d4c7404291d4eda8113d716, type: 2}
