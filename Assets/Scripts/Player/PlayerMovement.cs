@@ -360,6 +360,7 @@ public class PlayerMovement : MonoBehaviour
         hands.transform.parent = transform;
 
         animatorController.SetTrigger("EndGrab");
+        animatorController.ResetTrigger("Attack");
     }
 
 
