@@ -14,7 +14,7 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
 
     // from IDamageable interface \\
     [field: SerializeField] public float MaxHealth { get; set; }
-    public float CurrentHealth { get; set; }
+    public float currentHealth;
     public float damageDeals;
 
     // from ITriggerCheckable interface \\
@@ -97,13 +97,13 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
 
         startPosition = transform.position;
         startRotation = transform.rotation;
-        CurrentHealth = MaxHealth;
+        currentHealth = MaxHealth;
     }
 
     // reset health and transforms when object enabled 
     public void ResetEnemyPosAndHealth()
     {
-        CurrentHealth = MaxHealth;
+        currentHealth = MaxHealth;
 
         transform.position = startPosition;
         transform.rotation = startRotation;
@@ -152,12 +152,12 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     // from IDamageable interface \\
     public void TakeDamage(float damageAmount)
     {
-        if (takeLessDamage) CurrentHealth -= (damageAmount / 2);
-        else CurrentHealth -= damageAmount;
+        if (takeLessDamage) currentHealth -= (damageAmount / 2);
+        else currentHealth -= damageAmount;
         // play damage animation somehow
         // depenidng on how materials work, could use enemy material and flash red?
         // confirmed will work for spider
-        if (CurrentHealth <= 0) stateMachine.ChangeState(deathState);
+        if (currentHealth <= 0) stateMachine.ChangeState(deathState);
     }
 
     // from ITriggerCheckable interface \\

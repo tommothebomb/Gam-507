@@ -1630,7 +1630,7 @@ MonoBehaviour:
   speed: 6
   turningSpeed: 360
   acceleration: 3
-  stoppingDist: 2
+  stoppingDist: 3
   shootPoint: {fileID: 7568308573403909229}
   playerStuckWeb: {fileID: 8817617925831552546}
   ratNest: {fileID: 0}

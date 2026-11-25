@@ -11,6 +11,7 @@ public class ResetScriptableObjectValues : MonoBehaviour
 
     [Header("Ship Health")]
     [SerializeField] ShipHealth shipHealth;
+    [Tooltip("set this to the number of scrap that can be found between all levels")]
     [SerializeField] float targetHealth;
 
 

@@ -180,6 +180,42 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1034130519509509071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643063412257109368}
+  m_Layer: 6
+  m_Name: RaycastPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1643063412257109368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034130519509509071}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3171559964461257798}
+  - {fileID: 7861162559626279044}
+  - {fileID: 6865522950103562514}
+  - {fileID: 6742520063048536424}
+  - {fileID: 2367333723635751064}
+  m_Father: {fileID: 5917734116312170854}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1327441940289249006
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,11 +377,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3171559964461257798}
-  - {fileID: 7861162559626279044}
-  - {fileID: 6865522950103562514}
-  - {fileID: 6742520063048536424}
-  - {fileID: 2367333723635751064}
+  - {fileID: 1643063412257109368}
   - {fileID: 2116773111341689362}
   - {fileID: 3704910102777561041}
   - {fileID: 6836361104057807204}
@@ -1099,7 +1131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.031859912, z: 0.038304012}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5917734116312170854}
+  m_Father: {fileID: 1643063412257109368}
   m_LocalEulerAnglesHint: {x: 0, y: -15, z: -90}
 --- !u!1 &3686319968022411771
 GameObject:
@@ -1162,7 +1194,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.031859912, z: 0.038304012}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5917734116312170854}
+  m_Father: {fileID: 1643063412257109368}
   m_LocalEulerAnglesHint: {x: 0, y: 30, z: -90}
 --- !u!1 &3938326839980653295
 GameObject:
@@ -1280,10 +1312,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.18301266, y: -0.18301266, z: -0.6830127, w: 0.6830127}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.031859912, z: 0.038304012}
+  m_LocalScale: {x: 1, y: 0.03185991, z: 0.038304012}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5917734116312170854}
+  m_Father: {fileID: 1643063412257109368}
   m_LocalEulerAnglesHint: {x: 0, y: -30, z: -90}
 --- !u!1 &4558850551738453170
 GameObject:
@@ -2003,10 +2035,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.09229593, y: 0.09229593, z: -0.7010574, w: 0.7010574}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.031859912, z: 0.038304012}
+  m_LocalScale: {x: 1, y: 0.031859916, z: 0.038304012}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5917734116312170854}
+  m_Father: {fileID: 1643063412257109368}
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: -90}
 --- !u!1 &6139196056681209979
 GameObject:
@@ -2337,10 +2369,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.0000022137533, y: -0.0000021889346, z: -0.70710665, w: 0.7071069}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.031859912, z: 0.038304012}
+  m_LocalScale: {x: 1, y: 0.03185991, z: 0.038304012}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5917734116312170854}
+  m_Father: {fileID: 1643063412257109368}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &8326291889168656545
 GameObject:
@@ -2573,7 +2605,7 @@ GameObject:
   - component: {fileID: 1064558273314954076}
   m_Layer: 6
   m_Name: PlayerV3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3588,7 +3620,7 @@ MonoBehaviour:
   - {fileID: 2367333723635751064}
   attackMask:
     serializedVersion: 2
-    m_Bits: 640
+    m_Bits: 641
   attackRadius: 1
   hasHit: 0
   Damage: 1

@@ -11,7 +11,6 @@ public class RatAttackState : EnemyAttackSOBase
 
     public override void DoEnterLogic()
     {
-        enemyBase.agent.stoppingDistance = 6;
         enemyBase.agent.isStopped = true;
         enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Attack1);
     }
@@ -25,7 +24,6 @@ public class RatAttackState : EnemyAttackSOBase
         else if (trigger == EnemyBase.AnimationTriggers.EndAttack1)
         {
             enemyBase.enemyAnimController.isAttacking = false;
-            enemyBase.agent.stoppingDistance = 2;
             enemyBase.agent.isStopped = false;
             enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
         }

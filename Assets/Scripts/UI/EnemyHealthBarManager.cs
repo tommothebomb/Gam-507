@@ -10,6 +10,6 @@ public class EnemyHealthBarManager : MonoBehaviour
 
     private void Update()
     {
-        healthBar.value = enemyBase.CurrentHealth / enemyBase.MaxHealth;
+        healthBar.value = enemyBase.currentHealth / enemyBase.MaxHealth;
     }
 }

@@ -14,6 +14,9 @@ public class RatChaseState : EnemyChaseSOBase
     [SerializeField] float healtAmountToRetreat;
     [SerializeField] float hurtSpeed;
     bool isHurt;
+    float destinationTimer;
+    float timeBetweenDestinationSet = 0.4f;
+    float distanceDestinationWillBeFromPlayer = 3.5f;
 
 
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
@@ -27,38 +30,59 @@ public class RatChaseState : EnemyChaseSOBase
     {
         attackTimer = 0;
         canAttack = false;
-        if (enemyBase.CurrentHealth <= healtAmountToRetreat) isHurt = true;
+        if (enemyBase.currentHealth <= healtAmountToRetreat) isHurt = true;
     }
 
     public override void DoUpdateLogic()
     {
-        if (enemyBase.CurrentHealth <= healtAmountToRetreat && !isHurt) // to prevent running every frame when doesn't need to
+        if (enemyBase.currentHealth <= healtAmountToRetreat && !isHurt) // to prevent running every frame when doesn't need to
         {
-            isHurt = true;
-            thisLookAt.enabled = false;
-            enemyBase.agent.speed = hurtSpeed;
-            enemyBase.agent.SetDestination(enemyBase.ratNest.position);
-            enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Hurt);
+            Debug.Log("starting hurt");
+            SetHurtLogic();
+            Debug.Log("ran hurt");
         }
-        else if (!isHurt) // normal state
-        { 
-            enemyBase.agent.SetDestination(enemyBase.player.transform.position); 
+        else if (!isHurt) // normal state 
+        {
+            destinationTimer += Time.deltaTime;
+            if (destinationTimer >= timeBetweenDestinationSet) FindNewDestination();
         }
 
-        if (isHurt)
+        //Debug.Log(enemyBase.agent.destination + " " + enemyBase.agent.remainingDistance);
+        if (enemyBase.agent.remainingDistance <= 0.5f && isHurt)
         {
-            if (enemyBase.agent.remainingDistance <= 2)
-            {
-                isHurt = false;
-                gameObject.SetActive(false);
-            }
+            gameObject.SetActive(false);
+            isHurt = false;
         }
 
         // check aggro and set back to patrol if needed
-        if (!enemyBase.IsAggroable) enemyBase.stateMachine.ChangeState(enemyBase.patrolState);
+        if (!enemyBase.IsAggroable && !isHurt) enemyBase.stateMachine.ChangeState(enemyBase.patrolState);
         // if player within attack radius, isnt hurt and attack interval reached, swap to attack state
         attackTimer += Time.deltaTime;
         if (attackTimer >= attackInterval) canAttack = true;
         if (enemyBase.IsWithinAttackDist && !isHurt && canAttack) enemyBase.stateMachine.ChangeState(enemyBase.attackState);
+    }
+
+    void SetHurtLogic()
+    {
+        Debug.Log("running hurt");
+        enemyBase.agent.SetDestination(enemyBase.ratNest.position);
+        Debug.Log(enemyBase.agent.destination + " " + enemyBase.agent.nextPosition);
+        Debug.Log(enemyBase.agent.remainingDistance);
+        enemyBase.agent.speed = hurtSpeed;
+        thisLookAt.enabled = false;
+        isHurt = true;
+        enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Hurt);
+    }
+
+    void FindNewDestination()
+    {
+        // find closest point to player around x unit circle, set as destination
+        Vector3 dirToPlayer = Vector3.Normalize(enemyBase.player.transform.position - gameObject.transform.position);
+        float distanceFromPlayer = Vector3.Distance(gameObject.transform.position, enemyBase.player.transform.position);
+        float distToTravel = distanceFromPlayer - distanceDestinationWillBeFromPlayer;
+        Vector3 pointCloseToPlayerDestination = gameObject.transform.position + (dirToPlayer * distToTravel);
+        enemyBase.agent.SetDestination(pointCloseToPlayerDestination);
+
+        destinationTimer = 0;
     }
 }
