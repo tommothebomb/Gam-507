@@ -47,7 +47,7 @@ public class RatChaseState : EnemyChaseSOBase
 
         if (isHurt)
         {
-            if (enemyBase.agent.remainingDistance <= 5)
+            if (enemyBase.agent.remainingDistance <= 2)
             {
                 isHurt = false;
                 gameObject.SetActive(false);

@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5350692893193229948}
@@ -341,7 +341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e871c610a82439f45ac104cfab218683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BiilboardUI
-  camTransform: {fileID: 0}
 --- !u!1 &2092202201240392244
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +900,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e871c610a82439f45ac104cfab218683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BiilboardUI
-  camTransform: {fileID: 0}
 --- !u!1 &6663789481937324999
 GameObject:
   m_ObjectHideFlags: 0
