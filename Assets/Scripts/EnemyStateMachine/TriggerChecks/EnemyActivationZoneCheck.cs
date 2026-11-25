@@ -28,7 +28,12 @@ public class EnemyActivationZoneCheck : MonoBehaviour
         {
             for (int i = 0; i < enemiesInZone.Length; i++)
             {
-                enemiesInZone[i].SetActive(true);
+                EnemyBase thisBase = enemiesInZone[i].GetComponent<EnemyBase>();
+                if (thisBase.isDead == false)
+                {
+                    thisBase.ResetEnemyPosAndHealth();
+                    enemiesInZone[i].SetActive(true);
+                }
             }
         }
     }

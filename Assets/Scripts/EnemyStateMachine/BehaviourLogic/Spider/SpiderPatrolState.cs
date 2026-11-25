@@ -23,11 +23,13 @@ public class SpiderPatrolState : EnemyPatrolSOBase
 
     public override void DoEnterLogic()
     {
+        base.DoEnterLogic();
         // turn off shoot point and look at to save on processing
         thisLookAt.enabled = false;
         enemyBase.shootPoint.gameObject.SetActive(false);
         enemyBase.agent.SetDestination(startPos);
         rotationTime = 0;
+        enemyBase.enemyAnimController.isAttacking = false;
     }
 
     public override void DoUpdateLogic()
@@ -47,6 +49,7 @@ public class SpiderPatrolState : EnemyPatrolSOBase
 
     public override void DoExitLogic()
     {
+        base.DoExitLogic();
         thisLookAt.enabled = true;
         atStartPos = false;
     }
