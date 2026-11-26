@@ -105,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            AkUnitySoundEngine.SetRTPCValue("Falling", 0, this.gameObject);
             if (!playedLand)
             {
                 AkUnitySoundEngine.PostEvent("Play_Land", this.gameObject);
