@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	693250459	MenuMusicEvent			\Default Work Unit\MenuMusicEvent	
+	2071284128	ClickedEvent			\Default Work Unit\ClickedEvent	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	465135888	Clicked	.cache\3E\{3EF007F8-2A30-BA36-81DD-C51D104FF99A}.wem		\Containers\Default Work Unit\Clicked		1145224
+	770607244	music_mainthheme	.cache\31\{319E2733-8C4D-BB59-77EF-B8749CFB21B7}.wem		\Containers\Default Work Unit\Menu Music\Menu Music\music_mainthheme		16982716
+	1041119103	music_level2start	.cache\D2\{D2B95444-FB6A-B4E1-B14F-50755A7902F7}.wem		\Containers\Default Work Unit\Menu Music\Menu Stinger\music_level2start		4608144
+

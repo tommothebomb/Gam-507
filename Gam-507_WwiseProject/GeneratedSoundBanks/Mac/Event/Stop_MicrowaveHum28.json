@@ -18,7 +18,7 @@
      {
       "Id": "1635482329",
       "Name": "Stop_MicrowaveHum28",
-      "ObjectPath": "\\Events\\Default Work Unit\\Stop_MicrowaveHum28",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Stop_MicrowaveHum28",
       "GUID": "{79C8C8C3-3A3D-4417-9F2E-61560F181A50}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{03D127FD-695A-C725-6EA1-98BF21C209DA}"
+  "FileHash": "{F2A85AF7-8906-328D-60E5-5C9EA05B2B60}"
  }
 }

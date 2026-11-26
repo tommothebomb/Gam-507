@@ -13,6 +13,10 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID CLICKEDEVENT = 2071284128U;
+        static const AkUniqueID ITEMGET = 1464598444U;
+        static const AkUniqueID KITCHENMUSICEVENT = 4150470712U;
+        static const AkUniqueID MENUMUSICEVENT = 693250459U;
         static const AkUniqueID PLAY_FRIDGE_CLOSE12 = 826038409U;
         static const AkUniqueID PLAY_FRIDGE_CLOSE14 = 826038415U;
         static const AkUniqueID PLAY_FRIDGE_OPEN11 = 2921916046U;
@@ -91,12 +95,15 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID KITCHEN = 1586158131U;
+        static const AkUniqueID MENU = 2607556080U;
     } // namespace BANKS
 
     namespace BUSSES
     {
         static const AkUniqueID AMBIENCE = 85412153U;
+        static const AkUniqueID ITEMGET = 1464598444U;
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 

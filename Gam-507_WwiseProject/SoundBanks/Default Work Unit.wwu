@@ -4,6 +4,14 @@
 		<WorkUnit Name="Default Work Unit" ID="{028D2149-1DF4-48F2-B399-B7A5615431A9}" PersistMode="Standalone">
 			<ChildrenList>
 				<WorkUnit Name="Roscislawa" ID="{07858A54-703D-42D1-B7F0-6177A4ED7F9B}" PersistMode="Reference"/>
+				<SoundBank Name="Menu" ID="{1D143808-FD1E-4029-86B2-C6BEA4D7005B}">
+					<ObjectInclusionList>
+						<ObjectRef Name="ClickedEvent" ID="{B158F7AE-75DC-403D-88B9-15886F847A4F}" WorkUnitID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MenuMusicEvent" ID="{2ED14023-0914-4111-AB60-0335E9296209}" WorkUnitID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
