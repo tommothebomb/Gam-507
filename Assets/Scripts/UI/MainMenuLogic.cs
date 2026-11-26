@@ -8,7 +8,10 @@ public class MainMenuLogic : MonoBehaviour
 
     public void StartGameButton()
     {
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene("KitchenLevelGreybox");
+        
+        
     }
     
 }
