@@ -374,6 +374,75 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Jump" ID="{87F2AAB6-FCCA-4F98-B7C6-BA650BE45723}">
+							<ChildrenList>
+								<Action Name="" ID="{52E94B53-7A41-4C50-8F25-D71E3D125AF3}" ShortID="56689403">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jump" ID="{A169E6A8-7747-4EA9-8ED9-2980CAE89DAF}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Falling" ID="{35502DB3-DA60-428C-BBBB-EC8E6581F7C7}">
+							<ChildrenList>
+								<Action Name="" ID="{8055EEB7-258B-4E71-9E85-EB0227C6C8B6}" ShortID="761124805">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="whistle" ID="{94BA8E40-0895-4B42-8895-B2E856258B36}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Falling" ID="{37A3D78C-8CE0-4DD1-BF70-5AA42808681C}">
+							<ChildrenList>
+								<Action Name="" ID="{745F315B-0333-40D9-A634-8C3D58E79736}" ShortID="317599918">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="whistle" ID="{94BA8E40-0895-4B42-8895-B2E856258B36}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Land" ID="{520A585D-0885-4E66-AA84-E7974230554D}">
+							<ChildrenList>
+								<Action Name="" ID="{7A029358-D50E-499A-8FB6-229E8835750B}" ShortID="619318510">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Land" ID="{95D2160D-6671-423C-8B0C-07993A954F35}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_AttackSwing" ID="{76A88760-16BC-4A68-94B4-0B3189637684}">
+							<ChildrenList>
+								<Action Name="" ID="{1E7255D5-DB78-4252-8D8C-4A47D4376219}" ShortID="214030589">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AttackSwing" ID="{80CA8AD4-61E7-4A50-9FB2-7F420141685D}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_AttackCharge" ID="{A9CE3B38-CCB3-465C-ACF0-11A90CAE7EAB}">
+							<ChildrenList>
+								<Action Name="" ID="{356C95E5-531B-4CB0-8A02-E7BADE41279B}" ShortID="939314624">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AttackCharge" ID="{11CE46A1-645D-47B1-91AA-336E7459CF70}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

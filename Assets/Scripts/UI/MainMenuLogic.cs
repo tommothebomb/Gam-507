@@ -16,7 +16,7 @@ public class MainMenuLogic : MonoBehaviour
     IEnumerator startgameroutine()
     {
         yield return new WaitForSeconds(2f);
-        AkSoundEngine.StopAll();
+        AkUnitySoundEngine.StopAll();
         SceneManager.LoadScene("KitchenLevelGreybox");
     }
 }

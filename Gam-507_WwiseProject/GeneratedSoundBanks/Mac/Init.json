@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{16D02AE9-5807-4351-7B51-9AC0D87C8352}",
+    "Hash": "{D894D78C-3084-E25C-092E-3A267F7227B2}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -64,6 +64,14 @@
       "Name": "Music",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music",
       "GUID": "{B3317480-D353-45B5-821A-C171E17549D3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "399052710",
+      "Name": "Falling",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Roscislawa\\Falling",
+      "GUID": "{76CB15AC-1281-40F4-8091-ACE2C2B8B8F0}"
      }
     ],
     "StateGroups": [
@@ -402,6 +410,6 @@
     ]
    }
   ],
-  "FileHash": "{3AD01FB6-F883-20F5-FF62-5AB74E6BB5F2}"
+  "FileHash": "{22EE7A00-37A7-9556-A007-4244344D4618}"
  }
 }

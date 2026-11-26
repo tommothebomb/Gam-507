@@ -15,6 +15,7 @@ public class PlayerAttack : MonoBehaviour
 
    public void AttackKeyFrame()
     {
+        AkUnitySoundEngine.PostEvent("Play_AttackSwing", this.gameObject);
         RaycastHit hit;
         foreach (Transform t in attackPoints)
         {
@@ -29,5 +30,9 @@ public class PlayerAttack : MonoBehaviour
                 return;
             }
         }
+    }
+    public void AttackCharge()
+    {
+        AkUnitySoundEngine.PostEvent("Play_AttackCharge", this.gameObject);
     }
 }

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{DFED22DB-9D72-4625-8B20-BFF28FE7B4C7}",
     "Language": "SFX",
-    "Hash": "{8C31B127-452D-2E5E-7F3B-774478A5D414}",
+    "Hash": "{C9212265-47BD-DA3E-6EB9-A99832B67736}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Roscislawa\\Kitchen",
     "ShortName": "Kitchen",
     "Path": "Kitchen.bnk",
@@ -136,6 +136,14 @@
       "CachePath": "25/{256C7FE1-8726-6B1D-5635-6F4B6713B537}.wem"
      },
      {
+      "Id": "292147062",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "thud.wav",
+      "CachePath": "7C/{7CD8E57F-B643-349D-784D-43BD73CA06F9}.wem"
+     },
+     {
       "Id": "313574756",
       "Language": "SFX",
       "Streaming": "false",
@@ -144,12 +152,36 @@
       "CachePath": "33/{336169EF-18A9-8BC9-D3C1-4C80A1FFE904}.wem"
      },
      {
+      "Id": "315457046",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "boing.wav",
+      "CachePath": "5C/{5CD4254B-D8A5-FF51-2A2E-7197DEC2A77F}.wem"
+     },
+     {
+      "Id": "334541834",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-004.wav",
+      "CachePath": "60/{6050D75C-FEC9-E8A1-3400-0D81B98D8E95}.wem"
+     },
+     {
       "Id": "346867583",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "GameSounds-056.wav",
       "CachePath": "08/{081155EE-8959-A2E5-2FDB-320D87C9A714}.wem"
+     },
+     {
+      "Id": "372529494",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-006.wav",
+      "CachePath": "72/{721B13DE-3FB7-79D3-B260-5081594E53FF}.wem"
      },
      {
       "Id": "372960455",
@@ -256,6 +288,14 @@
       "CachePath": "71/{71349EA5-4186-2A2C-599B-D60B7BEF27F8}.wem"
      },
      {
+      "Id": "592387553",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-005.wav",
+      "CachePath": "BA/{BA3802F0-8865-637A-330B-C44DC42B907C}.wem"
+     },
+     {
       "Id": "657867990",
       "Language": "SFX",
       "Streaming": "false",
@@ -296,12 +336,52 @@
       "CachePath": "0F/{0FCB73D1-2566-2443-7C0B-02767586ECCA}.wem"
      },
      {
+      "Id": "779145042",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-003.wav",
+      "CachePath": "75/{754A1881-FB5A-BBDA-8563-051D27124F63}.wem"
+     },
+     {
+      "Id": "791180260",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-004.wav",
+      "CachePath": "16/{166C6CE4-6646-9A58-A80B-C62B71EB07BB}.wem"
+     },
+     {
+      "Id": "793404955",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "untitled-034.wav",
+      "CachePath": "18/{18E432A6-4053-24FB-7797-99634B550BF3}.wem"
+     },
+     {
       "Id": "825261531",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "music_levelstart.wav",
       "CachePath": "A6/{A6EFCA3F-AA2F-AAAF-6996-85D8A1019DCE}.wem"
+     },
+     {
+      "Id": "842443730",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-002.wav",
+      "CachePath": "F7/{F739B572-06D4-A8C9-E191-5692960C6663}.wem"
+     },
+     {
+      "Id": "851349571",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-005.wav",
+      "CachePath": "28/{28C2E838-E877-9581-C571-0EB94154FBCA}.wem"
      },
      {
       "Id": "886367113",
@@ -344,6 +424,14 @@
       "CachePath": "6A/{6A6B494B-BDDA-E24F-48FC-F3D28EB50AE5}.wem"
      },
      {
+      "Id": "1026740398",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Woosh-001.wav",
+      "CachePath": "4B/{4B9233B6-207A-3C6F-A1BE-461A2B4085D1}.wem"
+     },
+     {
       "Id": "1053435619",
       "Language": "SFX",
       "Streaming": "false",
@@ -358,6 +446,14 @@
       "Location": "Memory",
       "ShortName": "GameSounds-045.wav",
       "CachePath": "5D/{5DAB0AD5-B8B7-0449-5722-D4D66D3053DC}.wem"
+     },
+     {
+      "Id": "1059209542",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-001.wav",
+      "CachePath": "CC/{CC7E6BEE-BC6A-1453-BB36-5EF16BAD7397}.wem"
      },
      {
       "Id": "1060463817",
@@ -395,6 +491,79 @@
        },
        {
         "Id": "825261531"
+       }
+      ]
+     },
+     {
+      "Id": "2772567846",
+      "Name": "Play_AttackCharge",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Play_AttackCharge",
+      "GUID": "{A9CE3B38-CCB3-465C-ACF0-11A90CAE7EAB}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.2699623",
+      "DurationMax": "0.52213687",
+      "MediaRefs": [
+       {
+        "Id": "334541834"
+       },
+       {
+        "Id": "372529494"
+       },
+       {
+        "Id": "592387553"
+       },
+       {
+        "Id": "779145042"
+       },
+       {
+        "Id": "842443730"
+       },
+       {
+        "Id": "1059209542"
+       }
+      ]
+     },
+     {
+      "Id": "3468848948",
+      "Name": "Play_AttackSwing",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Play_AttackSwing",
+      "GUID": "{76A88760-16BC-4A68-94B4-0B3189637684}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.7759017",
+      "DurationMax": "1.1132512",
+      "MediaRefs": [
+       {
+        "Id": "89397176"
+       },
+       {
+        "Id": "102405684"
+       },
+       {
+        "Id": "202898901"
+       },
+       {
+        "Id": "791180260"
+       },
+       {
+        "Id": "851349571"
+       },
+       {
+        "Id": "1026740398"
+       },
+       {
+        "Id": "1060463817"
+       }
+      ]
+     },
+     {
+      "Id": "913957623",
+      "Name": "Play_Falling",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Play_Falling",
+      "GUID": "{37A3D78C-8CE0-4DD1-BF70-5AA42808681C}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "793404955"
        }
       ]
      },
@@ -455,6 +624,99 @@
       "MediaRefs": [
        {
         "Id": "430415088"
+       }
+      ]
+     },
+     {
+      "Id": "3689126666",
+      "Name": "Play_Jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Play_Jump",
+      "GUID": "{87F2AAB6-FCCA-4F98-B7C6-BA650BE45723}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.8077143",
+      "DurationMax": "2.0885475",
+      "MediaRefs": [
+       {
+        "Id": "89397176"
+       },
+       {
+        "Id": "102405684"
+       },
+       {
+        "Id": "202898901"
+       },
+       {
+        "Id": "315457046"
+       },
+       {
+        "Id": "791180260"
+       },
+       {
+        "Id": "851349571"
+       },
+       {
+        "Id": "1060463817"
+       }
+      ]
+     },
+     {
+      "Id": "4285282925",
+      "Name": "Play_Land",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Play_Land",
+      "GUID": "{520A585D-0885-4E66-AA84-E7974230554D}",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "292147062"
+       }
+      ],
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "4274333454",
+         "Id": "670602561",
+         "GUID": "{2FF8575A-4DFB-4783-AF4F-3FFF4A5B9520}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "372960455"
+         },
+         {
+          "Id": "380061265"
+         },
+         {
+          "Id": "1019592869"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "4274333454",
+         "Id": "3599861390",
+         "GUID": "{D18670D2-18BC-4382-8315-011AA98149C2}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "165318275"
+         },
+         {
+          "Id": "177217177"
+         },
+         {
+          "Id": "563146009"
+         },
+         {
+          "Id": "657867990"
+         },
+         {
+          "Id": "979974951"
+         }
+        ]
        }
       ]
      },
@@ -734,7 +996,8 @@
          "GroupType": "Switch",
          "GroupId": "4274333454",
          "Id": "3599861390",
-         "GUID": "{D18670D2-18BC-4382-8315-011AA98149C2}"
+         "GUID": "{D18670D2-18BC-4382-8315-011AA98149C2}",
+         "Default": "true"
         },
         "MediaRefs": [
          {
@@ -927,6 +1190,24 @@
         "Id": "1055799433"
        }
       ]
+     },
+     {
+      "Id": "3396348501",
+      "Name": "Stop_Falling",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Stop_Falling",
+      "GUID": "{35502DB3-DA60-428C-BBBB-EC8E6581F7C7}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "399052710",
+      "Name": "Falling",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Roscislawa\\Falling",
+      "GUID": "{76CB15AC-1281-40F4-8091-ACE2C2B8B8F0}"
      }
     ],
     "SwitchGroups": [
@@ -973,6 +1254,6 @@
     ]
    }
   ],
-  "FileHash": "{FD700D6B-13CC-65ED-2FEC-096BE690D8FC}"
+  "FileHash": "{DB6EF97D-230A-CAB5-3C67-535B21749768}"
  }
 }

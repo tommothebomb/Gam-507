@@ -3,7 +3,6 @@
 	<Containers>
 		<WorkUnit Name="Default Work Unit" ID="{C8075C99-F114-4F19-8C69-634C4E1125B3}" PersistMode="Standalone">
 			<ChildrenList>
-				<WorkUnit Name="Roscislawa" ID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}" PersistMode="Reference"/>
 				<MusicPlaylistContainer Name="Menu Music" ID="{DC8D7667-BC2C-4564-AC24-1D1E7F2EE63B}" ShortID="54563715">
 					<PropertyList>
 						<Property Name="Tempo" Type="Real64" Value="140"/>
