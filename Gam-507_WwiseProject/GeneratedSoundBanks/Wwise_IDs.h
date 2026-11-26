@@ -33,6 +33,7 @@ namespace AK
         static const AkUniqueID PLAY_PLANT_SHAKE208 = 3916972312U;
         static const AkUniqueID PLAY_PLANT_SHAKE209 = 3916972313U;
         static const AkUniqueID PLAY_PLANT_SHAKE210 = 3933749891U;
+        static const AkUniqueID PLAY_STEPS = 2600469463U;
         static const AkUniqueID PLAY_STOVEKNOB_BURN20 = 3528540685U;
         static const AkUniqueID PLAY_STOVEKNOB_BURN21 = 3528540684U;
         static const AkUniqueID PLAY_STOVEKNOBS16 = 2074530137U;
@@ -60,6 +61,17 @@ namespace AK
 
     namespace SWITCHES
     {
+        namespace FLOORMATERIAL
+        {
+            static const AkUniqueID GROUP = 4274333454U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID HARD = 3599861390U;
+                static const AkUniqueID SOFT = 670602561U;
+            } // namespace SWITCH
+        } // namespace FLOORMATERIAL
+
         namespace LEVELS
         {
             static const AkUniqueID GROUP = 2678230316U;

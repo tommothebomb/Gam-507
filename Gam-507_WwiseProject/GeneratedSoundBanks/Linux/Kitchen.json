@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{DFED22DB-9D72-4625-8B20-BFF28FE7B4C7}",
     "Language": "SFX",
-    "Hash": "{2A7BC1E5-ACA7-0F54-91DC-F8A9D1A87274}",
+    "Hash": "{A81D2E6C-4406-9C7B-B5C2-EC2A5E5B244E}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Roscislawa\\Kitchen",
     "ShortName": "Kitchen",
     "Path": "Kitchen.bnk",
@@ -30,6 +30,22 @@
       "Location": "Memory",
       "ShortName": "GameSounds-046.wav",
       "CachePath": "70/{705D59AB-5A96-08C1-3E12-E87B23C7E0BF}.wem"
+     },
+     {
+      "Id": "89397176",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-006.wav",
+      "CachePath": "B6/{B6F10CF9-B3C3-620C-B145-5F96153A44D5}.wem"
+     },
+     {
+      "Id": "102405684",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-002.wav",
+      "CachePath": "8E/{8EB2D705-8743-C1B2-2C03-E1DA9FEEC797}.wem"
      },
      {
       "Id": "122699877",
@@ -56,12 +72,36 @@
       "CachePath": "AA/{AAE14993-E4D9-DAAD-7810-E2DC789DD3E8}.wem"
      },
      {
+      "Id": "165318275",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Bare Step Stone Medium A.wav",
+      "CachePath": "08/{08AC559D-C80F-18D0-D008-42C132C438BB}.wem"
+     },
+     {
       "Id": "177179192",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "GameSounds-053.wav",
       "CachePath": "C3/{C36D722C-58D2-9494-63B5-0568AE0FFE86}.wem"
+     },
+     {
+      "Id": "177217177",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Bare Step Stone Medium B.wav",
+      "CachePath": "1D/{1DC7630F-1F40-770C-7AC0-847C4CDF6D37}.wem"
+     },
+     {
+      "Id": "202898901",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-001.wav",
+      "CachePath": "B4/{B4AB11D7-865F-E312-5ECE-AF09A61BFBA7}.wem"
      },
      {
       "Id": "253600627",
@@ -112,12 +152,28 @@
       "CachePath": "08/{081155EE-8959-A2E5-2FDB-320D87C9A714}.wem"
      },
      {
+      "Id": "372960455",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_footstep_3.wav",
+      "CachePath": "45/{45F163FF-F881-FF29-FD48-6E6E39340992}.wem"
+     },
+     {
       "Id": "377712691",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "GameSounds-036.wav",
       "CachePath": "F7/{F79ECDCC-AF59-717D-B01E-2C5438FC528A}.wem"
+     },
+     {
+      "Id": "380061265",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_footstep_1.wav",
+      "CachePath": "C3/{C3ACC247-4006-0E9E-6127-F62D1565FFAE}.wem"
      },
      {
       "Id": "424851816",
@@ -176,12 +232,28 @@
       "CachePath": "C0/{C0A6EF05-0BAD-DB74-76A3-86E248666049}.wem"
      },
      {
+      "Id": "563146009",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Bare Step Stone Medium E.wav",
+      "CachePath": "AB/{AB0900D6-5E6F-363F-34E4-8A6F4452799C}.wem"
+     },
+     {
       "Id": "579537519",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "GameSounds-038.wav",
       "CachePath": "71/{71349EA5-4186-2A2C-599B-D60B7BEF27F8}.wem"
+     },
+     {
+      "Id": "657867990",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Bare Step Stone Medium C.wav",
+      "CachePath": "AA/{AA81F67F-E8D7-51FF-5D57-BFA330B076C4}.wem"
      },
      {
       "Id": "664495416",
@@ -208,6 +280,22 @@
       "CachePath": "0F/{0FCB73D1-2566-2443-7C0B-02767586ECCA}.wem"
      },
      {
+      "Id": "791180260",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-004.wav",
+      "CachePath": "16/{166C6CE4-6646-9A58-A80B-C62B71EB07BB}.wem"
+     },
+     {
+      "Id": "851349571",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-005.wav",
+      "CachePath": "28/{28C2E838-E877-9581-C571-0EB94154FBCA}.wem"
+     },
+     {
       "Id": "886367113",
       "Language": "SFX",
       "Streaming": "false",
@@ -224,12 +312,28 @@
       "CachePath": "B3/{B3EF5C44-3CF0-97E0-26B2-ABA9BEF208B9}.wem"
      },
      {
+      "Id": "979974951",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Bare Step Stone Medium D.wav",
+      "CachePath": "DB/{DB7AB5F5-1286-F024-159B-74ECD55160B8}.wem"
+     },
+     {
       "Id": "986660540",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "GameSounds-058.wav",
       "CachePath": "39/{3937A92A-A292-D393-2DC0-EB53E013BE25}.wem"
+     },
+     {
+      "Id": "1019592869",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_footstep_2.wav",
+      "CachePath": "6A/{6A6B494B-BDDA-E24F-48FC-F3D28EB50AE5}.wem"
      },
      {
       "Id": "1053435619",
@@ -246,6 +350,14 @@
       "Location": "Memory",
       "ShortName": "GameSounds-045.wav",
       "CachePath": "5D/{5DAB0AD5-B8B7-0449-5722-D4D66D3053DC}.wem"
+     },
+     {
+      "Id": "1060463817",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RachetMove-003.wav",
+      "CachePath": "F6/{F672C093-19F7-68A6-AA42-0095E1D22295}.wem"
      }
     ],
     "Events": [
@@ -533,6 +645,81 @@
       ]
      },
      {
+      "Id": "2600469463",
+      "Name": "Play_Steps",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Play_Steps",
+      "GUID": "{561C9F62-741F-4107-92E4-09B0109C00CA}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.43906307",
+      "DurationMax": "0.6673125",
+      "MediaRefs": [
+       {
+        "Id": "89397176"
+       },
+       {
+        "Id": "102405684"
+       },
+       {
+        "Id": "202898901"
+       },
+       {
+        "Id": "791180260"
+       },
+       {
+        "Id": "851349571"
+       },
+       {
+        "Id": "1060463817"
+       }
+      ],
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "4274333454",
+         "Id": "670602561",
+         "GUID": "{2FF8575A-4DFB-4783-AF4F-3FFF4A5B9520}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "372960455"
+         },
+         {
+          "Id": "380061265"
+         },
+         {
+          "Id": "1019592869"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "4274333454",
+         "Id": "3599861390",
+         "GUID": "{D18670D2-18BC-4382-8315-011AA98149C2}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "165318275"
+         },
+         {
+          "Id": "177217177"
+         },
+         {
+          "Id": "563146009"
+         },
+         {
+          "Id": "657867990"
+         },
+         {
+          "Id": "979974951"
+         }
+        ]
+       }
+      ]
+     },
+     {
       "Id": "3528540685",
       "Name": "Play_StoveKnob_Burn20",
       "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\SFX\\Kitchen\\Stove\\Play_StoveKnob_Burn20",
@@ -725,10 +912,30 @@
         "GUID": "{4D3CE863-7FC2-471A-B61D-6329BB0F1347}"
        }
       ]
+     },
+     {
+      "Id": "4274333454",
+      "Name": "FloorMaterial",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\FloorMaterial",
+      "GUID": "{4A48B5C8-F1D3-420A-ACFA-C31FB95EE5B4}",
+      "Switches": [
+       {
+        "Id": "670602561",
+        "Name": "Soft",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\FloorMaterial\\Soft",
+        "GUID": "{2FF8575A-4DFB-4783-AF4F-3FFF4A5B9520}"
+       },
+       {
+        "Id": "3599861390",
+        "Name": "Hard",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\FloorMaterial\\Hard",
+        "GUID": "{D18670D2-18BC-4382-8315-011AA98149C2}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{7329C96B-AE05-5723-C99A-DF2218EC4C9A}"
+  "FileHash": "{88AB4B10-D453-379A-281B-5E57307F5920}"
  }
 }

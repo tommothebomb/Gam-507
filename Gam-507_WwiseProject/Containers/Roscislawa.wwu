@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}" SchemaVersion="133" RootDocumentID="{C8075C99-F114-4F19-8C69-634C4E1125B3}" ParentDocumentID="{C8075C99-F114-4F19-8C69-634C4E1125B3}">
+<WwiseDocument Type="WorkUnit" ID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}" SchemaVersion="133">
 	<Containers>
-		<WorkUnit Name="Roscislawa" ID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}" OwnerID="{C8075C99-F114-4F19-8C69-634C4E1125B3}" PersistMode="Nested">
+		<WorkUnit Name="Roscislawa" ID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}" PersistMode="Standalone">
 			<ChildrenList>
 				<Folder Name="Sound FXs" ID="{99AF7702-909E-441D-9CB1-F76F27FD20F9}" ShortID="101468643">
 					<ChildrenList>
@@ -1845,6 +1845,488 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicSegment>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Player" ID="{03FA5604-3C74-4A3C-B5BC-49BCD95DCDFB}" ShortID="172753315">
+					<ChildrenList>
+						<BlendContainer Name="Steps" ID="{502EB0A3-7551-4324-9890-6BD8867AA7BC}" ShortID="119499659">
+							<PropertyList>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Rachets" ID="{B1CA3767-2B52-475F-BC94-11C9D6C27D47}" ShortID="61474112">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>76</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>33</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{585EC7D0-50A4-46C1-B932-A4F00BF4CBD2}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="225"/>
+															<Property Name="Min" Type="Real64" Value="-75"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Crank-004" ID="{26C9A529-D967-450A-A745-0ABC51C76335}" ShortID="247278881">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="RachetMove-004" ID="{2A178824-A1A6-43C1-A29A-24F935ED5790}">
+													<Language>SFX</Language>
+													<AudioFile>RachetMove-004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="791180260"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="RachetMove-004" ID="{2A178824-A1A6-43C1-A29A-24F935ED5790}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Crank-005" ID="{94F110D3-F5E1-40DB-AB69-2B5EB1F21893}" ShortID="510786960">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="RachetMove-005" ID="{1D6C6E1F-BDF4-4FC4-9119-A5C4A2D0CEBD}">
+													<Language>SFX</Language>
+													<AudioFile>RachetMove-005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="851349571"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="RachetMove-005" ID="{1D6C6E1F-BDF4-4FC4-9119-A5C4A2D0CEBD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Crank-006" ID="{89E0763D-14C4-42A6-BCA0-1977A3AF7DC3}" ShortID="203016576">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="RachetMove-006" ID="{404479B8-8C93-4711-84EC-1207EE7CE884}">
+													<Language>SFX</Language>
+													<AudioFile>RachetMove-006.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="89397176"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="RachetMove-006" ID="{404479B8-8C93-4711-84EC-1207EE7CE884}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Crank-002" ID="{D92C629A-FC78-40DB-95A6-037F4DA4D1F9}" ShortID="342170886">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="RachetMove-002" ID="{C02E2E6A-88CD-40C9-898E-17BCCF328773}">
+													<Language>SFX</Language>
+													<AudioFile>RachetMove-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="102405684"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="RachetMove-002" ID="{C02E2E6A-88CD-40C9-898E-17BCCF328773}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Crank-001" ID="{3A0495AD-CC1C-4ABA-A34A-3667DA37BF44}" ShortID="300255025">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="RachetMove-001" ID="{A2EF6C3F-98AB-40B2-B821-D807377F8F4A}">
+													<Language>SFX</Language>
+													<AudioFile>RachetMove-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="202898901"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="RachetMove-001" ID="{A2EF6C3F-98AB-40B2-B821-D807377F8F4A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Crank-003" ID="{4BB14970-E36E-44BB-92E2-874FBFF05D85}" ShortID="113401268">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="RachetMove-003" ID="{8C3B5F04-83BD-421C-A77B-B88F93F7085B}">
+													<Language>SFX</Language>
+													<AudioFile>RachetMove-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1060463817"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="RachetMove-003" ID="{8C3B5F04-83BD-421C-A77B-B88F93F7085B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<SwitchContainer Name="Step" ID="{B68D4263-E7CB-4FA9-8A8A-EF286855CC70}" ShortID="441373878">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="FloorMaterial" ID="{4A48B5C8-F1D3-420A-ACFA-C31FB95EE5B4}" WorkUnitID="{45845EE0-310A-423D-99E9-FD87425BD9A1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="HardMat" ID="{375BA056-1E40-460E-A724-C7D14F26B6AB}" ShortID="838645985">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Bare Step Stone Medium C" ID="{1593E838-75F1-453F-9BAC-4E13D560CF12}" ShortID="614265623">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Bare Step Stone Medium C" ID="{A3257B5B-5CC2-4C52-A954-278A9FADE2F3}">
+															<Language>SFX</Language>
+															<AudioFile>Bare Step Stone Medium C.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="657867990"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Bare Step Stone Medium C" ID="{A3257B5B-5CC2-4C52-A954-278A9FADE2F3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Bare Step Stone Medium B" ID="{CA7D7DC7-D2D6-458C-B68E-D57712208272}" ShortID="169723162">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Bare Step Stone Medium B" ID="{AEE6E902-F819-4152-9B1E-090D7513E239}">
+															<Language>SFX</Language>
+															<AudioFile>Bare Step Stone Medium B.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="177217177"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Bare Step Stone Medium B" ID="{AEE6E902-F819-4152-9B1E-090D7513E239}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Bare Step Stone Medium E" ID="{489EF0EB-B7C9-4B89-881A-27DCBA4AD66D}" ShortID="856691488">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Bare Step Stone Medium E" ID="{995C2F10-27FA-450C-99CE-719CB58DE213}">
+															<Language>SFX</Language>
+															<AudioFile>Bare Step Stone Medium E.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="563146009"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Bare Step Stone Medium E" ID="{995C2F10-27FA-450C-99CE-719CB58DE213}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Bare Step Stone Medium D" ID="{E4BD34A1-6BBB-4A84-9065-DD2FD6B9F7DE}" ShortID="337440198">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Bare Step Stone Medium D" ID="{5A1CB42A-8382-4FC4-A615-CBFB3C854DCE}">
+															<Language>SFX</Language>
+															<AudioFile>Bare Step Stone Medium D.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="979974951"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Bare Step Stone Medium D" ID="{5A1CB42A-8382-4FC4-A615-CBFB3C854DCE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Bare Step Stone Medium A" ID="{22A54FFB-FC38-410E-8D7A-3DFE3196499C}" ShortID="821816068">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Bare Step Stone Medium A" ID="{2E68CE16-0037-4D9B-80A5-76119C5FB46E}">
+															<Language>SFX</Language>
+															<AudioFile>Bare Step Stone Medium A.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="165318275"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Bare Step Stone Medium A" ID="{2E68CE16-0037-4D9B-80A5-76119C5FB46E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="SoftMat" ID="{F7C7ACDF-A686-4B15-A7E2-45247AA42961}" ShortID="145369364">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>53</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="sfx_footstep_1" ID="{08898E3B-F64E-470C-92B4-02B7A1AEB3FC}" ShortID="245892977">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sfx_footstep_1" ID="{63BFCA75-0709-4161-8DB0-434522D463DF}">
+															<Language>SFX</Language>
+															<AudioFile>sfx_footstep_1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="380061265"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sfx_footstep_1" ID="{63BFCA75-0709-4161-8DB0-434522D463DF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sfx_footstep_2" ID="{1E70393C-8D46-45FF-A1DA-1630C00A3A11}" ShortID="559082625">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sfx_footstep_2" ID="{FD47887F-EB07-45B9-AFB0-43F37C456931}">
+															<Language>SFX</Language>
+															<AudioFile>sfx_footstep_2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1019592869"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sfx_footstep_2" ID="{FD47887F-EB07-45B9-AFB0-43F37C456931}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sfx_footstep_3" ID="{F03528C1-7C12-43CF-B19F-0CE1BBEBCCE0}" ShortID="155103142">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CBD218-E0E1-43EE-9629-B9FB02393905}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sfx_footstep_3" ID="{193BA469-AA62-4AD4-A419-7FA2EA380A86}">
+															<Language>SFX</Language>
+															<AudioFile>sfx_footstep_3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="372960455"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sfx_footstep_3" ID="{193BA469-AA62-4AD4-A419-7FA2EA380A86}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="HardMat" ID="{375BA056-1E40-460E-A724-C7D14F26B6AB}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="SoftMat" ID="{F7C7ACDF-A686-4B15-A7E2-45247AA42961}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Soft" ID="{2FF8575A-4DFB-4783-AF4F-3FFF4A5B9520}"/>
+												<ItemList>
+													<ItemRef Name="SoftMat" ID="{F7C7ACDF-A686-4B15-A7E2-45247AA42961}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Hard" ID="{D18670D2-18BC-4382-8315-011AA98149C2}"/>
+												<ItemList>
+													<ItemRef Name="HardMat" ID="{375BA056-1E40-460E-A724-C7D14F26B6AB}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+							</ChildrenList>
+							<BlendTrackList>
+								<BlendTrack Name="New Blend Track" ID="{F625233A-98EF-4576-9FFD-D3AAF309DC7F}" ShortID="965038086">
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="Rachets" ID="{B1CA3767-2B52-475F-BC94-11C9D6C27D47}"/>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

@@ -361,6 +361,21 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Player" ID="{9B91A4CF-AF7F-4EE9-9997-1C2E8E38B708}" ShortID="88684711">
+					<ChildrenList>
+						<Event Name="Play_Steps" ID="{561C9F62-741F-4107-92E4-09B0109C00CA}">
+							<ChildrenList>
+								<Action Name="" ID="{AA950249-4F37-4B26-AC0F-A62C915B7F8B}" ShortID="147011625">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Steps" ID="{502EB0A3-7551-4324-9890-6BD8867AA7BC}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

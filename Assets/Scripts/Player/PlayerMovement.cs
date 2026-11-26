@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Runtime.ExceptionServices;
 using Unity.Mathematics;
 using Unity.VisualScripting;
@@ -96,6 +97,9 @@ public class PlayerMovement : MonoBehaviour
             Move();
         }
 
+        if (rb.linearVelocity.x > 0 || rb.linearVelocity.y > 0) StartCoroutine(playStep());
+        Debug.Log(rb.angularVelocity);
+
     }
 
     void Move()
@@ -167,6 +171,12 @@ public class PlayerMovement : MonoBehaviour
 
         //Animation
         animatorController.SetTrigger("Jump");
+    }
+
+    public IEnumerator playStep()
+    {
+        yield return new WaitForSeconds(1);
+        AkUnitySoundEngine.PostEvent("Play_Steps", this.gameObject);
     }
 
     #region Grab
@@ -396,6 +406,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (hit.collider != null)
         {
+            if (hit.collider.tag == "Carpet") AkUnitySoundEngine.SetSwitch("FloorMaterial", "Soft", this.gameObject);
+            else AkUnitySoundEngine.SetSwitch("FloorMaterial", "Hard", this.gameObject);
             remaingAirJumps = additionalAirJump;
             //is grounded
             //check ground normal for slide = on slide// add a downward force to the player

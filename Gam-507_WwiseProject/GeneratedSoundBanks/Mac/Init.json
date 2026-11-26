@@ -128,6 +128,26 @@
         "GUID": "{8E5FC8C8-CB6D-4B18-B105-94D69C0C6C89}"
        }
       ]
+     },
+     {
+      "Id": "4274333454",
+      "Name": "FloorMaterial",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\FloorMaterial",
+      "GUID": "{4A48B5C8-F1D3-420A-ACFA-C31FB95EE5B4}",
+      "Switches": [
+       {
+        "Id": "670602561",
+        "Name": "Soft",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\FloorMaterial\\Soft",
+        "GUID": "{2FF8575A-4DFB-4783-AF4F-3FFF4A5B9520}"
+       },
+       {
+        "Id": "3599861390",
+        "Name": "Hard",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\FloorMaterial\\Hard",
+        "GUID": "{D18670D2-18BC-4382-8315-011AA98149C2}"
+       }
+      ]
      }
     ],
     "AcousticTextures": [
@@ -370,6 +390,6 @@
     ]
    }
   ],
-  "FileHash": "{3914E04D-47A3-0E48-037B-BB11E0FB62DC}"
+  "FileHash": "{9F110ADB-AA6A-B5C7-7B78-727FA9FB9759}"
  }
 }
