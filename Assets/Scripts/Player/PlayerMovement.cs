@@ -1,5 +1,4 @@
-using System.Runtime.ExceptionServices;
-using Unity.Mathematics;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -68,6 +67,9 @@ public class PlayerMovement : MonoBehaviour
     InputAction attackKey;
     //if attack while attacking or slightlyBefore
 
+    [Header("Audio")]
+    bool playedLand = true;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -95,7 +97,29 @@ public class PlayerMovement : MonoBehaviour
         {
             Move();
         }
+        Debug.Log(rb.angularVelocity);
 
+        if (!isGrounded){
+            StartCoroutine(CheckFall());
+            playedLand = false;
+        }
+        else
+        {
+            if (!playedLand)
+            {
+                AkUnitySoundEngine.PostEvent("Play_Land", this.gameObject);
+                AkUnitySoundEngine.PostEvent("Stop_Falling", this.gameObject);
+                playedLand = true;
+                Debug.Log("meow");
+            }
+        }
+        RaycastHit Grnd;
+        if (!Physics.Raycast(transform.position, Vector3.down, out Grnd)) return;
+
+        if (Grnd.distance > 1)
+        {
+            AkUnitySoundEngine.SetRTPCValue("Falling", Grnd.distance, this.gameObject);
+        }
     }
 
     void Move()
@@ -164,6 +188,7 @@ public class PlayerMovement : MonoBehaviour
         remaingAirJumps -= 1;
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
         rb.AddForce(new Vector3(currentDir.x , 0.5f , currentDir.z) * jumpForce);
+        AkUnitySoundEngine.PostEvent("Play_Jump", this.gameObject);
 
         //Animation
         animatorController.SetTrigger("Jump");
@@ -363,7 +388,18 @@ public class PlayerMovement : MonoBehaviour
         animatorController.ResetTrigger("Attack");
     }
 
-
+    IEnumerator CheckFall()
+    {
+        float fallHeight = transform.position.y;
+        yield return new WaitForSeconds(0.2f);
+        if (transform.position.y < fallHeight && !GroundedCheck()) StartCoroutine(fallingSound());
+    }
+    IEnumerator fallingSound()
+    {
+        AkUnitySoundEngine.PostEvent("Play_Falling", this.gameObject);
+        if (GroundedCheck())
+        yield return null;
+    }
     #endregion
 
     #region Attack
@@ -396,6 +432,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (hit.collider != null)
         {
+            if (hit.collider.tag == "Carpet") AkUnitySoundEngine.SetSwitch("FloorMaterial", "Soft", Model.gameObject);
+            else AkUnitySoundEngine.SetSwitch("FloorMaterial", "Hard", Model.gameObject);
             remaingAirJumps = additionalAirJump;
             //is grounded
             //check ground normal for slide = on slide// add a downward force to the player

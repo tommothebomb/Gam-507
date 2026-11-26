@@ -18,6 +18,12 @@
 						<Switch Name="Off" ID="{FD1E765D-1D59-4978-9D3B-386B225B31FC}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="FloorMaterial" ID="{4A48B5C8-F1D3-420A-ACFA-C31FB95EE5B4}">
+					<ChildrenList>
+						<Switch Name="Hard" ID="{D18670D2-18BC-4382-8315-011AA98149C2}"/>
+						<Switch Name="Soft" ID="{2FF8575A-4DFB-4783-AF4F-3FFF4A5B9520}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>
