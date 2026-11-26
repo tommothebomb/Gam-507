@@ -427,7 +427,7 @@ public class PlayerMovement : MonoBehaviour
     bool GroundedCheck()
     {
         RaycastHit hit;
-        Physics.Raycast(transform.position, Vector2.down,out hit, 1.15f, GroundMask);
+        Physics.Raycast(transform.position, Vector2.down,out hit, 1.15f, GroundMask,QueryTriggerInteraction.Ignore);
         Debug.DrawRay(transform.position, Vector2.down * 1.15f, Color.green);
 
 
