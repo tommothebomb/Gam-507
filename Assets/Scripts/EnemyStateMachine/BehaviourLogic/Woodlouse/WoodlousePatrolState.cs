@@ -10,6 +10,7 @@ public class WoodlousePatrolState : EnemyPatrolSOBase
     [SerializeField] float maxRoamRadius;
     float minRoamRadius;
     Vector3 randomPoint;
+    NavMeshQueryFilter filter;
 
 
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
@@ -17,10 +18,13 @@ public class WoodlousePatrolState : EnemyPatrolSOBase
         base.Initialize(gameObject, enemyBase);
         startPos = gameObject.transform.position;
         minRoamRadius = maxRoamRadius * -1;
+        filter = new NavMeshQueryFilter() { agentTypeID = enemyBase.agent.agentTypeID, areaMask = enemyBase.agent.areaMask };
     }
 
     public override void DoEnterLogic()
     {
+        base.DoEnterLogic();
+        enemyBase.enemyAnimController.isAttacking = false;
         // turn off shoot point and look at to save on processing
         FindRandomPointOnNavmesh();
     }
@@ -47,7 +51,11 @@ public class WoodlousePatrolState : EnemyPatrolSOBase
     bool CheckPointValid()
     {
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomPoint, out hit, 2, NavMesh.AllAreas)) return true;
+        if (NavMesh.SamplePosition(randomPoint, out hit, 2, filter)) return true;
         else return false;
+    }
+    public override void DoExitLogic()
+    {
+        base.DoExitLogic();
     }
 }

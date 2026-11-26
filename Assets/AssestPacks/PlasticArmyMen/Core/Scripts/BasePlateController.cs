@@ -8,7 +8,7 @@ namespace PlasticArmyMen.Core
     {
         [Header("Baseplate")]
         [SerializeField] private SkinnedMeshRenderer basePlateRenderer;
-        private bool autoDetectThickness = true;
+        //private bool autoDetectThickness = true;
 
         [Header("Baseplate Bones")]
         [SerializeField] private Transform leftBaseBone;

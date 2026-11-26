@@ -31,11 +31,11 @@ public class WebProjectileLogic : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             enemyBase.player.GetComponent<PlayerMovement>().enabled = false;
+            enemyBase.player.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
             enemyBase.playerStuckWeb.SetActive(true);
             enemyBase.stateMachine.ChangeState(enemyBase.attackState);
             FadeWebThenSetInactive();
         }
-        else if (!collision.gameObject.CompareTag("Enemy")) FadeWebThenSetInactive(); // to prevent spider spawning it to se it inactive immediately
     }
 
     void FadeWebThenSetInactive()

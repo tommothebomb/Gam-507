@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{DFED22DB-9D72-4625-8B20-BFF28FE7B4C7}",
     "Language": "SFX",
-    "Hash": "{A81D2E6C-4406-9C7B-B5C2-EC2A5E5B244E}",
+    "Hash": "{8C31B127-452D-2E5E-7F3B-774478A5D414}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Roscislawa\\Kitchen",
     "ShortName": "Kitchen",
     "Path": "Kitchen.bnk",
@@ -208,6 +208,14 @@
       "CachePath": "78/{78609AD3-5B8E-56B8-E787-4284152D9F11}.wem"
      },
      {
+      "Id": "504584392",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ItemGetALT.wav",
+      "CachePath": "C1/{C1B90152-69FE-7FD0-926C-9EBBED4C21E5}.wem"
+     },
+     {
       "Id": "519167652",
       "Language": "SFX",
       "Streaming": "false",
@@ -264,6 +272,14 @@
       "CachePath": "B7/{B75A4B10-855A-5C66-B1EE-D57FF4FCEDBA}.wem"
      },
      {
+      "Id": "667827403",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "music_level_1.wav",
+      "CachePath": "99/{99BF39C5-04FC-E03A-DB8F-278D54DFFC23}.wem"
+     },
+     {
       "Id": "672508387",
       "Language": "SFX",
       "Streaming": "false",
@@ -280,20 +296,12 @@
       "CachePath": "0F/{0FCB73D1-2566-2443-7C0B-02767586ECCA}.wem"
      },
      {
-      "Id": "791180260",
+      "Id": "825261531",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "RachetMove-004.wav",
-      "CachePath": "16/{166C6CE4-6646-9A58-A80B-C62B71EB07BB}.wem"
-     },
-     {
-      "Id": "851349571",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RachetMove-005.wav",
-      "CachePath": "28/{28C2E838-E877-9581-C571-0EB94154FBCA}.wem"
+      "ShortName": "music_levelstart.wav",
+      "CachePath": "A6/{A6EFCA3F-AA2F-AAAF-6996-85D8A1019DCE}.wem"
      },
      {
       "Id": "886367113",
@@ -361,6 +369,35 @@
      }
     ],
     "Events": [
+     {
+      "Id": "1464598444",
+      "Name": "ItemGET",
+      "ObjectPath": "\\Events\\Default Work Unit\\ItemGET",
+      "GUID": "{4E5E7879-BA1B-433A-8177-EDBAB38611D7}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.69909",
+      "DurationMax": "2.69909",
+      "MediaRefs": [
+       {
+        "Id": "504584392"
+       }
+      ]
+     },
+     {
+      "Id": "4150470712",
+      "Name": "KitchenMusicEvent",
+      "ObjectPath": "\\Events\\Default Work Unit\\KitchenMusicEvent",
+      "GUID": "{981AB9D6-ADBA-40F4-A113-534B87219D75}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "667827403"
+       },
+       {
+        "Id": "825261531"
+       }
+      ]
+     },
      {
       "Id": "826038409",
       "Name": "Play_Fridge_Close12",
@@ -936,6 +973,6 @@
     ]
    }
   ],
-  "FileHash": "{88AB4B10-D453-379A-281B-5E57307F5920}"
+  "FileHash": "{4CFD2A6C-0643-9DE8-0BFF-EA356DF4C008}"
  }
 }

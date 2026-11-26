@@ -14,6 +14,9 @@ public class RatChaseState : EnemyChaseSOBase
     [SerializeField] float healtAmountToRetreat;
     [SerializeField] float hurtSpeed;
     bool isHurt;
+    float destinationTimer;
+    float timeBetweenDestinationSet = 0.5f;
+    float distanceDestinationWillBeFromPlayer = 5f;
 
 
     public override void Initialize(GameObject gameObject, EnemyBase enemyBase)
@@ -27,28 +30,57 @@ public class RatChaseState : EnemyChaseSOBase
     {
         attackTimer = 0;
         canAttack = false;
+        if (enemyBase.currentHealth <= healtAmountToRetreat) SetHurtLogic();
     }
 
     public override void DoUpdateLogic()
     {
-        if (enemyBase.CurrentHealth <= healtAmountToRetreat && !isHurt) // to prevent running every frame when doesn't need to
+        if (enemyBase.currentHealth <= healtAmountToRetreat && !isHurt) // to prevent running every frame when doesn't need to
         {
-            isHurt = true;
-            thisLookAt.enabled = false;
-            enemyBase.agent.speed = hurtSpeed;
-            enemyBase.agent.SetDestination(enemyBase.ratNest.position);
-            enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Hurt);
+            SetHurtLogic();
         }
-        else if (!isHurt) // normal state
-        { 
-            enemyBase.agent.SetDestination(enemyBase.player.transform.position); 
+        else if (!isHurt) // normal state 
+        {
+            destinationTimer += Time.deltaTime;
+            if (destinationTimer >= timeBetweenDestinationSet) FindNewDestination();
+        }
+
+        if (isHurt) // nesting for performance, dont want to call vector3.distance more than i need to
+        {
+            //if (enemyBase.agent.destination != enemyBase.ratNest.position) SetHurtLogic();
+            if (Vector3.Distance(gameObject.transform.position, enemyBase.ratNest.position) <= 4)
+            {
+                gameObject.SetActive(false);
+                isHurt = false;
+            }
         }
 
         // check aggro and set back to patrol if needed
-        if (!enemyBase.IsAggroable) enemyBase.stateMachine.ChangeState(enemyBase.patrolState);
+        if (!enemyBase.IsAggroable && !isHurt) enemyBase.stateMachine.ChangeState(enemyBase.patrolState);
         // if player within attack radius, isnt hurt and attack interval reached, swap to attack state
         attackTimer += Time.deltaTime;
         if (attackTimer >= attackInterval) canAttack = true;
         if (enemyBase.IsWithinAttackDist && !isHurt && canAttack) enemyBase.stateMachine.ChangeState(enemyBase.attackState);
+    }
+
+    void SetHurtLogic()
+    {
+        enemyBase.agent.SetDestination(enemyBase.ratNest.position);
+        enemyBase.agent.speed = hurtSpeed;
+        thisLookAt.enabled = false;
+        enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Hurt);
+        isHurt = true;
+    }
+
+    void FindNewDestination()
+    {
+        // find closest point to player around x unit circle, set as destination
+        Vector3 dirToPlayer = Vector3.Normalize(enemyBase.player.transform.position - gameObject.transform.position);
+        float distanceFromPlayer = Vector3.Distance(gameObject.transform.position, enemyBase.player.transform.position);
+        float distToTravel = distanceFromPlayer - distanceDestinationWillBeFromPlayer;
+        Vector3 pointCloseToPlayerDestination = gameObject.transform.position + (dirToPlayer * distToTravel);
+        enemyBase.agent.SetDestination(pointCloseToPlayerDestination);
+
+        destinationTimer = 0;
     }
 }

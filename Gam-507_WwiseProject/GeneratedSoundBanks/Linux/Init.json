@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{A1F5DEBA-A90D-36A4-4821-F42D5754BF70}",
+    "Hash": "{C3488053-87BF-6E0A-A3B9-22281E2D1E57}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -48,10 +48,22 @@
       "GUID": "{4E6FBD19-E879-4582-9F30-0B432B4EA021}"
      },
      {
+      "Id": "1464598444",
+      "Name": "Itemget",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Itemget",
+      "GUID": "{88CD3A7D-3C63-4B4E-90E1-AE5ADCCFD528}"
+     },
+     {
       "Id": "2246998526",
       "Name": "Main Audio Bus",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     },
+     {
+      "Id": "3991942870",
+      "Name": "Music",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music",
+      "GUID": "{B3317480-D353-45B5-821A-C171E17549D3}"
      }
     ],
     "StateGroups": [
@@ -390,6 +402,6 @@
     ]
    }
   ],
-  "FileHash": "{DE8413A8-F468-C8CE-ABA0-812A42B5D83C}"
+  "FileHash": "{D65A9B20-FE99-99BC-B88E-EFE5A58A037F}"
  }
 }

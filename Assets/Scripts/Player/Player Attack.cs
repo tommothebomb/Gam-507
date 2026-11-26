@@ -1,4 +1,3 @@
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,7 +21,7 @@ public class PlayerAttack : MonoBehaviour
             Physics.SphereCast(t.position,attackRadius,t.transform.forward * 2,out hit,attackMask);
             Debug.DrawRay(t.position, t.transform.forward * 2, Color.blue,1);
 
-            Debug.Log(hit.point);
+            //Debug.Log(hit.point);
 
             if (hit.collider != null && hit.collider.TryGetComponent<IDamageable>(out IDamageable HitObj) == true)
             {

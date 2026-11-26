@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RatChaseState
   m_EditorClassIdentifier: Assembly-CSharp::RatChaseState
   attackInterval: 3
-  healtAmountToRetreat: 3
+  healtAmountToRetreat: 2
   hurtSpeed: 2

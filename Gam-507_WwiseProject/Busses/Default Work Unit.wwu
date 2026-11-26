@@ -12,6 +12,23 @@
 					<ChildrenList>
 						<Bus Name="Ambience" ID="{B23447F3-6EDD-4D1F-A9E8-01A71657CB23}"/>
 						<Bus Name="SFX" ID="{4E6FBD19-E879-4582-9F30-0B432B4EA021}"/>
+						<Bus Name="Music" ID="{B3317480-D353-45B5-821A-C171E17549D3}"/>
+						<Bus Name="Itemget" ID="{88CD3A7D-3C63-4B4E-90E1-AE5ADCCFD528}">
+							<PropertyList>
+								<Property Name="RecoveryTime" Type="Real64" Value="0"/>
+							</PropertyList>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="Music" ID="{B3317480-D353-45B5-821A-C171E17549D3}"/>
+									<DuckingParam>
+										<Volume>-13</Volume>
+										<FadeInTime>0.5</FadeInTime>
+										<FadeOutTime>0.5</FadeOutTime>
+										<FadeCurve>FadeLog1</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 				<WorkUnit Name="Roscislawa" ID="{D919FA3A-259E-40C4-9C8D-B492E944E9AD}" PersistMode="Reference"/>

@@ -8,10 +8,13 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     [Tooltip("make sure is assigned as the players model")]
     public GameObject player;
     public PoolManager pooler;
+    Vector3 startPosition;
+    Quaternion startRotation;
+    public bool isDead;
 
     // from IDamageable interface \\
     [field: SerializeField] public float MaxHealth { get; set; }
-    public float CurrentHealth { get; set; }
+    public float currentHealth;
     public float damageDeals;
 
     // from ITriggerCheckable interface \\
@@ -91,12 +94,25 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
         chaseState = new EnemyChaseState(this, stateMachine);
         attackState = new EnemyAttackState(this, stateMachine);
         deathState = new EnemyDeathState(this, stateMachine);
+
+        startPosition = transform.position;
+        startRotation = transform.rotation;
+        currentHealth = MaxHealth;
+    }
+
+    // reset health and transforms when object enabled 
+    public void ResetEnemyPosAndHealth()
+    {
+        currentHealth = MaxHealth;
+
+        transform.position = startPosition;
+        transform.rotation = startRotation;
+
+        enemyAnimController.isAttacking = false;
     }
 
     private void Start()
     {
-        CurrentHealth = MaxHealth;
-
         enemyPatrolBaseInstance.Initialize(gameObject, this);
         enemyChaseBaseInstance.Initialize(gameObject, this);
         enemyAttackBaseInstance.Initialize(gameObject, this);
@@ -136,12 +152,12 @@ public class EnemyBase : MonoBehaviour, IDamageable, ITriggerCheckable
     // from IDamageable interface \\
     public void TakeDamage(float damageAmount)
     {
-        if (takeLessDamage) CurrentHealth -= (damageAmount / 2);
-        else CurrentHealth -= damageAmount;
+        if (takeLessDamage) currentHealth -= (damageAmount / 2);
+        else currentHealth -= damageAmount;
         // play damage animation somehow
         // depenidng on how materials work, could use enemy material and flash red?
         // confirmed will work for spider
-        if (CurrentHealth <= 0) stateMachine.ChangeState(deathState);
+        if (currentHealth <= 0) stateMachine.ChangeState(deathState);
     }
 
     // from ITriggerCheckable interface \\

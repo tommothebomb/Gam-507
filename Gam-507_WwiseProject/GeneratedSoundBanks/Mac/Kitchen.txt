@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	826038409	Play_Fridge_Close12			\Default Work Unit\Roscislawa\SFX\Kitchen\Fridge\Play_Fridge_Close12	
 	826038415	Play_Fridge_Close14			\Default Work Unit\Roscislawa\SFX\Kitchen\Fridge\Play_Fridge_Close14	
+	1464598444	ItemGET			\Default Work Unit\ItemGET	
 	1966100289	Play_MicrowaveOpen26			\Default Work Unit\Roscislawa\SFX\Kitchen\Microwave\Play_MicrowaveOpen26	
 	2005916398	Play_TapContainer			\Default Work Unit\Roscislawa\SFX\Kitchen\Tap\Play_TapContainer	
 	2074530134	Play_StoveKnobs19			\Default Work Unit\Roscislawa\SFX\Kitchen\Stove\Play_StoveKnobs19	
@@ -27,6 +28,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3916972313	Play_Plant_Shake209			\Default Work Unit\Roscislawa\SFX\Kitchen\Plant\Play_Plant_Shake209	
 	3933749891	Play_Plant_Shake210			\Default Work Unit\Roscislawa\SFX\Kitchen\Plant\Play_Plant_Shake210	
 	4104439926	Play_MicrowaveClose27			\Default Work Unit\Roscislawa\SFX\Kitchen\Microwave\Play_MicrowaveClose27	
+	4150470712	KitchenMusicEvent			\Default Work Unit\KitchenMusicEvent	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	845985344	Tap			\Default Work Unit\Roscislawa\Tap	
@@ -39,47 +41,36 @@ Switch	ID	Name	Switch Group			Notes
 	3599861390	Hard	FloorMaterial			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	56960220	Plant Shake207	.cache\A6\{A6F71B23-1D8F-10E9-75FA-0F3249BFBD0F}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant Shake207		246164
-	75420453	StoveKnobs16	.cache\70\{705D59AB-5A96-08C1-3E12-E87B23C7E0BF}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnobs16		441096
-	89397176	Crank-006	.cache\B6\{B6F10CF9-B3C3-620C-B145-5F96153A44D5}.wem		\Containers\Roscislawa\Player\Steps\Rachets\Crank-006		88296
-	102405684	Crank-002	.cache\8E\{8EB2D705-8743-C1B2-2C03-E1DA9FEEC797}.wem		\Containers\Roscislawa\Player\Steps\Rachets\Crank-002		88296
-	122699877	Plant shake02	.cache\E2\{E2673EF6-2770-B503-F033-C1CC59354B8D}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant shake02		264696
-	139868115	StoveKnobs18	.cache\07\{07C4C3C3-D38D-7FC3-F66C-4219588834FB}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnobs18		441096
-	164553671	Plant shake01	.cache\AA\{AAE14993-E4D9-DAAD-7810-E2DC789DD3E8}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant shake01		264696
-	165318275	Bare Step Stone Medium A	.cache\08\{08AC559D-C80F-18D0-D008-42C132C438BB}.wem		\Containers\Roscislawa\Player\Steps\Step\HardMat\Bare Step Stone Medium A		42200
-	177179192	TapStart25	.cache\C3\{C36D722C-58D2-9494-63B5-0568AE0FFE86}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Tap\TapContainer\TapStart25		176496
-	177217177	Bare Step Stone Medium B	.cache\1D\{1DC7630F-1F40-770C-7AC0-847C4CDF6D37}.wem		\Containers\Roscislawa\Player\Steps\Step\HardMat\Bare Step Stone Medium B		42200
-	202898901	Crank-001	.cache\B4\{B4AB11D7-865F-E312-5ECE-AF09A61BFBA7}.wem		\Containers\Roscislawa\Player\Steps\Rachets\Crank-001		88296
-	253600627	Plant shake04	.cache\D5\{D5BA47DF-4EA5-7163-FF4F-DB2CBCFD7FDE}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant shake04		176496
-	254476878	StoveKnobs19	.cache\9B\{9BCBE345-9726-5A2E-399E-B8FA252DDBF4}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnobs19		352896
-	254727835	MicrowaveClose27	.cache\E3\{E34B8EC7-DB87-7B9D-9FCD-72FC5EBBACEC}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Microwave\MicrowaveClose27		176496
-	291966812	MicrowaveBing30	.cache\25\{256C7FE1-8726-6B1D-5635-6F4B6713B537}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Microwave\MicrowaveBing30		264696
-	313574756	StoveKnobs17	.cache\33\{336169EF-18A9-8BC9-D3C1-4C80A1FFE904}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnobs17		378468
-	346867583	MicrowaveOpen26	.cache\08\{081155EE-8959-A2E5-2FDB-320D87C9A714}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Microwave\MicrowaveOpen26		176496
-	372960455	sfx_footstep_3	.cache\45\{45F163FF-F881-FF29-FD48-6E6E39340992}.wem		\Containers\Roscislawa\Player\Steps\Step\SoftMat\sfx_footstep_3		96144
-	377712691	Plant Shake206	.cache\F7\{F79ECDCC-AF59-717D-B01E-2C5438FC528A}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant Shake206		215888
-	380061265	sfx_footstep_1	.cache\C3\{C3ACC247-4006-0E9E-6127-F62D1565FFAE}.wem		\Containers\Roscislawa\Player\Steps\Step\SoftMat\sfx_footstep_1		70296
-	424851816	Fridge Open11	.cache\E0\{E088643A-8233-58AF-7455-6E3262E86F2F}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Fridge\Fridge Open11		207332
-	430415088	Fridge Open13	.cache\5E\{5EECEA89-97B0-2E53-BBAA-12394405A839}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Fridge\Fridge Open13		352896
-	445707285	Plant Shake210	.cache\EB\{EB1ED4A2-BB95-0B74-C7AF-852C012FFD75}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant Shake210		264696
-	495664148	StoveKnob&Burn20	.cache\78\{78609AD3-5B8E-56B8-E787-4284152D9F11}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnob&Burn20		705696
-	519167652	MicrowaveHum28	.cache\5A\{5AD69412-4D7C-B1E8-083D-637A2B3DF5F2}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Microwave\MicrowaveHum28		1587696
-	540328741	Plant shake05	.cache\4B\{4BA9CA14-7051-B11A-C08B-DBDB4CB003F7}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant shake05		264696
-	559662226	StoveKnob&Burn21	.cache\C0\{C0A6EF05-0BAD-DB74-76A3-86E248666049}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnob&Burn21		793896
-	563146009	Bare Step Stone Medium E	.cache\AB\{AB0900D6-5E6F-363F-34E4-8A6F4452799C}.wem		\Containers\Roscislawa\Player\Steps\Step\HardMat\Bare Step Stone Medium E		47628
-	579537519	Plant Shake208	.cache\71\{71349EA5-4186-2A2C-599B-D60B7BEF27F8}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant Shake208		225092
-	657867990	Bare Step Stone Medium C	.cache\AA\{AA81F67F-E8D7-51FF-5D57-BFA330B076C4}.wem		\Containers\Roscislawa\Player\Steps\Step\HardMat\Bare Step Stone Medium C		43928
-	664495416	Fridge Close14	.cache\B7\{B75A4B10-855A-5C66-B1EE-D57FF4FCEDBA}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Fridge\Fridge Close14		352896
-	672508387	TapEnd23	.cache\64\{6414F0A1-74FD-31C8-2097-8D9E19F72F78}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Tap\TapContainer\TapEnd23		352896
-	702891835	Fridge Close12	.cache\0F\{0FCB73D1-2566-2443-7C0B-02767586ECCA}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Fridge\Fridge Close12		264696
-	791180260	Crank-004	.cache\16\{166C6CE4-6646-9A58-A80B-C62B71EB07BB}.wem		\Containers\Roscislawa\Player\Steps\Rachets\Crank-004		88296
-	851349571	Crank-005	.cache\28\{28C2E838-E877-9581-C571-0EB94154FBCA}.wem		\Containers\Roscislawa\Player\Steps\Rachets\Crank-005		88296
-	886367113	TapRunning24	.cache\CE\{CE5C1B02-F280-DAC8-6BD3-491CB5484121}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Tap\TapContainer\TapRunning24		281800
-	963671071	Plant Shake209	.cache\B3\{B3EF5C44-3CF0-97E0-26B2-ABA9BEF208B9}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant Shake209		264696
-	979974951	Bare Step Stone Medium D	.cache\DB\{DB7AB5F5-1286-F024-159B-74ECD55160B8}.wem		\Containers\Roscislawa\Player\Steps\Step\HardMat\Bare Step Stone Medium D		44128
-	986660540	MicrowaveStartHum29	.cache\39\{3937A92A-A292-D393-2DC0-EB53E013BE25}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Microwave\MicrowaveStartHum29		88296
-	1019592869	sfx_footstep_2	.cache\6A\{6A6B494B-BDDA-E24F-48FC-F3D28EB50AE5}.wem		\Containers\Roscislawa\Player\Steps\Step\SoftMat\sfx_footstep_2		109068
-	1053435619	Plant shake03	.cache\BA\{BA952F81-767D-F171-AC38-EFA3898F18CF}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant shake03		352896
-	1055799433	Toaster Set15	.cache\5D\{5DAB0AD5-B8B7-0449-5722-D4D66D3053DC}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Toaster\Toaster Set15		176496
-	1060463817	Crank-003	.cache\F6\{F672C093-19F7-68A6-AA42-0095E1D22295}.wem		\Containers\Roscislawa\Player\Steps\Rachets\Crank-003		88296
+	56960220	Plant Shake207	.cache\A6\{A6F71B23-1D8F-10E9-75FA-0F3249BFBD0F}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant Shake207		246164
+	75420453	StoveKnobs16	.cache\70\{705D59AB-5A96-08C1-3E12-E87B23C7E0BF}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnobs16		441096
+	122699877	Plant shake02	.cache\E2\{E2673EF6-2770-B503-F033-C1CC59354B8D}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant shake02		264696
+	139868115	StoveKnobs18	.cache\07\{07C4C3C3-D38D-7FC3-F66C-4219588834FB}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnobs18		441096
+	164553671	Plant shake01	.cache\AA\{AAE14993-E4D9-DAAD-7810-E2DC789DD3E8}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant shake01		264696
+	177179192	TapStart25	.cache\C3\{C36D722C-58D2-9494-63B5-0568AE0FFE86}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Tap\TapContainer\TapStart25		176496
+	253600627	Plant shake04	.cache\D5\{D5BA47DF-4EA5-7163-FF4F-DB2CBCFD7FDE}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant shake04		176496
+	254476878	StoveKnobs19	.cache\9B\{9BCBE345-9726-5A2E-399E-B8FA252DDBF4}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnobs19		352896
+	254727835	MicrowaveClose27	.cache\E3\{E34B8EC7-DB87-7B9D-9FCD-72FC5EBBACEC}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Microwave\MicrowaveClose27		176496
+	291966812	MicrowaveBing30	.cache\25\{256C7FE1-8726-6B1D-5635-6F4B6713B537}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Microwave\MicrowaveBing30		264696
+	313574756	StoveKnobs17	.cache\33\{336169EF-18A9-8BC9-D3C1-4C80A1FFE904}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnobs17		378468
+	346867583	MicrowaveOpen26	.cache\08\{081155EE-8959-A2E5-2FDB-320D87C9A714}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Microwave\MicrowaveOpen26		176496
+	377712691	Plant Shake206	.cache\F7\{F79ECDCC-AF59-717D-B01E-2C5438FC528A}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant Shake206		215888
+	424851816	Fridge Open11	.cache\E0\{E088643A-8233-58AF-7455-6E3262E86F2F}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Fridge\Fridge Open11		207332
+	430415088	Fridge Open13	.cache\5E\{5EECEA89-97B0-2E53-BBAA-12394405A839}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Fridge\Fridge Open13		352896
+	445707285	Plant Shake210	.cache\EB\{EB1ED4A2-BB95-0B74-C7AF-852C012FFD75}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant Shake210		264696
+	495664148	StoveKnob&Burn20	.cache\78\{78609AD3-5B8E-56B8-E787-4284152D9F11}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnob&Burn20		705696
+	504584392	Itemget	.cache\C1\{C1B90152-69FE-7FD0-926C-9EBBED4C21E5}.wem		\Containers\Default Work Unit\Itemget		518368
+	519167652	MicrowaveHum28	.cache\5A\{5AD69412-4D7C-B1E8-083D-637A2B3DF5F2}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Microwave\MicrowaveHum28		1587696
+	540328741	Plant shake05	.cache\4B\{4BA9CA14-7051-B11A-C08B-DBDB4CB003F7}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant shake05		264696
+	559662226	StoveKnob&Burn21	.cache\C0\{C0A6EF05-0BAD-DB74-76A3-86E248666049}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnob&Burn21		793896
+	579537519	Plant Shake208	.cache\71\{71349EA5-4186-2A2C-599B-D60B7BEF27F8}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant Shake208		225092
+	664495416	Fridge Close14	.cache\B7\{B75A4B10-855A-5C66-B1EE-D57FF4FCEDBA}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Fridge\Fridge Close14		352896
+	667827403	music_level_1	.cache\99\{99BF39C5-04FC-E03A-DB8F-278D54DFFC23}.wem		\Containers\Default Work Unit\Kitchen Music\Kitchen Music\music_level_1		21640428
+	672508387	TapEnd23	.cache\64\{6414F0A1-74FD-31C8-2097-8D9E19F72F78}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Tap\TapContainer\TapEnd23		352896
+	702891835	Fridge Close12	.cache\0F\{0FCB73D1-2566-2443-7C0B-02767586ECCA}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Fridge\Fridge Close12		264696
+	825261531	music_levelstart	.cache\A6\{A6EFCA3F-AA2F-AAAF-6996-85D8A1019DCE}.wem		\Containers\Default Work Unit\Kitchen Music\Kitchen Stinger\music_levelstart		3627836
+	886367113	TapRunning24	.cache\CE\{CE5C1B02-F280-DAC8-6BD3-491CB5484121}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Tap\TapContainer\TapRunning24		281800
+	963671071	Plant Shake209	.cache\B3\{B3EF5C44-3CF0-97E0-26B2-ABA9BEF208B9}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant Shake209		264696
+	986660540	MicrowaveStartHum29	.cache\39\{3937A92A-A292-D393-2DC0-EB53E013BE25}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Microwave\MicrowaveStartHum29		88296
+	1053435619	Plant shake03	.cache\BA\{BA952F81-767D-F171-AC38-EFA3898F18CF}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant shake03		352896
+	1055799433	Toaster Set15	.cache\5D\{5DAB0AD5-B8B7-0449-5722-D4D66D3053DC}.wem		\Containers\Default Work Unit\Roscislawa\Sound FXs\KitchenSlawa\Toaster\Toaster Set15		176496
 

@@ -7,6 +7,7 @@ public class SpiderAttackState : EnemyAttackSOBase
     [SerializeField] float distToBackUp;
     bool attackPlaying;
     bool movingBack;
+    Vector3 backAwayPos;
 
 
     public override void DoEnterLogic()
@@ -20,18 +21,18 @@ public class SpiderAttackState : EnemyAttackSOBase
     public override void DoUpdateLogic()
     {
         // when spider gets close enough, trigger attack anim
-        if (enemyBase.agent.remainingDistance <= 2 && !attackPlaying)
+        if (!attackPlaying && Vector3.Distance(gameObject.transform.position, enemyBase.player.transform.position) <= 3)
         {
             attackPlaying = true;
             enemyBase.agent.isStopped = true;
+            enemyBase.agent.velocity = Vector3.zero;
             enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Attack2);
         }
 
         // when backed away swap back to chase
-        if (movingBack && enemyBase.agent.remainingDistance < 0.2f)
+        if (movingBack && Vector3.Distance(gameObject.transform.position, backAwayPos) < 0.2f)
         {
             enemyBase.stateMachine.ChangeState(enemyBase.chaseState);
-            Debug.Log("changed state");
         }
     }
 
@@ -39,7 +40,7 @@ public class SpiderAttackState : EnemyAttackSOBase
     void MoveBack()
     {
         enemyBase.agent.isStopped = false;
-        Vector3 backAwayPos = gameObject.transform.position + (gameObject.transform.forward * -distToBackUp);
+        backAwayPos = gameObject.transform.position + (gameObject.transform.forward * -distToBackUp);
         enemyBase.agent.SetDestination(backAwayPos);
         movingBack = true;
     }

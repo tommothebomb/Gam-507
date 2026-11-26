@@ -1618,8 +1618,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RatEnemyBase
   player: {fileID: 0}
   pooler: {fileID: 0}
-  <MaxHealth>k__BackingField: 10
-  damageDeals: 4
+  isDead: 0
+  <MaxHealth>k__BackingField: 6
+  currentHealth: 0
+  damageDeals: 3
   enemyAnimController: {fileID: 8622506315189991187}
   enemyPatrolBase: {fileID: 11400000, guid: a93504b22b842fd4bbc3ab5f76dcbfb0, type: 2}
   enemyChaseBase: {fileID: 11400000, guid: 38af61055d4c7404291d4eda8113d716, type: 2}
@@ -1629,7 +1631,7 @@ MonoBehaviour:
   speed: 6
   turningSpeed: 360
   acceleration: 3
-  stoppingDist: 5
+  stoppingDist: 3
   shootPoint: {fileID: 7568308573403909229}
   playerStuckWeb: {fileID: 8817617925831552546}
   ratNest: {fileID: 0}

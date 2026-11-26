@@ -6,6 +6,60 @@
 				<WorkUnit Name="Roscislawa" ID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" PersistMode="Reference"/>
 				<WorkUnit Name="Harrison" ID="{0653EA8E-19B9-4395-B257-AEFA6826B14B}" PersistMode="Reference"/>
 				<WorkUnit Name="Damien" ID="{4BE47704-534A-4C17-832F-F0C8C03CBB03}" PersistMode="Reference"/>
+				<Event Name="MenuMusicEvent" ID="{2ED14023-0914-4111-AB60-0335E9296209}">
+					<ChildrenList>
+						<Action Name="" ID="{C67384FA-A288-4D93-97A9-5DA4C039FA85}" ShortID="254668550">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu Music" ID="{DC8D7667-BC2C-4564-AC24-1D1E7F2EE63B}" WorkUnitID="{C8075C99-F114-4F19-8C69-634C4E1125B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ClickedEvent" ID="{B158F7AE-75DC-403D-88B9-15886F847A4F}">
+					<ChildrenList>
+						<Action Name="" ID="{F5BD2D8B-B650-4D07-9229-91AA5DCBC03D}" ShortID="67712375">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Clicked" ID="{AB1F8B67-D7E6-4B3C-A641-D3E65FE7BCDC}" WorkUnitID="{C8075C99-F114-4F19-8C69-634C4E1125B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3207D935-C1A5-4B33-A059-FAA29AD5E5A3}" ShortID="955214648">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu Music" ID="{DC8D7667-BC2C-4564-AC24-1D1E7F2EE63B}" WorkUnitID="{C8075C99-F114-4F19-8C69-634C4E1125B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="KitchenMusicEvent" ID="{981AB9D6-ADBA-40F4-A113-534B87219D75}">
+					<ChildrenList>
+						<Action Name="" ID="{74C6F0DE-FAC2-48CC-B373-D7249E291F13}" ShortID="131161845">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Kitchen Music" ID="{239FEA85-CD2E-4AF4-8B4C-9F591B3BC8F5}" WorkUnitID="{C8075C99-F114-4F19-8C69-634C4E1125B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ItemGET" ID="{4E5E7879-BA1B-433A-8177-EDBAB38611D7}">
+					<ChildrenList>
+						<Action Name="" ID="{438522E1-3FC5-4F14-B932-68B46B9CC97E}" ShortID="341957742">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Itemget" ID="{FF155022-C175-4819-997F-B350121EC21C}" WorkUnitID="{C8075C99-F114-4F19-8C69-634C4E1125B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

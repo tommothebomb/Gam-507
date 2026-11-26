@@ -9,11 +9,12 @@
 						<ObjectRef Name="Play_MicrowaveOpen26" ID="{5CBACC2A-D4FA-40A1-9164-6CECBB360507}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TapContainer" ID="{37725630-BEED-40A8-BEA7-08579C5B6260}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StoveKnobs19" ID="{5BF40E50-6958-40D3-9D31-AD399EF658CF}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Steps" ID="{561C9F62-741F-4107-92E4-09B0109C00CA}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="KitchenMusicEvent" ID="{981AB9D6-ADBA-40F4-A113-534B87219D75}" WorkUnitID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Fridge" ID="{76DC9005-3937-418E-B465-669ED784E4FB}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Plant" ID="{67E5B78B-697B-42B9-97CB-48FFC901A9AA}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Plant_Shake209" ID="{85A464B2-949D-431F-B8A9-FFD7EB55696C}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Plant_Shake210" ID="{EBB81DC2-27AB-433A-8001-FBFE0BF4C58C}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ItemGET" ID="{4E5E7879-BA1B-433A-8177-EDBAB38611D7}" WorkUnitID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MicrowaveStartHum29" ID="{BC5BDC21-DAD0-4363-AB25-23E98A350D84}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Plant_Shake208" ID="{936F3570-50F3-4607-9138-024EF9EF8226}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stove" ID="{D87ED12F-D15F-4652-B073-A458D63BF1FF}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>

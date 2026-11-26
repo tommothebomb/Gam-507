@@ -13,20 +13,18 @@ public class DefaultDeathState : EnemyDeathSOBase
 
     public override void DoEnterLogic()
     {
-        base.DoEnterLogic();
         deathPos = gameObject.transform.position;
         endPos = new Vector3(deathPos.x, deathPos.y - 6, deathPos.z);
         enemyBase.agent.SetDestination(deathPos);
         startDescent = false;
         gameObject.GetComponent<Collider>().enabled = false;
         enemyBase.enemyAnimController.ChangeAnimation(EnemyAnimations.AnimationStates.Death);
-        lerpTime = 0; 
+        lerpTime = 0;
+        enemyBase.isDead = true;
     }
 
     public override void DoUpdateLogic()
     {
-        base.DoUpdateLogic();
-
         // make enemy sink below the floor before deactivating
         if (startDescent)
         {
