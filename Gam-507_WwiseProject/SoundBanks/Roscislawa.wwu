@@ -24,6 +24,7 @@
 						<ObjectRef Name="Play_Fridge_Open11" ID="{A6C2F47F-2DA6-4669-9FDC-C836411B15D2}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StoveKnobs17" ID="{818E6F91-36BC-466D-8C74-B4C5B7D3C028}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Tap" ID="{9485DAA6-7294-46DD-A9B7-6B6A92BC7A52}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AttackClink" ID="{CE3670FE-3DDF-4751-BAAB-E47035DB175D}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Plant_shake02" ID="{577B3F01-F3B8-4765-90B6-2EA52EA48858}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Fridge_Close12" ID="{7DA93BC2-8A2D-478F-AA57-0E59AEC10ACA}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StoveKnob_Burn21" ID="{5D2524A9-6321-47BF-A319-6B34BB424AD6}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>

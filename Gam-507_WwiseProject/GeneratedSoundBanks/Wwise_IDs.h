@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID KITCHENMUSICEVENT = 4150470712U;
         static const AkUniqueID MENUMUSICEVENT = 693250459U;
         static const AkUniqueID PLAY_ATTACKCHARGE = 2772567846U;
+        static const AkUniqueID PLAY_ATTACKCLINK = 2508207149U;
         static const AkUniqueID PLAY_ATTACKSWING = 3468848948U;
         static const AkUniqueID PLAY_FALLING = 913957623U;
         static const AkUniqueID PLAY_FRIDGE_CLOSE12 = 826038409U;

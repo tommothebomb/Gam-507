@@ -29,6 +29,10 @@ public class PlayerAttack : MonoBehaviour
                 HitObj.TakeDamage(Damage);
                 return;
             }
+            else if (hit.collider != null && hit.collider.TryGetComponent<Tap>(out Tap TapObj) == true)
+            {
+                TapObj.ManageTap();
+            }
         }
     }
     public void AttackCharge()

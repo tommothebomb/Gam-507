@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{DFED22DB-9D72-4625-8B20-BFF28FE7B4C7}",
     "Language": "SFX",
-    "Hash": "{C9212265-47BD-DA3E-6EB9-A99832B67736}",
+    "Hash": "{0F98059D-BC3E-0F0A-7AE3-632CE5DEDF50}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Roscislawa\\Kitchen",
     "ShortName": "Kitchen",
     "Path": "Kitchen.bnk",
@@ -46,6 +46,14 @@
       "Location": "Memory",
       "ShortName": "RachetMove-002.wav",
       "CachePath": "8E/{8EB2D705-8743-C1B2-2C03-E1DA9FEEC797}.wem"
+     },
+     {
+      "Id": "121456320",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Clink-001.wav",
+      "CachePath": "87/{87500982-1A90-B06E-7DCF-A7ACDEE0C2E7}.wem"
      },
      {
       "Id": "122699877",
@@ -280,6 +288,14 @@
       "CachePath": "AB/{AB0900D6-5E6F-363F-34E4-8A6F4452799C}.wem"
      },
      {
+      "Id": "571787680",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Clink-002.wav",
+      "CachePath": "0B/{0BF452FB-00DC-011B-8FD6-8E0B5FCC6BCD}.wem"
+     },
+     {
       "Id": "579537519",
       "Language": "SFX",
       "Streaming": "false",
@@ -294,6 +310,14 @@
       "Location": "Memory",
       "ShortName": "RachetMove-005.wav",
       "CachePath": "BA/{BA3802F0-8865-637A-330B-C44DC42B907C}.wem"
+     },
+     {
+      "Id": "644979800",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Clink-003.wav",
+      "CachePath": "9D/{9D9020E4-3DDA-C319-701E-42E9F841C829}.wem"
      },
      {
       "Id": "657867990",
@@ -358,6 +382,14 @@
       "Location": "Memory",
       "ShortName": "untitled-034.wav",
       "CachePath": "18/{18E432A6-4053-24FB-7797-99634B550BF3}.wem"
+     },
+     {
+      "Id": "809935280",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Clink-004.wav",
+      "CachePath": "FA/{FA465828-60BF-B9F7-BB4F-B192A9E582C0}.wem"
      },
      {
       "Id": "825261531",
@@ -497,7 +529,7 @@
      {
       "Id": "2772567846",
       "Name": "Play_AttackCharge",
-      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Play_AttackCharge",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Attacks\\Play_AttackCharge",
       "GUID": "{A9CE3B38-CCB3-465C-ACF0-11A90CAE7EAB}",
       "DurationType": "OneShot",
       "DurationMin": "0.2699623",
@@ -524,9 +556,32 @@
       ]
      },
      {
+      "Id": "2508207149",
+      "Name": "Play_AttackClink",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Attacks\\Play_AttackClink",
+      "GUID": "{CE3670FE-3DDF-4751-BAAB-E47035DB175D}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.44544935",
+      "DurationMax": "0.78154194",
+      "MediaRefs": [
+       {
+        "Id": "121456320"
+       },
+       {
+        "Id": "571787680"
+       },
+       {
+        "Id": "644979800"
+       },
+       {
+        "Id": "809935280"
+       }
+      ]
+     },
+     {
       "Id": "3468848948",
       "Name": "Play_AttackSwing",
-      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Play_AttackSwing",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Attacks\\Play_AttackSwing",
       "GUID": "{76A88760-16BC-4A68-94B4-0B3189637684}",
       "DurationType": "OneShot",
       "DurationMin": "0.7759017",
@@ -558,7 +613,7 @@
      {
       "Id": "913957623",
       "Name": "Play_Falling",
-      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Play_Falling",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Movement\\Play_Falling",
       "GUID": "{37A3D78C-8CE0-4DD1-BF70-5AA42808681C}",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -630,7 +685,7 @@
      {
       "Id": "3689126666",
       "Name": "Play_Jump",
-      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Play_Jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Movement\\Play_Jump",
       "GUID": "{87F2AAB6-FCCA-4F98-B7C6-BA650BE45723}",
       "DurationType": "OneShot",
       "DurationMin": "1.8077143",
@@ -662,7 +717,7 @@
      {
       "Id": "4285282925",
       "Name": "Play_Land",
-      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Play_Land",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Movement\\Play_Land",
       "GUID": "{520A585D-0885-4E66-AA84-E7974230554D}",
       "DurationType": "OneShot",
       "DurationMin": "2",
@@ -946,7 +1001,7 @@
      {
       "Id": "2600469463",
       "Name": "Play_Steps",
-      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Play_Steps",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Movement\\Play_Steps",
       "GUID": "{561C9F62-741F-4107-92E4-09B0109C00CA}",
       "DurationType": "OneShot",
       "DurationMin": "0.43906307",
@@ -1194,7 +1249,7 @@
      {
       "Id": "3396348501",
       "Name": "Stop_Falling",
-      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Stop_Falling",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Movement\\Stop_Falling",
       "GUID": "{35502DB3-DA60-428C-BBBB-EC8E6581F7C7}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
@@ -1254,6 +1309,6 @@
     ]
    }
   ],
-  "FileHash": "{DB6EF97D-230A-CAB5-3C67-535B21749768}"
+  "FileHash": "{19F14B43-205A-5299-F38B-B278DF8B2648}"
  }
 }
