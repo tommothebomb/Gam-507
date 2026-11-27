@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{27074A54-53B3-4D9B-9707-A184AE1481EA}" SchemaVersion="133" RootDocumentID="{8E574AE6-C9FA-4E20-ABA2-BAD7B9343532}" ParentDocumentID="{8E574AE6-C9FA-4E20-ABA2-BAD7B9343532}">
 	<GameParameters>
-		<WorkUnit Name="Roscislawa" ID="{27074A54-53B3-4D9B-9707-A184AE1481EA}" OwnerID="{8E574AE6-C9FA-4E20-ABA2-BAD7B9343532}" PersistMode="Nested"/>
+		<WorkUnit Name="Roscislawa" ID="{27074A54-53B3-4D9B-9707-A184AE1481EA}" OwnerID="{8E574AE6-C9FA-4E20-ABA2-BAD7B9343532}" PersistMode="Nested">
+			<ChildrenList>
+				<GameParameter Name="Falling" ID="{76CB15AC-1281-40F4-8091-ACE2C2B8B8F0}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="5"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

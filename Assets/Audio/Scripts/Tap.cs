@@ -6,9 +6,10 @@ public class Tap : MonoBehaviour
     public Animator anim;
     public ParticleSystem particles;
 
-    private void OnCollisionEnter(Collision collision)
+    public void ManageTap()
     {
-        if (collision.gameObject.CompareTag("Player") && playing != true)
+        AkUnitySoundEngine.PostEvent("Play_AttackClink", this.gameObject);
+        if (playing != true)
         {
             anim.SetTrigger("switch");
             particles.Play();
@@ -16,11 +17,11 @@ public class Tap : MonoBehaviour
             AkUnitySoundEngine.PostEvent("Play_TapContainer", this.gameObject);
             playing = true;
         }
-        else if (collision.gameObject.CompareTag("Player") && playing == true)
+        else if (playing == true)
         {
             anim.SetTrigger("switch");
             particles.Stop();
-            AkUnitySoundEngine.SetSwitch("Tap","Off",this.gameObject);
+            AkUnitySoundEngine.SetSwitch("Tap", "Off", this.gameObject);
             playing = false;
         }
     }

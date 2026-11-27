@@ -17,11 +17,17 @@ namespace AK
         static const AkUniqueID ITEMGET = 1464598444U;
         static const AkUniqueID KITCHENMUSICEVENT = 4150470712U;
         static const AkUniqueID MENUMUSICEVENT = 693250459U;
+        static const AkUniqueID PLAY_ATTACKCHARGE = 2772567846U;
+        static const AkUniqueID PLAY_ATTACKCLINK = 2508207149U;
+        static const AkUniqueID PLAY_ATTACKSWING = 3468848948U;
+        static const AkUniqueID PLAY_FALLING = 913957623U;
         static const AkUniqueID PLAY_FRIDGE_CLOSE12 = 826038409U;
         static const AkUniqueID PLAY_FRIDGE_CLOSE14 = 826038415U;
         static const AkUniqueID PLAY_FRIDGE_OPEN11 = 2921916046U;
         static const AkUniqueID PLAY_FRIDGE_OPEN13 = 2921916044U;
+        static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_KITCHENROOMTONE22 = 1295599627U;
+        static const AkUniqueID PLAY_LAND = 4285282925U;
         static const AkUniqueID PLAY_MICROWAVEBING30 = 2361751234U;
         static const AkUniqueID PLAY_MICROWAVECLOSE27 = 4104439926U;
         static const AkUniqueID PLAY_MICROWAVEHUM28 = 3314291739U;
@@ -37,6 +43,7 @@ namespace AK
         static const AkUniqueID PLAY_PLANT_SHAKE208 = 3916972312U;
         static const AkUniqueID PLAY_PLANT_SHAKE209 = 3916972313U;
         static const AkUniqueID PLAY_PLANT_SHAKE210 = 3933749891U;
+        static const AkUniqueID PLAY_STEPS = 2600469463U;
         static const AkUniqueID PLAY_STOVEKNOB_BURN20 = 3528540685U;
         static const AkUniqueID PLAY_STOVEKNOB_BURN21 = 3528540684U;
         static const AkUniqueID PLAY_STOVEKNOBS16 = 2074530137U;
@@ -45,6 +52,7 @@ namespace AK
         static const AkUniqueID PLAY_STOVEKNOBS19 = 2074530134U;
         static const AkUniqueID PLAY_TAPCONTAINER = 2005916398U;
         static const AkUniqueID PLAY_TOASTER_SET15 = 2722711969U;
+        static const AkUniqueID STOP_FALLING = 3396348501U;
         static const AkUniqueID STOP_MICROWAVEHUM28 = 1635482329U;
     } // namespace EVENTS
 
@@ -64,6 +72,17 @@ namespace AK
 
     namespace SWITCHES
     {
+        namespace FLOORMATERIAL
+        {
+            static const AkUniqueID GROUP = 4274333454U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID HARD = 3599861390U;
+                static const AkUniqueID SOFT = 670602561U;
+            } // namespace SWITCH
+        } // namespace FLOORMATERIAL
+
         namespace LEVELS
         {
             static const AkUniqueID GROUP = 2678230316U;
@@ -90,6 +109,11 @@ namespace AK
         } // namespace TAP
 
     } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID FALLING = 399052710U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

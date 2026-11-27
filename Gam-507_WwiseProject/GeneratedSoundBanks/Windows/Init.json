@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{0F73A3A8-E9FC-F912-1F1D-F7B7720CA712}",
+    "Hash": "{F9659BA4-299D-1E7E-ECB5-C711BD14F63E}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -64,6 +64,14 @@
       "Name": "Music",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music",
       "GUID": "{B3317480-D353-45B5-821A-C171E17549D3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "399052710",
+      "Name": "Falling",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Roscislawa\\Falling",
+      "GUID": "{76CB15AC-1281-40F4-8091-ACE2C2B8B8F0}"
      }
     ],
     "StateGroups": [
@@ -138,6 +146,26 @@
         "Name": "MainMenu",
         "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\Levels\\MainMenu",
         "GUID": "{8E5FC8C8-CB6D-4B18-B105-94D69C0C6C89}"
+       }
+      ]
+     },
+     {
+      "Id": "4274333454",
+      "Name": "FloorMaterial",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\FloorMaterial",
+      "GUID": "{4A48B5C8-F1D3-420A-ACFA-C31FB95EE5B4}",
+      "Switches": [
+       {
+        "Id": "670602561",
+        "Name": "Soft",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\FloorMaterial\\Soft",
+        "GUID": "{2FF8575A-4DFB-4783-AF4F-3FFF4A5B9520}"
+       },
+       {
+        "Id": "3599861390",
+        "Name": "Hard",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Roscislawa\\FloorMaterial\\Hard",
+        "GUID": "{D18670D2-18BC-4382-8315-011AA98149C2}"
        }
       ]
      }
@@ -382,6 +410,6 @@
     ]
    }
   ],
-  "FileHash": "{D09ADDA1-64E4-084A-0655-B55D3479BA68}"
+  "FileHash": "{31E89134-EE4C-7CE4-244C-666158B3F0B1}"
  }
 }
