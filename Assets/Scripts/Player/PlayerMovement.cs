@@ -69,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Audio")]
     bool playedLand = true;
+    float fallTimer = 0f;
 
     private void Awake()
     {
@@ -97,11 +98,23 @@ public class PlayerMovement : MonoBehaviour
         {
             Move();
         }
-        Debug.Log(rb.angularVelocity);
+        //Debug.Log(rb.angularVelocity);
 
         if (!isGrounded){
             StartCoroutine(CheckFall());
             playedLand = false;
+            if (rb.linearVelocity.y < -0.1f)
+            {
+                fallTimer += Time.deltaTime;
+            }
+            else
+            {
+                fallTimer = 0f;
+            }
+
+            float pitch = Mathf.Min(fallTimer, 2f) * 3f;
+            AkUnitySoundEngine.SetRTPCValue("Falling", pitch, gameObject);
+            Debug.Log(rb.linearVelocity.y);
         }
         else
         {
@@ -111,15 +124,7 @@ public class PlayerMovement : MonoBehaviour
                 AkUnitySoundEngine.PostEvent("Play_Land", this.gameObject);
                 AkUnitySoundEngine.PostEvent("Stop_Falling", this.gameObject);
                 playedLand = true;
-                Debug.Log("meow");
             }
-        }
-        RaycastHit Grnd;
-        if (!Physics.Raycast(transform.position, Vector3.down, out Grnd)) return;
-
-        if (Grnd.distance > 1)
-        {
-            AkUnitySoundEngine.SetRTPCValue("Falling", Grnd.distance, this.gameObject);
         }
     }
 
@@ -185,7 +190,8 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         if ((!isGrounded && remaingAirJumps == 0) || IsGrab ) { return; }
-        Debug.Log("Jump");
+        AkUnitySoundEngine.PostEvent("Stop_Falling", this.gameObject);
+        AkUnitySoundEngine.SetRTPCValue("Falling", 0, this.gameObject);
         remaingAirJumps -= 1;
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
         rb.AddForce(new Vector3(currentDir.x , 0.5f , currentDir.z) * jumpForce);
@@ -357,10 +363,6 @@ public class PlayerMovement : MonoBehaviour
 
             animatorController.SetTrigger("Grab");
         }
-
-
-
-
     }
 
     //when relasing the grab button or nolonger being able to grab said object
@@ -408,17 +410,18 @@ public class PlayerMovement : MonoBehaviour
     void Attack()
     {
         //just play the animation
-        Debug.Log("Attack");
         animatorController.SetTrigger("Attack");
     }
 
 
+    /*
     //called via keyframes when the player attacks
     //do a spherecast at each connection points
     public void AttackPoint()
     {
         Debug.Log("AHHHH");
     }
+    */
 
    
     #endregion
@@ -441,7 +444,6 @@ public class PlayerMovement : MonoBehaviour
             //Debug.Log(Vector3.Dot(Vector3.up, hit.normal));
             if (Vector3.Dot(Vector3.up, hit.normal) < 0.9f)
             {
-                Debug.Log("IM SLIDING YO");
                 isSliding = true;
             }
             else if (isSliding)

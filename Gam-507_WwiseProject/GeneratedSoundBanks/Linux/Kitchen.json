@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{DFED22DB-9D72-4625-8B20-BFF28FE7B4C7}",
     "Language": "SFX",
-    "Hash": "{096FF95F-F3AE-ED2C-69EE-E3A5947B3EE7}",
+    "Hash": "{F4D9297F-456F-2316-09E4-61B906E46C11}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Roscislawa\\Kitchen",
     "ShortName": "Kitchen",
     "Path": "Kitchen.bnk",
@@ -1386,6 +1386,6 @@
     ]
    }
   ],
-  "FileHash": "{96A4345C-3254-46E3-9B90-B18DC241259F}"
+  "FileHash": "{20837AD0-93C2-FD51-322F-8E4162771DC5}"
  }
 }
