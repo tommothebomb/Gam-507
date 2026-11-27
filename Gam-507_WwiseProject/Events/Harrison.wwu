@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0653EA8E-19B9-4395-B257-AEFA6826B14B}" SchemaVersion="133" RootDocumentID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}" ParentDocumentID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}">
 	<Events>
-		<WorkUnit Name="Harrison" ID="{0653EA8E-19B9-4395-B257-AEFA6826B14B}" OwnerID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}" PersistMode="Nested"/>
+		<WorkUnit Name="Harrison" ID="{0653EA8E-19B9-4395-B257-AEFA6826B14B}" OwnerID="{E3C90690-0D2C-4B45-A93B-90B657B4B399}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="BedroomMusicEvent" ID="{7B2225CB-9C49-403F-8C90-D18840082163}">
+					<ChildrenList>
+						<Action Name="" ID="{BC8E00E0-14C3-4642-89B1-E17DE7DB72EC}" ShortID="93070861">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bedroom Music" ID="{F4596E03-0200-4197-9BB7-699730F85A3F}" WorkUnitID="{6542E4D3-DE7A-4297-A433-29316998144E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
