@@ -109,6 +109,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
+                AkUnitySoundEngine.PostEvent("Stop_Falling", this.gameObject);
                 fallTimer = 0f;
             }
 
