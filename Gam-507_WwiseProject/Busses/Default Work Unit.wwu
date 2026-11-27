@@ -32,6 +32,7 @@
 					</ChildrenList>
 				</Bus>
 				<WorkUnit Name="Roscislawa" ID="{D919FA3A-259E-40C4-9C8D-B492E944E9AD}" PersistMode="Reference"/>
+				<WorkUnit Name="Harrison" ID="{5ACDEDC9-79EB-4099-8196-8A9A3374D593}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Busses>

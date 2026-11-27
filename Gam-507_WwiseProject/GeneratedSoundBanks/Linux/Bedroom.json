@@ -1,0 +1,56 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3788924735",
+    "Type": "User",
+    "GUID": "{46FC21D0-145C-4EFF-ADD9-C46AB5F68927}",
+    "Language": "SFX",
+    "Hash": "{D7F48517-0EEB-4630-EBE3-28553BF93180}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Harrison\\Bedroom",
+    "ShortName": "Bedroom",
+    "Path": "Bedroom.bnk",
+    "Media": [
+     {
+      "Id": "660747143",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "music_level_2.wav",
+      "CachePath": "54/{54711797-8C64-2C6E-50C8-BA32BAB201BF}.wem"
+     },
+     {
+      "Id": "825261531",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "music_levelstart.wav",
+      "CachePath": "A6/{A6EFCA3F-AA2F-AAAF-6996-85D8A1019DCE}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4185905132",
+      "Name": "BedroomMusicEvent",
+      "ObjectPath": "\\Events\\Default Work Unit\\Harrison\\BedroomMusicEvent",
+      "GUID": "{7B2225CB-9C49-403F-8C90-D18840082163}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "660747143"
+       },
+       {
+        "Id": "825261531"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{99AA3441-0910-F284-B983-D52FC0BA8579}"
+ }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F970F9BC-5A58-4287-B552-19E64C4AEBFE}" SchemaVersion="133" RootDocumentID="{028D2149-1DF4-48F2-B399-B7A5615431A9}" ParentDocumentID="{028D2149-1DF4-48F2-B399-B7A5615431A9}">
+	<SoundBanks>
+		<WorkUnit Name="Harrison" ID="{F970F9BC-5A58-4287-B552-19E64C4AEBFE}" OwnerID="{028D2149-1DF4-48F2-B399-B7A5615431A9}" PersistMode="Nested">
+			<ChildrenList>
+				<SoundBank Name="Bedroom" ID="{46FC21D0-145C-4EFF-ADD9-C46AB5F68927}">
+					<ObjectInclusionList>
+						<ObjectRef Name="BedroomMusicEvent" ID="{7B2225CB-9C49-403F-8C90-D18840082163}" WorkUnitID="{0653EA8E-19B9-4395-B257-AEFA6826B14B}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

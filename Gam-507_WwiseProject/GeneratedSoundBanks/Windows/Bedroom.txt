@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4185905132	BedroomMusicEvent			\Default Work Unit\Harrison\BedroomMusicEvent	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	660747143	music_level_2	.cache\54\{54711797-8C64-2C6E-50C8-BA32BAB201BF}.wem		\Containers\HarrisonHunt\Bedroom Music\Bedroom Music\music_level_2		25005144
+	825261531	music_levelstart	.cache\A6\{A6EFCA3F-AA2F-AAAF-6996-85D8A1019DCE}.wem		\Containers\HarrisonHunt\Bedroom Music\Bedroom Stinger\music_levelstart		3627836
+

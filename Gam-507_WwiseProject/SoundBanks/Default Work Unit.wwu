@@ -12,6 +12,7 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<WorkUnit Name="Harrison" ID="{F970F9BC-5A58-4287-B552-19E64C4AEBFE}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
