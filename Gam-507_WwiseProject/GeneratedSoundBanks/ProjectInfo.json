@@ -3,7 +3,7 @@
   "Project": {
    "Name": "Gam-507_WwiseProject",
    "GUID": "{1280F5D7-CCB5-4E17-91B0-7E416B643E7C}",
-   "Generator": "2025.1.8.9170"
+   "Generator": "2025.1.7.9143"
   },
   "CacheRoot": "../.cache",
   "Platforms": [
@@ -38,6 +38,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{C31FD02A-3833-20D7-9981-67ED35C15F39}"
+  "FileHash": "{DB43D920-DD06-F59F-AAB6-36F7D1B4AC08}"
  }
 }

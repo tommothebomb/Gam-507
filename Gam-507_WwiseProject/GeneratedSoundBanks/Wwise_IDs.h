@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BEDROOMMUSICEVENT = 4185905132U;
         static const AkUniqueID CLICKEDEVENT = 2071284128U;
         static const AkUniqueID ITEMGET = 1464598444U;
         static const AkUniqueID KITCHENMUSICEVENT = 4150470712U;
@@ -118,6 +119,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID BEDROOM = 3788924735U;
         static const AkUniqueID KITCHEN = 1586158131U;
         static const AkUniqueID MENU = 2607556080U;
     } // namespace BANKS
