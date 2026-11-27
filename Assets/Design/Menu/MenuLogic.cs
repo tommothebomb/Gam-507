@@ -28,6 +28,7 @@ public class MenuLogic : MonoBehaviour
 
     public void StartGame()
     {
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(1);
     }
 
