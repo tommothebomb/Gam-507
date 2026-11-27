@@ -25,6 +25,7 @@ namespace AK
         static const AkUniqueID PLAY_FRIDGE_CLOSE14 = 826038415U;
         static const AkUniqueID PLAY_FRIDGE_OPEN11 = 2921916046U;
         static const AkUniqueID PLAY_FRIDGE_OPEN13 = 2921916044U;
+        static const AkUniqueID PLAY_HITENEMYSOUNDS = 2442501063U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_KITCHENROOMTONE22 = 1295599627U;
         static const AkUniqueID PLAY_LAND = 4285282925U;

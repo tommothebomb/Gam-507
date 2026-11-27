@@ -40,6 +40,7 @@
 						<ObjectRef Name="Play_StoveKnobs18" ID="{EE98B90B-58C3-4CB1-9F3F-778A0CC88C32}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Plant_Shake206" ID="{A5207909-5B56-4CF5-89D6-08E0CBDC5B2E}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StoveKnobs16" ID="{9E20C803-34F7-4D6E-93EA-BC212230369B}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_HitEnemySounds" ID="{92418680-260A-4DC7-9469-8E956408222A}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Falling" ID="{37A3D78C-8CE0-4DD1-BF70-5AA42808681C}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Microwave" ID="{794DF708-2E83-4E13-B41C-14E5074ADDF6}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Plant_shake05" ID="{3A457836-A27A-4E4B-8815-5FF1392D859C}" WorkUnitID="{74F1AC57-4414-4F41-8AC6-ECA2262979AA}" Origin="Manual" Filter="7"/>
