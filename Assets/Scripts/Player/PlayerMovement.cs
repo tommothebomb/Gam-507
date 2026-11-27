@@ -70,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Audio")]
     bool playedLand = true;
     float fallTimer = 0f;
+    float fallTimer2 = 0f;
 
     private void Awake()
     {
@@ -101,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(rb.angularVelocity);
 
         if (!isGrounded){
-            StartCoroutine(CheckFall());
+            //StartCoroutine(CheckFall());
             playedLand = false;
             if (rb.linearVelocity.y < -0.1f)
             {
@@ -111,15 +112,25 @@ public class PlayerMovement : MonoBehaviour
             {
                 AkUnitySoundEngine.PostEvent("Stop_Falling", this.gameObject);
                 fallTimer = 0f;
+                fallTimer2 = 0f;
             }
 
-            float pitch = Mathf.Min(fallTimer, 2f) * 3f;
-            AkUnitySoundEngine.SetRTPCValue("Falling", pitch, gameObject);
-            Debug.Log(rb.linearVelocity.y);
+            if (fallTimer > 1)
+            {
+                fallTimer2 += Time.deltaTime;
+                {
+                    AkUnitySoundEngine.PostEvent("Play_Falling", this.gameObject);
+                    float pitch = (Mathf.Min(fallTimer2, 2)) * 3f;
+                    AkUnitySoundEngine.SetRTPCValue("Falling", pitch, gameObject);
+                    Debug.Log(pitch);
+                }
+            }
         }
         else
         {
             AkUnitySoundEngine.SetRTPCValue("Falling", 0, this.gameObject);
+            fallTimer = 0f;
+            fallTimer2 = 0f;
             if (!playedLand)
             {
                 AkUnitySoundEngine.PostEvent("Play_Land", this.gameObject);

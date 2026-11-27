@@ -6,7 +6,7 @@
 				<GameParameter Name="Falling" ID="{76CB15AC-1281-40F4-8091-ACE2C2B8B8F0}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="1"/>
-						<Property Name="Max" Type="Real64" Value="5"/>
+						<Property Name="Max" Type="Real64" Value="10"/>
 						<Property Name="Min" Type="Real64" Value="1"/>
 					</PropertyList>
 				</GameParameter>

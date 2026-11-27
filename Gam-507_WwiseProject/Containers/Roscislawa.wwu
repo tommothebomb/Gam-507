@@ -2589,14 +2589,14 @@
 						</BlendContainer>
 						<BlendContainer Name="Land" ID="{95D2160D-6671-423C-8B0C-07993A954F35}" ShortID="346629187">
 							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>28</Value>
+									</ValueList>
+								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>5</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2901,7 +2901,17 @@
 						</BlendContainer>
 						<Sound Name="whistle" ID="{94BA8E40-0895-4B42-8895-B2E856258B36}" ShortID="225814868">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>53</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>21</Value>
+									</ValueList>
+								</Property>
 								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
@@ -2959,8 +2969,44 @@
 																<Flags>5</Flags>
 															</Point>
 															<Point>
-																<XPos>5</XPos>
+																<XPos>10</XPos>
 																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{88B79F1C-FB27-4DBF-A99A-A027B9B2008C}" ShortID="26899329">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="Falling" ID="{76CB15AC-1281-40F4-8091-ACE2C2B8B8F0}" WorkUnitID="{27074A54-53B3-4D9B-9707-A184AE1481EA}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{2EE8E6F4-FDF0-4636-9B71-1B540307E4AD}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>1.44865</XPos>
+																<YPos>0.33425</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>10</XPos>
+																<YPos>0.16085</YPos>
 																<Flags>37</Flags>
 															</Point>
 														</PointList>
