@@ -398,6 +398,17 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Play_HitEnemySounds" ID="{92418680-260A-4DC7-9469-8E956408222A}">
+									<ChildrenList>
+										<Action Name="" ID="{C747C94A-0A04-420C-9227-CD50545AFFDD}" ShortID="819078567">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="HitEnemySounds" ID="{46A22386-02BF-4B21-808B-BDB9F9CE1EAD}" WorkUnitID="{F748D5B2-011F-4010-84DA-3FF800CA2C7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Movement" ID="{AB90027E-44A5-48BE-890C-D48FE2E91FE0}" ShortID="933530778">

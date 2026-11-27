@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C16CDD58-02F6-4A9F-930B-D1B4D3A9A979}" SchemaVersion="133" RootDocumentID="{9DB2DE91-E15B-4ACC-81EA-8B7BA2090C33}" ParentDocumentID="{9DB2DE91-E15B-4ACC-81EA-8B7BA2090C33}">
 	<MixingSessions>
-		<WorkUnit Name="Roscislawa" ID="{C16CDD58-02F6-4A9F-930B-D1B4D3A9A979}" OwnerID="{9DB2DE91-E15B-4ACC-81EA-8B7BA2090C33}" PersistMode="Nested"/>
+		<WorkUnit Name="Roscislawa" ID="{C16CDD58-02F6-4A9F-930B-D1B4D3A9A979}" OwnerID="{9DB2DE91-E15B-4ACC-81EA-8B7BA2090C33}" PersistMode="Nested">
+			<ChildrenList>
+				<MixingSession Name="New Mixing Session" ID="{FB84F5DB-1115-4070-BBF1-A0480E7A3FC4}">
+					<ObjectList>
+						<ObjectRef Name="Ambience" ID="{B23447F3-6EDD-4D1F-A9E8-01A71657CB23}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+						<ObjectRef Name="Music" ID="{B3317480-D353-45B5-821A-C171E17549D3}" WorkUnitID="{7C587F03-5BC9-4AD5-8F79-07FF532F866D}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
 	</MixingSessions>
 </WwiseDocument>

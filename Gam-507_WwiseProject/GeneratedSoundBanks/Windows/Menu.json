@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D143808-FD1E-4029-86B2-C6BEA4D7005B}",
     "Language": "SFX",
-    "Hash": "{DA347F56-BD35-101C-3A32-2ED85565BC1C}",
+    "Hash": "{FB0D1F50-FE54-2F6F-39AE-938DEFEFD78B}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Menu",
     "ShortName": "Menu",
     "Path": "Menu.bnk",
@@ -73,6 +73,6 @@
     ]
    }
   ],
-  "FileHash": "{1C391594-C4FA-3BBA-01F3-6F656D163922}"
+  "FileHash": "{7D770DA5-465C-56B0-78F6-996EF0510665}"
  }
 }

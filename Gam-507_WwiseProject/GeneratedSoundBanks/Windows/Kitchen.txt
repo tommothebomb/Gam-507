@@ -10,6 +10,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2074530136	Play_StoveKnobs17			\Default Work Unit\Roscislawa\SFX\Kitchen\Stove\Play_StoveKnobs17	
 	2074530137	Play_StoveKnobs16			\Default Work Unit\Roscislawa\SFX\Kitchen\Stove\Play_StoveKnobs16	
 	2361751234	Play_MicrowaveBing30			\Default Work Unit\Roscislawa\SFX\Kitchen\Microwave\Play_MicrowaveBing30	
+	2442501063	Play_HitEnemySounds			\Default Work Unit\Roscislawa\Player\Attacks\Play_HitEnemySounds	
 	2508207149	Play_AttackClink			\Default Work Unit\Roscislawa\Player\Attacks\Play_AttackClink	
 	2600469463	Play_Steps			\Default Work Unit\Roscislawa\Player\Movement\Play_Steps	
 	2661019970	Play_Plant_shake04			\Default Work Unit\Roscislawa\SFX\Kitchen\Plant\Play_Plant_shake04	
@@ -57,7 +58,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	102405684	Crank-002	.cache\8E\{8EB2D705-8743-C1B2-2C03-E1DA9FEEC797}.wem		\Containers\Roscislawa\Player\Steps\Rachets\Crank-002		88296
 	121456320	Clink-001	.cache\87\{87500982-1A90-B06E-7DCF-A7ACDEE0C2E7}.wem		\Containers\Roscislawa\Player\AttackClink\Clink-001		103484
 	122699877	Plant shake02	.cache\E2\{E2673EF6-2770-B503-F033-C1CC59354B8D}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant shake02		264696
+	130636404	04	.cache\AC\{AC765FE8-E1F3-ACDD-03F7-F24772F34E17}.wem		\Containers\Roscislawa\Player\HitEnemySounds\04		88296
 	139868115	StoveKnobs18	.cache\07\{07C4C3C3-D38D-7FC3-F66C-4219588834FB}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnobs18		441096
+	141583988	05	.cache\EB\{EB991EE3-4789-D52B-9264-E6E6AA51BC18}.wem		\Containers\Roscislawa\Player\HitEnemySounds\05		88296
 	164553671	Plant shake01	.cache\AA\{AAE14993-E4D9-DAAD-7810-E2DC789DD3E8}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant shake01		264696
 	165318275	Bare Step Stone Medium A	.cache\08\{08AC559D-C80F-18D0-D008-42C132C438BB}.wem		\Containers\Roscislawa\Player\Land\Step\HardMat\Bare Step Stone Medium A		42200
 	177179192	TapStart25	.cache\C3\{C36D722C-58D2-9494-63B5-0568AE0FFE86}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Tap\TapContainer\TapStart25		176496
@@ -71,6 +74,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	313574756	StoveKnobs17	.cache\33\{336169EF-18A9-8BC9-D3C1-4C80A1FFE904}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnobs17		378468
 	315457046	Boing	.cache\5C\{5CD4254B-D8A5-FF51-2A2E-7197DEC2A77F}.wem		\Containers\Roscislawa\Player\Jump\Boing		352896
 	334541834	Crank-004	.cache\60\{6050D75C-FEC9-E8A1-3400-0D81B98D8E95}.wem		\Containers\Roscislawa\Player\AttackCharge\Crank-004		88296
+	344166367	02	.cache\30\{3070F75A-94F2-6A06-0278-B503386B8786}.wem		\Containers\Roscislawa\Player\HitEnemySounds\02		88296
 	346867583	MicrowaveOpen26	.cache\08\{081155EE-8959-A2E5-2FDB-320D87C9A714}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Microwave\MicrowaveOpen26		176496
 	372529494	Crank-006	.cache\72\{721B13DE-3FB7-79D3-B260-5081594E53FF}.wem		\Containers\Roscislawa\Player\AttackCharge\Crank-006		88296
 	372960455	sfx_footstep_3	.cache\45\{45F163FF-F881-FF29-FD48-6E6E39340992}.wem		\Containers\Roscislawa\Player\Land\Step\SoftMat\sfx_footstep_3		96144
@@ -78,9 +82,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	380061265	sfx_footstep_1	.cache\C3\{C3ACC247-4006-0E9E-6127-F62D1565FFAE}.wem		\Containers\Roscislawa\Player\Steps\Step\SoftMat\sfx_footstep_1		70296
 	424851816	Fridge Open11	.cache\E0\{E088643A-8233-58AF-7455-6E3262E86F2F}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Fridge\Fridge Open11		207332
 	430415088	Fridge Open13	.cache\5E\{5EECEA89-97B0-2E53-BBAA-12394405A839}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Fridge\Fridge Open13		352896
+	444574170	06	.cache\77\{77CBEDF9-1276-4ADF-1397-D0C712370162}.wem		\Containers\Roscislawa\Player\HitEnemySounds\06		88296
 	445707285	Plant Shake210	.cache\EB\{EB1ED4A2-BB95-0B74-C7AF-852C012FFD75}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant Shake210		264696
 	495664148	StoveKnob&Burn20	.cache\78\{78609AD3-5B8E-56B8-E787-4284152D9F11}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnob&Burn20		705696
 	504584392	Itemget	.cache\C1\{C1B90152-69FE-7FD0-926C-9EBBED4C21E5}.wem		\Containers\Default Work Unit\Itemget		518368
+	510044811	03	.cache\E8\{E8FD5886-103B-EAE7-8ABB-CACE9A31FE28}.wem		\Containers\Roscislawa\Player\HitEnemySounds\03		88296
 	519167652	MicrowaveHum28	.cache\5A\{5AD69412-4D7C-B1E8-083D-637A2B3DF5F2}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Microwave\MicrowaveHum28		1587696
 	540328741	Plant shake05	.cache\4B\{4BA9CA14-7051-B11A-C08B-DBDB4CB003F7}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant shake05		264696
 	559662226	StoveKnob&Burn21	.cache\C0\{C0A6EF05-0BAD-DB74-76A3-86E248666049}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Stove\StoveKnob&Burn21		793896
@@ -101,6 +107,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	825261531	music_levelstart	.cache\A6\{A6EFCA3F-AA2F-AAAF-6996-85D8A1019DCE}.wem		\Containers\Default Work Unit\Kitchen Music\Kitchen Stinger\music_levelstart		3627836
 	842443730	Crank-002	.cache\F7\{F739B572-06D4-A8C9-E191-5692960C6663}.wem		\Containers\Roscislawa\Player\AttackCharge\Crank-002		88296
 	851349571	Crank-005	.cache\28\{28C2E838-E877-9581-C571-0EB94154FBCA}.wem		\Containers\Roscislawa\Player\Jump\Rachets\Crank-005		88296
+	884515715	01	.cache\A5\{A50337BB-99A5-43DD-ACBC-C8BD569F6EA0}.wem		\Containers\Roscislawa\Player\HitEnemySounds\01		88296
 	886367113	TapRunning24	.cache\CE\{CE5C1B02-F280-DAC8-6BD3-491CB5484121}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Tap\TapContainer\TapRunning24		281800
 	963671071	Plant Shake209	.cache\B3\{B3EF5C44-3CF0-97E0-26B2-ABA9BEF208B9}.wem		\Containers\Roscislawa\Sound FXs\KitchenSlawa\Plants\Plant Shake209		264696
 	979974951	Bare Step Stone Medium D	.cache\DB\{DB7AB5F5-1286-F024-159B-74ECD55160B8}.wem		\Containers\Roscislawa\Player\Land\Step\HardMat\Bare Step Stone Medium D		44128

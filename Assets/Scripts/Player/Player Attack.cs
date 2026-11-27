@@ -27,6 +27,7 @@ public class PlayerAttack : MonoBehaviour
             if (hit.collider != null && hit.collider.TryGetComponent<IDamageable>(out IDamageable HitObj) == true)
             {
                 HitObj.TakeDamage(Damage);
+                AkUnitySoundEngine.PostEvent("Play_HitEnemySounds", this.gameObject);
                 return;
             }
             else if (hit.collider != null && hit.collider.TryGetComponent<Tap>(out Tap TapObj) == true)

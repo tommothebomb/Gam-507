@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{DFED22DB-9D72-4625-8B20-BFF28FE7B4C7}",
     "Language": "SFX",
-    "Hash": "{0F98059D-BC3E-0F0A-7AE3-632CE5DEDF50}",
+    "Hash": "{096FF95F-F3AE-ED2C-69EE-E3A5947B3EE7}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Roscislawa\\Kitchen",
     "ShortName": "Kitchen",
     "Path": "Kitchen.bnk",
@@ -64,12 +64,28 @@
       "CachePath": "E2/{E2673EF6-2770-B503-F033-C1CC59354B8D}.wem"
      },
      {
+      "Id": "130636404",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Hit-004.wav",
+      "CachePath": "AC/{AC765FE8-E1F3-ACDD-03F7-F24772F34E17}.wem"
+     },
+     {
       "Id": "139868115",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "GameSounds-048.wav",
       "CachePath": "07/{07C4C3C3-D38D-7FC3-F66C-4219588834FB}.wem"
+     },
+     {
+      "Id": "141583988",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Hit-005.wav",
+      "CachePath": "EB/{EB991EE3-4789-D52B-9264-E6E6AA51BC18}.wem"
      },
      {
       "Id": "164553671",
@@ -176,6 +192,14 @@
       "CachePath": "60/{6050D75C-FEC9-E8A1-3400-0D81B98D8E95}.wem"
      },
      {
+      "Id": "344166367",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Hit-002.wav",
+      "CachePath": "30/{3070F75A-94F2-6A06-0278-B503386B8786}.wem"
+     },
+     {
       "Id": "346867583",
       "Language": "SFX",
       "Streaming": "false",
@@ -232,6 +256,14 @@
       "CachePath": "5E/{5EECEA89-97B0-2E53-BBAA-12394405A839}.wem"
      },
      {
+      "Id": "444574170",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Hit-006.wav",
+      "CachePath": "77/{77CBEDF9-1276-4ADF-1397-D0C712370162}.wem"
+     },
+     {
       "Id": "445707285",
       "Language": "SFX",
       "Streaming": "false",
@@ -254,6 +286,14 @@
       "Location": "Memory",
       "ShortName": "ItemGetALT.wav",
       "CachePath": "C1/{C1B90152-69FE-7FD0-926C-9EBBED4C21E5}.wem"
+     },
+     {
+      "Id": "510044811",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Hit-003.wav",
+      "CachePath": "E8/{E8FD5886-103B-EAE7-8ABB-CACE9A31FE28}.wem"
      },
      {
       "Id": "519167652",
@@ -414,6 +454,14 @@
       "Location": "Memory",
       "ShortName": "RachetMove-005.wav",
       "CachePath": "28/{28C2E838-E877-9581-C571-0EB94154FBCA}.wem"
+     },
+     {
+      "Id": "884515715",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Hit-001.wav",
+      "CachePath": "A5/{A50337BB-99A5-43DD-ACBC-C8BD569F6EA0}.wem"
      },
      {
       "Id": "886367113",
@@ -679,6 +727,35 @@
       "MediaRefs": [
        {
         "Id": "430415088"
+       }
+      ]
+     },
+     {
+      "Id": "2442501063",
+      "Name": "Play_HitEnemySounds",
+      "ObjectPath": "\\Events\\Default Work Unit\\Roscislawa\\Player\\Attacks\\Play_HitEnemySounds",
+      "GUID": "{92418680-260A-4DC7-9469-8E956408222A}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.44544935",
+      "DurationMax": "0.53743666",
+      "MediaRefs": [
+       {
+        "Id": "130636404"
+       },
+       {
+        "Id": "141583988"
+       },
+       {
+        "Id": "344166367"
+       },
+       {
+        "Id": "444574170"
+       },
+       {
+        "Id": "510044811"
+       },
+       {
+        "Id": "884515715"
        }
       ]
      },
@@ -1309,6 +1386,6 @@
     ]
    }
   ],
-  "FileHash": "{AB85445B-1970-F592-3B1F-C0AC1437BB76}"
+  "FileHash": "{6DA0232A-066B-CB58-F563-2FB00A96DE2B}"
  }
 }
